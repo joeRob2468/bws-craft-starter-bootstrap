@@ -22,11 +22,7 @@ Then, run the `nys-setup` command to configure Craft-Scripts & Craft 3 Multi-Env
 
     ./nys-setup
 
-Next, run `./craft install` to run the craft installation scripts. 
-
-Finally, open `.env.sh`, and change the `LOCAL_BACKUPS_PATH` variable from "REPLACE_ME" to this:
-    
-    LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
+Finally, run `./craft install` to run the craft installation scripts, which will create all the database tables and get the website CMS set up. 
 
 That's it, enjoy!
 
