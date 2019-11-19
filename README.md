@@ -13,16 +13,20 @@ It also installs a few base plugins described in the [Setting up a New Craft 3 C
 
 First, clone the repository onto your local machine and install the project dependencies by running `composer install`. If installing on a production environment, run `yarn install --production`. Otherwise, run `yarn`. 
 
-Then `cd` to your new project directory, and run Craft's `setup` console command to create your `.env` environments and optionally install:
+Then `cd` to your new project directory, and run Craft's `setup` console command to create your `.env` environments. _When asked if you want to install, say no._
 
     cd PATH
     ./craft setup
 
-Next, run the `nys-setup` command to configure Craft-Scripts & Craft 3 Multi-Environment based on your newly created `.env` settings:
+Then, run the `nys-setup` command to configure Craft-Scripts & Craft 3 Multi-Environment based on your newly created `.env` settings:
 
     ./nys-setup
+
+Next, run `./craft install` to run the craft installation scripts. 
+
+Finally, open `.env.sh`, and change the `LOCAL_BACKUPS_PATH` variable from "REPLACE_ME" to this:
     
-Finally, run `./craft install` to run the craft installation scripts. 
+    LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
 
 That's it, enjoy!
 
