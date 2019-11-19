@@ -65,7 +65,9 @@
     ],
     "post-update-cmd": [
       "@php nys-setup update"
-    ],
+    ]
+  },
+  "unused-scripts": {
     "post-install-cmd": [
       "@php nys-setup update"
     ]

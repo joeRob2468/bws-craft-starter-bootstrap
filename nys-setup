@@ -35,7 +35,7 @@ const INSTALL_PLUGINS = [
 const CRAFT_SCRIPTS_SETUP = [
     'srclink'      => 'vendor/nystudio107/craft-scripts/scripts',
     'destlink'     => 'scripts',
-    'srcpath'      => 'scripts/craft3-example.env.sh',
+    'srcpath'      => '.env.sh.example',
     'destpath'     => '.env.sh',
     'replacements' => [
         'GLOBAL_DB_TABLE_PREFIX=""' => [
