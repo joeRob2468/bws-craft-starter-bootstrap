@@ -26,7 +26,7 @@ return [
     // All environments
     '*' => [
         'database' => getenv('CRAFTENV_DB_DATABASE'),
-        'driver' => getenv('CRAFTENV_DB_DRIVER'),
+        'driver' => getenv('CRAFTENV_DB_DRIVER') ?? 'mysql',
         'server' => getenv('CRAFTENV_DB_SERVER'),
         'user' => getenv('CRAFTENV_DB_USER'),
         'password' => getenv('CRAFTENV_DB_PASSWORD'),
