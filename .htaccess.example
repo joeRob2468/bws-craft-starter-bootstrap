@@ -6,4 +6,5 @@ RewriteCond %{REQUEST_URI} !^/exclude-file1\.html$
 RewriteCond %{REQUEST_URI} !^/exclude-file2\.html$
 RewriteCond %{REQUEST_URI} !^/exclude-dir
 
-RewriteRule (.*) web/$1 [R=302,L]
+# RewriteRule (.*) web/$1 [R=302,L]
+RewriteRule (.*) web/$1 [L]
