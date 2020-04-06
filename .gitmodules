@@ -1,0 +1,3 @@
+[submodule "laradock-bootstrap"]
+	path = laradock-bootstrap
+	url = git@github.com:joeRob2468/laradock.git
