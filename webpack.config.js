@@ -9,28 +9,37 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = (env, argv) => {
 
+    const isDevelopment = env.development || false;
+
     return {
         entry: {
             main: './src/app.js'
         },
         output: {
             filename: '[name].bundle.js',
-            path: path.resolve(__dirname) + '/web/dist'
+            path: path.resolve(__dirname) + '/web/dist',
+            pathinfo: false
         },
         optimization: {
-            splitChunks: {
-                chunks: 'all'
-            }
+            splitChunks: isDevelopment ? false : { chunks: 'all' },
+            removeEmptyChunks: isDevelopment ? false : true,
+            removeAvailableModules: isDevelopment ? false : true
         },
-        devtool: 'source-map',
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: isDevelopment ? 1000 : false,
+            ignored: /node_modules/
+        },
+        devtool: isDevelopment ? 'cheap-module-eval-source-map' : 'source-map',
         stats: 'none',
+        mode: isDevelopment ? 'development' : 'production',
         module: {
             rules: [
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
                     use: {
-                        loader: "babel-loader"
+                        loader: "babel-loader?cacheDirectory"
                     }
                 },
                 {
@@ -63,6 +72,9 @@ module.exports = (env, argv) => {
                 files: [
                     './templates'
                 ],
+                proxy: 'workspace:3000',
+                notify: false,
+                open: false,
                 logSnippet: false,
                 logLevel: 'warn',
                 reloadDelay: 0
@@ -90,7 +102,7 @@ module.exports = (env, argv) => {
                 'node_modules'
             ],
             alias: {
-                vue: argv.mode === 'development' ? 'vue/dist/vue.esm.js' : 'vue/dist/vue.min.js'
+                vue: isDevelopment ? 'vue/dist/vue.esm.js' : 'vue/dist/vue.min.js'
             }
         }
     };

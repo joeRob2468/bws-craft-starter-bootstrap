@@ -15,9 +15,6 @@
 @import "foundation-settings";
 @import '~foundation-sites/scss/foundation';
 
-@import 'lity/dist/lity.css';
-@import 'slick-slider/slick/slick.scss';
-
 // Global styles
 @include foundation-global-styles;
 @include foundation-forms;
