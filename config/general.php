@@ -1,101 +1,45 @@
 <?php
 /**
- * Craft 3 Multi-Environment
- * Efficient and flexible multi-environment config for Craft 3 CMS
- *
- * $_ENV constants are loaded by craft3-multi-environment from .env.php via
- * ./web/index.php for web requests, and ./craft for console requests
- *
- * @author    nystudio107
- * @copyright Copyright (c) 2017 nystudio107
- * @link      https://nystudio107.com/
- * @package   craft3-multi-environment
- * @since     1.0.5
- * @license   MIT
- */
-
-/**
  * General Configuration
  *
- * All of your system's general configuration settings go in here.
- * You can see a list of the default settings in src/config/GeneralConfig.php
+ * All of your system's general configuration settings go in here. You can see a
+ * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
+ *
+ * @see craft\config\GeneralConfig
  */
 
 return [
-
-    // All environments
-    '*' => [
-        // Craft defined config settings
-        'cacheDuration' => false,
-        'defaultSearchTermOptions' => array(
-            'subLeft' => true,
-            'subRight' => true,
-        ),
-        'enableCsrfProtection' => true,
-        'generateTransformsBeforePageLoad' => true,
-        'omitScriptNameInUrls' => true,
-        'securityKey' => getenv('CRAFTENV_SECURITY_KEY'),
-        'siteUrl' => getenv('CRAFTENV_SITE_URL'),
-        'useEmailAsUsername' => true,
-        'usePathInfo' => true,
-        // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
-        'aliases' => [
-            '@basePath' => getenv('CRAFTENV_BASE_PATH'),
-            '@baseUrl' => getenv('CRAFTENV_BASE_URL'),
-        ],
-        // Custom site-specific config settings
-        'custom' => [
-            'craftEnv' => CRAFT_ENVIRONMENT,
-            'staticAssetsVersion' => 1,
-        ]
+    // Craft config settings from .env variables
+    'aliases' => [
+        '@assetsUrl' => getenv('ASSETS_URL'),
+        '@cloudfrontUrl' => getenv('CLOUDFRONT_URL'),
+        '@web' => getenv('SITE_URL'),
+        '@webroot' => getenv('WEB_ROOT_PATH'),
     ],
-
-    // Live (production) environment
-    'live' => [
-        // Craft defined config settings
-        'allowUpdates' => false,
-        'backupOnUpdate' => false,
-        'devMode' => false,
-        'enableTemplateCaching' => true,
-        'isSystemLive' => true,
-        // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
-        'aliases' => [
-        ],
-        // Custom site-specific config settings
-        'custom' => [
-        ]
+    'allowUpdates' => (bool)getenv('ALLOW_UPDATES'),
+    'allowAdminChanges' => (bool)getenv('ALLOW_ADMIN_CHANGES'),
+    'backupOnUpdate' => (bool)getenv('BACKUP_ON_UPDATE'),
+    'devMode' => (bool)getenv('DEV_MODE'),
+    'enableTemplateCaching' => (bool)getenv('ENABLE_TEMPLATE_CACHING'),
+    'isSystemLive' => (bool)getenv('IS_SYSTEM_LIVE'),
+    'resourceBasePath' => getenv('WEB_ROOT_PATH').'/cpresources',
+    'runQueueAutomatically' => (bool)getenv('RUN_QUEUE_AUTOMATICALLY'),
+    'securityKey' => getenv('SECURITY_KEY'),
+    'siteUrl' => getenv('SITE_URL'),
+    // Craft config settings from constants
+    'cacheDuration' => false,
+    'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true,
     ],
-
-    // Staging (pre-production) environment
-    'staging' => [
-        // Craft defined config settings
-        'allowUpdates' => false,
-        'backupOnUpdate' => false,
-        'devMode' => false,
-        'enableTemplateCaching' => true,
-        'isSystemLive' => false,
-        // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
-        'aliases' => [
-        ],
-        // Custom site-specific config settings
-        'custom' => [
-        ]
-    ],
-
-    // Local (development) environment
-    'local' => [
-        // Craft defined config settings
-        'allowUpdates' => true,
-        'backupOnUpdate' => true,
-        'devMode' => true,
-        'enableTemplateCaching' => false,
-        'isSystemLive' => true,
-        // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
-        'aliases' => [
-        ],
-        // Custom site-specific config settings
-        'custom' => [
-            'staticAssetsVersion' => time(),
-        ]
-    ],
+    'defaultTokenDuration' => 'P2W',
+    'enableCsrfProtection' => true,
+    'errorTemplatePrefix' => 'errors/',
+    'generateTransformsBeforePageLoad' => true,
+    'maxCachedCloudImageSize' => 3000,
+    'maxUploadFileSize' => '100M',
+    'omitScriptNameInUrls' => true,
+    'useEmailAsUsername' => true,
+    'usePathInfo' => true,
+    'useProjectConfigFile' => true,
 ];

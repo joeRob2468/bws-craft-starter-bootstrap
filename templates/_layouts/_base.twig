@@ -12,8 +12,8 @@
 
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {%- minify -%}
-{% set baseUrl = alias('@baseUrl') ~ '/' %}
-{% set craftEnvironment = getenv('CRAFTENV_CRAFT_ENVIRONMENT') %}
+{% set baseUrl = alias('@web') ~ '/' %}
+{% set craftEnvironment = getenv('ENVIRONMENT') %}
 {% header "Link: <#{baseUrl}>; rel=dns-prefetch;,<#{baseUrl}>; rel=preconnect; crossorigin;" %}
 <!DOCTYPE html>
 {%- endminify -%}
@@ -60,7 +60,6 @@
 
     {# -- HTML Body -- #}
     <body {% if bodyClass is defined %}class="{{ bodyClass }}"{% endif %}>
-
         {% block body %}
         {% endblock %}
 

@@ -1,24 +1,22 @@
-# Craft 3 Scripts Environment
+#@IgnoreInspection BashAddShebang
+# Craft Scripts Defaults
 #
-# Local environmental config for nystudio107 Craft scripts
+# Default settings for Craft scripts
 #
 # @author    nystudio107
 # @copyright Copyright (c) 2017 nystudio107
 # @link      https://nystudio107.com/
 # @package   craft-scripts
-# @since     1.2.4
+# @since     1.2.2
 # @license   MIT
-#
-# This file should be renamed to '.env.sh' and it should reside in the
-# `scripts` directory.  Add '.env.sh' to your .gitignore.
 
 # -- GLOBAL settings --
 
 # What to prefix the database table names with
-GLOBAL_DB_TABLE_PREFIX=""
+GLOBAL_DB_TABLE_PREFIX="craft_"
 
 # The path of the `craft` folder, relative to the root path; paths should always have a trailing /
-GLOBAL_CRAFT_PATH="./"
+GLOBAL_CRAFT_PATH="craft/"
 
 # The maximum age of db backups in days; backups older than this will be automatically removed
 GLOBAL_DB_BACKUPS_MAX_AGE=90
@@ -29,8 +27,8 @@ GLOBAL_DB_DRIVER="mysql"
 # -- LOCAL settings --
 
 # Local path constants; paths should always have a trailing /
-LOCAL_ROOT_PATH="/var/www/"
-LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"web/assets/"
+LOCAL_ROOT_PATH="REPLACE_ME"
+LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"REPLACE_ME"
 
 # Local user & group that should own the Craft CMS install
 LOCAL_CHOWN_USER="admin"
@@ -39,8 +37,7 @@ LOCAL_CHOWN_GROUP="apache"
 # Local directories relative to LOCAL_ROOT_PATH that should be writeable by the $CHOWN_GROUP
 LOCAL_WRITEABLE_DIRS=(
                 "${GLOBAL_CRAFT_PATH}storage"
-                "web/cpresources"
-                "web/assets"
+                "public/assets"
                 )
 
 # Local asset directories relative to LOCAL_ASSETS_PATH that should be synched with remote assets
@@ -48,9 +45,10 @@ LOCAL_ASSETS_DIRS=(
                 ""
                 )
 
-# Craft-specific file directories relative to GLOBAL_CRAFT_PATH that should be synched with remote files
+# Craft-specific file directories relative to LOCAL_CRAFT_FILES_PATH that should be synched with remote files
 LOCAL_CRAFT_FILE_DIRS=(
                 "rebrand"
+                "userphotos"
                 )
 
 # Absolute paths to directories to back up, in addition to `LOCAL_ASSETS_DIRS` and `LOCAL_CRAFT_FILE_DIRS`
@@ -65,17 +63,13 @@ LOCAL_FASTCGI_CACHE_DIR=""
 # this Redis database when it is executed (say, on deploy)
 LOCAL_REDIS_DB_ID=""
 
-# Local Redis password; leave it empty ("") if no password is required. You'll probably only need this if you've set a
-# password for Redis yourself. It's disabled by default on Redis installations.
-LOCAL_REDIS_PASSWORD=""
-
 # Local database constants; default port for mysql is 3306, default port for postgres is 5432
-LOCAL_DB_NAME="default"
-LOCAL_DB_PASSWORD="secret"
-LOCAL_DB_USER="default"
-LOCAL_DB_HOST="mysql"
+LOCAL_DB_NAME="REPLACE_ME"
+LOCAL_DB_PASSWORD="REPLACE_ME"
+LOCAL_DB_USER="REPLACE_ME"
+LOCAL_DB_HOST="localhost"
 LOCAL_DB_PORT="3306"
-LOCAL_DB_SCHEMA=""
+LOCAL_DB_SCHEMA="public"
 
 # If you are using mysql 5.6.10 or later and you have `login-path` setup as per:
 # https://opensourcedbms.com/dbms/passwordless-authentication-using-mysql_config_editor-with-mysql-5-6/
@@ -91,7 +85,7 @@ LOCAL_PSQL_CMD="psql"
 LOCAL_PG_DUMP_CMD="pg_dump"
 
 # Local backups path; paths should always have a trailing /
-LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
+LOCAL_BACKUPS_PATH="/tmp/"
 
 # -- REMOTE settings --
 
@@ -99,12 +93,12 @@ LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
 REMOTE_SSH_LOGIN="REPLACE_ME"
 REMOTE_SSH_PORT="22"
 
-# Should we connect to the remote database server via ssh?
-REMOTE_DB_USING_SSH="yes"
-
 # Remote path constants; paths should always have a trailing /
 REMOTE_ROOT_PATH="REPLACE_ME"
 REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"REPLACE_ME"
+
+# Should we connect to the remote database server via ssh?
+REMOTE_DB_USING_SSH="yes"
 
 # Remote database constants; default port for mysql is 3306, default port for postgres is 5432
 REMOTE_DB_NAME="REPLACE_ME"
@@ -128,7 +122,7 @@ REMOTE_PSQL_CMD="psql"
 REMOTE_PG_DUMP_CMD="pg_dump"
 
 # Remote backups path; paths should always have a trailing /
-REMOTE_BACKUPS_PATH="REPLACE_ME"
+REMOTE_BACKUPS_PATH="/tmp/"
 
 # Remote Amazon S3 bucket name
 REMOTE_S3_BUCKET="REPLACE_ME"

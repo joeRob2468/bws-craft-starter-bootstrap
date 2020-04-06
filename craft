@@ -28,14 +28,9 @@ if (file_exists(CRAFT_BASE_PATH.'/.env')) {
     (new Dotenv\Dotenv(CRAFT_BASE_PATH))->load();
 }
 
-// Load the local craft3-multi-environment
-if (file_exists(CRAFT_BASE_PATH . DIRECTORY_SEPARATOR . '.env.php')) {
-    require_once CRAFT_BASE_PATH . DIRECTORY_SEPARATOR . '.env.php';
-}
-
 // Default environment
 if (!defined('CRAFT_ENVIRONMENT')) {
-    define('CRAFT_ENVIRONMENT', getenv('CRAFTENV_CRAFT_ENVIRONMENT'));
+    define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT'));
 }
 
 // Load and run Craft
