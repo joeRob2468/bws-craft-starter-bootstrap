@@ -56,7 +56,7 @@
         "webpackbar": "4.0.0"
     },
     "scripts": {
-        "start": "webpack --mode development --watch --watch-poll", 
+        "start": "webpack --mode development --watch", 
         "build": "webpack --mode production"
     },
     "bugs": {

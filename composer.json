@@ -64,7 +64,7 @@
     "post-install-cmd": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "@php -r \"file_exists('.env.sh') || copy('.env.sh.example', '.env.sh');\"",
-      "@php -r \"file_exists('./web/.htaccess.example') || copy('./web/.htaccess.example', './web/.htaccess');\"",
+      "@php -r \"file_exists('web/.htaccess') || copy('web/.htaccess.example', 'web/.htaccess');\"",
       "@php craft setup/welcome",
       "@php setup-script welcome"
     ]

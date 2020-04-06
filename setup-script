@@ -88,7 +88,7 @@ function welcomeCraft()
 
     outputString(PHP_EOL.'To set up your environment for theme development, run:', Console::FG_YELLOW);
     $script = './setup-script development';
-    outputString(PHP_EOL.'    '.$script, Console::FG_GREEN);
+    outputString(PHP_EOL.'    '.$script.PHP_EOL, Console::FG_GREEN);
 }
 
 /**

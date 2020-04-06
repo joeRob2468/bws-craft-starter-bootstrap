@@ -33230,7 +33230,7 @@ function xhrClient (request) {
 
 function nodeClient (request) {
 
-    var client = __webpack_require__(/*! got */ 1);
+    var client = __webpack_require__(/*! got */ 0);
 
     return new PromiseObj(function (resolve) {
 
