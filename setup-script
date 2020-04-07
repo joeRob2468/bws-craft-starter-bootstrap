@@ -37,7 +37,7 @@ const INSTALL_PLUGINS = [
 ];
 
 // Set path constants
-define('CRAFT_BASE_PATH', __DIR__);
+define('CRAFT_BASE_PATH', __DIR__.'/cms');
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');
 
 // Load Composer's autoloader
@@ -77,8 +77,8 @@ if (empty($argv[1])) {
  */
 function welcomeCraft()
 {
-    outputString(PHP_EOL.'To set up your Craft install, from your project directory, run:', Console::FG_YELLOW);
-    $script = './craft install';
+    outputString(PHP_EOL.'To set up your Craft install, FROM THE ROOT PROJECT DIRECTORY, run:', Console::FG_YELLOW);
+    $script = './cms/craft install';
     outputString(PHP_EOL.'    '.$script, Console::FG_GREEN);
 
     outputString(PHP_EOL.'Then to set up the Craft 3 CMS environment, run:', Console::FG_YELLOW);
@@ -123,7 +123,7 @@ function setupCraftDevelopment()
 function installPlugins()
 {
     outputString(PHP_EOL.'Installing plugins', Console::FG_YELLOW);
-    $installPluginCmd = './craft install/plugin ';
+    $installPluginCmd = './cms/craft install/plugin ';
     foreach (INSTALL_PLUGINS as $pluginHandle) {
         outputString('- installing plugin '.$pluginHandle);
         executeShellCommand($installPluginCmd . $pluginHandle);

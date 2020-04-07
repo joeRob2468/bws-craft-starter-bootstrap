@@ -15,22 +15,11 @@ $dark-heading-copy-color: #FFFFFF;
 /* Container Margins */
 $container-small-margin: 7.5%; // width: 85%;
 
-$fixed-nav-size: 4.5rem;
-$mobile-nav-width: 15rem;
-
 /* Layout variables */
 $base-font-size: 19px;
-$page-container-spacing: 1rem;
 $small-spacing: 4rem;
 $medium-spacing: 7rem;
 $large-spacing: 10rem;
-
-$numbered-heading-offset: 2.5rem;
-
-/* Transition variables */
-$fast-transition-speed: 400ms;
-$normal-transition-speed: 750ms;
-$slow-transition-speed: 1200ms;
 
 // CSS Easing functions - https://github.com/KingScooty/sass-easing
 @import "~awesome-sass-easing/_sass-easing.scss";

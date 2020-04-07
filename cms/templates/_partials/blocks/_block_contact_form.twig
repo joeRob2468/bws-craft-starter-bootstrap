@@ -1,0 +1,40 @@
+{# Contact Form Block #}
+{% import '_macros/_lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set rtfAdditionalContent = block['rtfAdditionalContent'] is defined ? block.rtfAdditionalContent : '' %}
+
+<section class="section is-medium section-contact-form block-{{ block.type.handle }} animatable">
+    <div class="page-container">
+        {% if heading|length %}<div class="form-header"><h1>{{ heading|typogrify(true) }}</h1></div>{% endif %}
+        <div class="contact-form-container">
+            <form class="contact-form" method="post" action="/" @submit.prevent="onSubmit" novalidate>
+                {{ csrfInput() }}
+                <input type="hidden" name="action" value="contact-form/send">
+                <div class="field-group">
+                    <div class="field"><input class="input name-input" name="fromName" type="text" placeholder="What is your name?" v-model="name" v-validate="'required'" required></div>
+                    <div class="field"><input class="input email-input" name="fromEmail" type="email" placeholder="What is your email address?" v-model="email" v-validate="'required|email'" required></div>
+                </div>
+                <div class="field-group">
+                    <div class="field"><input class="input phone-input" name="message[Phone]" type="tel" placeholder="What is your phone number?" v-model="phone" v-validate="'required'" required></div>
+                    <div class="field"><input class="input company-input" name="message[Organization]" type="text" placeholder="What is your organization?" v-model="organization" v-validate="'required'" required></div>
+                </div>
+
+                <div class="field">
+                    <textarea class="input message-input" name="message[body]" rows="4" placeholder="What would you like to tell us?" v-model="message" v-validate="'required'" required></textarea>
+                </div>
+
+                <p class="help error" v-if="ajaxError" v-cloak>
+                    Sorry, something went wrong, and we couldn't send your message. Please email us at <a href="mailto:{{ siteSettings.primaryContactEmail }}">{{ siteSettings.primaryContactEmail }}</a> directly.
+                </p>
+                {# <p class="help" v-if="submitted" v-cloak>
+                    Thanks for getting in touch! We'll get back to you shortly with more details. 
+                </p> #}
+                <div class="buttons">
+                    <button class="button primary" :class="{ 'submitting': submitting, 'submitted': submitted}" type="submit" :disabled="submitting">${buttonLabel}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

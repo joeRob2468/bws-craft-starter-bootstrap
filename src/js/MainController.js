@@ -3,7 +3,7 @@ import ScrollMonitor from 'scrollmonitor';
 // NOTE: Foundation scripts break IE11 and down, so don't use them.
 
 import NavigationController from './NavigationController';
-import ContactFormController from './ContactFormController';
+//import ContactFormController from './ContactFormController';
 
 class MainController {
     // main class initialization - runs once on site load

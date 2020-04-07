@@ -96,7 +96,7 @@ a.logo {
     margin-right: 0.7rem;
   }
 
-  transition: transform $fast-transition-speed $easeInOutCubic, background-color $fast-transition-speed $easeInOutCubic, border $fast-transition-speed $easeInOutCubic, color $fast-transition-speed $easeInOutCubic;
+  transition: transform 200ms ease, background-color 200ms ease, border 200ms ease, color 200ms ease;
 
   &:hover {
     background: darken($primary-accent, 20);
@@ -143,7 +143,7 @@ a.logo {
 
   margin-top: 0.8rem;
   margin-bottom: 0.8rem + 0.5rem;
-  transition: transform $fast-transition-speed $easeInOutCubic, opacity $fast-transition-speed $easeInOutCubic;
+  transition: transform 200ms ease, opacity 200ms ease;
 
   &:hover {
     opacity: 0.6;

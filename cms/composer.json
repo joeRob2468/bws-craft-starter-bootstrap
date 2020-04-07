@@ -1,0 +1,72 @@
+{
+  "name": "nystudio107/craft",
+  "description": "nystudio107 Craft 3 CMS scaffolding project",
+  "version": "1.0.15",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "license": "MIT",
+  "homepage": "https://craftcms.com/",
+  "type": "project",
+  "support": {
+    "email": "info@nystudio107.com",
+    "issues": "https://github.com/nystudio107/craft/issues",
+    "source": "https://github.com/nystudio107/craft",
+    "docs": "https://github.com/nystudio107/craft"
+  },
+  "minimum-stability": "RC",
+  "require": {
+    "aelvan/imager": "v2.4.0",
+    "barrelstrength/sprout-fields": "3.6.1",
+    "craftcms/cms": "3.4.6.1",
+    "craftcms/contact-form": "2.2.6",
+    "craftcms/feed-me": "^4.1",
+    "craftcms/mailgun": "^1.4",
+    "craftcms/redactor": "2.6.0.1",
+    "ether/logs": "3.0.3",
+    "ether/seo": "3.6.3",
+    "jalendport/craft-queuemanager": "^1.2",
+    "marionnewlevant/twig-perversion": "^2.0",
+    "mmikkel/child-me": "1.0.6",
+    "mmikkel/cp-field-inspect": "1.1.2",
+    "mmikkel/retcon": "^2.0",
+    "nystudio107/craft-minify": "^1.2.5",
+    "nystudio107/craft-routemap": "^1.0.0",
+    "nystudio107/craft-scripts": "^1.2.4",
+    "nystudio107/craft-typogrify": "^1.1",
+    "ostark/craft-async-queue": "^2.0",
+    "rias/craft-scout": "2.1.4",
+    "sebastianlenz/linkfield": "1.0.20",
+    "solspace/craft-freeform": "3.6.3",
+    "spicyweb/craft-embedded-assets": "^2.0",
+    "spicyweb/craft-neo": "2.6.1",
+    "unionco/calendarize": "^1.2",
+    "unionco/craft-related-entry-types": "^0.2.2",
+    "verbb/expanded-singles": "1.0.7",
+    "verbb/field-manager": "2.1.1",
+    "vlucas/phpdotenv": "^2.4.0",
+    "yiisoft/yii2-redis": "^2.0.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\sitemodule\\": "modules/sitemodule/src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "php": "7.3"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "@php -r \"file_exists('../.env.sh') || copy('../.env.sh.example', '../.env.sh');\"",
+      "@php -r \"file_exists('web/.htaccess') || copy('web/.htaccess.example', 'web/.htaccess');\"",
+      "@php craft setup/welcome",
+      "@php ../setup-script welcome"
+    ]
+  }
+}

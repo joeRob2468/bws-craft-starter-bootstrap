@@ -1,0 +1,98 @@
+dateModified: 1586194950
+email:
+  fromEmail: hello@boyerwebstudios.com
+  fromName: 'BWS Craft Bootstrap'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  8fba94f5-6d8c-4344-9c60-61b9b1b52e17:
+    name: Common
+plugins:
+  async-queue:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  calendarize:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.3.0
+  child-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  logs:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  neo:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  related-entry-types:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.1
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+siteGroups:
+  9c9cedf8-9d96-4d16-8615-c7b9ba00c0fc:
+    name: 'BWS Craft Bootstrap'
+sites:
+  0cc785f8-a672-4448-9841-1c39b72f75bd:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'BWS Craft Bootstrap'
+    primary: true
+    siteGroup: 9c9cedf8-9d96-4d16-8615-c7b9ba00c0fc
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'BWS Craft Bootstrap'
+  schemaVersion: 3.4.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

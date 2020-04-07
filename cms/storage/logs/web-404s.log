@@ -1,0 +1,487 @@
+2020-04-07 10:42:24 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:42:24 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:42:24 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT `value`
+FROM `projectconfig`
+WHERE `path`='dateModified'
+LIMIT 1
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT `value`
+FROM `projectconfig`
+WHERE `path`='dateModified'
+LIMIT 1
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT `value`
+FROM `projectconfig`
+WHERE `path`='dateModified'
+LIMIT 1
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\Module::getModule] Loading module: site-module
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][modules\sitemodule\SiteModule::init] Site module loaded
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\Application::bootstrap] Bootstrap with modules\sitemodule\SiteModule
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2020-04-07 10:42:25 [-][-][ja05cgnnvliun6311o2v4umutv][info][unionco\calendarize\Calendarize::init] Calendarize plugin loaded
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][unionco\relatedentrytypes\RelatedEntryTypesPlugin::init] Related Entry Types plugin loaded
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][nystudio107\minify\Minify::init] Minify plugin loaded
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT EXISTS(SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='fieldlabels')
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='fieldlabels')
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT EXISTS(SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='fieldlabels')
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][nystudio107\typogrify\Typogrify::init] Typogrify plugin loaded
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\web\Session::open] Session started
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT `path`
+FROM `resourcepaths`
+WHERE `hash`='5b5b998a'
+LIMIT 1
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT `path`
+FROM `resourcepaths`
+WHERE `hash`='5b5b998a'
+LIMIT 1
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT `path`
+FROM `resourcepaths`
+WHERE `hash`='5b5b998a'
+LIMIT 1
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `resourcepaths`
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `resourcepaths`
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `resourcepaths`
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'resourcepaths' AND kcu.table_name = 'resourcepaths'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'resourcepaths' AND kcu.table_name = 'resourcepaths'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'resourcepaths' AND kcu.table_name = 'resourcepaths'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'resourcepaths' AND kcu.table_name = 'resourcepaths'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'resourcepaths' AND kcu.table_name = 'resourcepaths'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'resourcepaths' AND kcu.table_name = 'resourcepaths'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::execute] INSERT INTO `resourcepaths` (`path`, `hash`) VALUES ('@lib/axios', '5b5b998a') ON DUPLICATE KEY UPDATE `path`='@lib/axios'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::execute] INSERT INTO `resourcepaths` (`path`, `hash`) VALUES ('@lib/axios', '5b5b998a') ON DUPLICATE KEY UPDATE `path`='@lib/axios'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::execute] INSERT INTO `resourcepaths` (`path`, `hash`) VALUES ('@lib/axios', '5b5b998a') ON DUPLICATE KEY UPDATE `path`='@lib/axios'
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][info][yii\db\Command::query] SELECT *
+FROM `seo_redirects`
+WHERE `siteId` IS NULL OR `siteId` = 1
+ORDER BY `dateCreated`, `siteId`
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile begin][yii\db\Command::query] SELECT *
+FROM `seo_redirects`
+WHERE `siteId` IS NULL OR `siteId` = 1
+ORDER BY `dateCreated`, `siteId`
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][profile end][yii\db\Command::query] SELECT *
+FROM `seo_redirects`
+WHERE `siteId` IS NULL OR `siteId` = 1
+ORDER BY `dateCreated`, `siteId`
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: axios.min.map does not exist. in /var/www/cms/vendor/craftcms/cms/src/web/Application.php:477
+Stack trace:
+#0 /var/www/cms/vendor/craftcms/cms/src/web/Application.php(161): craft\web\Application->_processResourceRequest(Object(craft\web\Request))
+#1 /var/www/cms/vendor/yiisoft/yii2/base/Application.php(386): craft\web\Application->handleRequest(Object(craft\web\Request))
+#2 /var/www/cms/web/index.php(21): yii\base\Application->run()
+#3 {main}
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\View::renderFile] Rendering view file: /var/www/cms/vendor/yiisoft/yii2/views/errorHandler/exception.php
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\View::renderFile] Rendering view file: /var/www/cms/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\View::renderFile] Rendering view file: /var/www/cms/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\View::renderFile] Rendering view file: /var/www/cms/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2020-04-07 10:42:26 [-][-][ja05cgnnvliun6311o2v4umutv][trace][yii\base\View::renderFile] Rendering view file: /var/www/cms/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2020-04-07 10:42:24 [-][-][ja05cgnnvliun6311o2v4umutv][info][application] $_GET = [
+    'p' => 'cpresources/5b5b998a/axios.min.map'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '1031b8c41dfff97a311a7ac99863bdc5_username' => '987adcf8928b533e413bdad0577e14b017f8811f6176308e582484cfa99c98e9a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_username\";i:1;s:5:\"admin\";}'
+    'CraftSessionId' => 'ja05cgnnvliun6311o2v4umutv'
+    '1031b8c41dfff97a311a7ac99863bdc5_identity' => '85e2bf31920dd02214ccda110e894834ad7cf50d3d58382a7f5becf4a352c8e8a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_identity\";i:1;s:247:\"[\"1\",\"[\\\"K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m\\\",null,\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\\\"]\",1209600]\";}'
+    'CRAFT_CSRF_TOKEN' => '•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    'io' => 'q2gLeoWVwiQ5QEQJAAAA'
+]
+
+$_SESSION = [
+    'bd62416aa8538ede709019a5e113eea5__flash' => []
+    '1031b8c41dfff97a311a7ac99863bdc5__token' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    '1031b8c41dfff97a311a7ac99863bdc5__id' => '1'
+    '1031b8c41dfff97a311a7ac99863bdc5__expire' => 1586284940
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'OCI_HOME' => '/opt/oracle/instantclient_12_1'
+    'HOSTNAME' => 'efd49a6d24e1'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'LD_LIBRARY_PATH' => '/opt/oracle/instantclient_12_1'
+    'OCI_LIB_DIR' => '/opt/oracle/instantclient_12_1'
+    'HOME' => '/var/www'
+    'LARADOCK_PHALCON_VERSION' => '3.4.5'
+    'PHP_IDE_CONFIG' => 'serverName=laradock'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_MD5' => ''
+    'DOCKER_TLS_VERIFY' => '1'
+    'PHP_VERSION' => '7.3.13'
+    'PGID' => '1000'
+    'GPG_KEYS' => 'CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.3.13.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://www.php.net/get/php-7.3.13.tar.xz/from/this/mirror'
+    'DOCKER_CERT_PATH' => '/certs/client'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'OCI_VERSION' => '12'
+    'FAKETIME' => '-0'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PUID' => '1000'
+    'DOCKER_TLS_CERTDIR' => '/certs'
+    'DOCKER_HOST' => 'tcp://docker-in-docker:2376'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'OCI_INCLUDE_DIR' => '/opt/oracle/instantclient_12_1/sdk/include'
+    'LC_ALL' => 'POSIX'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '57ac55fe442d2da650abeb9e6fa161bd3a98ba6528c029f076f8bba43dd5c228'
+    'DB_1_ENV_MYSQL_PASSWORD' => ''
+    'DB_1_ENV_MYSQL_USER' => ''
+    'DB_1_ENV_MYSQL_DATABASE' => ''
+    'USER' => 'www-data'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/cpresources/5b5b998a/axios.min.map'
+    'QUERY_STRING' => 'p=cpresources/5b5b998a/axios.min.map'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'p=cpresources/5b5b998a/axios.min.map'
+    'REDIRECT_URL' => '/cpresources/5b5b998a/axios.min.map'
+    'REMOTE_PORT' => '51294'
+    'SCRIPT_FILENAME' => '/var/www/cms/web/index.php'
+    'SERVER_ADMIN' => '[no address given]'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/cms/web/'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/cms/web/'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'SERVER_NAME' => 'bws-bootstrap.test'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at bws-bootstrap.test Port 80</address>
+'
+    'HTTP_COOKIE' => '1031b8c41dfff97a311a7ac99863bdc5_username=987adcf8928b533e413bdad0577e14b017f8811f6176308e582484cfa99c98e9a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_username%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3B%7D; CraftSessionId=ja05cgnnvliun6311o2v4umutv; 1031b8c41dfff97a311a7ac99863bdc5_identity=85e2bf31920dd02214ccda110e894834ad7cf50d3d58382a7f5becf4a352c8e8a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_identity%22%3Bi%3A1%3Bs%3A247%3A%22%5B%221%22%2C%22%5B%5C%22K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m%5C%22%2Cnull%2C%5C%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F80.0.3987.149+Safari%2F537.36%5C%22%5D%22%2C1209600%5D%22%3B%7D; CRAFT_CSRF_TOKEN=e9d906556f3fbf589b095b6576c81c3f0ce4aebf3973ffd8da4f1245b7a7e505a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A208%3A%22RHCumo-TiXjpfS_Db52uP0jzs8FnbSqyTedu7CFw%7C5a73af65d92d93b1fe1b7a33d94bcd93abe5332b7b2e83a6d61213d33d06e236RHCumo-TiXjpfS_Db52uP0jzs8FnbSqyTedu7CFw%7C1%7C%242y%2413%240Ubk.mMYiQACMuLOGrn9r.Va1Rudrbaon7NiqF74s5Bs89a1TrqR6%22%3B%7D; io=q2gLeoWVwiQ5QEQJAAAA'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'bws-bootstrap.test'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586281342.9687
+    'REQUEST_TIME' => 1586281342
+    'ALLOW_UPDATES' => '1'
+    'ALLOW_ADMIN_CHANGES' => '1'
+    'BACKUP_ON_UPDATE' => '0'
+    'DEV_MODE' => '1'
+    'ENABLE_TEMPLATE_CACHING' => '0'
+    'ENVIRONMENT' => 'local'
+    'IS_SYSTEM_LIVE' => '1'
+    'RUN_QUEUE_AUTOMATICALLY' => '1'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'mysql'
+    'DB_USER' => 'default'
+    'DB_PASSWORD' => '••••••'
+    'DB_DATABASE' => 'default'
+    'DB_SCHEMA' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_PORT' => '3306'
+    'ASSETS_URL' => 'http://bws-bootstrap.test/'
+    'SITE_URL' => 'http://bws-bootstrap.test/'
+    'WEB_ROOT_PATH' => '/var/www/cms/web'
+    'LICENSE_KEY' => ''
+    'PLUGIN_IMAGEOPTIMIZE_LICENSE' => ''
+    'PLUGIN_RETOUR_LICENSE' => ''
+    'PLUGIN_SEOMATIC_LICENSE' => ''
+    'PLUGIN_TRANSCODER_LICENSE' => ''
+    'PLUGIN_WEBPERF_LICENSE' => ''
+    'S3_KEY_ID' => '••••••••••'
+    'S3_SECRET' => '••••••••••'
+    'S3_BUCKET' => 'devmode-bucket'
+    'S3_REGION' => 'us-east-2'
+    'S3_SUBFOLDER' => ''
+    'CLOUDFRONT_URL' => ''
+    'CLOUDFRONT_DISTRIBUTION_ID' => ''
+    'CLOUDFRONT_PATH_PREFIX' => ''
+    'REDIS_ENABLED' => 'false'
+    'REDIS_HOSTNAME' => 'REPLACE_ME'
+    'REDIS_PORT' => '6379'
+    'REDIS_DEFAULT_DB' => '0'
+    'REDIS_CRAFT_DB' => '3'
+    'DISQUS_PUBLIC_KEY' => ''
+    'DISQUS_SECRET_KEY' => ''
+    'GA_TRACKING_ID' => 'UA-69117511-5'
+    'FAST_CGI_CACHE_PATH' => ''
+    'DB_DSN' => 'mysql:host=mysql;port=3306;dbname=default;'
+    'DEFAULT_SITE_URL' => 'http://127.0.0.1/'
+]

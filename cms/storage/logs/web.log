@@ -1,0 +1,652 @@
+2020-04-07 10:50:05 [-][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:50:05 [-][1][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:50:05 [-][1][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:50:05 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2020-04-07 10:50:05 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2020-04-07 10:50:05 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2020-04-07 10:50:05 [-][1][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2020-04-07 10:50:05 [-][1][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2020-04-07 10:50:05 [-][1][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2020-04-07 10:50:05 [-][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:50:05 [-][1][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:50:05 [-][1][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=mysql;dbname=default;port=3306
+2020-04-07 10:50:05 [-][1][-][info][yii\db\Command::query] SELECT `value`
+FROM `projectconfig`
+WHERE `path`='dateModified'
+LIMIT 1
+2020-04-07 10:50:05 [-][1][-][profile begin][yii\db\Command::query] SELECT `value`
+FROM `projectconfig`
+WHERE `path`='dateModified'
+LIMIT 1
+2020-04-07 10:50:05 [-][1][-][profile end][yii\db\Command::query] SELECT `value`
+FROM `projectconfig`
+WHERE `path`='dateModified'
+LIMIT 1
+2020-04-07 10:50:05 [-][1][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2020-04-07 10:50:05 [-][1][-][trace][yii\base\Module::getModule] Loading module: site-module
+2020-04-07 10:50:05 [-][1][-][info][modules\sitemodule\SiteModule::init] Site module loaded
+2020-04-07 10:50:05 [-][1][-][trace][yii\base\Application::bootstrap] Bootstrap with modules\sitemodule\SiteModule
+2020-04-07 10:50:05 [-][1][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2020-04-07 10:50:05 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2020-04-07 10:50:05 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2020-04-07 10:50:05 [-][1][-][info][unionco\calendarize\Calendarize::init] Calendarize plugin loaded
+2020-04-07 10:50:06 [-][1][-][info][unionco\relatedentrytypes\RelatedEntryTypesPlugin::init] Related Entry Types plugin loaded
+2020-04-07 10:50:06 [-][1][-][info][nystudio107\minify\Minify::init] Minify plugin loaded
+2020-04-07 10:50:06 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='fieldlabels')
+2020-04-07 10:50:06 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='fieldlabels')
+2020-04-07 10:50:06 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='fieldlabels')
+2020-04-07 10:50:06 [-][1][-][info][nystudio107\typogrify\Typogrify::init] Typogrify plugin loaded
+2020-04-07 10:50:06 [-][1][-][info][yii\web\Session::open] Session started
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getTokenRoute] [
+    'rule' => 'Token',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`type`
+FROM `elements` `elements`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL) AND ((`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)) AND (`elements_sites`.`uri`='__home__') AND ((`elements_sites`.`enabled`=TRUE) AND (`elements`.`enabled`=TRUE) AND (`elements`.`archived`=FALSE))
+LIMIT 1
+2020-04-07 10:50:06 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`type`
+FROM `elements` `elements`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL) AND ((`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)) AND (`elements_sites`.`uri`='__home__') AND ((`elements_sites`.`enabled`=TRUE) AND (`elements`.`enabled`=TRUE) AND (`elements`.`archived`=FALSE))
+LIMIT 1
+2020-04-07 10:50:06 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`type`
+FROM `elements` `elements`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL) AND ((`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)) AND (`elements_sites`.`uri`='__home__') AND ((`elements_sites`.`enabled`=TRUE) AND (`elements`.`enabled`=TRUE) AND (`elements`.`archived`=FALSE))
+LIMIT 1
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getMatchedElementRoute] [
+    'rule' => 'Element URI: ',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: sitemap.xml',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: sitemap_<section:\\w*>_<id:\\d*>_<page:\\d*>.xml',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: sitemap_custom.xml',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: robots.txt',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\UrlManager::_getTemplateRoute] [
+    'rule' => 'Template: ',
+    'match' => true,
+    'parent' => null,
+]
+2020-04-07 10:50:06 [-][1][-][trace][yii\web\Application::handleRequest] Route requested: 'templates/render'
+2020-04-07 10:50:06 [-][1][-][trace][yii\base\Controller::runAction] Route to run: templates/render
+2020-04-07 10:50:06 [-][1][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\TemplatesController::actionRender()
+2020-04-07 10:50:06 [-][1][-][trace][craft\web\View::renderTemplate] Rendering template: 
+2020-04-07 10:50:06 [-][1][-][profile begin][craft\web\twig\Environment::compileSource] 
+2020-04-07 10:50:07 [-][1][-][profile end][craft\web\twig\Environment::compileSource] 
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT `id`
+FROM `sessions`
+WHERE (`token`='K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m') AND (`userId`='1')
+LIMIT 1
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`
+FROM `sessions`
+WHERE (`token`='K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m') AND (`userId`='1')
+LIMIT 1
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT `id`
+FROM `sessions`
+WHERE (`token`='K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m') AND (`userId`='1')
+LIMIT 1
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `sessions`
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `sessions`
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `sessions`
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'sessions' AND kcu.table_name = 'sessions'
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'sessions' AND kcu.table_name = 'sessions'
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'sessions' AND kcu.table_name = 'sessions'
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'sessions' AND kcu.table_name = 'sessions'
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'sessions' AND kcu.table_name = 'sessions'
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'sessions' AND kcu.table_name = 'sessions'
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::execute] UPDATE `sessions` SET `dateUpdated`='2020-04-07 17:50:07' WHERE `id`='6'
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `sessions` SET `dateUpdated`='2020-04-07 17:50:07' WHERE `id`='6'
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::execute] UPDATE `sessions` SET `dateUpdated`='2020-04-07 17:50:07' WHERE `id`='6'
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT 1
+FROM `sites`
+LIMIT 2) `x`
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT 1
+FROM `sites`
+LIMIT 2) `x`
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT 1
+FROM `sites`
+LIMIT 2) `x`
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `elements`
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `elements`
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `elements`
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'elements' AND kcu.table_name = 'elements'
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'elements' AND kcu.table_name = 'elements'
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'elements' AND kcu.table_name = 'elements'
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'elements' AND kcu.table_name = 'elements'
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'elements' AND kcu.table_name = 'elements'
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'elements' AND kcu.table_name = 'elements'
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`unverifiedEmail`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`unverifiedEmail`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`unverifiedEmail`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2020-04-07 10:50:07 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `globalsets`.`name`, `globalsets`.`handle`, `globalsets`.`uid`, `content`.`id` AS `contentId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `globalsets` `globalsets` ON `globalsets`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements_sites`.`enabled`=TRUE) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `globalsets`.`name`) `subquery`
+INNER JOIN `globalsets` `globalsets` ON `globalsets`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `globalsets`.`name`
+2020-04-07 10:50:07 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `globalsets`.`name`, `globalsets`.`handle`, `globalsets`.`uid`, `content`.`id` AS `contentId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `globalsets` `globalsets` ON `globalsets`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements_sites`.`enabled`=TRUE) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `globalsets`.`name`) `subquery`
+INNER JOIN `globalsets` `globalsets` ON `globalsets`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `globalsets`.`name`
+2020-04-07 10:50:07 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `globalsets`.`name`, `globalsets`.`handle`, `globalsets`.`uid`, `content`.`id` AS `contentId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `globalsets` `globalsets` ON `globalsets`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements_sites`.`enabled`=TRUE) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `globalsets`.`name`) `subquery`
+INNER JOIN `globalsets` `globalsets` ON `globalsets`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `globalsets`.`name`
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: 
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: _layouts/_layout.twig
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: _layouts/_base
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render block: _head_links
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render block: _head_links
+2020-04-07 10:50:07 [-][1][-][trace][craft\web\View::renderTemplate] Rendering template: seo/_seo/meta
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: seo/_seo/meta
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: __string_template__4023023c12a704865a17a8b694f331f6509c4ff68c46c07dc587e96e674b57e8
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render template: __string_template__4023023c12a704865a17a8b694f331f6509c4ff68c46c07dc587e96e674b57e8
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render template: seo/_seo/meta
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: _partials/global/_global_header.twig
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render template: _partials/global/_global_header.twig
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render block: _inline_css
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render block: _inline_css
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render block: _head_js
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render block: _head_js
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render block: body
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: _partials/components/_page_revealer.twig
+2020-04-07 10:50:07 [-][1][-][profile end][Twig template] render template: _partials/components/_page_revealer.twig
+2020-04-07 10:50:07 [-][1][-][profile begin][Twig template] render template: _partials/components/_header.twig
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render template: _partials/components/_navbar.twig
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render template: _partials/components/_logo.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _partials/components/_logo.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _partials/components/_navbar.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _partials/components/_header.twig
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render block: content
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render block: content
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render block: subcontent
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render block: subcontent
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render template: _partials/components/_footer.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _partials/components/_footer.twig
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render template: _partials/global/_global_footer.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _partials/global/_global_footer.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render block: body
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render block: _footer_js
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render block: _footer_js
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render block: _inline_js
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render block: _inline_js
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _layouts/_base
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: _layouts/_layout.twig
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: 
+2020-04-07 10:50:08 [-][1][-][trace][craft\web\UrlManager::_getTokenRoute] [
+    'rule' => 'Token',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:08 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: sitemap.xml',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:08 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: sitemap_<section:\\w*>_<id:\\d*>_<page:\\d*>.xml',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:08 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: sitemap_custom.xml',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:08 [-][1][-][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: robots.txt',
+    'match' => false,
+    'parent' => null,
+]
+2020-04-07 10:50:08 [-][1][-][trace][craft\web\UrlManager::_getTemplateRoute] [
+    'rule' => 'Template: ',
+    'match' => true,
+    'parent' => null,
+]
+2020-04-07 10:50:08 [-][1][-][profile begin][Twig template] render template: __string_template__0fe28675f159257946bb88c6315e06b2988bab989f3cacd71d7546eaf12d1b44
+2020-04-07 10:50:08 [-][1][-][profile end][Twig template] render template: __string_template__0fe28675f159257946bb88c6315e06b2988bab989f3cacd71d7546eaf12d1b44
+2020-04-07 10:50:04 [-][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '1031b8c41dfff97a311a7ac99863bdc5_username' => '987adcf8928b533e413bdad0577e14b017f8811f6176308e582484cfa99c98e9a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_username\";i:1;s:5:\"admin\";}'
+    'CraftSessionId' => 'ja05cgnnvliun6311o2v4umutv'
+    '1031b8c41dfff97a311a7ac99863bdc5_identity' => '85e2bf31920dd02214ccda110e894834ad7cf50d3d58382a7f5becf4a352c8e8a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_identity\";i:1;s:247:\"[\"1\",\"[\\\"K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m\\\",null,\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\\\"]\",1209600]\";}'
+    'CRAFT_CSRF_TOKEN' => '•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    'io' => 'iKy7EepkTqvgc-tbAAAB'
+]
+
+$_SESSION = [
+    'bd62416aa8538ede709019a5e113eea5__flash' => []
+    '1031b8c41dfff97a311a7ac99863bdc5__token' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    '1031b8c41dfff97a311a7ac99863bdc5__id' => '1'
+    '1031b8c41dfff97a311a7ac99863bdc5__expire' => 1586285407
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'OCI_HOME' => '/opt/oracle/instantclient_12_1'
+    'HOSTNAME' => 'efd49a6d24e1'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'LD_LIBRARY_PATH' => '/opt/oracle/instantclient_12_1'
+    'OCI_LIB_DIR' => '/opt/oracle/instantclient_12_1'
+    'HOME' => '/var/www'
+    'LARADOCK_PHALCON_VERSION' => '3.4.5'
+    'PHP_IDE_CONFIG' => 'serverName=laradock'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_MD5' => ''
+    'DOCKER_TLS_VERIFY' => '1'
+    'PHP_VERSION' => '7.3.13'
+    'PGID' => '1000'
+    'GPG_KEYS' => 'CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.3.13.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://www.php.net/get/php-7.3.13.tar.xz/from/this/mirror'
+    'DOCKER_CERT_PATH' => '/certs/client'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'OCI_VERSION' => '12'
+    'FAKETIME' => '-0'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PUID' => '1000'
+    'DOCKER_TLS_CERTDIR' => '/certs'
+    'DOCKER_HOST' => 'tcp://docker-in-docker:2376'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'OCI_INCLUDE_DIR' => '/opt/oracle/instantclient_12_1/sdk/include'
+    'LC_ALL' => 'POSIX'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '57ac55fe442d2da650abeb9e6fa161bd3a98ba6528c029f076f8bba43dd5c228'
+    'DB_1_ENV_MYSQL_PASSWORD' => ''
+    'DB_1_ENV_MYSQL_USER' => ''
+    'DB_1_ENV_MYSQL_DATABASE' => ''
+    'USER' => 'www-data'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51604'
+    'SCRIPT_FILENAME' => '/var/www/cms/web/index.php'
+    'SERVER_ADMIN' => '[no address given]'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/cms/web/'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/cms/web/'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'SERVER_NAME' => 'bws-bootstrap.test'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at bws-bootstrap.test Port 80</address>
+'
+    'HTTP_COOKIE' => '1031b8c41dfff97a311a7ac99863bdc5_username=987adcf8928b533e413bdad0577e14b017f8811f6176308e582484cfa99c98e9a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_username%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3B%7D; CraftSessionId=ja05cgnnvliun6311o2v4umutv; 1031b8c41dfff97a311a7ac99863bdc5_identity=85e2bf31920dd02214ccda110e894834ad7cf50d3d58382a7f5becf4a352c8e8a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_identity%22%3Bi%3A1%3Bs%3A247%3A%22%5B%221%22%2C%22%5B%5C%22K_spzB4uvARh6Zh1m-B7zMsOFeM63sjtmKUtc0d0oLz7u0jDTKiIEQ3uu0BRvOzhsAybNSHY8VmOleA_mU59VW8We_Au9Gsq8C-m%5C%22%2Cnull%2C%5C%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F80.0.3987.149+Safari%2F537.36%5C%22%5D%22%2C1209600%5D%22%3B%7D; CRAFT_CSRF_TOKEN=e9d906556f3fbf589b095b6576c81c3f0ce4aebf3973ffd8da4f1245b7a7e505a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A208%3A%22RHCumo-TiXjpfS_Db52uP0jzs8FnbSqyTedu7CFw%7C5a73af65d92d93b1fe1b7a33d94bcd93abe5332b7b2e83a6d61213d33d06e236RHCumo-TiXjpfS_Db52uP0jzs8FnbSqyTedu7CFw%7C1%7C%242y%2413%240Ubk.mMYiQACMuLOGrn9r.Va1Rudrbaon7NiqF74s5Bs89a1TrqR6%22%3B%7D; io=iKy7EepkTqvgc-tbAAAB'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://bws-bootstrap.test/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'bws-bootstrap.test'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586281803.6074
+    'REQUEST_TIME' => 1586281803
+    'ALLOW_UPDATES' => '1'
+    'ALLOW_ADMIN_CHANGES' => '1'
+    'BACKUP_ON_UPDATE' => '0'
+    'DEV_MODE' => '1'
+    'ENABLE_TEMPLATE_CACHING' => '0'
+    'ENVIRONMENT' => 'local'
+    'IS_SYSTEM_LIVE' => '1'
+    'RUN_QUEUE_AUTOMATICALLY' => '1'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'mysql'
+    'DB_USER' => 'default'
+    'DB_PASSWORD' => '••••••'
+    'DB_DATABASE' => 'default'
+    'DB_SCHEMA' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_PORT' => '3306'
+    'ASSETS_URL' => 'http://bws-bootstrap.test/'
+    'SITE_URL' => 'http://bws-bootstrap.test/'
+    'WEB_ROOT_PATH' => '/var/www/cms/web'
+    'LICENSE_KEY' => ''
+    'PLUGIN_IMAGEOPTIMIZE_LICENSE' => ''
+    'PLUGIN_RETOUR_LICENSE' => ''
+    'PLUGIN_SEOMATIC_LICENSE' => ''
+    'PLUGIN_TRANSCODER_LICENSE' => ''
+    'PLUGIN_WEBPERF_LICENSE' => ''
+    'S3_KEY_ID' => '••••••••••'
+    'S3_SECRET' => '••••••••••'
+    'S3_BUCKET' => 'devmode-bucket'
+    'S3_REGION' => 'us-east-2'
+    'S3_SUBFOLDER' => ''
+    'CLOUDFRONT_URL' => ''
+    'CLOUDFRONT_DISTRIBUTION_ID' => ''
+    'CLOUDFRONT_PATH_PREFIX' => ''
+    'REDIS_ENABLED' => 'false'
+    'REDIS_HOSTNAME' => 'REPLACE_ME'
+    'REDIS_PORT' => '6379'
+    'REDIS_DEFAULT_DB' => '0'
+    'REDIS_CRAFT_DB' => '3'
+    'DISQUS_PUBLIC_KEY' => ''
+    'DISQUS_SECRET_KEY' => ''
+    'GA_TRACKING_ID' => 'UA-69117511-5'
+    'FAST_CGI_CACHE_PATH' => ''
+    'DB_DSN' => 'mysql:host=mysql;port=3306;dbname=default;'
+    'DEFAULT_SITE_URL' => 'http://127.0.0.1/'
+]

@@ -1,0 +1,39 @@
+{# Text Block #}
+{% import '_macros/_lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set subheading = block['subheading'] is defined ? block.subheading : '' %}
+{% set rtfContent = block['rtfContent'] is defined ? block.rtfContent : '' %}
+{% set buttons = block['buttons'] is defined ? block.buttons.all() : null %}
+
+<section class="section is-medium section-text block-{{ block.type.handle }} animatable">
+    <div class="page-container">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-12 content-container">
+                    <div class="content">
+                        {% if subheading|length %}
+                            <p class="subheading">{{ subheading|typogrify(true) }}</p>
+                        {% endif %}
+                        {% if heading|length %}
+                            <h1 class="heading">{{ heading|typogrify(true) }}</h1>
+                        {% endif %}
+                        {% if rtfContent|length %}
+                            <div class="rtf">
+                                {{ rtfContent|typogrify}}
+                            </div>
+                        {% endif %}
+                        {% if buttons|length %}
+                            <div class="buttons">
+                                {% for button in buttons %}
+                                    <a href="{{ button.linkItem.getUrl() }}" class="button {{ button.buttonType }}" {% if button.linkItem.getTarget() %} target="{{ button.linkItem.getTarget() }}" {% endif %}>{{ button.linkItem.getText()|upper|typogrify }}</a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

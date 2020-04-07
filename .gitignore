@@ -18,26 +18,22 @@
 .env
 
 # COMPOSER
-/vendor
-
-/alecbreed
-/antiochinc
-/repo
-/staging
+vendor
+/cms/vendor
 
 # CRAFT STORAGE
-/storage/*
-!/storage/.gitkeep
+/cms/storage/*
+!/cms/storage/.gitkeep
 
 # ASSETS
-/web/assets/*
-/web/imager
+/cms/web/assets/*
+/cms/web/imager
 
 # BACKUPS
 /backups/*
 
 # TEMPORARY TEMPLATE FILES 
-/web/img/temp/*
+/cms/web/img/temp/*
 /src/img/temp/*
 
 # BUILD FILES
@@ -46,7 +42,7 @@
 /build/*
 /yarn-error.log
 /npm-debug.log
-/web/.htaccess
+/cms/web/.htaccess
 
 # MISC FILES
 .cache
@@ -68,4 +64,4 @@ config.codekit3
 prepros-6.config
 .ftpquota
 .htaccess
-/config/license.key
+/cms/config/license.key

@@ -1,0 +1,5 @@
+{% if entry['contentBuilder'] is defined %}
+    {% for block in entry.contentBuilder.all() %}
+        {% include('_partials/blocks/_block_' ~ block.type.handle) ignore missing %}
+    {% endfor %}
+{% endif %}

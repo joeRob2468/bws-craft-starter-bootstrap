@@ -1,0 +1,7 @@
+{% macro extractYouTubeId(url) %}{% spaceless %}
+{% set ytregex1 = '/^(?:https?:\\/\\/)?(?:www\.)?(?:youtu\.be\\/|youtube\.com)(?:\\/embed\\/|\\/v\\/|\\/watch\\?v=||\\/watch\\\?.+&v=)/' %}
+{% set ytregexTrailingSlash = '/(\\/)$/' %}
+{% set ytregexTrailingVariables = '/(&+.*)/' %}
+{% set youtubeid = url | replace(ytregex1, '') | replace(ytregexTrailingSlash, '') | replace(ytregexTrailingVariables, '') %}
+{{ youtubeid}}
+{% endspaceless %}{% endmacro %}

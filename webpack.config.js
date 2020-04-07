@@ -17,7 +17,7 @@ module.exports = (env, argv) => {
         },
         output: {
             filename: '[name].bundle.js',
-            path: path.resolve(__dirname) + '/web/dist',
+            path: path.resolve(__dirname) + '/cms/web/dist',
             pathinfo: false
         },
         optimization: {
@@ -27,7 +27,7 @@ module.exports = (env, argv) => {
         },
         watchOptions: {
             aggregateTimeout: 300,
-            poll: isDevelopment ? 1000 : false,
+            poll: isDevelopment ? true : false,
             ignored: /node_modules/
         },
         devtool: isDevelopment ? 'cheap-module-eval-source-map' : 'source-map',
@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: path.resolve(__dirname) + '/web/dist/fonts/'
+                            outputPath: path.resolve(__dirname) + '/cms/web/dist/fonts/'
                         }
                     }]
                 }
@@ -70,14 +70,18 @@ module.exports = (env, argv) => {
             }),
             new BrowserSyncPlugin({
                 files: [
-                    './templates'
+                    'cms/templates/**/*.twig'
                 ],
                 proxy: 'workspace:3000',
                 notify: false,
                 open: false,
                 logSnippet: false,
                 logLevel: 'warn',
-                reloadDelay: 0
+                reloadDelay: 0,
+                watchOptions: {
+                    usePolling: isDevelopment? true : false,
+                    interval: 500
+                }
             }),
             new webpack.ProvidePlugin({
                 $: 'jquery',

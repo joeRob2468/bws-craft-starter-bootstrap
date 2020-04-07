@@ -120,7 +120,7 @@
     // Visible State
     .hero.will-animate.is-active {
         .transition-helper {
-            transition: transform $slow-transition-speed $easeOutCubic, opacity $slow-transition-speed $easeOutCubic;
+            transition: transform 400ms $easeOutCubic, opacity 400ms $easeOutCubic;
             transform: scale(1);
             opacity: 1;
         }

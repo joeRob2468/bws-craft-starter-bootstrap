@@ -1,0 +1,29 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% extends "_layouts/_layout.twig" %}
+
+{% block _inline_css %}
+{% endblock %}
+
+{% block content %}
+<section class="section is-small animatable">
+    <div class="page-container">
+        <h1>Welcome to Craft Starter</h1>
+        <p>Lets get this new website up and running!</p>
+        <p>
+            Quick note - don't use index.twig for templates. Set up a new entry in the dashboard, using the "_pages/home.twig" template.
+        </p>
+        <p>
+            Navigate to /admin > Settings > New Section, and add these settings:
+            <ul> 
+                <li>Name: <em>Home</em></li>
+                <li>Section Type: <em>Single</em></li>
+                <li>URI: <em>BLANK</em></li>
+                <li>Template: <em>_pages/home</em></li>
+            </ul>
+        </p>
+    </div>
+</section>
+{% endblock %}
+
+{% block _inline_js %}
+{% endblock %}
