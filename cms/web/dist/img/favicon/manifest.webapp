@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "bws-craft-starter-bootstrap",
   "description": "A simple project setup for beginning a new Craft CMS site. GPL-3.0-or-later",
   "icons": {
-    "60": "/img/favicon/firefox_app_60x60.png",
-    "128": "/img/favicon/firefox_app_128x128.png",
-    "512": "/img/favicon/firefox_app_512x512.png"
+    "60": "/dist/img/favicon/firefox_app_60x60.png",
+    "128": "/dist/img/favicon/firefox_app_128x128.png",
+    "512": "/dist/img/favicon/firefox_app_512x512.png"
   },
   "developer": {
     "name": "John Robert Boyer, boyerwebstudios",

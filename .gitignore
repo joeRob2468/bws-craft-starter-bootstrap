@@ -24,6 +24,7 @@ vendor
 # CRAFT STORAGE
 /cms/storage/*
 !/cms/storage/.gitkeep
+/cms/storage/logs
 
 # ASSETS
 /cms/web/assets/*

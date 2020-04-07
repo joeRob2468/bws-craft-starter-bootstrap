@@ -1,7 +1,7 @@
 {
-  "name": "nystudio107/craft",
-  "description": "nystudio107 Craft 3 CMS scaffolding project",
-  "version": "1.0.15",
+  "name": "joeRob2468/bws-craft-starter-bootstrap",
+  "description": "Boyer Web Studios Craft 3 CMS scaffolding project",
+  "version": "1.1.0",
   "keywords": [
     "craft",
     "cms",
@@ -9,12 +9,12 @@
     "project"
   ],
   "license": "MIT",
-  "homepage": "https://craftcms.com/",
+  "homepage": "https://www.boyerwebstudios.com/",
   "type": "project",
   "support": {
-    "email": "info@nystudio107.com",
-    "issues": "https://github.com/nystudio107/craft/issues",
-    "source": "https://github.com/nystudio107/craft",
+    "email": "hello@boyerwebstudios.com",
+    "issues": "https://github.com/joeRob2468/bws-craft-starter-bootstrap/issues",
+    "source": "https://github.com/joeRob2468/bws-craft-starter-bootstrap",
     "docs": "https://github.com/nystudio107/craft"
   },
   "minimum-stability": "RC",

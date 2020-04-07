@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
@@ -87,10 +87,11 @@ module.exports = (env, argv) => {
                 $: 'jquery',
                 jQuery: 'jquery'
             }),
-            new WebappWebpackPlugin({
+            new FaviconsWebpackPlugin({
                 logo: './src/img/favicon_src.png',
-                cache: true,
+                publicPath: '/dist',
                 prefix: 'img/favicon/',
+                cache: true,
                 inject: false
             }),
             new CopyPlugin([{
