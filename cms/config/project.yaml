@@ -1,4 +1,4 @@
-dateModified: 1586194950
+dateModified: 1586287621
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: 'BWS Craft Bootstrap'
@@ -50,7 +50,7 @@ plugins:
   neo:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.0
+    schemaVersion: 2.3.0
   redactor:
     edition: standard
     enabled: true
@@ -88,7 +88,7 @@ system:
   edition: solo
   live: true
   name: 'BWS Craft Bootstrap'
-  schemaVersion: 3.4.9
+  schemaVersion: 3.4.10
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
