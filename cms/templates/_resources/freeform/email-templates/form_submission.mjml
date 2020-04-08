@@ -1,0 +1,38 @@
+{# subject: New submission from your {{ form.name }} form #}
+{# fromEmail: noreply@boyerwebstudios.com #}
+{# fromName: Boyer Web Studios #}
+{# replyToEmail: #}
+{# cc: #}
+{# bcc: #}
+{# includeAttachments: true #}
+{# description: A default email notification template for form submissions. #}
+<mjml>
+  <mj-head>
+    <mj-style>      
+      ul li {
+        margin-bottom: 0.5em;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-color="#3F98DF"></mj-divider>
+
+        <mj-text font-size="25px" color="#3F98DF" font-family="helvetica">New {{ form.name }} Submission</mj-text>
+
+        <mj-text font-size="20px" color="#222222" font-family="helvetica">
+          The following submission came in from Boyer Web Studios on {{ dateCreated|date('l, F j, Y \\a\\t g:ia') }}.
+        </mj-text>
+        <mj-text font-size="20px" color="#222222" font-family="helvetica">
+        Here are the details:
+        <ul>
+          {% for field in allFields if field.valueAsString %}
+            <li><strong>{{ field.label }}</strong>: {{ field.valueAsString }}</li>
+          {% endfor %}
+        </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

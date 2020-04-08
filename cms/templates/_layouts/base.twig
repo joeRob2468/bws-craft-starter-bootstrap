@@ -24,6 +24,19 @@
         <link rel="preconnect" href="{{ baseUrl }}" crossorigin="crossorigin">
         {# <meta name="google-site-verification" content="pSIFysvZOVXyWxcXGDBDo1pMuF0UtC-ILBThaI7G7gE" /> #}
 
+        {# set up caching requirements for pages that include cache tags #}
+        {# usage: {% cache globally using key craft.app.request.pathInfo unless cacheExempt %} #}
+        {% set cacheExempt = false %}
+        {% set cacheExemptSegments = [
+            'dont-cache-me'
+        ] %}
+        {% if craft.app.request.getSegment(1) in cacheExemptSegments %}
+            {% set cacheExempt = true %}
+        {% endif %}
+        {% if craftEnvironment != 'staging' or craftEnvironment != 'live' %}
+            {% set cacheExempt = true %}
+        {% endif %}
+
 
         {# -- Any <link> tags that should be included in the header #}
         {% block _head_links %}{% endblock %}
@@ -31,7 +44,7 @@
         {# <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title> #}
         {% hook "seo" %}
 
-        {% include "_partials/global/_global_header.twig" %}
+        {% include "_partials/global/global_header.twig" %}
 
         {%- endminify -%}
         <link rel="stylesheet" href="{{ baseUrl }}dist/vendors~main.css"></link>
@@ -43,14 +56,17 @@
 
         {%- minify -%}
         {% if craftEnvironment != 'staging' and craftEnvironment != 'local' %}
-           {% include "_partials/global/_google-analytics.twig" %}
+           {% include "_partials/global/google-analytics.twig" %}
         {% endif %}
         
         <script type="text/javascript">
+            var baseUrl = "{{ baseUrl }}";
             var assetsBaseUrl = "{{ baseUrl }}";
             var retina = window.devicePixelRatio > 1;
             var csrfTokenName = "{{ craft.app.config.general.csrfTokenName | e('js') }}";
             var csrfTokenValue = "{{ craft.app.request.csrfToken | e('js') }}";
+            var calendarTimeFormat = "{{ craft.app.locale.getTimeFormat('short', 'php') }}";
+            var calendarDefaultDate = "{{ now.format("Y-m-d") }}";
         </script>
 
         {# -- </head> JS -- #}

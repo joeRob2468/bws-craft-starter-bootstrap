@@ -1,0 +1,51 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% cache globally unless cacheExempt %}
+{% set mainMenuLinks = craft.entries({
+    section: 'mainNavigation',
+    with: ['children', 'children.children']
+}).all() %}
+
+<nav class="page-container main-nav">
+    <div class="nav-logo">
+        {% include "_partials/components/logo.twig" with {'size': 'compact' } %}
+    </div>
+    <div class="nav-links">
+        <ul class="menu">
+            {# Primary items #}
+            {% for topLevelLink in mainMenuLinks if topLevelLink.level == 1 %}
+            <li class="menu-item{% if topLevelLink.children|length %} is-parent{% endif %}">
+                <a href="{{ topLevelLink.navigationLink.getUrl() }}"{% if topLevelLink.navigationLink.getTarget()|length %} target="{{ topLevelLink.navigationLink.getTarget() }}"{% endif %}>
+                    {{ topLevelLink.navigationLink.getText()|typogrify }}
+                </a>
+
+                {# Dropdown menu items #}
+                {% if topLevelLink.children|length %}
+                <ul class="dropdown-menu">
+                    {% for item in topLevelLink.children %}
+                        {% if item.level == 2 %}
+                            <li class="dropdown-menu-item{% if item.children|length %} is-parent{% endif %}">
+                                <a href="{{ item.navigationLink.getUrl() }}"{% if item.navigationLink.getTarget()|length %} target="{{ item.navigationLink.getTarget() }}"{% endif %}>
+                                    {{ item.navigationLink.getText()|typogrify }}
+                                </a>
+                            </li>
+
+                            {# Further nested items #}
+                            {# {% if item.children|length %}
+                                {% for child in item.children %}
+                                    <li class="dropdown-menu-item is-child">
+                                        <a href="{{ child.navigationLink.getUrl() }}"{% if child.navigationLink.getTarget()|length %} target="{{ child.navigationLink.getTarget() }}"{% endif %}>
+                                            {{ child.navigationLink.getText()|typogrify }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            {% endif %} #}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+{% endcache %}

@@ -1,0 +1,27 @@
+{# Utility to pull event data from a channel named "events", in JSON format. Specifically for https://fullcalendar.io/docs/vue #}
+
+{% set events = craft.calendarize.between(date(craft.app.request.post("rangeStart"))|date('Y-m-d'), date(craft.app.request.post("rangeEnd"))|date('Y-m-d'), {
+  section: ['events'],
+  limit: 500
+}, 'asc', false) %}
+[
+  {% for event in events %}
+  {
+    "id": "{{ event.id }}",
+    "title": "{{ event.title|length > 16 ? event.title|slice(0, 13) ~ '...' : event.title }}",
+    "slug": "{{ event.slug }}",
+    "url": "{{ event.url }}",
+    "allDay": "{{ event.calendarEvent.allDay }}",
+    "start": "{{ event.start.date }}",
+    "end": "{{ event.end.date }}",
+    "classNames": [
+        {% if event.calendarEvent.allDay %}"fc-all-day-event"{% if event.calendarEvent.repeats %},{% endif %}{% endif %}
+        {% if event.calendarEvent.repeats %}"fc-repeating-event"{% endif %}
+    ],
+    "editable": "false",
+    "enabled": "true",
+    "repeats": "false",
+    "readableRepeatRule": null
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+]

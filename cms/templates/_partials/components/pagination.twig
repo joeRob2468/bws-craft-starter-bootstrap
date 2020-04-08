@@ -1,0 +1,37 @@
+{# requires pageInfo pagination variable from {% pagination %} tag #}
+
+{% if pageInfo is defined and pageInfo.totalPages > 1 %}
+    {% set prevNextPagesToShow = 3 %}
+    <div class="pagination">
+        <div class="previous{% if pageInfo.prevUrl %} active{% endif %}">
+            {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">{% endif %}
+                Previous
+            {% if pageInfo.prevUrl %}</a>{% endif %}
+        </div>
+        <div class="links">
+            <ul class="links-menu">
+                {% if pageInfo.totalPages <= prevNextPagesToShow * 2 + 1 %}
+                    {# show all pages if we have fewer than pagesToShow #}
+                    {% for page, url in pageInfo.getRangeUrls(1, prevNextPagesToShow * 2 + 1) %}
+                        <li{% if page == pageInfo.currentPage %} class="active"{% endif %}><a href="{{ url }}">{{ page }}</a></li>
+                    {% endfor %}
+                {% else %}
+                    {# show the pages around the current page #}
+                    {% for page, url in pageInfo.getRangeUrls(pageInfo.currentPage - prevNextPagesToShow, pageInfo.currentPage + prevNextPagesToShow) %}
+                        <li{% if page == pageInfo.currentPage %} class="active"{% endif %}><a href="{{ url }}">{{ page }}</a></li>
+                    {% endfor %}
+
+                    {# show the last page if it isn't currently visible #}
+                    {% if pageInfo.currentPage + prevNextPagesToShow < pageInfo.totalPages %}
+                        <li>... <a href="{{ pageInfo.lastUrl }}">{{ pageInfo.totalPages }}</a></li>
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </div>
+        <div class="next{% if pageInfo.nextUrl %} active{% endif %}">
+            {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}">{% endif %}
+                Next
+            {% if pageInfo.nextUrl %}</a>{% endif %}
+        </div>
+    </div>
+{% endif %}

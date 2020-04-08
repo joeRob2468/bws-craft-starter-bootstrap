@@ -1,0 +1,33 @@
+{% cache globally unless cacheExempt %}
+{% set footerNavigation = craft.entries({
+    section: 'footerNavigation',
+    with: ['children']
+}).all() %}
+
+<div class="footer-navigation">
+    <div class="page-container">
+        <div class="footer-navigation-content">
+            <div class="nav-columns">
+                {% for column in footerNavigation %}
+                {% if column.level == 1 %}
+                <div class="nav-column-item">
+                    <div class="nav-column-heading">
+                        <p class="heading">
+                            {{ column.navigationLink.getText() }}
+                        </p>
+                    </div>
+                    <div class="nav-column-content">
+                        <ul class="menu">
+                            {% for item in column.children %}
+                            <li class="menu-item"><a href="{{ item.navigationLink.getUrl() }}" {% if item.navigationLink.getTarget()|length %}target="{{ item.navigationLink.getTarget() }}"{% endif %}>{{ item.navigationLink.getText() }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endcache %}

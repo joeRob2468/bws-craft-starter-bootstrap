@@ -1,0 +1,26 @@
+{% cache globally using key craft.app.request.pathInfo ~ 'global-content-builder' unless cacheExempt %}
+
+{# This particular site uses Neo for content blocks #}
+{% if entry['contentBuilder'] is defined %}
+	{# Eager load #}
+	{% do craft.app.elements.eagerLoadElements(
+        className(entry),
+        [entry],
+        [
+            'contentBuilder',
+            'contentBuilder.text',
+            'contentBuilder.image',
+            'contentBuilder.image:image',
+        ]
+    ) %}
+
+	{% for block in entry.contentBuilder %}
+		{% do block.useMemoized(entry.contentBuilder) %}
+	{% endfor %}
+
+	{% for block in entry.contentBuilder if block.level == 1 %}
+		{% include '_partials/blocks/' ~ block.type.handle ignore missing with {block: block} only %}
+	{% endfor %}
+{% endif %}
+
+{% endcache %}

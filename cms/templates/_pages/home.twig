@@ -1,5 +1,5 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
-{% extends "_layouts/_layout.twig" %}
+{% extends "_layouts/layout.twig" %}
 
 {% block _inline_css %}
 {% endblock %}
@@ -11,6 +11,9 @@
         <p>Looks like you set up the proper page template structure. Lets get this new website up and running!</p>
     </div>
 </section>
+
+{% include '_partials/components/content_builder' %}
+
 {% endblock %}
 
 {% block _inline_js %}

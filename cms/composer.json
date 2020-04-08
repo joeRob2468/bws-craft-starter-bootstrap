@@ -39,7 +39,7 @@
     "nystudio107/craft-typogrify": "^1.1",
     "ostark/craft-async-queue": "^2.0",
     "rias/craft-scout": "2.1.4",
-    "sebastianlenz/linkfield": "1.0.21",
+    "sebastianlenz/linkfield": "^2.0.0@beta",
     "solspace/craft-freeform": "3.6.3",
     "spicyweb/craft-embedded-assets": "^2.0",
     "spicyweb/craft-neo": "2.7.5",
