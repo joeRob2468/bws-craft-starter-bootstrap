@@ -3,61 +3,102 @@ This project contains the full starter theme for [Boyer Web Studios](https://www
 
 ## About 
 In addition to setting up a new Craft 3 CMS project, this project sets up:
- 
-* [Craft 3 Multi-Environment](https://github.com/nystudio107/craft3-multi-environment) as described in the [Multi-Environment Config for Craft CMS](https://nystudio107.com/blog/multi-environment-config-for-craft-cms) article
-* [Craft-Scripts](https://github.com/nystudio107/craft-scripts) as described in the [Database & Asset Syncing Between Environments in Craft CMS](https://nystudio107.com/blog/database-asset-syncing-between-environments-in-craft-cms), [Mitigating Disaster via Website Backups](https://nystudio107.com/blog/mitigating-disaster-via-website-backups) & [Hardening Craft CMS Permissions](https://nystudio107.com/blog/hardening-craft-cms-permissions) articles
 
-It also installs a few base plugins described in the [Setting up a New Craft 3 CMS Project](https://nystudio107.com/blog/enhancing-a-craft-cms-3-website-with-a-custom-module) article.
+Best-practices configuration for Craft CMS, including a template and plugin setup for building flexible themes using content blocks  
+Full webpack build system for SCSS and ES6 project dependencies  
+Easily adjustable environments using .env files  
+Utility bash scripts for easy setup and management of backups and database syncing  
+Docker local development toolset using [Laradock](https://laradock.io/).  
+
 
 ## Installation
 
-First, clone the repository onto your local machine and install the project dependencies by running `composer install`. If installing on a production environment, run `yarn install --production`. Otherwise, run `yarn`. 
+### Production Deployment
 
-Then `cd` to your new project directory, and run Craft's `setup` console command to create your `.env` environments. _When asked if you want to install, say no._
+1. Clone this repository.
+2. Run `cd cms && composer install` to install dependencies.
+3. Update `.env.sh` and `cms/.env` with the proper production environment settings.
+4. Run `./cms/craft install` and follow directions. 
+5. Run `./setup-script install` to install default Craft plugins
+6. Run `./shell-scripts/backup_assets.sh` to create backups directory
+7. If you have a set of local backups, upload the `assets`, `craft`, and `db` folders into `backups/DATABASE_NAME`. 
+8. Run `./shell-scripts/restore_assets.sh` to restore asset backups
+9. Run `./shell-scripts/restore_db.sh ./backups/DATABASE_NAME/db/BACKUP_FILENAME` to restore database backups. 
 
-    cd PATH
-    ./craft setup
+### Local Development
 
-Then, run the `nys-setup` command to configure Craft-Scripts & Craft 3 Multi-Environment based on your newly created `.env` settings:
+In local development, you'll be setting up the Laradock docker containers, then running all of your dependency, backup/restore, and build commands inside the `workspace` container to help keep your project code isolated. It's fine to run `git` commands outside the container, but everything else should be done in the `workspace` container. For new projects, rename the `laradock-bootstrap` folder to `laradock-project-name`. 
 
-    ./nys-setup
+1. Install and run Docker Desktop. If you're on Windows, also install Git for Windows. 
+2. Open a new terminal session (in Git Bash if you're on Windows). 
+3. Clone this repository onto your local machine. 
+4. `cd` to your new project directory, then into the `laradock-bootstrap` folder. 
+5. Copy `env-example` to `.env` to set up the docker environment configuration. 
+6. Run `docker-compose up -d apache2 mysql redis workspace` to build and run the docker containers. This will take a while if you're installing this project for the first time.
+5. Once your docker containers are built and running, run `docker-compose exec workspace bash` to open a bash session inside the workspace container. 
+6. Once inside your docker container, run `cd cms && composer install`. This will install the Craft CMS dependencies and create default environment variable files.
+7. Follow the directions printed in your terminal to finish the project setup.
 
-Finally, run `./craft install` to run the craft installation scripts, which will create all the database tables and get the website CMS set up. 
+## Environment Defaults (use for Craft CMS installation on development environment)
 
-That's it, enjoy!
+**Craft CMS User**  
+Username: `admin`  
+Email: `hello@boyerwebstudios.com`  
+Password: `secret`
 
-If you ever delete the `vendor` folder or such, just re-run:
+**MySQL**  
+Driver: `mysql`  
+Host: `mysql`  
+User: `default`  
+Password: `secret`  
+Database: `default`  
+Port: `3306`
 
-    ./nys-setup
+**Apache2**  
+Site address: `http://localhost/`  
+Document root: `/var/www/cms/web`
 
-...and it will re-create the symlink to your `.env.sh`; don't worry, it won't stomp on any changes you've made.
 
-## Build Process
+## Working on the development site and building site assets
 
-To build for production, make sure `yarn` and `composer` dependencies are installed, then run `yarn build`. To build for a local environment and watch for changes, run `yarn watch`. 
+Make sure the Docker containers are up by running `docker-compose up -d apache2 mysql redis workspace` inside your laradock folder.
+
+Open a bash session inside the Docker `workspace` container by running `docker-compose exec workspace bash` inside your laradock folder. You'll be running all backup/restore and build commands (except for `git` commands) inside this container. 
+
+Make sure you've installed the webpack dependencies, which are installed by running `./setup-script development` or `yarn install` during the initial setup. 
+
+To build the site assets and watch for changes, run `yarn watch`. To stop watching for changes, press `ctrl/cmd + c`. To create a production build, run `yarn build`.
+
+Open `http://localhost/` to view the site. 
+
+When you're done working, stop the webpack build if it's running. If you adjusted the Craft CMS database or uploaded/changed any assets in the CMS, make updated backups of your database and assets by running `./shell-scripts/backup_assets.sh` and `./shell-scripts/backup_db.sh`, then exit the `workspace` bash session by running `exit`.
+
+To shut down the Docker containers, run `docker-compose down` inside your laradock folder.
+
+We highly suggest that you pull the latest version of the GitHub project repository before you start working, create regular `git` commits as you finish chunks of work, and push all your changes to the GitHub repository when you're done for the day, so all developers always have access to the latest codebase. Run your `git` commands as you normally would, not inside the `workspace` container. 
+
+
+## File and database backups
+
+We've included a command-line script system to allow for easy creation and restoration of file and database backups. The shell scripts are configured by the `.env.sh` environment file. If you're working in a local development environment, all backup and restore commands should be run from a bash session inside the `workspace` container. 
+
+Backups are stored in the `backups` directory, under a folder named after the primary database. For example, the default database is named `default`, so backups will be stored in `backups/default`. Assets are stored in `backups/default/assets`, and database dumps are stored in `backups/default/db`.
+
+### Asset Backups
+
+To create asset backups, run `./shell-scripts/backup_assets.sh`, which will back up all the assets uploaded to Craft CMS (which are stored in `cms/web/assets`). 
+
+To restore asset backups, run `./shell-scripts/restore_assets.sh`. 
+
+### Database Backups
+
+To create a database backup, run `./shell-scripts/backup_db.sh`, which will create a full backup of the primary database. 
+
+To restore a database backup, run `./shell-scripts/restore_db.sh ./backups/default/db/FILENAME.sql.gz`.
+
 
 ## About Craft CMS
 
 Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike. It is optimized for bespoke web and application development, offering developers a clean slate to build out exactly what they want, rather than wrestling with a theme.
 
 Learn more about Craft at [craftcms.com](https://craftcms.com).
-
-## How to Install Craft 3 Beta
-
-Installation instructions can be found in the [Craft 3 documentation](https://github.com/craftcms/docs/blob/master/en/installation.md).
-
-## Resources
-
-#### Official Resources
-- [Craft 3 Documentation](https://github.com/craftcms/docs)
-- [Craft 3 Plugins](https://github.com/craftcms/plugins)
-- [Demo site](https://demo.craftcms.com/)
-- [Craft Slack](https://craftcms.com/community#slack)
-- [Craft CMS Stack Exchange](http://craftcms.stackexchange.com/)
-
-#### Community Resources
-- [Mijingo](https://mijingo.com/craft) – Video courses and other learning resources
-- [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
-- [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
-- [Craft Cookbook](https://craftcookbook.net/) – Quick answers for common tasks
-- [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator
