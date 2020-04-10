@@ -27,16 +27,16 @@ Docker local development toolset using [Laradock](https://laradock.io/).
 
 ### Local Development
 
-In local development, you'll be setting up the Laradock docker containers, then running all of your dependency, backup/restore, and build commands inside the `workspace` container to help keep your project code isolated. It's fine to run `git` commands outside the container, but everything else should be done in the `workspace` container. For new projects, rename the `laradock-bootstrap` folder to `laradock-project-name`. 
+In local development, you'll be setting up the Laradock docker containers, then running all of your dependency, backup/restore, and build commands inside the `workspace` container to help keep your project code isolated. It's fine to run `git` commands outside the container, but everything else should be done in the `workspace` container. For new projects, rename the `laradock-bootstrap` directory to `laradock-project-name`. 
 
 1. Install and run Docker Desktop. If you're on Windows, also install Git for Windows. 
 2. Open a new terminal session (in Git Bash if you're on Windows). 
 3. Clone this repository onto your local machine. 
-4. `cd` to your new project directory, then into the `laradock-bootstrap` folder. 
-5. Copy `env-example` to `.env` to set up the docker environment configuration. 
-6. Run `docker-compose up -d apache2 mysql redis workspace` to build and run the docker containers. This will take a while if you're installing this project for the first time.
-5. Once your docker containers are built and running, run `docker-compose exec workspace bash` to open a bash session inside the workspace container. 
-6. Once inside your docker container, run `cd cms && composer install`. This will install the Craft CMS dependencies and create default environment variable files.
+4. `cd` to your new project directory.  
+5. In your laradock directory, copy `env-example` to `.env` to set up the docker environment configuration.
+6. In your laradock directory, run `docker-compose up -d apache2 mysql redis workspace` to build and run the docker containers. This will take a while if you're installing this project for the first time.
+5. Once your docker containers are built and running, in your laradock directory, run `docker-compose exec workspace bash` to open a bash session inside the workspace container. 
+6. Once you're running a bash session inside the `workspace` container, run `cd cms && composer install`. This will install the Craft CMS dependencies and create default environment variable files.
 7. Follow the directions printed in your terminal to finish the project setup.
 
 ## Environment Defaults (use for Craft CMS installation on development environment)
@@ -61,9 +61,9 @@ Document root: `/var/www/cms/web`
 
 ## Working on the development site and building site assets
 
-Make sure the Docker containers are up by running `docker-compose up -d apache2 mysql redis workspace` inside your laradock folder.
+Make sure the Docker containers are up by running `docker-compose up -d apache2 mysql redis workspace` inside your laradock directory.
 
-Open a bash session inside the Docker `workspace` container by running `docker-compose exec workspace bash` inside your laradock folder. You'll be running all backup/restore and build commands (except for `git` commands) inside this container. 
+Open a bash session inside the Docker `workspace` container by running `docker-compose exec workspace bash` inside your laradock directory. You'll be running all backup/restore and build commands (except for `git` commands) inside this container. 
 
 Make sure you've installed the webpack dependencies, which are installed by running `./setup-script development` or `yarn install` during the initial setup. 
 
@@ -73,7 +73,7 @@ Open `http://localhost/` to view the site.
 
 When you're done working, stop the webpack build if it's running. If you adjusted the Craft CMS database or uploaded/changed any assets in the CMS, make updated backups of your database and assets by running `./shell-scripts/backup_assets.sh` and `./shell-scripts/backup_db.sh`, then exit the `workspace` bash session by running `exit`.
 
-To shut down the Docker containers, run `docker-compose down` inside your laradock folder.
+To shut down the Docker containers, run `docker-compose down` inside your laradock directory.
 
 We highly suggest that you pull the latest version of the GitHub project repository before you start working, create regular `git` commits as you finish chunks of work, and push all your changes to the GitHub repository when you're done for the day, so all developers always have access to the latest codebase. Run your `git` commands as you normally would, not inside the `workspace` container. 
 
@@ -82,11 +82,11 @@ We highly suggest that you pull the latest version of the GitHub project reposit
 
 We've included a command-line script system to allow for easy creation and restoration of file and database backups. The shell scripts are configured by the `.env.sh` environment file. If you're working in a local development environment, all backup and restore commands should be run from a bash session inside the `workspace` container. 
 
-Backups are stored in the `backups` directory, under a folder named after the primary database. For example, the default database is named `default`, so backups will be stored in `backups/default`. Assets are stored in `backups/default/assets`, and database dumps are stored in `backups/default/db`.
+Backups are stored in the `backups` directory, under a directory named after the primary database. For example, the default database is named `default`, so backups will be stored in `backups/default`. Assets are stored in `backups/default/assets`, and database dumps are stored in `backups/default/db`.
 
 ### Asset Backups
 
-To create asset backups, run `./shell-scripts/backup_assets.sh`, which will back up all the assets uploaded to Craft CMS (which are stored in `cms/web/assets`). 
+To create asset backups, run `./shell-scripts/backup_assets.sh`, which will back up all the assets uploaded to Craft CMS. 
 
 To restore asset backups, run `./shell-scripts/restore_assets.sh`. 
 
@@ -94,7 +94,7 @@ To restore asset backups, run `./shell-scripts/restore_assets.sh`.
 
 To create a database backup, run `./shell-scripts/backup_db.sh`, which will create a full backup of the primary database. 
 
-To restore a database backup, run `./shell-scripts/restore_db.sh ./backups/default/db/FILENAME.sql.gz`.
+To restore a database backup, run `./shell-scripts/restore_db.sh ./backups/default/db/FILENAME`.
 
 
 ## About Craft CMS
