@@ -66,3 +66,4 @@ prepros-6.config
 .ftpquota
 .htaccess
 /cms/config/license.key
+*.unison*
