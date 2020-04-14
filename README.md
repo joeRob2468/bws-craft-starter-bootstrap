@@ -28,6 +28,8 @@ Docker local development toolset using [Laradock](https://laradock.io/).
 
 In local development, you'll be setting up the Laradock docker containers, then running all of your dependency, backup/restore, and build commands inside the `workspace` container to help keep your project code isolated. It's fine to run `laradock.sh` and `git` commands outside the container, but everything else should be done in the `workspace` container.
 
+#### Step One - install and run the Laradock development environment
+
 1. Install and run Docker Desktop. If you're on Windows, also install Git for Windows, and Ruby. 
 2. Open a new terminal session (in Git Bash if you're on Windows). 
 3. If you haven't done this already for your git environment, set up git with your name and email address by running:
@@ -36,17 +38,21 @@ In local development, you'll be setting up the Laradock docker containers, then 
     > `git config --global submodule.recurse true`  
 4. Clone this repository onto your local machine. 
 5. `cd` to your new project directory.
-6. Make sure `laradock.sh` is executable by running `chmod +x laradock.sh`
+7. Run `git submodule init` and `git submodule update` to make sure the `laradock` folder is up-to-date. 
+6. Run `chmod +x laradock.sh` to make sure `laradock.sh` is executable.
 7. Run `./laradock.sh install` to install the docker-sync gem and set up your default laradock environment. 
-8. Build and start your Laradock service containers by running `./laradock.sh up`. This will take a while. 
-9. Once the containers have built and started, run `./laradock.sh bash` to open a terminal session inside the workspace. 
-9. Run `cd cms && composer install`. This will install the Craft CMS dependencies and create default environment variable files.
-10. `cd` back to the root project folder and run `./cms/craft install`. Leave all settings at default (by pressing enter without typing anything), except for the following settings:
+8. Run `./laradock.sh up` to and start your Laradock service containers. This will take a while. 
+
+#### Step Two - set up Craft CMS in your Laradock workspace
+
+1. Once the Laradock containers have built and started, run `./laradock.sh bash` to open a terminal session inside the workspace. 
+1. Run `cd cms && composer install`. This will install the Craft CMS dependencies inside the `cms` folder and create default environment variable files.
+2. `cd` back to the root project folder and run `./cms/craft install`. Leave all settings at default (by pressing enter without typing anything), except for the following settings: 
     > Username: `admin`  
     > Email: `hello@boyerwebstudios.com`  
     > Password: `secret`
-11. Run `yarn install` to install the webpack build dependencies (for making changes to the site assets)
-12. You're done! Open `http://localhost/` to see the website, and navigate to `http://localhost/admin` to log into the admin panel using the credentials you set up in step 11. 
+3. Run `yarn install` to install the webpack build dependencies (for making changes to the site assets)
+4. You're done! Open `http://localhost/` to see the website, and navigate to `http://localhost/admin` to log into the admin panel using the credentials you set up in step 11. 
 
 ## Environment Defaults (use for Craft CMS installation on development environment)
 
