@@ -95,10 +95,10 @@ function setupPermissions()
     // Say hello
     outputString(PHP_EOL.'Setting file permissions', Console::FG_YELLOW);
     // Set file permissions
-    executeShellCommand('chmod +x setup-script');
-    executeShellCommand('chmod +x laradock.sh');
-    executeShellCommand('chmod +x ./laradock/sync.sh');
-    executeShellCommand('chmod +x ./cms/craft');
+    executeShellCommand('chmod +x ../setup-script');
+    executeShellCommand('chmod +x ../laradock/sync.sh');
+    executeShellCommand('find ../shell-scripts -type f -iname "*.sh" -exec chmod +x {} \;');
+    executeShellCommand('chmod +x ./craft');
 
     // Say goodbye
     outputString('File permissions set successfully!', Console::FG_YELLOW);
