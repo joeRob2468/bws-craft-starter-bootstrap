@@ -1,4 +1,4 @@
-dateModified: 1586375306
+dateModified: 1586879762
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: 'BWS Craft Bootstrap'
@@ -689,7 +689,7 @@ neoBlockTypes:
     childBlocks: ''
     field: 720308b0-c8fd-4f13-bd94-758097e76b5e
     fieldLayouts:
-      -
+      c9a8b21b-4f29-474a-96ed-5ab3aabdf536:
         tabs:
           -
             fields:
@@ -711,7 +711,7 @@ neoBlockTypes:
     childBlocks: ''
     field: 720308b0-c8fd-4f13-bd94-758097e76b5e
     fieldLayouts:
-      -
+      67292745-9be4-4774-92bc-23dc6ae3f615:
         tabs:
           -
             fields:
@@ -830,6 +830,7 @@ sections:
         titleLabel: 'Page Title'
     handle: pages
     name: Pages
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       0cc785f8-a672-4448-9841-1c39b72f75bd:
@@ -863,13 +864,14 @@ sections:
         titleLabel: Title
     handle: footerNavigation
     name: 'Footer Navigation'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       0cc785f8-a672-4448-9841-1c39b72f75bd:
         enabledByDefault: true
         hasUrls: false
         template: null
-        uriFormat: ''
+        uriFormat: null
     structure:
       maxLevels: 2
       uid: 89fb4446-314f-4f70-a09a-93f8422f21f5
@@ -906,6 +908,7 @@ sections:
         titleLabel: 'Page Title'
     handle: home
     name: Home
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       0cc785f8-a672-4448-9841-1c39b72f75bd:
@@ -936,13 +939,14 @@ sections:
         titleLabel: Title
     handle: mainNavigation
     name: 'Main Navigation'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       0cc785f8-a672-4448-9841-1c39b72f75bd:
         enabledByDefault: true
         hasUrls: false
         template: null
-        uriFormat: ''
+        uriFormat: null
     structure:
       maxLevels: 2
       uid: 044f4483-118f-4254-a95e-cfcdb58dc8b7
