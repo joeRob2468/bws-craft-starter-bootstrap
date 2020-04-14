@@ -38,21 +38,21 @@ In local development, you'll be setting up the Laradock docker containers, then 
     > `git config --global submodule.recurse true`  
 4. Clone this repository onto your local machine. 
 5. `cd` to your new project directory.
-7. Run `git submodule init` and `git submodule update` to make sure the `laradock` folder is up-to-date. 
-6. Run `chmod +x laradock.sh` to make sure `laradock.sh` is executable.
-7. Run `./laradock.sh install` to install the docker-sync gem and set up your default laradock environment. 
-8. Run `./laradock.sh up` to and start your Laradock service containers. This will take a while. 
+6. Run `git submodule init` and `git submodule update` to make sure the `laradock` folder is up-to-date. 
+7. Run `chmod +x laradock.sh` to make sure `laradock.sh` is executable.
+8. Run `./laradock.sh install` to install the docker-sync gem and set up your default laradock environment. 
+9. Run `./laradock.sh up` to and start your Laradock service containers. This will take a while. 
 
 #### Step Two - set up Craft CMS in your Laradock workspace
 
 1. Once the Laradock containers have built and started, run `./laradock.sh bash` to open a terminal session inside the workspace. 
-1. Run `cd cms && composer install`. This will install the Craft CMS dependencies inside the `cms` folder and create default environment variable files.
-2. `cd` back to the root project folder and run `./cms/craft install`. Leave all settings at default (by pressing enter without typing anything), except for the following settings: 
+2. Run `cd cms && composer install`. This will install the Craft CMS dependencies inside the `cms` folder and create default environment variable files.
+3. `cd` back to the root project folder and run `./cms/craft install`. Leave all settings at default (by pressing enter without typing anything), except for the following settings: 
     > Username: `admin`  
     > Email: `hello@boyerwebstudios.com`  
     > Password: `secret`
-3. Run `yarn install` to install the webpack build dependencies (for making changes to the site assets)
-4. You're done! Open `http://localhost/` to see the website, and navigate to `http://localhost/admin` to log into the admin panel using the credentials you set up in step 11. 
+4. Run `yarn install` to install the webpack build dependencies (for making changes to the site assets)
+5. You're done! Open `http://localhost/` to see the website, and navigate to `http://localhost/admin` to log into the admin panel using the credentials you set up in step 11. 
 
 ## Environment Defaults (use for Craft CMS installation on development environment)
 
