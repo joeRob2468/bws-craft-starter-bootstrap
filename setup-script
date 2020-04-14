@@ -59,15 +59,16 @@ if (empty($argv[1])) {
             // Display a welcome message
             welcomeCraft();
             break;
-
-        case 'development':
-            // Display a welcome message
-            setupCraftDevelopment();
+        
+        case 'setup':
+            // setup file permissions and display welcome message
+            setupPermissions();
+            welcomeCraft();
             break;
 
         default:
-            // Set up all the things!
-            setupCraft();
+            // Display a welcome message. Yarn install should be manual, plugins are installed by Craft's Project Config
+            welcomeCraft();
             break;
     }
 }
@@ -81,14 +82,26 @@ function welcomeCraft()
     $script = './cms/craft install';
     outputString(PHP_EOL.'    '.$script, Console::FG_GREEN);
 
-    outputString(PHP_EOL.'Then to set up the Craft 3 CMS environment, run:', Console::FG_YELLOW);
-    $script = './setup-script';
-    outputString(PHP_EOL.'    '.$script, Console::FG_GREEN);
-    outputString(PHP_EOL.'Your setup is not complete until you run these two commands.', Console::FG_YELLOW);
-
     outputString(PHP_EOL.'To set up your environment for theme development, run:', Console::FG_YELLOW);
-    $script = './setup-script development';
+    $script = 'yarn install';
     outputString(PHP_EOL.'    '.$script.PHP_EOL, Console::FG_GREEN);
+}
+
+/**
+ * Set up file permissions
+ */
+function setupPermissions()
+{
+    // Say hello
+    outputString(PHP_EOL.'Setting file permissions', Console::FG_YELLOW);
+    // Set file permissions
+    executeShellCommand('chmod +x setup-script');
+    executeShellCommand('chmod +x laradock.sh');
+    executeShellCommand('chmod +x ./laradock/sync.sh');
+    executeShellCommand('chmod +x ./cms/craft');
+
+    // Say goodbye
+    outputString('File permissions set successfully!', Console::FG_YELLOW);
 }
 
 /**
