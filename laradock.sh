@@ -71,9 +71,13 @@ elif [ "$1" == "bash" ]; then
 
 elif [ "$1" == "install" ]; then
     print_style "Setting up Laradock environment\n" "info"
-    cd laradock && cp env-example .env && sudo ./sync.sh install
+    cd laradock && cp env-example .env
+    print_style "Project name (no spaces or special characters, eg: boyerwebstudios): "
+    read project_name
+    sed -i "s/REPLACE_WITH_PROJECT_NAME/$project_name/" .env
+    sudo ./sync.sh install
 
-    print_style "If you have another Laradock setup installed, please change COMPOSE_PROJECT_NAME in laradock/.env \n" "danger"
+    print_style "If the project fails to run, double-check COMPOSE_PROJECT_NAME and DATA_PATH_HOST in laradock/.env \n" "info"
 
 elif [ "$1" == "sync" ]; then
     cd laradock && ./sync.sh sync;
