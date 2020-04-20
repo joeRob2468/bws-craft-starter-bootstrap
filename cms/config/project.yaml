@@ -1,4 +1,4 @@
-dateModified: 1586879762
+dateModified: 1587401958
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: 'BWS Craft Bootstrap'
@@ -789,6 +789,47 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.1.0
+    settings:
+      description: ''
+      facebookAppId: ''
+      metaTemplate: _partials/global/meta
+      removeAlternateUrls: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage: ''
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' - {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: ''
   typedlinkfield:
     edition: standard
     enabled: true
@@ -886,7 +927,7 @@ sections:
               -
                 fields:
                   720308b0-c8fd-4f13-bd94-758097e76b5e:
-                    required: true
+                    required: false
                     sortOrder: 2
                   d36c88c9-b8c6-4b76-afe5-cc0210389ee9:
                     required: true
