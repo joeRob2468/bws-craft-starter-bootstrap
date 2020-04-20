@@ -1,65 +1,20 @@
 /* Common Styles - used as a baseline boilerplate theme for most sites. */
 
-html {
-  background: #FFFFFF;
-}
-
-body {
-  margin: auto;
-  background: #FFFFFF;
-}
-
-html {
-  background: #FFFFFF;
-}
-
-body {
-  margin: auto;
-  background: #FFFFFF;
-}
-
 object.svg {
   pointer-events: none;
 }
 
 /* Global Typography Styles */
 body, html {
-  font-family: $body-copy-font;
-  color: $body-copy-color;
-  font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  // scale down font size responsively on smaller screens
-  @media (max-width: 1000px) {
-    font-size: calc(16px + .4vw);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-copy-font;
-    color: $heading-copy-color;
-    margin-top: 0;
-  }
-
-  p {
-    margin-bottom: 1.6em;
-  }
+  background: #FFFFFF;
 
   .is-dark h1, .is-dark h2, .is-dark h3, .is-dark h4, .is-dark h5, .is-dark h6 {
-    color: $dark-heading-copy-color;
+    color: #FFFFFF;
   }
 
   .is-dark p {
-    color: rgba(#FFFFFF, 0.9);
+    color: #FFFFFF;
   }
-}
-
-p.is-subheading {
-  font-family: $subheading-copy-font;
-  letter-spacing: 0.03em;
-  color: #887F74;
-  font-size: px-to-em(20px);
-  max-width: 36rem;
 }
 
 p.is-multi-column {
@@ -114,15 +69,26 @@ img, audio, video {
   display: block;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 img.cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-img:not(.cover) {
-  width: 100%;
+video {
   height: auto;
+  width: 100%;
+}
+
+video.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .clearfix {
@@ -136,159 +102,141 @@ img:not(.cover) {
   }
 }
 
-.grid-container, .page-container {
-  //width: 81%;
-  //margin: 0 $container-margin;
-  //margin: 0 auto;
-  max-width: $global-width;
-  margin-right: auto;
+.container {
+  width: 100%;
+  max-width: $max-fixed-width;
   margin-left: auto;
-  //overflow-x: hidden;
-  overflow-y: visible;
+  margin-right: auto;
 
-  &.is-full {
-    max-width: none;
-  }
+  // padding-right: rem-calc(get($grid-column-gutter, "small")) / 2;
+  // padding-left: rem-calc(get($grid-column-gutter, "small")) / 2;
 
-  &.is-small {
-    padding-left: $container-small-margin;
-    padding-right: $container-small-margin;
-  }
+  // @include breakpoint(medium up) {
+  //   padding-right: rem-calc(get($grid-column-gutter, "medium")) / 2;
+  //   padding-left: rem-calc(get($grid-column-gutter, "medium")) / 2;
+  // }
 
-  &.is-tiny {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    @include breakpoint(medium) {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-
-    @include breakpoint(large up) {
-      padding-left: 12rem;
-      padding-right: 12rem;
-    }
-  }
-
-  &.is-tiny-desktop {
-    @include breakpoint(large up) {
-      padding-left: 12rem;
-      padding-right: 12rem;
-    }
-  }
-
-  &.is-small-desktop {
-    @include breakpoint(large up) {
-      padding-left: $container-small-margin;
-      padding-right: $container-small-margin;
-    }
-  }
-
-  .grid-margin-x {
-    margin-right: rem-calc(map-get($grid-column-gutter, "small")) * -1;
-    margin-left: rem-calc(map-get($grid-column-gutter, "small")) * -1;
-
-    @include breakpoint(medium up) {
-      margin-right: rem-calc(map-get($grid-column-gutter, "medium")) * -1;
-      margin-left: rem-calc(map-get($grid-column-gutter, "medium")) * -1;
-    }
-  }
-}
-
-.page-container {
-  padding-right: rem-calc(map-get($grid-column-gutter, "small")) / 2;
-  padding-left: rem-calc(map-get($grid-column-gutter, "small")) / 2;
+  padding-left: get($container-margins, "standard.small");
+  padding-right: get($container-margins, "standard.small");
 
   @include breakpoint(medium up) {
-    padding-right: rem-calc(map-get($grid-column-gutter, "medium")) / 2;
-    padding-left: rem-calc(map-get($grid-column-gutter, "medium")) / 2;
+    padding-left: get($container-margins, "standard.medium");
+    padding-right: get($container-margins, "standard.medium");
   }
-}
 
-.grid-x {
-  &.is-reversed-desktop {
+  @include breakpoint(large up) {
+    padding-left: get($container-margins, "standard.large");
+    padding-right: get($container-margins, "standard.large");
+  }
+
+  @include breakpoint(xlarge up) {
+    padding-left: get($container-margins, "standard.xlarge");
+    padding-right: get($container-margins, "standard.xlarge");
+  }
+
+  @include breakpoint(xxlarge up) {
+    padding-left: get($container-margins, "standard.xxlarge");
+    padding-right: get($container-margins, "standard.xxlarge");
+  }
+
+  &.container--small {
+    padding-left: get($container-margins, "small.small");
+    padding-right: get($container-margins, "small.small");
+
     @include breakpoint(medium up) {
-      flex-direction: row-reverse;
+      padding-left: get($container-margins, "small.medium");
+      padding-right: get($container-margins, "small.medium");
+    }
+
+    @include breakpoint(large up) {
+      padding-left: get($container-margins, "small.large");
+      padding-right: get($container-margins, "small.large");
+    }
+
+    @include breakpoint(xlarge up) {
+      padding-left: get($container-margins, "small.xlarge");
+      padding-right: get($container-margins, "small.xlarge");
+    }
+
+    @include breakpoint(xxlarge up) {
+      padding-left: get($container-margins, "small.xxlarge");
+      padding-right: get($container-margins, "small.xxlarge");
+    }
+  }
+
+  &.container--medium {
+    padding-left: get($container-margins, "medium.small");
+    padding-right: get($container-margins, "medium.small");
+
+    @include breakpoint(medium up) {
+      padding-left: get($container-margins, "medium.medium");
+      padding-right: get($container-margins, "medium.medium");
+    }
+
+    @include breakpoint(large up) {
+      padding-left: get($container-margins, "medium.large");
+      padding-right: get($container-margins, "medium.large");
+    }
+
+    @include breakpoint(xlarge up) {
+      padding-left: get($container-margins, "medium.xlarge");
+      padding-right: get($container-margins, "medium.xlarge");
+    }
+
+    @include breakpoint(xxlarge up) {
+      padding-left: get($container-margins, "medium.xxlarge");
+      padding-right: get($container-margins, "medium.xxlarge");
     }
   }
 }
 
 .section {
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 
-  &.is-small {
-    padding: $small-spacing 0;
-  }
+  &.section--small {
+    padding-top: get($section-spacings, "small.small");
+    padding-bottom: get($section-spacings, "small.small");
 
-  &.is-small-desktop {
+    @include breakpoint(medium up) {
+      padding-top: get($section-spacings, "small.medium");
+      padding-bottom: get($section-spacings, "small.medium");
+    }
+
     @include breakpoint(large up) {
-      padding: $small-spacing 0;
+      padding-top: get($section-spacings, "small.large");
+      padding-bottom: get($section-spacings, "small.large");
     }
   }
 
-  &.is-small-spaced:not(:first-child) {
-    padding-top: $small-spacing;
-  }
+  &.section--medium {
+    padding-top: get($section-spacings, "medium.small");
+    padding-bottom: get($section-spacings, "medium.small");
 
-  &.is-small-top {
-    padding-top: $small-spacing;
-  }
-  &.is-small-bottom {
-    padding-bottom: $small-spacing;
-  }
-
-  &.is-medium {
-    padding: $medium-spacing 0;
-
-    @include breakpoint(small down) {
-      padding: $medium-spacing/2 0
+    @include breakpoint(medium up) {
+      padding-top: get($section-spacings, "medium.medium");
+      padding-bottom: get($section-spacings, "medium.medium");
     }
-  }
 
-  &.is-medium-desktop {
     @include breakpoint(large up) {
-      padding: $medium-spacing 0;
+      padding-top: get($section-spacings, "medium.large");
+      padding-bottom: get($section-spacings, "medium.large");
     }
   }
 
-  &.is-medium-spaced:not(:first-child) {
-    padding-top: $medium-spacing;
-  }
+  &.section--large {
+    padding-top: get($section-spacings, "large.small");
+    padding-bottom: get($section-spacings, "large.small");
 
-  &.is-medium-top {
-    padding-top: $medium-spacing;
-  }
-  &.is-medium-bottom {
-    padding-bottom: $medium-spacing;
-  }
-
-  &.is-large {
-    padding: $large-spacing 0;
-
-    @include breakpoint(small down) {
-      padding: $large-spacing/2 0
+    @include breakpoint(medium up) {
+      padding-top: get($section-spacings, "large.medium");
+      padding-bottom: get($section-spacings, "large.medium");
     }
-  }
 
-  &.is-large-desktop {
     @include breakpoint(large up) {
-      padding: $large-spacing 0;
+      padding-top: get($section-spacings, "large.large");
+      padding-bottom: get($section-spacings, "large.large");
     }
-  }
-
-  &.is-large-spaced:not(:first-child) {
-    padding-top: $large-spacing;
-  }
-
-  &.is-large-top {
-    padding-top: $large-spacing;
-  }
-  &.is-large-bottom {
-    padding-bottom: $large-spacing;
-  }
-
-  &.is-secondary-section {
-    background: #F8F8F8;
   }
 }
 
@@ -381,49 +329,20 @@ form {
 }
 
 /* Utility Classes */
-.is-vertical-center {
-  display: flex;
-  justify-content: center;
-}
-
-.is-centered {
-  justify-content: center;
-}
-
-.is-background-container {
+.background-container {
   position: relative;
   z-index: 1;
 }
 
-.background-image-container {
+img.background, video.background {
   position: absolute;
   top: 0;
   left: 0;
   width:100%;
   height: 100%;
   z-index: -1;
-  overflow: hidden;
-
-  img, video {
-    position: relative;
-    max-width: none;
-    object-fit: cover;
-    object-position: center;
-    left: -5%;
-    top: -5%;
-    width: 110%;
-    height: 110%;
-  }
-}
-
-video {
-  height: auto;
-  width: 100%;
-}
-
-.transition-helper {
-  width: 100%;
-  height: 100%;
+  max-width: none;
+  object-fit: cover;
 }
 
 .background-video-container {

@@ -1,8 +1,10 @@
 module.exports = {
-    plugins: [
-        require('postcss-import'),
-        require('postcss-import-url'),
-        require('autoprefixer'),
-        require('postcss-clean')
-    ]
+    sourceMap: true,
+    syntax: 'postcss-scss',
+    plugins: {
+        'postcss-import': {},
+        'postcss-import-url': {},
+        'autoprefixer': {},
+        'postcss-clean': {}
+    }
 }

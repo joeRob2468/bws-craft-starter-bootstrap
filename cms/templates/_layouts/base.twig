@@ -47,8 +47,7 @@
         {% include "_partials/global/global_header.twig" %}
 
         {%- endminify -%}
-        <link rel="stylesheet" href="{{ baseUrl }}dist/vendors~main.css"></link>
-        <link rel="stylesheet" href="{{ baseUrl }}dist/css/main.css"></link>
+        <link rel="stylesheet" href="{{ baseUrl }}dist/main.css"></link>
         {# -- Inline CSS block used by templates for Critical CSS #}
         {% block _inline_css %}{% endblock %}
 
@@ -95,7 +94,7 @@
         {% endblock %}
         {%- endminify -%}
 
-        <script src="{{ baseUrl }}dist/vendors~main.bundle.js" type="text/javascript"></script>
-        <script src="{{ baseUrl }}dist/main.bundle.js" type="text/javascript"></script>
+        <script src="{{ baseUrl }}dist/vendors~main.bundle.js" type="text/javascript" defer></script>
+        <script src="{{ baseUrl }}dist/main.bundle.js" type="text/javascript" defer></script>
     </body>
 </html>

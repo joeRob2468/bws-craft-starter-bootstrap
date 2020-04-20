@@ -5,8 +5,8 @@
 {% set heading = block['heading'] is defined ? block.heading : '' %}
 {% set rtfContent = block['rtfContent'] is defined ? block.rtfContent : '' %}
 
-<section class="section is-small section-{{ block_type }}-block animatable">
-	<div class="page-container">
+<section class="section section--small section-{{ block_type }}-block animatable">
+	<div class="container container--small">
 		{% if heading|length %}
 			<h2 class="heading">{{ heading | typogrify(true) }}</h2>
 		{% endif %}

@@ -17,11 +17,10 @@ module.exports = (env, argv) => {
         },
         output: {
             filename: '[name].bundle.js',
-            path: path.resolve(__dirname) + '/cms/web/dist',
-            pathinfo: false
+            path: path.resolve(__dirname) + '/cms/web/dist'
         },
         optimization: {
-            splitChunks: isDevelopment ? false : { chunks: 'all' },
+            splitChunks: { chunks: 'all' },
             removeEmptyChunks: isDevelopment ? false : true,
             removeAvailableModules: isDevelopment ? false : true
         },
@@ -30,7 +29,7 @@ module.exports = (env, argv) => {
             poll: isDevelopment ? true : false,
             ignored: /node_modules/
         },
-        devtool: isDevelopment ? 'cheap-module-eval-source-map' : 'source-map',
+        devtool: isDevelopment ? 'cheap-module-source-map' : 'source-map',
         stats: 'none',
         mode: isDevelopment ? 'development' : 'production',
         module: {
@@ -46,9 +45,18 @@ module.exports = (env, argv) => {
                     test: /\.scss|.css$/,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        'css-loader',
-                        'postcss-loader',
-                        'sass-loader'
+                        { 
+                            loader: 'css-loader', 
+                            options: { sourceMap: true, importLoaders: 2 }
+                        },
+                        { 
+                            loader: 'postcss-loader', 
+                            options: {}
+                        },
+                        { 
+                            loader: 'sass-loader', 
+                            options: { sourceMap: true }
+                        },
                     ]
                 },
                 {
@@ -65,7 +73,7 @@ module.exports = (env, argv) => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: 'css/[name].css',
+                filename: '[name].css',
                 chunkFilename: '[id].css'
             }),
             new BrowserSyncPlugin({

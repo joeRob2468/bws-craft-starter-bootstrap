@@ -5,8 +5,8 @@
 {% set heading = block['heading'] is defined ? block.heading : '' %}
 {% set rtfAdditionalContent = block['rtfAdditionalContent'] is defined ? block.rtfAdditionalContent : '' %}
 
-<section class="section is-medium section-contact-form block-{{ block.type.handle }} animatable">
-    <div class="page-container">
+<section class="section section--small section-contact-form block-{{ block.type.handle }} animatable">
+    <div class="container container--small">
         {% if heading|length %}<div class="form-header"><h1>{{ heading|typogrify(true) }}</h1></div>{% endif %}
         <div class="contact-form-container">
             <form class="contact-form" method="post" action="/" @submit.prevent="onSubmit" novalidate>

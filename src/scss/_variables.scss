@@ -1,25 +1,153 @@
- @charset "utf-8";
+@charset "utf-8";
 
+/************* Custom Variables *************/
 /* Color and font variables */
-$primary-accent: #0076CC;
-
-$body-copy-font: 'Muli', sans-serif;
-$body-text-color: #000000;
-$body-copy-color: rgba($body-text-color, 0.8);
-$subheading-copy-font: "Muli", sans-serif;
-$heading-copy-font: "Muli", sans-serif;
-$heading-text-color: #000000;
-$heading-copy-color: $heading-text-color;
+$primary-accent: #0D9A5F;
 $dark-heading-copy-color: #FFFFFF;
 
-/* Container Margins */
-$container-small-margin: 7.5%; // width: 85%;
+$body-copy-font: 'Muli', sans-serif;
+$body-text-color: #16191A;
+$body-copy-color: $body-text-color;
+$subheading-copy-font: "Muli", sans-serif;
+$heading-copy-font: "Muli", sans-serif;
+$heading-text-color: #16191A;
+$heading-copy-color: $heading-text-color;
+$dark-heading-copy-color: #FFFFFF;
+$base-font-size: 20px;
+$global-font-size: 20px;
 
-/* Layout variables */
-$base-font-size: 19px;
-$small-spacing: 4rem;
-$medium-spacing: 7rem;
-$large-spacing: 10rem;
+@import '~foundation-sites/scss/util/util';
+
+/************* Layout Variables *************/
+
+$max-fixed-width: rem-calc(1920px); // max width for all page-container classes 
+
+
+// Used for setting widths of containers via margins inside a page-container class (IE, not full-width containers). 
+// Allows us to set different widths when max-width is hit, instead of all being the same width on small screens. 
+// Usage: get($container-margins, "containerSize.breakpoint") 
+$container-margins: (
+  small: (
+      small: rem-calc(50px),
+      medium: rem-calc(120px),
+      large: rem-calc(220px),
+      xlarge: rem-calc(290px),
+      xxlarge: rem-calc(385px)
+  ),
+  medium: (
+      small: rem-calc(20px),
+      medium: rem-calc(50px),
+      large: rem-calc(75px),
+      xlarge: rem-calc(100px),
+      xxlarge: rem-calc(120px)
+  ),
+  standard: (
+      small: rem-calc(20px),
+      medium: rem-calc(50px),
+      large: rem-calc(75px),
+      xlarge: rem-calc(100px),
+      xxlarge: rem-calc(120px)
+  ),
+);
+
+// Usage: get($section-spacings, "sectionSize.breakpoint")
+$section-spacings: (
+    small: (
+        small: 2rem,
+        medium: 4rem,
+        large: 4rem,
+    ),
+    medium: (
+        small: 4.5rem,
+        medium: 7rem,
+        large: 7rem,
+    ),
+    large: (
+        small: 5rem,
+        medium: 8rem,
+        large: 10rem
+    )
+);
+
+
+/************* Foundation Overrides *************/
+// Global settings
+$flex: true;
+$prototype: false;
+$global-width: rem-calc(1150);
+
+// Base Typography
+$small-font-size: 16px;
+$global-lineheight: 1.6;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$body-font-color: #16191A;
+$body-font-family: 'Muli', Roboto, Arial, sans-serif;
+
+// Paragraph Typography
+$paragraph-lineheight: 1.6;
+$paragraph-margin-bottom: 1.6em;
+
+// Heading Typography
+$header-font-weight: $global-weight-normal;
+$header-font-style: normal;
+$header-color: #16191A;
+$header-small-font-color: $header-color;
+$header-font-family: 'Muli', Roboto, Arial, sans-serif;
+$header-lineheight: 1.2;
+$header-margin-bottom: 1em;
+$header-styles: (
+  small: (
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
+  ),
+  medium: (
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+  ),
+);
+
+// Misc Typography
+$anchor-color: $primary-accent;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+$list-lineheight: $paragraph-lineheight;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-side-margin: 1.25rem;
+$list-nested-side-margin: 1.25rem;
+
+// Breakpoints
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium large xlarge xxlarge);
+
+// XY Grid
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-columns: 12;
+$grid-margin-gutters: (
+  small: 20px,
+  medium: 50px
+);
+$xy-block-grid-max: 8;
+
+/************* Misc *************/
 
 // CSS Easing functions - https://github.com/KingScooty/sass-easing
 @import "~awesome-sass-easing/_sass-easing.scss";
