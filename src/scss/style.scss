@@ -48,17 +48,359 @@ $hamburger-layer-color: #FFFFFF;
 $hamburger-hover-opacity: 1;
 @import 'hamburgers/_sass/hamburgers/hamburgers';
 
+// CSS Easing functions - https://github.com/KingScooty/sass-easing
+// Only import if you need something other than the default ease
+// @import "~awesome-sass-easing/_sass-easing.scss";
+
 // Common Styles (overrides and utilities)
 @import "common";
 
+/******************** Typography ********************/
+.page--heading {
+  font-family: $heading-copy-font;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $heading-copy-color;
+  line-height: $header-lineheight;
+  margin-bottom: 0.65em;
+  font-size: rem-calc(35);
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(70);
+  }
+}
+
+.primary--heading {
+  font-family: $heading-copy-font;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $heading-copy-color;
+  line-height: $header-lineheight;
+  margin-bottom: 0.65em;
+  font-size: rem-calc(30);
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(50);
+  }
+}
+
+.inline--heading {
+  font-family: $heading-copy-font;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $heading-copy-color;
+  line-height: $header-lineheight;
+  margin-bottom: 0.65em;
+  font-size: rem-calc(25);
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(35);
+  }
+}
+
+/******************** Form Styles ********************/
+
+form {
+  input:disabled, textarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .field input, .field textarea {
+    border: none;
+    box-shadow: 0px 5px 12px 0px rgba(#333333 ,0.06);
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    //border-left: 2px solid #FFFFFF;
+    color: $body-copy-color;
+    font-size: rem-calc(18px);
+    line-height: 1.6rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    height: auto;
+
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+
+    &::placeholder {
+      color: #7B8D9A;
+    }
+
+    &:focus, &:active {
+      border-color: #DDDDDD;
+      border-left: 2px solid $primary-accent;
+      box-shadow: 0px 12px 15px 0px rgba(#333333, 0.1);
+    }
+
+    &.invalid {
+      border-color: #d10e0e;
+      color: #d10e0e;
+
+      &::placeholder {
+        color: #d10e0e;
+      }
+    }
+  }
+
+  .field-group {
+    display: flex; 
+    flex-direction: row;
+
+    @include breakpoint(small down) {
+      flex-direction: column;
+    }
+
+    .field {
+      flex: 1;
+      
+      @include breakpoint(medium up) {
+        &:not(:last-of-type):not(.no-spacing) {
+          margin-right: 0.65rem;
+        }
+      }
+    }
+  }
+
+  .button, .buttons .button {
+    width: 100%;
+
+    background: $primary-accent;
+    border: 1px solid $primary-accent;
+    border-color: $primary-accent;
+    color: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    line-height: 1.6rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    border-radius: 0;
+    
+    &:not(:last-of-type) {
+      margin-right: 0.75rem;
+    }
+
+    &:hover {
+      background: darken($primary-accent, 5);
+      border-color: darken($primary-accent, 5);
+    }
+
+    &.submitted {
+      background: #00b330;
+      border-color: #00b330;
+    }
+  }
+}
+
 /******************** General Styles ********************/
+.rtf li {
+  margin-bottom: 1em;
+}
+
+.hamburger {
+  padding-bottom: 5px;
+}
+
+/******************** Global Component Styles ********************/
+// Main navigation bar
+header.site-header {
+  .main-nav--section {
+    border-bottom: 1px solid #F0F0F0;
+    
+    nav.main-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .nav-logo {
+        padding: 1.5rem 0;
+        img, svg {
+          height: rem-calc(50px);
+        }
+      }
+
+      .nav-links {
+        display: flex;
+      }
+    }
+  }
+} 
+
+// Main navigation menu
+.main-navigation--menu {
+  display: flex;
+}
+
+.main-navigation--menu ul.menu {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+  // Standard menu item
+  .menu-item {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    a {
+      display: block;
+      color: $heading-text-color;
+      padding: 1rem 0.5rem;
+      transition: color 300ms ease;
+    }
+
+    &:hover > a {
+      color: $primary-accent;
+    }
+
+    .icon {
+      width: rem-calc(20px);
+      height: rem-calc(20px);
+      transform: translate(0, rem-calc(4px));
+      color: $primary-accent;
+    }
+  }
+
+  // Highlighted menu item
+  // Note: displays as button unless it is a dropdown parent
+  .menu-item.highlighted:not(.is-parent) {
+    a {
+      padding: 0.25rem 1.3rem;
+      border: 2px solid $primary-accent;
+      background: rgba($primary-accent, 0);
+      color: $primary-accent;
+      border-radius: rem-calc(50px);
+      font-weight: 600;
+      transition: background-color 300ms ease, color 300ms ease;
+
+      &:hover {
+        background: rgba($primary-accent, 1);
+        color: #FFFFFF;
+      }
+    }
+
+    &:not(:first-of-type) a {
+      margin-left: 1rem;
+    }
+
+    &:not(:last-of-type) a {
+      margin-right: 1rem;
+    }
+  }
+}
+
+// Main Navigation dropdown menus
+.main-navigation--menu > ul.menu {
+  // First level dropdowns
+  .menu-item > .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: -30%;
+    top: calc(100% - 2px);
+    border: 1px solid #F0F0F0;
+    border-top: 2px solid $primary-accent;
+    width: auto;
+    background: #FFFFFF;
+    font-size: rem-calc(18px);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 150ms ease, visibility 150ms ease;
+
+    .dropdown-menu-item {
+      > a {
+        position: relative; 
+        padding: 0.4rem 2.5rem 0.4rem 1rem;
+        white-space: nowrap;
+        transition: color 150ms ease, background-color 150ms ease;
+
+        .icon {
+          position: absolute;
+          right: 0.25rem;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: color 150ms ease;
+        }
+      }
+
+      &:hover > a {
+        color: $primary-accent;
+        //background: $primary-accent;
+      }
+
+      // add some spacing to the first and last items in a dropdown menu
+      &:first-of-type {
+        padding-top: 0.4rem;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  .menu-item:hover > .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // Second level dropdowns
+  .menu-item > .dropdown-menu .dropdown-menu-item > .nested-dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: auto;
+    min-height: 100%;
+    background: $primary-accent;
+    border-top: 2px solid $primary-accent;
+    margin-top: -2px;
+    font-size: rem-calc(18px);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 150ms ease, visibility 150ms ease;
+
+    .dropdown-menu-item {
+      a {
+        color: #FFFFFF;
+      }
+
+      &:hover > a {
+        color: rgba(#FFFFFF, 0.75);
+      }
+    } 
+  }
+
+  .menu-item > .dropdown-menu .dropdown-menu-item:hover > .nested-dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Footer
+footer.site-footer {
+  padding: 3rem 0;
+}
+
+/******************** Component Styles ********************/
+
+/******************** Block Styles ********************/
+
+/******************** Snippet Styles ********************/
 a.logo {
   position: relative;
   display: flex;
   justify-content: center;
 
   .svg, img {
-    height: 35px;
+    height: rem-calc(45px);
     width: auto;
   }
 
@@ -72,144 +414,29 @@ a.logo {
   }
 }
 
-.rtf li {
-  margin-bottom: 1em;
-}
+.newsletter-signup--section {
+  padding: 2rem 0;
 
-.hamburger {
-  padding-bottom: 5px;
-}
+  .newsletter-form--container {
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: rem-calc(950px);
+    background: #F8F8F8;
 
-// Buttons 
-.button {
-  padding: 0.8rem 1.3rem;
-  margin-bottom: 0.5rem;
-  align-self: flex-start;
-  //min-width: 12rem;
+    form {
+      max-width: rem-calc(550px);
+      margin-left: auto;
+      margin-right: auto;
 
-  background: $primary-accent;
-  border: 1px solid $primary-accent;
-  border-radius: 3px;
+      .buttons .button:last-of-type {
+        margin-bottom: 0;
+      }
 
-  font-size: px-to-em(16px);
-  font-weight: 500;
-  color: #FFFFFF;
-  letter-spacing: 0.03em;
-  
-  &:not(:only-of-type, :last-of-type) {
-    margin-right: 0.7rem;
-  }
-
-  transition: transform 200ms ease, background-color 200ms ease, border 200ms ease, color 200ms ease;
-
-  &:hover {
-    background: darken($primary-accent, 20);
-    border-color: darken($primary-accent, 20);
-    transform: translateY(-0.1rem);
-  }
-
-  &.no-outline {
-    border: none;
-  }
-
-  &.no-padding {
-    max-width: none;
-  }
-}
-
-.buttons .button:not(.text) {
-  @include breakpoint(small down) {
-    margin-right: 0;
-    width: 100%;
-  }
-}
-
-.button.secondary {
-  font-weight: 700;
-  background: rgba($primary-accent, 0);
-  border-color: $primary-accent;
-  color: $primary-accent;
-
-  &:hover, &:active {
-    background: rgba($primary-accent, 1);
-    color: #FFFFFF;
-  }
-}
-
-.button.text {
-  padding: 0.4rem 0;
-  background: none;
-  
-  color: rgba($body-text-color, 1);
-  border: none;
-  border-bottom: 2px solid rgba($body-text-color, 1);
-  border-radius: 0;
-
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem + 0.5rem;
-  transition: transform 200ms ease, opacity 200ms ease;
-
-  &:hover {
-    opacity: 0.6;
-  }
-}
-
-.is-dark .button, .button.is-light {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  color: $primary-accent;
-
-  &:hover, &:active {
-    border-color: #DFDFDF;
-    background: #DFDFDF;
-    color: $primary-accent;
-  }
-}
-
-.is-dark .button.text, .button.is-light.text {
-  background: none;
-  border: none;
-  border-bottom: 2px solid #FFFFFF;
-  color: rgba(#FFFFFF, 1);
-}
-
-.is-dark .button.secondary, .button.is-light.secondary {
-  background: rgba(#FFFFFF, 0);
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-
-  &:hover, &:active {
-    border-color: #FFFFFF;
-    background: #FFFFFF;
-    color: $primary-accent;
-  }
-}
-
-// Navigation
-header.site-header {
-  padding: 1rem 0;
-  border-bottom: 1px solid #DDDDDD;
-
-  .main-nav--section nav.main-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .nav-logo {
-      display: inline-block;
-    }
-
-    nav.main-nav .nav-links {
-      flex: 1;
+      @include breakpoint(medium up) {
+        .field-group .field input, .field-group .buttons .button {
+          margin-bottom: 0;
+        }
+      }
     }
   }
-} 
-
-// Footer
-
-footer.site-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #DDDDDD;
 }
-
-/******************** Block Styles ********************/

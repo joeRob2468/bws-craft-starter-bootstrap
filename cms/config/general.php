@@ -26,6 +26,7 @@ return [
     'runQueueAutomatically' => (bool)getenv('RUN_QUEUE_AUTOMATICALLY'),
     'securityKey' => getenv('SECURITY_KEY'),
     'siteUrl' => getenv('SITE_URL'),
+    'siteName' => getenv('SITE_NAME'),
     // Craft config settings from constants
     'cacheDuration' => false,
     'defaultSearchTermOptions' => [
@@ -34,7 +35,7 @@ return [
     ],
     'defaultTokenDuration' => 'P2W',
     'enableCsrfProtection' => true,
-    'errorTemplatePrefix' => 'errors/',
+    'errorTemplatePrefix' => '_errors/',
     'generateTransformsBeforePageLoad' => true,
     'maxCachedCloudImageSize' => 3000,
     'maxUploadFileSize' => '100M',

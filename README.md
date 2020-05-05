@@ -41,7 +41,7 @@ In local development, you'll be setting up the Laradock docker containers, then 
 6. Run `git submodule init` and `git submodule update` to make sure the `laradock` folder is up-to-date. 
 7. Run `chmod +x laradock.sh` to make sure `laradock.sh` is executable.
 8. Run `./laradock.sh install` to install the docker-sync gem and set up your default laradock environment. 
-9. Run `./laradock.sh up` to and start your Laradock service containers. This will take a while. 
+9. Run `./laradock.sh up` to start your Laradock service containers. This will take a while. 
 
 #### Step Two - set up Craft CMS in your Laradock workspace
 

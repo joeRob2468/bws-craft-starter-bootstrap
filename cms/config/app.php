@@ -12,7 +12,7 @@
  * You can define custom modules and system components, and even override the
  * built-in system components.
  */
-if (getenv('REDIS_HOSTNAME') == 'true') {
+if (getenv('REDIS_ENABLED') == 'true') {
     return [
         'modules' => [
             'site-module' => [

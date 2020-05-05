@@ -1,8 +1,7 @@
 import ScrollMonitor from 'scrollmonitor';
-//import { Foundation } from 'foundation-sites/js/foundation.core';
-// NOTE: Foundation scripts break IE11 and down, so don't use them.
 
-import NavigationController from './NavigationController';
+import feather from 'feather-icons';
+//import NavigationController from './NavigationController';
 //import ContactFormController from './ContactFormController';
 
 class MainController {
@@ -10,10 +9,9 @@ class MainController {
     constructor() {
         // Create class variables
         this.scrollMonitor = ScrollMonitor;
-        //Foundation.addToJquery($);
         this.scrollWatchers = [];
-        this.navigationController = null;
-        this.contactFormController = null;
+        //this.navigationController = null;
+        //this.contactFormController = null;
 
         // hide preloader 
         $('.revealer').removeClass('show').addClass('animate-out');
@@ -32,6 +30,11 @@ class MainController {
             if (typeof ga === 'function') {
                 ga('send', 'pageview', location.pathname);
             }
+
+            // replace feather markup with SVGs
+            feather.replace({
+                class: 'icon'
+            });
 
             // initialize navigation controller
             // this.navigationController = new NavigationController();
@@ -84,7 +87,6 @@ class MainController {
             }
 
             this.scrollWatchers = [];
-            //$(document).foundation('destroy');
         } catch (e) {
             console.log(e);
         }

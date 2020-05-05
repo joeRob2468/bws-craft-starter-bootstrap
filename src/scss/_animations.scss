@@ -1,4 +1,8 @@
-/* CSS3 Animations - used to animate stuff. I need to clean this up one day. */
+/********************************************************************************************************
+* CSS3 Animations - used to animate stuff. I need to clean this up one day.
+********************************************************************************************************/
+
+// TODO: Really clean this up, currently only used for revealer animation
 
 /* Page Revealer */
 .revealer {
@@ -42,7 +46,7 @@
         
         .logo-animation {
             opacity: 0;
-            animation: revealer-fade-in 800ms $easeInOutCubic forwards;
+            animation: revealer-fade-in 800ms ease forwards;
             animation-delay: 1000ms;
         }
     }
@@ -52,7 +56,7 @@
 
         .revealer-layer {
             
-            animation: revealer-fade-in 800ms $easeInOutCubic forwards;
+            animation: revealer-fade-in 800ms ease forwards;
             //animation: revealer-slide-in-1 600ms $easeInSine forwards;
         }
     }
@@ -61,13 +65,13 @@
         display: block;
 
         .logo-animation {
-            transition: opacity 400ms $easeInOutCubic;
+            transition: opacity 400ms ease;
             opacity: 0;
             transition-delay: 0;
         }
 
         .revealer-layer {
-            animation: revealer-fade-out 800ms $easeInOutCubic forwards;
+            animation: revealer-fade-out 800ms ease forwards;
             // animation: revealer-slide-out-1 600ms $easeInSine forwards;
         }
     }
@@ -107,7 +111,12 @@
     }
 }
 
-/* Hero (Example of how the animation system works) */
+/* 
+Hero (Example of how the JS-driven animation system works). 
+.will-animate elements have .is-active added to them via JS when they are visible on the page 
+*/
+
+/*
 .animations-enabled {
     // Initial State
     .hero.will-animate {
@@ -126,3 +135,4 @@
         }
     }
 }
+*/

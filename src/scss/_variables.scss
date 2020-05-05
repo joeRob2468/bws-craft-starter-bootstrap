@@ -1,15 +1,17 @@
-@charset "utf-8";
+/********************************************************************************************************
+* Variables - used to create variables for the site SCSS and to override default configuration values
+* created by Foundation. 
+********************************************************************************************************/
 
-/************* Custom Variables *************/
-/* Color and font variables */
+/******************** Color and font variables ********************/
 $primary-accent: #0D9A5F;
 $dark-heading-copy-color: #FFFFFF;
 
-$body-copy-font: 'Muli', sans-serif;
+$body-copy-font: 'Open Sans', sans-serif;
 $body-text-color: #16191A;
 $body-copy-color: $body-text-color;
-$subheading-copy-font: "Muli", sans-serif;
-$heading-copy-font: "Muli", sans-serif;
+$subheading-copy-font: "Open Sans", sans-serif;
+$heading-copy-font: "Encode Sans Condensed", sans-serif;
 $heading-text-color: #16191A;
 $heading-copy-color: $heading-text-color;
 $dark-heading-copy-color: #FFFFFF;
@@ -18,35 +20,42 @@ $global-font-size: 20px;
 
 @import '~foundation-sites/scss/util/util';
 
-/************* Layout Variables *************/
+/******************** Layout Variables ********************/
 
-$max-fixed-width: rem-calc(1920px); // max width for all page-container classes 
-
-
-// Used for setting widths of containers via margins inside a page-container class (IE, not full-width containers). 
-// Allows us to set different widths when max-width is hit, instead of all being the same width on small screens. 
-// Usage: get($container-margins, "containerSize.breakpoint") 
-$container-margins: (
-  small: (
-      small: rem-calc(50px),
-      medium: rem-calc(120px),
-      large: rem-calc(220px),
-      xlarge: rem-calc(290px),
-      xxlarge: rem-calc(385px)
-  ),
-  medium: (
-      small: rem-calc(20px),
-      medium: rem-calc(50px),
-      large: rem-calc(75px),
-      xlarge: rem-calc(100px),
-      xxlarge: rem-calc(120px)
-  ),
+// Map containing max-widths for container classes. Used mostly in _common.scss, where we set up the standard containers. 
+// Usage: get($container-widths, "containerSize.breakpoint") 
+$container-widths: (
   standard: (
-      small: rem-calc(20px),
-      medium: rem-calc(50px),
-      large: rem-calc(75px),
-      xlarge: rem-calc(100px),
-      xxlarge: rem-calc(120px)
+      small: rem-calc(1150px),
+      medium: rem-calc(1150px),
+      large: rem-calc(1150px),
+      xlarge: rem-calc(1150px),
+      xxlarge: rem-calc(1150px)
+  ),
+  large: (
+      small: rem-calc(1700px),
+      medium: rem-calc(1700px),
+      large: rem-calc(1700px),
+      xlarge: rem-calc(1700px),
+      xxlarge: rem-calc(1700px)
+  ),
+);
+
+// Map containing gutters (left and right padding values) for container classes. Used mostly in _common.scss, where we set up the standard containers. 
+$container-gutters: (
+  standard: (
+      small: rem-calc(10px),
+      medium: rem-calc(25px),
+      large: rem-calc(25px),
+      xlarge: rem-calc(25px),
+      xxlarge: rem-calc(25px)
+  ),
+  large: (
+      small: rem-calc(10px),
+      medium: rem-calc(25px),
+      large: rem-calc(25px),
+      xlarge: rem-calc(25px),
+      xxlarge: rem-calc(25px)
   ),
 );
 
@@ -70,7 +79,7 @@ $section-spacings: (
 );
 
 
-/************* Foundation Overrides *************/
+/******************** Foundation Overrides ********************/
 // Global settings
 $flex: true;
 $prototype: false;
@@ -82,20 +91,20 @@ $global-lineheight: 1.6;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $body-font-color: #16191A;
-$body-font-family: 'Muli', Roboto, Arial, sans-serif;
+$body-font-family: $body-copy-font, Roboto, Arial, sans-serif;
 
 // Paragraph Typography
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1.6em;
 
 // Heading Typography
-$header-font-weight: $global-weight-normal;
+$header-font-weight: 700;
 $header-font-style: normal;
 $header-color: #16191A;
 $header-small-font-color: $header-color;
-$header-font-family: 'Muli', Roboto, Arial, sans-serif;
+$header-font-family: $heading-copy-font, Roboto, Arial, sans-serif;
 $header-lineheight: 1.2;
-$header-margin-bottom: 1em;
+$header-margin-bottom: 1.5em;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
@@ -147,7 +156,4 @@ $grid-margin-gutters: (
 );
 $xy-block-grid-max: 8;
 
-/************* Misc *************/
-
-// CSS Easing functions - https://github.com/KingScooty/sass-easing
-@import "~awesome-sass-easing/_sass-easing.scss";
+/******************** Misc ********************/

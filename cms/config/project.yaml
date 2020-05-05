@@ -1,4 +1,4 @@
-dateModified: 1587401958
+dateModified: 1588611899
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: 'BWS Craft Bootstrap'
@@ -11,7 +11,7 @@ fieldGroups:
   7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565:
     name: Globals
   8fba94f5-6d8c-4344-9c60-61b9b1b52e17:
-    name: Common
+    name: Navigation
   eca12a22-55f0-4613-ad10-2bed6bfdb4a2:
     name: 'Content Builder'
 fields:
@@ -177,6 +177,18 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f:
+    contentColumnType: boolean
+    fieldGroup: 8fba94f5-6d8c-4344-9c60-61b9b1b52e17
+    handle: navigationLinkHighlight
+    instructions: 'If enabled, this link will be highlighted in the navigation menu, most often by displaying as a button. '
+    name: 'Link Highlight'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   20fdd39d-df7e-451e-8aed-0581d1a06c84:
     contentColumnType: string
     fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
@@ -527,7 +539,9 @@ fields:
                   - false
                 -
                   - sources
-                  - '*'
+                  -
+                    - singles
+                    - 'section:393e6f52-2804-4e16-a508-40de6249b4af'
           -
             - site
             -
@@ -958,6 +972,42 @@ sections:
         template: _pages/home
         uriFormat: __home__
     type: single
+  ecc44cee-dded-4260-be41-18578d1a9286:
+    enableVersioning: true
+    entryTypes:
+      82de9b35-174d-44e9-869a-e7fa3286c0de:
+        fieldLayouts:
+          35ae30e5-0e9d-42ff-8b17-d0b1e31baaae:
+            tabs:
+              -
+                fields:
+                  5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93:
+                    required: true
+                    sortOrder: 1
+                  9075a3a8-280c-41d1-96e2-348beb518b13:
+                    required: true
+                    sortOrder: 2
+                name: Settings
+                sortOrder: 1
+        handle: socialLinks
+        hasTitleField: false
+        name: 'Social Links'
+        sortOrder: 1
+        titleFormat: '{navigationLink.getText()}'
+        titleLabel: Title
+    handle: socialLinks
+    name: 'Social Links'
+    propagationMethod: all
+    siteSettings:
+      0cc785f8-a672-4448-9841-1c39b72f75bd:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: ''
+    structure:
+      maxLevels: 1
+      uid: 28e7c3b5-bfb9-473f-81a6-028c265e906f
+    type: structure
   f9dbfbdc-d362-47f8-8861-5a62706fc184:
     enableVersioning: true
     entryTypes:
@@ -967,6 +1017,9 @@ sections:
             tabs:
               -
                 fields:
+                  12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f:
+                    required: false
+                    sortOrder: 2
                   9075a3a8-280c-41d1-96e2-348beb518b13:
                     required: true
                     sortOrder: 1
@@ -980,16 +1033,15 @@ sections:
         titleLabel: Title
     handle: mainNavigation
     name: 'Main Navigation'
-    previewTargets: null
     propagationMethod: all
     siteSettings:
       0cc785f8-a672-4448-9841-1c39b72f75bd:
         enabledByDefault: true
         hasUrls: false
         template: null
-        uriFormat: null
+        uriFormat: ''
     structure:
-      maxLevels: 2
+      maxLevels: 3
       uid: 044f4483-118f-4254-a95e-cfcdb58dc8b7
     type: structure
 siteGroups:
@@ -1008,7 +1060,7 @@ sites:
 system:
   edition: solo
   live: true
-  name: 'BWS Craft Bootstrap'
+  name: $SITE_NAME
   schemaVersion: 3.4.10
   timeZone: America/Los_Angeles
 users:

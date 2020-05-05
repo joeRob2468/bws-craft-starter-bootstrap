@@ -1,10 +1,12 @@
-/* Common Styles - used as a baseline boilerplate theme for most sites. */
+/********************************************************************************************************
+* Common Styles - used as a baseline boilerplate theme for most sites.
+********************************************************************************************************/
 
 object.svg {
   pointer-events: none;
 }
 
-/* Global Typography Styles */
+/******************** Global Typography Styles ********************/
 body, html {
   background: #FFFFFF;
 
@@ -29,42 +31,7 @@ a {
   color: $primary-accent;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
- 
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
- 
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
- 
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
- 
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
-
-/* Common Layout Classes */
+/******************** Common Layout Styles ********************/
 img, audio, video {
   display: block;
 }
@@ -102,9 +69,10 @@ video.cover {
   }
 }
 
+/******************** Container Styles ********************/
+
 .container {
   width: 100%;
-  max-width: $max-fixed-width;
   margin-left: auto;
   margin-right: auto;
 
@@ -116,76 +84,61 @@ video.cover {
   //   padding-left: rem-calc(get($grid-column-gutter, "medium")) / 2;
   // }
 
-  padding-left: get($container-margins, "standard.small");
-  padding-right: get($container-margins, "standard.small");
+  max-width: get($container-widths, "standard.small");
+  padding-left: get($container-gutters, "standard.small");
+  padding-right: get($container-gutters, "standard.small");
 
   @include breakpoint(medium up) {
-    padding-left: get($container-margins, "standard.medium");
-    padding-right: get($container-margins, "standard.medium");
+    max-width: get($container-widths, "standard.medium");
+    padding-left: get($container-gutters, "standard.medium");
+    padding-right: get($container-gutters, "standard.medium");
   }
 
   @include breakpoint(large up) {
-    padding-left: get($container-margins, "standard.large");
-    padding-right: get($container-margins, "standard.large");
+    max-width: get($container-widths, "standard.large");
+    padding-left: get($container-gutters, "standard.large");
+    padding-right: get($container-gutters, "standard.large");
   }
 
   @include breakpoint(xlarge up) {
-    padding-left: get($container-margins, "standard.xlarge");
-    padding-right: get($container-margins, "standard.xlarge");
+    max-width: get($container-widths, "standard.xlarge");
+    padding-left: get($container-gutters, "standard.xlarge");
+    padding-right: get($container-gutters, "standard.xlarge");
   }
 
   @include breakpoint(xxlarge up) {
-    padding-left: get($container-margins, "standard.xxlarge");
-    padding-right: get($container-margins, "standard.xxlarge");
+    max-width: get($container-widths, "standard.xxlarge");
+    padding-left: get($container-gutters, "standard.xxlarge");
+    padding-right: get($container-gutters, "standard.xxlarge");
   }
 
-  &.container--small {
-    padding-left: get($container-margins, "small.small");
-    padding-right: get($container-margins, "small.small");
+  &.container--large {
+    max-width: get($container-widths, "large.small");
+    padding-left: get($container-gutters, "large.small");
+    padding-right: get($container-gutters, "large.small");
 
     @include breakpoint(medium up) {
-      padding-left: get($container-margins, "small.medium");
-      padding-right: get($container-margins, "small.medium");
+      max-width: get($container-widths, "large.medium");
+      padding-left: get($container-gutters, "large.medium");
+      padding-right: get($container-gutters, "large.medium");
     }
 
     @include breakpoint(large up) {
-      padding-left: get($container-margins, "small.large");
-      padding-right: get($container-margins, "small.large");
+      max-width: get($container-widths, "large.large");
+      padding-left: get($container-gutters, "large.large");
+      padding-right: get($container-gutters, "large.large");
     }
 
     @include breakpoint(xlarge up) {
-      padding-left: get($container-margins, "small.xlarge");
-      padding-right: get($container-margins, "small.xlarge");
+      max-width: get($container-widths, "large.xlarge");
+      padding-left: get($container-gutters, "large.xlarge");
+      padding-right: get($container-gutters, "large.xlarge");
     }
 
     @include breakpoint(xxlarge up) {
-      padding-left: get($container-margins, "small.xxlarge");
-      padding-right: get($container-margins, "small.xxlarge");
-    }
-  }
-
-  &.container--medium {
-    padding-left: get($container-margins, "medium.small");
-    padding-right: get($container-margins, "medium.small");
-
-    @include breakpoint(medium up) {
-      padding-left: get($container-margins, "medium.medium");
-      padding-right: get($container-margins, "medium.medium");
-    }
-
-    @include breakpoint(large up) {
-      padding-left: get($container-margins, "medium.large");
-      padding-right: get($container-margins, "medium.large");
-    }
-
-    @include breakpoint(xlarge up) {
-      padding-left: get($container-margins, "medium.xlarge");
-      padding-right: get($container-margins, "medium.xlarge");
-    }
-
-    @include breakpoint(xxlarge up) {
-      padding-left: get($container-margins, "medium.xxlarge");
-      padding-right: get($container-margins, "medium.xxlarge");
+      max-width: get($container-widths, "large.xxlarge");
+      padding-left: get($container-gutters, "large.xlarge");
+      padding-right: get($container-gutters, "large.xlarge");
     }
   }
 }
@@ -240,95 +193,7 @@ video.cover {
   }
 }
 
-[v-cloak] {
-  display: none;
-}
-
-form {
-  .field input, .field textarea {
-    
-    border: none;
-    box-shadow: 0px 5px 12px 0px rgba(#316489 ,0.06);
-    background: #FFFFFF;
-    border-left: 2px solid #FFFFFF;
-    color: #003053;
-    font-size: px-to-em(20px);
-    font-weight: 600;
-    padding: 1.75rem;
-    margin-bottom: 1.5rem;
-
-    transition: border-color 200ms ease, box-shadow 200ms ease;
-
-    @include breakpoint(small down) {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      font-size: px-to-em(18px);
-    }
-
-    &::placeholder {
-      color: #7B8D9A;
-    }
-
-    &:focus, &:active {
-      border: none;
-      border-left: 2px solid $primary-accent;
-      box-shadow: 0px 12px 15px 0px rgba(#0075CB, 0.1);
-    }
-
-    &.invalid {
-      border-color: #d10e0e;
-      color: #d10e0e;
-
-      &::placeholder {
-        color: #d10e0e;
-      }
-    }
-  }
-
-  .field-group {
-    display: flex; 
-    flex-direction: row;
-
-    @include breakpoint(small down) {
-      flex-direction: column;
-    }
-
-    .field {
-      flex: 1;
-      
-      @include breakpoint(medium up) {
-        &:not(:last-of-type) {
-          margin-right: 0.75rem;
-        }
-
-        &:not(:first-of-type) {
-          margin-left: 0.75rem;
-        }
-      }
-    }
-  }
-
-  .buttons .button {
-    width: 100%;
-
-    background: $primary-accent;
-    border-color: $primary-accent;
-    color: #FFFFFF;
-    padding: 1.25rem;
-
-    &:hover {
-      background: darken($primary-accent, 5);
-      border-color: darken($primary-accent, 5);
-    }
-
-    &.submitted {
-      background: #00b330;
-      border-color: #00b330;
-    }
-  }
-}
-
-/* Utility Classes */
+/******************** Utility Classes ********************/
 .background-container {
   position: relative;
   z-index: 1;
@@ -370,4 +235,55 @@ img.background, video.background {
     pointer-events: none;
     opacity: 0.5;
   }
+}
+
+/******************** Misc ********************/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.feather {
+  width: rem-calc(24px);
+  height: rem-calc(24px);
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+[v-cloak] {
+  display: none;
 }
