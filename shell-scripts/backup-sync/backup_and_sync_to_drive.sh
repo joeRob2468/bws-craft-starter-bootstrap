@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage: 
-# ./backup_and_sync.sh -e "ABSOLUTE_PATH_TO_RCLONE_BIN" -p "ABSOLUTE_PATH_TO_APP_DIRECTORY" -t sync -r drive -s "ABSOLUTE_PATH_TO_BACKUP_DIRECTORY" -d "SITE_NAME_ON_GD"
+# ./backup_and_sync_to_drive.sh -e "ABSOLUTE_PATH_TO_RCLONE_BIN" -p "ABSOLUTE_PATH_TO_APP_DIRECTORY" -t sync -r drive -s "ABSOLUTE_PATH_TO_BACKUP_DIRECTORY" -d "SITE_NAME_ON_GD"
 # e: executable - path to rclone binary
 # p: root directory to run commands in - absolute path of webapp root directory
 # t: type - sync or clone
@@ -22,4 +22,4 @@ d) REMOTE_PATH=${OPTARG};;
 esac
 done
 
-cd $ROOT && $ROOT/scripts/backup_db.sh && $ROOT/scripts/backup_assets.sh && $ROOT/backup_to_drive.sh -e $RCLONE -t $TYPE -r $REMOTE -s $SOURCE_PATH -d $REMOTE_PATH
+cd $ROOT && $ROOT/shell-scripts/backup_db.sh && $ROOT/shell-scripts/backup_assets.sh && $ROOT/shell-scripts/backup-sync/backup_to_drive.sh -e $RCLONE -t $TYPE -r $REMOTE -s $SOURCE_PATH -d $REMOTE_PATH
