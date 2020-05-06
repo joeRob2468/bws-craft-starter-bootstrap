@@ -2,6 +2,7 @@
 
 # Usage: 
 # ./backup_and_sync.sh -e "ABSOLUTE_PATH_TO_RCLONE_BIN" -p "ABSOLUTE_PATH_TO_APP_DIRECTORY" -t sync -r drive -s "ABSOLUTE_PATH_TO_BACKUP_DIRECTORY" -d "SITE_NAME_ON_GD"
+# e: executable - path to rclone binary
 # p: root directory to run commands in - absolute path of webapp root directory
 # t: type - sync or clone
 # r: remote - name of rclone remote that has been configured

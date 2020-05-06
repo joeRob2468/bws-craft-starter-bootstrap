@@ -48,11 +48,10 @@ In local development, you'll be setting up the Laradock docker containers, then 
 1. Once the Laradock containers have built and started, run `./laradock.sh bash` to open a terminal session inside the workspace. 
 2. Run `cd cms && composer install`. This will install the Craft CMS dependencies inside the `cms` folder and create default environment variable files.
 3. `cd` back to the root project folder and run `./cms/craft install`. Leave all settings at default (by pressing enter without typing anything), except for the following settings: 
-    > Username: `admin`  
     > Email: `hello@boyerwebstudios.com`  
     > Password: `secret`
 4. Run `yarn install` to install the webpack build dependencies (for making changes to the site assets)
-5. You're done! Open `http://localhost/` to see the website, and navigate to `http://localhost/admin` to log into the admin panel using the credentials you set up in step 11. 
+5. You're done! Open `http://localhost/` to see the website, and navigate to `http://localhost/admin` to log into the admin panel using the credentials you set up in step 3. 
 
 ## Environment Defaults (use for Craft CMS installation on development environment)
 
