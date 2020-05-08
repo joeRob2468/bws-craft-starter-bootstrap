@@ -1,8 +1,7 @@
 import ScrollMonitor from 'scrollmonitor';
 
 import feather from 'feather-icons';
-//import NavigationController from './NavigationController';
-//import ContactFormController from './ContactFormController';
+import NavigationController from './NavigationController';
 
 class MainController {
     // main class initialization - runs once on site load
@@ -10,8 +9,7 @@ class MainController {
         // Create class variables
         this.scrollMonitor = ScrollMonitor;
         this.scrollWatchers = [];
-        //this.navigationController = null;
-        //this.contactFormController = null;
+        this.navigationController = null;
 
         // hide preloader 
         $('.revealer').removeClass('show').addClass('animate-out');
@@ -37,8 +35,8 @@ class MainController {
             });
 
             // initialize navigation controller
-            // this.navigationController = new NavigationController();
-            // this.navigationController.init();
+            this.navigationController = new NavigationController();
+            this.navigationController.init();
 
             // run element animations when in viewport (adds .is-active to visible elements as you scroll)
             $('.animatable').each(function (index) {
@@ -78,8 +76,8 @@ class MainController {
     destroy() {
         try {
             // destroy navigation controller
-            // this.navigationController.destroy();
-            // this.navigationController = null;
+            this.navigationController.destroy();
+            this.navigationController = null;
 
             // destroy element animation scroll watchers 
             for (let i = 0; i < this.scrollWatchers.length; i++) {

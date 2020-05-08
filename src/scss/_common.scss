@@ -191,9 +191,14 @@ video.cover {
       padding-bottom: get($section-spacings, "large.large");
     }
   }
+
+  &.section--whitespace + .section--whitespace {
+    padding-top: 0;
+  }
 }
 
 /******************** Utility Classes ********************/
+
 .background-container {
   position: relative;
   z-index: 1;

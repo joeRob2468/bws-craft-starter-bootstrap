@@ -1,13 +1,14 @@
 {# Contact Form Block #}
-{% import '_macros/_lazyImager' as LazyImager %}
-
+{# Just an example of a Vue contact form, modify and style to fit needs #}
 {% set block_type = "contact-form" %}
+
+{% import '_macros/_lazyImager' as LazyImager %}
 
 {# Block variable defaults #}
 {% set heading = block['heading'] is defined ? block.heading : '' %}
 {% set rtfAdditionalContent = block['rtfAdditionalContent'] is defined ? block.rtfAdditionalContent : '' %}
 
-<section class="section section--small section-{{ block_type }}-block animatable">
+<section class="section section--medium section-{{ block_type}}--block animatable">
     <div class="container">
         {% if heading|length %}<div class="form-header"><h1>{{ heading|typogrify(true) }}</h1></div>{% endif %}
         <div class="contact-form-container">

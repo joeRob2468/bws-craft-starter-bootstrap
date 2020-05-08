@@ -1,3 +1,4 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
 {# 
 
 // lazyLoaded Image/bgImages, optimized with Imager and Focuspoint
@@ -16,21 +17,26 @@ https://github.com/inuitcss/inuitcss/blob/develop/objects/_objects.ratio.scss
 
 3. set options in template, or pass without options for defaults:
 {% set options = {
-    sizes: [                --> set responsive image widths created by imager for lazySizes
-    { width: 1024 },      --> defaults based on http://gs.statcounter.com/screen-resolution-stats
-    { width: 768 },
+    sizes: [                        --> set responsive image widths created by imager for lazySizes. You can set the height as well. 
+        { width: 2200 },            --> defaults based on http://gs.statcounter.com/screen-resolution-stats
+        { width: 1920 },
+        { width: 1366 },
+        { width: 768 },
+        { width: 360 },
     ],
-    allowUpscale: false,    --> set imager setting allowUpscale - default is false
-    alt: 'logo',            --> set image alt tag, you could also use a twig variable if alt tag is set in CP - default is false
-    background: false,      --> set to true for bgImage element - default is false
-    class: 'o-media',       --> class name of img/bg element - default is o-media
-    format: 'jpg',          --> forces output format to a specific type - default is jpg
-    interlace: true,        --> set imager setting interlace - default is true
-    lazy: true,             --> use lazySizes - default is true      
-    mode: 'crop',           --> set mode 'crop', 'fit', 'stretch', 'croponly', 'letterbox' - default is crop
-    openDiv: false,         --> won't close the bgImage div element, useful for sliders or if the bgImage contains other elements - default is false
-    quality: 80,            --> set image quality - default is 80
-    ratio: 16:9,            --> set image ratio for cropping and sets a intrinsic ratio classname for bgImages - default is false
+    allowUpscale: true,             --> allow images to upscale - default is false, which will prevent upscaling
+    alt: 'logo',                    --> set image alt tag - default is false
+    class: 'o-media',               --> class name of img/bg element - default is o-media
+    format: 'jpg',                  --> forces output format to a specific type - default is jpg
+    interlace: true,                --> set imager setting interlace - default is true
+    mode: 'crop',                   --> set resize mode to 'crop', 'fit', 'stretch', 'croponly', 'letterbox' - default is crop
+    openDiv: false,                 --> won't close the bgImage div element, useful for sliders or if the bgImage contains other elements - default is false
+    quality: 80,                    --> set image quality - default is 80
+    ratio: 16:9,                    --> set image ratio for cropping - default is false
+    lazy: true,                     --> use lazySizes - default is true 
+    wrapImage: true                 --> wrap image in container div
+    wrapClass: 'image-container'    --> class to use for container div - defaults to 'image-container'
+    cover: flse                     --> add the 'cover' class to the image for object-fit: cover support - defaults to false
 } %}
 
 4. execute macro in template:
@@ -49,21 +55,19 @@ https://github.com/inuitcss/inuitcss/blob/develop/objects/_objects.ratio.scss
             { width: 768 },
             { width: 360 },
         ],
-        allowUpscale: false,
-        alt: false,
-        background: false,
-        class: '',
-        containerClass: '',
-        wrapImage: true,
+        allowUpscale: true,
+        alt: '',
+        class: 'o-media',
         transparent: false,
-        cover: true,
         format: 'jpg',
         interlace: true,
         lazy: true,
         mode: 'crop',
-        openDiv: false,
         quality: 80,
         ratio: false, 
+        wrapImage: true,
+        wrapClass: 'image-container',
+        cover: false,
     } %}
 
     {# Merge Attr with Defaults #}
@@ -95,50 +99,13 @@ https://github.com/inuitcss/inuitcss/blob/develop/objects/_objects.ratio.scss
         {# Image #}
         {% set images = craft.imager.transformImage(image, options.sizes, imageSettings) %}
 
-        {% if options.lazy %}
-            {% if options.background %}
-                {% if options.wrapImage %}<div class="background-image-container {{ options.containerClass }}">
-                    <div class="transition-helper {% if not options.cover %}no-cover{% endif %} {% if options.transparent %}is-transparent{% endif %}">{% endif %}
-                        <img data-sizes="auto"
-                                src="{{ craft.imager.base64Pixel(base64Ratio|first, base64Ratio|last) }}"
-                                data-srcset="{{ craft.imager.srcset(images) }}"
-                                class="{{ options.class }} {% if options.cover %}cover{% endif %} lazyload"
-                                alt="{{ options.alt }}" 
-                                {% if options.cover %}data-object-fit{% endif %}>
-                    {% if options.wrapImage %}</div>
-                </div>{% endif %}
-            {% else %}
-                {% if options.wrapImage %}<div class="transition-helper {% if not options.cover %}no-cover{% endif %} {{ options.containerClass }} {% if options.transparent %}is-transparent{% endif %}">{% endif %}
-                    <img data-sizes="auto"
-                        src="{{ craft.imager.base64Pixel(base64Ratio|first, base64Ratio|last) }}"
-                        data-srcset="{{ craft.imager.srcset(images) }}"
-                        class="{{ options.class }} {% if options.cover %}cover{% endif %} lazyload"
-                        alt="{{ options.alt }}"
-                        {% if options.cover %}data-object-fit{% endif %} />
-                {% if options.wrapImage %}</div>{% endif %}
-            {% endif %}
-        {% else %}
-            {% if options.background %}
-                {% if options.wrapImage %}<div class="background-image-container {{ options.containerClass }}">
-                    <div class="transition-helper {% if not options.cover %}no-cover{% endif %} {% if options.transparent %}is-transparent{% endif %}">{% endif %}
-                        <img sizes="auto"
-                            src="{{ images|last.url }}"
-                            srcset="{{ craft.imager.srcset(images) }}"
-                            class="{{ options.class }} {% if options.cover %}cover{% endif %}"  
-                            alt="{{ options.alt }}" 
-                            {% if options.cover %}data-object-fit{% endif %}>
-                    {% if options.wrapImage %}</div>
-                </div>{% endif %}
-            {% else %}
-                {% if options.wrapImage %}<div class="transition-helper {% if not options.cover %}no-cover{% endif %} {{ options.containerClass }} {% if options.transparent %}is-transparent{% endif %}">{% endif %}
-                    <img sizes="auto"
-                        src="{{ images|last.url }}"
-                        srcset="{{ craft.imager.srcset(images) }}"
-                        class="{{ options.class }} {% if options.cover %}cover{% endif %}"  
-                        alt="{{ options.alt }}"
-                        {% if options.cover %}data-object-fit{% endif %}>
-                {% if options.wrapImage %}</div>{% endif %}
-            {% endif %}
-        {% endif %}
+        {% if options.wrapImage %}<div class="{{ options.wrapClass }}{% if not options.cover %} no-cover{% endif %}{% if options.transparent %} is-transparent{% endif %}">{% endif %}
+            <img data-sizes="auto"
+                src="{{ craft.imager.base64Pixel(base64Ratio|first, base64Ratio|last) }}"
+                data-srcset="{{ craft.imager.srcset(images) }}"
+                class="{{ options.class }} {% if options.cover %}cover{% endif %} {% if options.lazy %}lazyload{% endif %}"
+                alt="{{ options.alt }}"
+                {% if options.cover %}data-object-fit{% endif %} />
+        {% if options.wrapImage %}</div>{% endif %}
     {% endif %}
 {% endmacro %}

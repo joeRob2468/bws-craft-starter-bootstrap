@@ -1,0 +1,77 @@
+{% set mainNavigation = craft.entries({
+    section: 'mainNavigation',
+    with: ['children', 'children.children']
+}).all() %}
+
+<div class="mobile-navigation--menu">
+    <div class="mobile-navigation-heading">
+        <div class="container container--large">
+            <div class="mobile-navigation-trigger-container">
+                <a class="mobile-navigation-trigger" href="#" aria-label="Close navigation menu"><span data-feather="x"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-navigation">
+        <div class="menu-container">
+            <ul class="menu">
+                {# Primary items #}
+                {% for topLevelLink in mainNavigation if topLevelLink.level == 1 %}
+                <li class="menu-item{% if topLevelLink.navigationLinkHighlight %} highlighted{% endif %}{% if topLevelLink.children|length %} is-parent{% endif %}">
+                    {% if topLevelLink.children|length %}
+                    <div class="dropdown-accordion-heading">
+                    {% endif %}
+                        <a href="{{ topLevelLink.navigationLink.getUrl() }}"{% if topLevelLink.navigationLink.getTarget()|length %} target="{{ topLevelLink.navigationLink.getTarget() }}"{% endif %}>
+                            {{ topLevelLink.navigationLink.getText() }}
+                        </a>
+                    {% if topLevelLink.children|length %}
+                        <div class="dropdown-expand-button"><span data-feather="chevron-down"></span></div>
+                    </div>
+                    {% endif %}
+
+                    {# Dropdown menu items - if dropdown menu has nested children, display as mega-menu #}
+                    {% if topLevelLink.children|length %}
+                    {% set submenuHasChildren = false %}
+                    {% for item in topLevelLink.children if not submenuHasChildren %}
+                        {% if item.children|length %}
+                            {% set submenuHasChildren = true %}
+                        {% endif %}
+                    {% endfor %}
+                    <ul class="menu dropdown-menu">
+                        {% for item in topLevelLink.children %}
+                            {% if item.level == 2 %}
+                                <li class="dropdown-menu-item{% if item.children|length %} is-parent{% endif %}">
+                                    {% if item.children|length %}
+                                    <div class="dropdown-accordion-heading">
+                                    {% endif %}
+                                        <a href="{{ item.navigationLink.getUrl() }}"{% if item.navigationLink.getTarget()|length %} target="{{ item.navigationLink.getTarget() }}"{% endif %}>
+                                            {{ item.navigationLink.getText() }}
+                                        </a>
+                                    {% if item.children|length %}
+                                        <div class="dropdown-expand-button"><span data-feather="chevron-down"></span></div>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    {# Further nested items #}
+                                    {% if item.children|length %}
+                                        <ul class="menu nested-dropdown-menu">
+                                        {% for child in item.children %}
+                                            <li class="dropdown-menu-item">
+                                                <a href="{{ child.navigationLink.getUrl() }}"{% if child.navigationLink.getTarget()|length %} target="{{ child.navigationLink.getTarget() }}"{% endif %}>
+                                                    {{ child.navigationLink.getText() }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

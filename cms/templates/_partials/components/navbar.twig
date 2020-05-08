@@ -1,15 +1,21 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {% cache globally unless cacheExempt %}
 <div class="main-nav--section">
-    <div class="container container--large">
-        <nav class="main-nav">
-            <div class="nav-logo">
-                {% include "_partials/snippets/logo" with {'size': 'compact' } %}
-            </div>
-            <div class="nav-links">
-                {% include '_partials/components/main-navigation' %}
-            </div>
-        </nav>
-    </div>
+	<div class="container container--large">
+		<nav class="main-nav">
+			<div class="nav-logo">
+				{% include "_partials/snippets/logo" with {'size': 'compact' } %}
+			</div>
+			<div class="nav-links">
+				{% include '_partials/components/main-navigation' %}
+				<div class="mobile-navigation-trigger-container">
+					<a class="mobile-navigation-trigger" href="#" aria-label="Open navigation menu">
+						<span data-feather="menu"></span>
+					</a>
+				</div>
+				{% include '_partials/components/mobile-navigation' %}
+			</div>
+		</nav>
+	</div>
 </div>
 {% endcache %}

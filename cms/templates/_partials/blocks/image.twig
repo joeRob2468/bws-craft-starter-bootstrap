@@ -6,36 +6,27 @@
 
 {# Block variable defaults #}
 {% set image = block['image'] is defined ? block.image[0] : null %}
-{% set heading = block['heading'] is defined ? block.heading : '' %}
-{% set rtfShortContent = block['rtfShortContent'] is defined ? block.rtfShortContent : '' %}
 
 {% if image %}
 	{% set imageOptions = {
         sizes: [
+            { width: 2200 },
             { width: 1920 },
             { width: 1366 },
             { width: 768 },
             { width: 360 },
         ],
-        allowUpscale: true,
         alt: image.title,
-        background: false,
-        cover: false
+        ratio: '16:10',
+        cover: true,
+        wrapImage: true,
     } %}
 {% endif %}
 
-<section class="section section--small section-{{ block_type}}-block animatable">
-    <div class="container">
-        {% if heading|length %}
-            <h2 class="heading">{{ heading | typogrify(true) }}</h2>
-        {% endif %}
-        {% if image %}
-            <a href="{{ image.url }}" target="_blank" class="image-link">{{ LazyImager.LazyImager(image, imageOptions) }}</a>
-        {% endif %}
-        {% if rtfShortContent|length %}
-            <div class="caption rte">
-                {{ rtfShortContent }}
-            </div>
-        {% endif %}
+{% if image %}
+<section class="section section--medium section--whitespace section-{{ block_type}}--block animatable">
+    <div class="container container--large">
+        {{ LazyImager.LazyImager(image, imageOptions) }}
     </div>
 </section>
+{% endif %}
