@@ -81,7 +81,7 @@ Open a bash session inside the Docker `workspace` container by running `laradock
 
 Make sure you've installed the webpack dependencies, which are installed by running `yarn install` during the initial setup. 
 
-To build the site assets and watch for changes, run `yarn watch`. To stop watching for changes, press `ctrl/cmd + c`. To create a production build, run `yarn build`.
+To build the site assets and watch for changes, run `yarn start`. To stop watching for changes, press `ctrl/cmd + c`. To create a production build, run `yarn build`.
 
 Open `http://localhost/` to view the site. 
 
