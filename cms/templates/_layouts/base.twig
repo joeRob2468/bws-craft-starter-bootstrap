@@ -44,7 +44,7 @@
         {# <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title> #}
         {% hook "seo" %}
 
-        {% include "_partials/global/global_header.twig" %}
+        {% include "_partials/global/html_header.twig" %}
 
         {%- endminify -%}
         <link rel="stylesheet" href="{{ baseUrl }}dist/main.css"></link>
@@ -96,5 +96,8 @@
 
         <script src="{{ baseUrl }}dist/vendors~main.bundle.js" type="text/javascript" defer></script>
         <script src="{{ baseUrl }}dist/main.bundle.js" type="text/javascript" defer></script>
+
+        {# -- Global HTML Footer -- #}
+        {% include "_partials/global/html_footer.twig" %}
     </body>
 </html>

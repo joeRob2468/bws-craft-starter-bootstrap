@@ -17,13 +17,13 @@
 
 {% block body %}
 
-    {% include "_partials/components/page_revealer.twig" %}
+    {% include "_partials/global/page_revealer.twig" %}
 
     <main data-router-wrapper>
         <div data-router-view="{{ namespace }}">
             <div class="page-wrapper">
                 {# -- Header -- #}
-                {% include "_partials/components/header.twig" %}
+                {% include "_partials/global/header.twig" %}
 
                 <div id="page-content-container">
                     {# -- Primary content block -- #}
@@ -34,11 +34,9 @@
                 </div>
 
                 {# -- Footer -- #}
-                {% include "_partials/components/footer.twig" %}
+                {% include "_partials/global/footer.twig" %}
             </div>
         </div>
     </main>
-    {# -- Global HTML Footer -- #}
-    {% include "_partials/global/global_footer.twig" %}
 
 {% endblock %}

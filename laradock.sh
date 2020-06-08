@@ -74,7 +74,7 @@ elif [ "$1" == "install" ]; then
     cd laradock && cp env-example .env
     print_style "Project name (no spaces or special characters, eg: boyerwebstudios): "
     read project_name
-    sed -i "s/REPLACE_WITH_PROJECT_NAME/$project_name/" .env
+    sed -i -- "s/REPLACE_WITH_PROJECT_NAME/$project_name/" .env
     sudo ./sync.sh install
 
     print_style "If the project fails to run, double-check COMPOSE_PROJECT_NAME and DATA_PATH_HOST in laradock/.env \n" "info"
