@@ -65,7 +65,7 @@
   color: $heading-copy-color;
   line-height: $header-lineheight;
   margin-bottom: 0.65em;
-  font-size: rem-calc(35);
+  font-size: rem-calc(36);
 
   @include breakpoint(medium up) {
     font-size: rem-calc(70);
@@ -81,7 +81,7 @@
   color: $heading-copy-color;
   line-height: $header-lineheight;
   margin-bottom: 0.65em;
-  font-size: rem-calc(30);
+  font-size: rem-calc(32);
 
   @include breakpoint(medium up) {
     font-size: rem-calc(50);

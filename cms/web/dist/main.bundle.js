@@ -272,30 +272,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var scrollmonitor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(scrollmonitor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var feather_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! feather-icons */ "./node_modules/feather-icons/dist/feather.js");
 /* harmony import */ var feather_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(feather_icons__WEBPACK_IMPORTED_MODULE_4__);
-function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}//import NavigationController from './NavigationController';
-//import ContactFormController from './ContactFormController';
-var MainController=/*#__PURE__*/function(){// main class initialization - runs once on site load
+/* harmony import */ var _NavigationController__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavigationController */ "./src/js/NavigationController.js");
+function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}var MainController=/*#__PURE__*/function(){// main class initialization - runs once on site load
 function MainController(){_classCallCheck(this,MainController);// Create class variables
-this.scrollMonitor=scrollmonitor__WEBPACK_IMPORTED_MODULE_3___default.a;this.scrollWatchers=[];//this.navigationController = null;
-//this.contactFormController = null;
-// hide preloader 
+this.scrollMonitor=scrollmonitor__WEBPACK_IMPORTED_MODULE_3___default.a;this.scrollWatchers=[];this.navigationController=null;// hide preloader 
 $('.revealer').removeClass('show').addClass('animate-out');setTimeout(function(){$('.revealer').removeClass('animate-out');},600);}// initialization - runs each time a new page is loaded
 _createClass(MainController,[{key:"init",value:function init(){try{//$(document).foundation();
 $('body').addClass('animations-enabled');var _instance=this;if(typeof ga==='function'){ga('send','pageview',location.pathname);}// replace feather markup with SVGs
 feather_icons__WEBPACK_IMPORTED_MODULE_4___default.a.replace({class:'icon'});// initialize navigation controller
-// this.navigationController = new NavigationController();
-// this.navigationController.init();
-// run element animations when in viewport (adds .is-active to visible elements as you scroll)
+this.navigationController=new _NavigationController__WEBPACK_IMPORTED_MODULE_5__["default"]();this.navigationController.init();// run element animations when in viewport (adds .is-active to visible elements as you scroll)
 $('.animatable').each(function(index){// create two watchers - one with an offset for enter events, and one without an offset for exit events
 // lets us add visibility classes with an offset, and remove them when the element is completely outside the visible viewport
 var enterScrollWatcher=scrollMonitor.create($(this).get(0),-100);var exitScrollWatcher=scrollMonitor.create($(this).get(0),100);_instance.scrollWatchers.push(enterScrollWatcher);_instance.scrollWatchers.push(exitScrollWatcher);enterScrollWatcher.enterViewport(function(){$(this.watchItem).addClass('is-active');});exitScrollWatcher.exitViewport(function(){$(this.watchItem).removeClass('is-active');});// If any of the elements are visible, add the active class (after an initial delay, to facilitate page transition animation)
 $(this).addClass('will-animate');$(this).removeClass('is-active');if(exitScrollWatcher.isInViewport){setTimeout(function(){$(exitScrollWatcher.watchItem).addClass('is-active');},50);}});}catch(e){console.log(e);}}// Runs every time a new page replaces the current one
 // Destroys all scripts on the page, so they can be reinitialized on the new one
 },{key:"destroy",value:function destroy(){try{// destroy navigation controller
-// this.navigationController.destroy();
-// this.navigationController = null;
-// destroy element animation scroll watchers 
+this.navigationController.destroy();this.navigationController=null;// destroy element animation scroll watchers 
 for(var i=0;i<this.scrollWatchers.length;i++){this.scrollWatchers[i].destroy();}this.scrollWatchers=[];}catch(e){console.log(e);}}}]);return MainController;}();/* harmony default export */ __webpack_exports__["default"] = (MainController);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/NavigationController.js":
+/*!****************************************!*\
+  !*** ./src/js/NavigationController.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
+function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}var NavigationController=/*#__PURE__*/function(){function NavigationController(){_classCallCheck(this,NavigationController);this.navigationContainer=null;this.mobileNavigationTrigger=null;this.mobileNavigationContainer=null;this.isMobileNavOpen=false;}_createClass(NavigationController,[{key:"init",value:function init(){var _this=this;this.navigationContainer=$('.main-nav--section');this.mobileNavigationTrigger=$('.mobile-navigation-trigger-container .mobile-navigation-trigger',this.navigationContainer);this.mobileNavigationContainer=$('.mobile-navigation--menu',this.navigationContainer);this.mobileNavigationTrigger.on('click.bws-navigation-controller',function(event){return _this.toggleMobileNav(event);});}},{key:"toggleMobileNav",value:function toggleMobileNav(event){var _this2=this;event.preventDefault();if(this.isMobileNavOpen){this.mobileNavigationContainer.removeClass('open');$('.is-parent',this.mobileNavigationContainer).removeClass('open');$('.is-parent .dropdown-expand-button').off('click.bws-navigation-controller');Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_0__["enableBodyScroll"])(this.mobileNavigationContainer[0]);}else{this.mobileNavigationContainer.addClass('open');$('.is-parent .dropdown-expand-button',this.mobileNavigationContainer).on('click.bws-navigation-controller',function(event){return _this2.toggleAccordionItem(event);});Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_0__["disableBodyScroll"])(this.mobileNavigationContainer[0]);}this.isMobileNavOpen=!this.isMobileNavOpen;}},{key:"toggleAccordionItem",value:function toggleAccordionItem(event){event.preventDefault();var accordionItem=$(event.currentTarget).parent().closest('.is-parent');if(accordionItem.hasClass('open')){accordionItem.removeClass('open');$('.is-parent',accordionItem).removeClass('open');}else{accordionItem.addClass('open');}}},{key:"destroy",value:function destroy(){Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_0__["clearAllBodyScrollLocks"])();this.mobileNavigationContainer.off('click.bws-navigation-controller');this.navigationContainer=null;this.mobileNavigationTrigger=null;this.mobileNavigationContainer=null;}}]);return NavigationController;}();/* harmony default export */ __webpack_exports__["default"] = (NavigationController);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

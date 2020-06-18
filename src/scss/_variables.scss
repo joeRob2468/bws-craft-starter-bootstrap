@@ -44,14 +44,14 @@ $container-widths: (
 // Map containing gutters (left and right padding values) for container classes. Used mostly in _common.scss, where we set up the standard containers. 
 $container-gutters: (
   standard: (
-      small: rem-calc(10px),
+      small: rem-calc(20px),
       medium: rem-calc(25px),
       large: rem-calc(25px),
       xlarge: rem-calc(25px),
       xxlarge: rem-calc(25px)
   ),
   large: (
-      small: rem-calc(10px),
+      small: rem-calc(20px),
       medium: rem-calc(25px),
       large: rem-calc(25px),
       xlarge: rem-calc(25px),
@@ -67,7 +67,7 @@ $section-spacings: (
         large: 4rem,
     ),
     medium: (
-        small: 4.5rem,
+        small: 3.5rem,
         medium: 7rem,
         large: 7rem,
     ),
