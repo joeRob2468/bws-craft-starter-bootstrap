@@ -8,7 +8,7 @@
 # s: source path - absolute path of directory to backup
 # d: remote path - path of remote directory on remote to use, relative to configured root directory
 
-while getopts t:r:s:d: option
+while getopts e:t:r:s:d: option
 do
 case "${option}"
 in

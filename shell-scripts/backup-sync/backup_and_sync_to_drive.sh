@@ -9,11 +9,11 @@
 # s: source path - absolute path of directory to backup
 # d: remote path - path of remote directory on remote to use, relative to configured root directory
 
-while getopts p:t:r:s:d: option
+while getopts e:p:t:r:s:d: option
 do
 case "${option}"
 in
-E) RCLONE=${OPTARG};;
+e) RCLONE=${OPTARG};;
 p) ROOT=${OPTARG};;
 t) TYPE=${OPTARG};;
 r) REMOTE=${OPTARG};;
@@ -22,4 +22,4 @@ d) REMOTE_PATH=${OPTARG};;
 esac
 done
 
-cd $ROOT && $ROOT/shell-scripts/backup_db.sh && $ROOT/shell-scripts/backup_assets.sh && $ROOT/shell-scripts/backup-sync/backup_to_drive.sh -e $RCLONE -t $TYPE -r $REMOTE -s $SOURCE_PATH -d $REMOTE_PATH
+cd $ROOT && $ROOT/shell-scripts/backup_db.sh && $ROOT/shell-scripts/backup_assets.sh && $ROOT/shell-scripts/backup-sync/sync_to_drive.sh -e $RCLONE -t $TYPE -r $REMOTE -s $SOURCE_PATH -d $REMOTE_PATH
