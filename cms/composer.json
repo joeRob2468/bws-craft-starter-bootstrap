@@ -42,23 +42,28 @@
     "sebastianlenz/linkfield": "^2.0.0@beta",
     "solspace/craft-freeform": "3.6.3",
     "spicyweb/craft-embedded-assets": "^2.0",
-    "spicyweb/craft-neo": "2.7.15",
+    "spicyweb/craft-neo": "2.8.1",
     "unionco/calendarize": "^1.2",
     "unionco/craft-related-entry-types": "^0.2.2",
     "verbb/expanded-singles": "^1.0.7",
     "verbb/field-manager": "2.1.8",
-    "vlucas/phpdotenv": "^2.4.0",
+    "vlucas/phpdotenv": "^3.4.0",
     "yiisoft/yii2-redis": "^2.0.6"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
     "psr-4": {
-      "modules\\sitemodule\\": "modules/sitemodule/src/"
+      "modules\\": "modules/"
     }
   },
   "config": {
-    "optimize-autoloader": true,
     "sort-packages": true,
-    "php": "7.3"
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.3"
+    }
   },
   "scripts": {
     "post-install-cmd": [
