@@ -1,0 +1,17 @@
+contentColumnType: string(120)
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: icon
+instructions: 'The icon to use for this section (for example, alert-circle). You can find a list of all the available icons at this URL: https://feathericons.com/'
+name: Icon
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 30
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: alert-circle
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

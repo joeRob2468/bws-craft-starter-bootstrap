@@ -1,0 +1,24 @@
+childBlocks: ''
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+fieldLayouts:
+  67292745-9be4-4774-92bc-23dc6ae3f615:
+    tabs:
+      -
+        fields:
+          040f755c-ead7-4a88-bf98-e0a117b05574:
+            required: false
+            sortOrder: 1
+          291580b7-d5d0-4340-8f73-76b8fcf000d1:
+            required: false
+            sortOrder: 3
+          f7a6d15c-0dbc-4167-ac30-a19f8f45491d:
+            required: true
+            sortOrder: 2
+        name: Settings
+        sortOrder: 1
+handle: image
+maxBlocks: 0
+maxChildBlocks: 0
+name: Image
+sortOrder: 3
+topLevel: true

@@ -1,0 +1,147 @@
+contentColumnType: string
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: linkField
+instructions: 'The link to use for this section'
+name: Link
+searchable: false
+settings:
+  allowCustomText: true
+  allowTarget: true
+  autoNoReferrer: false
+  defaultLinkName: entry
+  defaultText: ''
+  enableAllLinkTypes: false
+  enableAriaLabel: false
+  enableElementCache: false
+  enableTitle: false
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - site
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - sites
+              - '*'
+      -
+        - user
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - custom
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+translationKeyFormat: null
+translationMethod: none
+type: lenz\linkfield\fields\LinkField

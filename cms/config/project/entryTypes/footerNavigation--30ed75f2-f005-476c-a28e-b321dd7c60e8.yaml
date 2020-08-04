@@ -1,0 +1,21 @@
+fieldLayouts:
+  62516416-708d-4a7c-b323-597e20b8a716:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: Settings
+        sortOrder: 1
+handle: footerNavigation
+hasTitleField: false
+name: 'Footer Navigation'
+section: 70e8051d-b22c-4014-b436-a4430f341640
+sortOrder: 1
+titleFormat: '{navigationLink.getText()}'

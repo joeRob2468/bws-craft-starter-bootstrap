@@ -1,0 +1,17 @@
+contentColumnType: string(800)
+fieldGroup: 5ced9d30-29a3-4b23-8b74-4951c818fb67
+handle: seoDescription
+instructions: 'The short description of this section, used for SEO and for sections where this entry is displayed in a list. Often contains the first few sentences of the page content, or a quick summary. '
+name: 'SEO Description'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 200
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

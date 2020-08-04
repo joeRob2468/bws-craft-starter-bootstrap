@@ -1,0 +1,149 @@
+contentColumnType: string
+fieldGroup: 8fba94f5-6d8c-4344-9c60-61b9b1b52e17
+handle: navigationLink
+instructions: 'The link to a page or URL that you''d like to include in this navigation section. '
+name: 'Navigation Link'
+searchable: false
+settings:
+  allowCustomText: true
+  allowTarget: true
+  autoNoReferrer: false
+  defaultLinkName: entry
+  defaultText: ''
+  enableAllLinkTypes: false
+  enableAriaLabel: false
+  enableElementCache: false
+  enableTitle: false
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              -
+                - singles
+                - 'section:393e6f52-2804-4e16-a508-40de6249b4af'
+      -
+        - site
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - sites
+              - '*'
+      -
+        - user
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - custom
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+translationKeyFormat: null
+translationMethod: none
+type: lenz\linkfield\fields\LinkField

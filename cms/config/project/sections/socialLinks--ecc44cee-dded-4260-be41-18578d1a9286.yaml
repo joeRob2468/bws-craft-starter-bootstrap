@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: socialLinks
+name: 'Social Links'
+propagationMethod: all
+siteSettings:
+  0cc785f8-a672-4448-9841-1c39b72f75bd:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: ''
+structure:
+  maxLevels: 1
+  uid: 28e7c3b5-bfb9-473f-81a6-028c265e906f
+type: structure

@@ -1,0 +1,45 @@
+contentColumnType: text
+fieldGroup: 5ced9d30-29a3-4b23-8b74-4951c818fb67
+handle: singleSeo
+instructions: 'The SEO setup for this page'
+name: 'Single SEO'
+searchable: true
+settings:
+  description: '{seoDescription}'
+  hideSocial: ''
+  robots:
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  socialImage: ''
+  suffixAsPrefix: null
+  title:
+    -
+      __assoc__:
+        -
+          - key
+          - '1'
+        -
+          - locked
+          - '0'
+        -
+          - template
+          - '{title}'
+    -
+      __assoc__:
+        -
+          - key
+          - '2'
+        -
+          - locked
+          - '1'
+        -
+          - template
+          - ' | {{ siteName }}'
+  titleSuffix: null
+translationKeyFormat: null
+translationMethod: none
+type: ether\seo\fields\SeoField

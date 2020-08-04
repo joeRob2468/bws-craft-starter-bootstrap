@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: mainNavigation
+name: 'Main Navigation'
+propagationMethod: all
+siteSettings:
+  0cc785f8-a672-4448-9841-1c39b72f75bd:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: ''
+structure:
+  maxLevels: 3
+  uid: 044f4483-118f-4254-a95e-cfcdb58dc8b7
+type: structure

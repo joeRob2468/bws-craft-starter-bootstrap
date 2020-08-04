@@ -1,0 +1,33 @@
+fieldLayouts:
+  0fb85331-7d0d-4fb7-9f3b-ed360e655926:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Page Title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 0c1e3849-8962-4287-8d23-5b4e202a8e01
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: home
+hasTitleField: true
+name: Home
+section: a8507c3f-710b-4695-af7d-8d48e0fd4f83
+sortOrder: 1
+titleFormat: '{section.name|raw}'

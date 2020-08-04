@@ -1,0 +1,25 @@
+fieldLayouts:
+  24fc02ef-bcd5-45f6-b06b-77272b3092ac:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Settings
+        sortOrder: 1
+handle: mainNavigation
+hasTitleField: false
+name: 'Main Navigation'
+section: f9dbfbdc-d362-47f8-8861-5a62706fc184
+sortOrder: 1
+titleFormat: '{navigationLink.getText()}'

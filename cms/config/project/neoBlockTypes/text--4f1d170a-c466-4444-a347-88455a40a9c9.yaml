@@ -1,0 +1,21 @@
+childBlocks: ''
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+fieldLayouts:
+  c9a8b21b-4f29-474a-96ed-5ab3aabdf536:
+    tabs:
+      -
+        fields:
+          040f755c-ead7-4a88-bf98-e0a117b05574:
+            required: false
+            sortOrder: 1
+          104a2117-39ef-4ed6-b367-0c0db83b87be:
+            required: true
+            sortOrder: 2
+        name: Settings
+        sortOrder: 1
+handle: text
+maxBlocks: 0
+maxChildBlocks: 0
+name: Text
+sortOrder: 2
+topLevel: true

@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: rtfShortContent
+instructions: 'A brief snippet of formatted text content for this section. '
+name: 'Short Formatted Content'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: TextWithFormatting.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

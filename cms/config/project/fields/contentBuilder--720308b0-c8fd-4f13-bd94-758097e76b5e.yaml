@@ -1,0 +1,15 @@
+contentColumnType: string
+fieldGroup: eca12a22-55f0-4613-ad10-2bed6bfdb4a2
+handle: contentBuilder
+instructions: 'Use the blocks below to create, remove, or reorder flexible content blocks, which will be displayed on this page. '
+name: 'Content Builder'
+searchable: true
+settings:
+  maxBlocks: ''
+  maxTopBlocks: '15'
+  minBlocks: ''
+  propagationMethod: all
+  wasModified: false
+translationKeyFormat: null
+translationMethod: site
+type: benf\neo\Field

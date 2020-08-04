@@ -1,0 +1,133 @@
+dateModified: 1596562526
+email:
+  fromEmail: hello@boyerwebstudios.com
+  fromName: $SITE_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    apiKey: $MAILGUN_API_KEY
+    domain: $MAILGUN_DOMAIN
+    endpoint: $MAILGUN_ENDPOINT
+  transportType: craft\mailgun\MailgunAdapter
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  async-queue:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  calendarize:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.3.0
+  child-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  logs:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  neo:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  related-entry-types:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.1
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.1
+    settings:
+      description: ''
+      facebookAppId: ''
+      metaTemplate: _partials/global/meta
+      removeAlternateUrls: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if getenv('ENVIRONMENT') != 'live' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage: ''
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' - {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: ''
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: $SITE_NAME
+  schemaVersion: 3.5.12
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,15 @@
+enableVersioning: true
+handle: footerNavigation
+name: 'Footer Navigation'
+previewTargets: null
+propagationMethod: all
+siteSettings:
+  0cc785f8-a672-4448-9841-1c39b72f75bd:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 2
+  uid: 89fb4446-314f-4f70-a09a-93f8422f21f5
+type: structure

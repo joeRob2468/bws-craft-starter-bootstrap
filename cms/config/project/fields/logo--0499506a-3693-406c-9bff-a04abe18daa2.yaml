@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565
+handle: logo
+instructions: 'The logo for this website, used across the site. '
+name: Logo
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Select a logo'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
+  singleUploadLocationSubpath: branding
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: calendarEvent
+instructions: 'The calendar configuration for this section - allows you to set up start and end dates, recurring events, and other calendar-related settings. '
+name: 'Calendar Event'
+searchable: false
+settings:
+  allDay: false
+  endDate: null
+  endRepeat: null
+  endRepeatDate: null
+  months: null
+  repeatType: null
+  repeats: false
+  startDate: null
+translationKeyFormat: null
+translationMethod: none
+type: unionco\calendarize\fields\CalendarizeField

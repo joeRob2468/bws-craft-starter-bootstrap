@@ -1,0 +1,12 @@
+fieldLayouts:
+  af3c3a34-13f9-4fee-9d52-84d591b76b2c:
+    tabs:
+      -
+        fields:
+          0499506a-3693-406c-9bff-a04abe18daa2:
+            required: true
+            sortOrder: 1
+        name: Branding
+        sortOrder: 1
+handle: siteSettings
+name: 'Site Settings'
