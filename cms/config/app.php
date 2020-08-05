@@ -22,7 +22,7 @@ if (getenv('REDIS_ENABLED') == 'true') {
         'bootstrap' => ['site-module'],
         'components' => [
             'deprecator' => [
-                'throwExceptions' => YII_DEBUG,
+                'throwExceptions' => getenv('THROW_DEPRECIATION_EXCEPTIONS'),
             ],
             'redis' => [
                 'class' => yii\redis\Connection::class,
@@ -61,7 +61,7 @@ if (getenv('REDIS_ENABLED') == 'true') {
         'bootstrap' => ['site-module'],
         'components' => [
             'deprecator' => [
-                'throwExceptions' => YII_DEBUG,
+                'throwExceptions' => getenv('THROW_DEPRECIATION_EXCEPTIONS'),
             ],
         ],
     ];
