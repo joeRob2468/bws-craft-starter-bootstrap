@@ -23,7 +23,7 @@ if composer install --no-interaction --prefer-dist --optimize-autoloader; then
     # run Craft CMS migration and project sync command
     printf -- ' Running Craft CMS migration...';
     php ./craft migrate/all
-    php ./craft project-config/sync
+    php ./craft project-config/apply
     printf -- ' DONE!\n';
 
     # clear caches
