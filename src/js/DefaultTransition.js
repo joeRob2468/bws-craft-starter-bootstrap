@@ -5,7 +5,6 @@ class DefaultTransition extends Highway.Transition {
     // Built-in methods
     in({ from, to, trigger, done }) {
         window.scrollTo(0, 0);
-        from.remove();
 
         $('.revealer').removeClass('animate-in').addClass('animate-out');
         setTimeout(() => {
@@ -17,6 +16,7 @@ class DefaultTransition extends Highway.Transition {
     out({ from, trigger, done }) {
         $('.revealer').addClass('animate-in');
         setTimeout(() => {
+            from.remove();
             done();
         }, 600);
     }
