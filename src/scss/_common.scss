@@ -143,6 +143,32 @@ video.cover {
   }
 }
 
+// Nested container->grid-container classes, prevents extra side spacing
+.container .grid-container {
+  margin-left: get($container-gutters, "standard.small") * -1;
+  margin-right: get($container-gutters, "standard.small") * -1;
+
+  @include breakpoint(medium up) {
+    margin-left: get($container-gutters, "standard.medium") * -1;
+    margin-right: get($container-gutters, "standard.medium") * -1;
+  }
+
+  @include breakpoint(large up) {
+    margin-left: get($container-gutters, "standard.large") * -1;
+    margin-right: get($container-gutters, "standard.large") * -1;
+  }
+
+  @include breakpoint(xlarge up) {
+    margin-left: get($container-gutters, "standard.xlarge") * -1;
+    margin-right: get($container-gutters, "standard.xlarge") * -1;
+  }
+
+  @include breakpoint(xxlarge up) {
+    margin-left: get($container-gutters, "standard.xxlarge") * -1;
+    margin-right: get($container-gutters, "standard.xxlarge") * -1;
+  }
+}
+
 .section {
   padding-top: 0;
   padding-bottom: 0;
