@@ -17,7 +17,8 @@ module.exports = (env, argv) => {
         },
         output: {
             filename: '[name].bundle.js',
-            path: path.resolve(__dirname) + '/cms/web/dist'
+            path: path.resolve(__dirname) + '/cms/web/dist',
+            publicPath: '/dist/'
         },
         optimization: {
             splitChunks: { chunks: 'all' },
@@ -65,7 +66,17 @@ module.exports = (env, argv) => {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: path.resolve(__dirname) + '/cms/web/dist/fonts/'
+                            outputPath: '/fonts/'
+                        }
+                    }]
+                },
+                {
+                    test: /\.(png|jpg|gif|ico)(\?v=\d+\.\d+\.\d+)?$/,
+                    use: [{
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '/img/'
                         }
                     }]
                 }
