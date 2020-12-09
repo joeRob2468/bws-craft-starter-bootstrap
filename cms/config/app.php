@@ -15,11 +15,8 @@
 if (getenv('REDIS_ENABLED') == 'true') {
     return [
         'modules' => [
-            'site-module' => [
-                'class' => \modules\sitemodule\SiteModule::class,
-            ],
         ],
-        'bootstrap' => ['site-module'],
+        'bootstrap' => [],
         'components' => [
             'deprecator' => [
                 'throwExceptions' => getenv('THROW_DEPRECIATION_EXCEPTIONS'),
@@ -54,11 +51,8 @@ if (getenv('REDIS_ENABLED') == 'true') {
 } else {
     return [
         'modules' => [
-            'site-module' => [
-                'class' => \modules\sitemodule\SiteModule::class,
-            ],
         ],
-        'bootstrap' => ['site-module'],
+        'bootstrap' => [],
         'components' => [
             'deprecator' => [
                 'throwExceptions' => getenv('THROW_DEPRECIATION_EXCEPTIONS'),
