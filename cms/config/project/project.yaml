@@ -1,4 +1,4 @@
-dateModified: 1608582715
+dateModified: 1608582817
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -123,6 +123,7 @@ system:
   edition: solo
   live: true
   name: $SITE_NAME
+  retryDuration: null
   schemaVersion: 3.5.13
   timeZone: America/Los_Angeles
 users:
