@@ -1,5 +1,5 @@
-## Boyer Web Studios
-This project contains the full starter theme for [Boyer Web Studios](https://www.boyerwebstudios.com), built on Craft 3 and Webpack 4. 
+## Hillcrest Hope
+This project contains the full starter theme for [Hillcrest Hope](https://www.hillcresthope.org), built on Craft 3 and Webpack 4. 
 
 ## About 
 In addition to setting up a new Craft 3 CMS project, this project sets up:
@@ -35,7 +35,6 @@ In local development, you'll be setting up the Laradock docker containers, then 
 3. If you haven't done this already for your git environment, set up git with your name and email address by running:
     > `git config --global user.name "John Doe"`  
     > `git config --global user.email johndoe@example.com`  
-    > `git config --global submodule.recurse true`  
 4. Clone this repository onto your local machine. 
 5. `cd` to your new project directory.
 6. Run `git submodule init` and `git submodule update` to make sure the `laradock` folder is up-to-date. 
