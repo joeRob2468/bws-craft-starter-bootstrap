@@ -1,4 +1,4 @@
-dateModified: 1596565208
+dateModified: 1608582715
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -57,7 +57,7 @@ plugins:
   neo:
     edition: standard
     enabled: true
-    schemaVersion: 2.8.0
+    schemaVersion: 2.8.15
   redactor:
     edition: standard
     enabled: true
@@ -123,7 +123,7 @@ system:
   edition: solo
   live: true
   name: $SITE_NAME
-  schemaVersion: 3.5.12
+  schemaVersion: 3.5.13
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
