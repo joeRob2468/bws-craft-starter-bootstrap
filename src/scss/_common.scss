@@ -9,12 +9,13 @@ object.svg {
 /******************** Global Typography Styles ********************/
 body, html {
   background: #FFFFFF;
+  color: $body-copy-color;
 
-  .is-dark h1, .is-dark h2, .is-dark h3, .is-dark h4, .is-dark h5, .is-dark h6 {
+  .section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4, .section--dark h5, .section--dark h6 {
     color: #FFFFFF;
   }
 
-  .is-dark p {
+  .section--dark p {
     color: #FFFFFF;
   }
 }
@@ -143,7 +144,7 @@ video.cover {
   }
 }
 
-// Nested container->grid-container classes, prevents extra side spacing
+// Nested container > grid-container classes, prevents extra side spacing
 .container .grid-container {
   margin-left: get($container-gutters, "standard.small") * -1;
   margin-right: get($container-gutters, "standard.small") * -1;
@@ -218,8 +219,12 @@ video.cover {
     }
   }
 
-  &.section--whitespace + .section--whitespace {
+  &.section--whitespace:not(.section--primary):not(.section--secondary) +  &.section--whitespace:not(.section--primary):not(.section--secondary), &.section--whitespace.section--primary + .section--whitespace.section--primary, &.section--whitespace.section--secondary + .section--whitespace.section--secondary {
     padding-top: 0;
+  }
+
+  &.section--secondary {
+    background-color: #FAFAFA;
   }
 }
 

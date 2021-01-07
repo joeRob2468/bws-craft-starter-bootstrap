@@ -46,16 +46,16 @@ module.exports = (env, argv) => {
                     test: /\.scss|.css$/,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        { 
-                            loader: 'css-loader', 
+                        {
+                            loader: 'css-loader',
                             options: { sourceMap: true, importLoaders: 2 }
                         },
-                        { 
-                            loader: 'postcss-loader', 
+                        {
+                            loader: 'postcss-loader',
                             options: {}
                         },
-                        { 
-                            loader: 'sass-loader', 
+                        {
+                            loader: 'sass-loader',
                             options: { sourceMap: true }
                         },
                     ]
@@ -83,6 +83,10 @@ module.exports = (env, argv) => {
             ]
         },
         plugins: [
+            new webpack.DefinePlugin({
+                __VUE_OPTIONS_API__: true,
+                __VUE_PROD_DEVTOOLS__: isDevelopment ? true : false,
+            }),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
                 chunkFilename: '[id].css'
@@ -98,7 +102,7 @@ module.exports = (env, argv) => {
                 logLevel: 'warn',
                 reloadDelay: 0,
                 watchOptions: {
-                    usePolling: isDevelopment? true : false,
+                    usePolling: isDevelopment ? true : false,
                     interval: 500
                 }
             }),
@@ -126,7 +130,7 @@ module.exports = (env, argv) => {
                 'node_modules'
             ],
             alias: {
-                vue: isDevelopment ? 'vue/dist/vue.esm.js' : 'vue/dist/vue.min.js'
+                vue: isDevelopment ? 'vue/dist/vue.esm-bundler.js' : 'vue/dist/vue.esm-bundler.js'
             }
         }
     };

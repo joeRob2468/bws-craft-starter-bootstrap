@@ -35,17 +35,7 @@
             </div>
 
             {% if socialLinks|length %}
-            <div class="social-links-container">
-                <ul class="menu social-links">
-                    {% for item in socialLinks %}
-                        <li class="link">
-                            <a href="{{ item.navigationLink.getUrl() }}" {% if item.navigationLink.getTarget()|length %}target="{{ item.navigationLink.getTarget() }}"{% endif %} aria-label="{{ item.navigationLink.getText() }}">
-                                <span data-feather="{{ item.icon | trim }}"></span>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% include '_partials/components/social-links' %}
             {% endif %}
         </div>
     </div>

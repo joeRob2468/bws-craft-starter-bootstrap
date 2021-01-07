@@ -9,6 +9,6 @@
 {# If no button variable was passed in, or the title is empty, don't output the button #}
 {% if title|length and url|length %}
 <a class="button button--{{ type }}" href="{{ url }}" {% if target|length %} target="{{ target }}" {% if target == '_blank' %} rel="nofollow" {% endif %} {% endif %} {% if isLightbox %} data-lightbox data-router-disabled {% endif %}>
-  {{ title }}
+  {{ title }} {% if type == 'text' %}<span class="icon" data-feather="arrow-right"></span>{% endif %}
 </a>
 {% endif %}

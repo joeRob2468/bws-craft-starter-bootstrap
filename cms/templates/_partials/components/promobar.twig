@@ -1,0 +1,25 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% cache globally unless cacheExempt %}
+{% set featuredLink = siteSettings['featuredLink'] is defined ? siteSettings.featuredLink : null %}
+
+<div class="promo-nav--section is-dark">
+	<div class="container container--large">
+		<nav class="promo-nav">
+			<div class="social-links-container">
+				{% include "_partials/components/social-links" %}
+			</div>
+            {% if featuredLink|length and featuredLink.getText()|length %}
+			<div class="promoted-link-container">
+				{% include "_partials/snippets/button" with {
+                    title: featuredLink.getText(),
+                    url: featuredLink.getUrl(),
+                    target: featuredLink.getTarget(),
+                    type: 'text',
+                    isLightbox: false
+                } %}
+			</div>
+            {% endif %}
+		</nav>
+	</div>
+</div>
+{% endcache %}

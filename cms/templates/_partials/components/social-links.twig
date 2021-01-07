@@ -1,0 +1,18 @@
+{% set socialLinks = craft.entries({
+    section: 'socialLinks',
+    with: ['navigationLink', 'children', 'children.navigationLink']
+}).all() %}
+
+{% if socialLinks|length %}
+<div class="social-links-container">
+    <ul class="menu social-links">
+        {% for item in socialLinks %}
+            <li class="link">
+                <a href="{{ item.navigationLink.getUrl() }}" {% if item.navigationLink.getTarget()|length %}target="{{ item.navigationLink.getTarget() }}"{% endif %} aria-label="{{ item.navigationLink.getText() }}">
+                    <span class="icon fab {{ item.icon | trim }}"></span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

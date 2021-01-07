@@ -3,6 +3,6 @@
     useBuiltIns: "usage",
     corejs: 3
   }]],
-  "plugins": ["transform-es2015-template-literals"],
+  "plugins": ["transform-es2015-template-literals", "@babel/plugin-proposal-class-properties"],
   "compact": true
 }

@@ -1,7 +1,7 @@
 contentColumnType: string(120)
 fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
 handle: icon
-instructions: 'The icon to use for this section (for example, alert-circle). You can find a list of all the available icons at this URL: https://feathericons.com/'
+instructions: 'The icon to use for this section (for example, fas fa-box-open). You can find a list of all the available icons at this URL: https://fontawesome.com/icons?d=gallery&s=solid&m=free. For sections using a brand icon (like social media menus), icons can be found here: https://fontawesome.com/icons?d=gallery&s=brands&m=free'
 name: Icon
 searchable: true
 settings:
@@ -11,7 +11,8 @@ settings:
   columnType: null
   initialRows: '4'
   multiline: ''
-  placeholder: alert-circle
+  placeholder: 'fas fa-box-open'
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText

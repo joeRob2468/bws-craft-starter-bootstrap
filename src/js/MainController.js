@@ -1,6 +1,5 @@
 import ScrollMonitor from 'scrollmonitor';
 
-import feather from 'feather-icons';
 import NavigationController from './NavigationController';
 
 class MainController {
@@ -10,6 +9,8 @@ class MainController {
         this.scrollMonitor = ScrollMonitor;
         this.scrollWatchers = [];
         this.navigationController = null;
+        this.iconLibrary = null;
+        this.content_block_modules = [];
 
         // hide preloader 
         $('.revealer').removeClass('show').addClass('animate-out');
@@ -28,11 +29,6 @@ class MainController {
             if (typeof ga === 'function') {
                 ga('send', 'pageview', location.pathname);
             }
-
-            // replace feather markup with SVGs
-            feather.replace({
-                class: 'icon'
-            });
 
             // initialize navigation controller
             this.navigationController = new NavigationController();
@@ -66,8 +62,34 @@ class MainController {
                     }, 50);
                 }
             });
+
+            // import icons library and dependencies, initialize when done
+            import(/* webpackChunkName: "icons-library" */"./IconLibrary").then(module => {
+                const IconLibrary = module.default;
+
+                this.iconLibrary = new IconLibrary();
+                this.iconLibrary.init();
+            });
+
+            this.initContentBlockModules();
         } catch (e) {
             console.log(e);
+        }
+    }
+
+    // Called in init() method - initializes all content block modules
+    initContentBlockModules() {
+        // init contact form
+        if ($('.section-contact_form--block').length) {
+            import(/* webpackChunkName: "contact-form" */"./block-modules/ContactForm").then(module => {
+                const ContactForm = module.default;
+
+                if ($(ContactForm.selector).length) {
+                    let contactForm = new ContactForm();
+                    contactForm.init();
+                    this.content_block_modules.push(contactForm);
+                }
+            });
         }
     }
 
@@ -75,9 +97,21 @@ class MainController {
     // Destroys all scripts on the page, so they can be reinitialized on the new one
     destroy() {
         try {
+            // destroy content blocks
+            for (let i=0; i < this.content_block_modules.length; i++) {
+                this.content_block_modules[i].destroy();
+            }
+            this.content_block_modules = [];
+
             // destroy navigation controller
             this.navigationController.destroy();
             this.navigationController = null;
+
+            // destroy fonts
+            if (typeof this.iconLibrary !== 'undefined') {
+                this.iconLibrary.destroy();
+                this.iconLibrary = null;
+            }
 
             // destroy element animation scroll watchers 
             for (let i = 0; i < this.scrollWatchers.length; i++) {
