@@ -22,13 +22,14 @@ if composer install --no-interaction --prefer-dist --optimize-autoloader; then
     
     # run Craft CMS migration and project sync command
     printf -- ' Running Craft CMS migration...';
-    php ./craft migrate/all
-    php ./craft project-config/apply
+    php ./craft migrate/all --no-content --interactive=0
+    php ./craft project-config/apply --force
+    php ./craft migrate --track=content --interactive=0
     printf -- ' DONE!\n';
 
     # clear caches
     printf -- ' Clearing caches...';
-    php ./craft clear-caches/all
+    php ./craft clear-caches/compiled-templates
     printf -- ' DONE!\n';
 fi
 
