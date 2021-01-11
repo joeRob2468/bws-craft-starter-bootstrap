@@ -1,0 +1,65 @@
+fieldLayouts:
+  db9e3352-1bd6-4cdf-a4fd-bfbe52758538:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: adac64af-2715-4c2c-aad7-d563dea9e9c0
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
+            instructions: 'The icon to use for this navmenu button (for example, fas fa-box-open). You can find a list of all the available icons at this URL: https://fontawesome.com/icons?d=gallery&s=solid&m=free. For sections using a brand icon (like social media menus), icons can be found here: https://fontawesome.com/icons?d=gallery&s=brands&m=free'
+            label: 'Icon (optional)'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: topBarNavigation
+hasTitleField: false
+name: 'Top Bar Navigation'
+section: 638c3c73-cfd2-4352-8c1f-d7c5c6230f97
+sortOrder: 1
+titleFormat: '{navigationLink.getText()}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -6,11 +6,6 @@
     with: ['navigationLink', 'children', 'children.navigationLink']
 }).all() %}
 
-{% set socialLinks = craft.entries({
-    section: 'socialLinks',
-    with: ['navigationLink', 'children', 'children.navigationLink']
-}).all() %}
-
 <footer class="site-footer animatable">
     {# {% include '_partials/snippets/newsletter-signup' %} #}
 
@@ -33,10 +28,6 @@
                     <span class="separator">|</span>Site by <a href="https://www.boyerwebstudios.com" target="_blank" rel="noopener">Boyer Web Studios</a>
                 </div>
             </div>
-
-            {% if socialLinks|length %}
-            {% include '_partials/components/social-links' %}
-            {% endif %}
         </div>
     </div>
 </footer>

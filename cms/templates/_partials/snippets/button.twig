@@ -2,6 +2,7 @@
 
 {% set title = title is defined ? title : '' %}
 {% set type = type is defined ? type : 'primary' %}
+{% set icon = icon is defined ? icon : '' %}
 {% set url = url is defined ? url : '' %}
 {% set target = target is defined ? target : '' %}
 {% set isLightbox = isLightbox is defined ? isLightbox : false %}
@@ -9,6 +10,6 @@
 {# If no button variable was passed in, or the title is empty, don't output the button #}
 {% if title|length and url|length %}
 <a class="button button--{{ type }}" href="{{ url }}" {% if target|length %} target="{{ target }}" {% if target == '_blank' %} rel="nofollow" {% endif %} {% endif %} {% if isLightbox %} data-lightbox data-router-disabled {% endif %}>
-  {{ title }} {% if type == 'text' %}<span class="icon" data-feather="arrow-right"></span>{% endif %}
+  {% if icon|length %}<span class="icon {{ icon }}"></span>{% endif %}  {{ title }} {% if type == 'text' %}<span class="icon-container"><span class="icon" data-feather="chevron-right"></span></span>{% endif %}
 </a>
 {% endif %}

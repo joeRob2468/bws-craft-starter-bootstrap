@@ -142,6 +142,26 @@ video.cover {
       padding-right: get($container-gutters, "large.xlarge");
     }
   }
+
+  &.container--full {
+    max-width: none;
+
+    @include breakpoint(medium up) {
+      max-width: none;
+    }
+
+    @include breakpoint(large up) {
+      max-width: none;
+    }
+
+    @include breakpoint(xlarge up) {
+      max-width: none;
+    }
+
+    @include breakpoint(xxlarge up) {
+      max-width: none;
+    }
+  }
 }
 
 // Nested container > grid-container classes, prevents extra side spacing

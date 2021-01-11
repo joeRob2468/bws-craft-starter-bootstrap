@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: topBarNavigation
+name: 'Top Bar Navigation'
+propagationMethod: all
+siteSettings:
+  0cc785f8-a672-4448-9841-1c39b72f75bd:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 74fc7fa1-bc2f-44d3-b375-0d68b72830c9
+type: structure

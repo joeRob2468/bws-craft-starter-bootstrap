@@ -1,24 +1,27 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {% cache globally unless cacheExempt %}
-{% set featuredLink = siteSettings['featuredLink'] is defined ? siteSettings.featuredLink : null %}
+{% set topBarNavigationLinks = craft.entries({
+    section: 'topBarNavigation',
+	with: ['children']
+}).all() %}
 
-<div class="promo-nav--section is-dark">
-	<div class="container container--large">
+<div class="promo-nav--section section--dark">
+	<div class="container container--full">
 		<nav class="promo-nav">
-			<div class="social-links-container">
-				{% include "_partials/components/social-links" %}
-			</div>
-            {% if featuredLink|length and featuredLink.getText()|length %}
-			<div class="promoted-link-container">
+			{% include "_partials/components/social-links" %}
+
+			<div class="promo-nav--menu">
+            {% for item in topBarNavigationLinks %}
 				{% include "_partials/snippets/button" with {
-                    title: featuredLink.getText(),
-                    url: featuredLink.getUrl(),
-                    target: featuredLink.getTarget(),
-                    type: 'text',
+                    title: item.navigationLink.getText(),
+                    url: item.navigationLink.getUrl(),
+                    target: item.navigationLink.getTarget(),
+                    type: item.buttonType,
+					icon: item.icon,
                     isLightbox: false
                 } %}
+            {% endfor %}
 			</div>
-            {% endif %}
 		</nav>
 	</div>
 </div>

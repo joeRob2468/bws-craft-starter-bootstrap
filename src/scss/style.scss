@@ -113,13 +113,13 @@
   color: $heading-copy-color;
   line-height: 1.8;
   margin-bottom: 0;
-  font-size: rem-calc(20);
+  font-size: rem-calc(20px);
 
   @include breakpoint(medium up) {
-    font-size: rem-calc(20);
+    font-size: rem-calc(20px);
   }
 
-  .is-dark & {
+  .section--dark & {
     color: #fefefe;
   }
 }
@@ -227,6 +227,65 @@ form {
 }
 
 /******************** Global Component Styles ********************/
+// Promo Bar
+header.site-header {
+  .promo-nav--section {
+    background: $primary-accent;
+    color: #FFFFFF;
+
+    .promo-nav {
+      display: flex;
+      flex-direction: row;
+      background: $primary-accent;
+      color: #FFFFFF;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+
+      @include breakpoint(small down) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .social-links-container {
+      .social-links .link {
+        margin-left: 0;
+
+        &:not(:last-of-type) {
+          margin-right: rem-calc(20px);
+        }
+
+        a {
+          color: #FFFFFF;
+
+          &:hover {
+            color: $secondary-accent;
+          }
+
+          .icon {
+            color: inherit;
+          }
+        }
+      }
+    }
+
+    .promo-nav--menu {
+      .social-links-container ~ & {
+        margin-top: 1rem;
+      }
+
+      .button {
+        
+      }
+
+      @include breakpoint(small down) {
+        text-align: center;
+      }
+    }
+  }
+}
 // Main navigation bar
 header.site-header {
   
@@ -719,6 +778,31 @@ a.logo {
   }
 }
 
+ul.social-links {
+  overflow: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  li {
+    margin-left: 10px;
+
+    a, a .icon {
+      font-size: 20px;
+      font-weight: normal;
+      color: $primary-accent;
+      transition: color 200ms ease, opacity 200ms ease;
+
+      &:hover {
+        color: $tertiary-accent;
+      }
+    }
+  }
+}
+
 .newsletter-signup--section {
   padding: 1rem 0;
 
@@ -750,6 +834,7 @@ a.logo {
 .button {
   @extend .cta;
 
+  font-size: rem-calc(18px);
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -768,50 +853,52 @@ a.logo {
 
   transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
 
+  & > .icon {
+    margin-right: 0.5rem;
+  }
+
   &.button--text {
     position: relative;
     background: transparent;
-    color: $body-copy-color;
+    color: $tertiary-accent;
     padding: 0 5px;
     border-width: 0;
     text-transform: uppercase;
     transition: color 200ms ease;
     z-index: 1;
+    align-items: center;
 
-    &::after {
-      content: '';
-      position: absolute;
-      background: rgba($primary-accent, .15);
-      left: 0;
-      right: 0;
-      bottom: 5px;
-      height: 7px;
-      z-index: -1;
+    .icon-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #D1D1D1;
+      width: rem-calc(22px);
+      height: rem-calc(22px);
+      border-radius: 50%;
+      margin-left: 0.4rem;
 
-      transition: background-color 200ms ease;
+      .icon {
+        font-size: rem-calc(16px);
+        color: $tertiary-accent;
+      }
     }
 
     &:hover, &:focus {
       color: $primary-accent;
+    }
 
-      &::after {
-        background: rgba($primary-accent, 0.1);
+    .section--dark & {
+      .icon-container {
+        border-color: #FFFFFF;
+
+        .icon {
+          color: #FFFFFF;
+        }
       }
     }
 
-    .is-dark & {
-      color: #FFFFFF;
-
-      &::after {
-        background: rgba(#16191A, .15);
-      }
-
-      &:hover::after {
-        background: rgba(#16191A, .25);
-      }
-    }
-
-    .is-dark &:hover, .is-dark &:focus {
+    .section--dark &:hover, .section--dark &:focus {
       color: #fefefe;
     }
   }
@@ -821,25 +908,44 @@ a.logo {
     border-width: 2px;
     border-style: solid;
     border-radius: 50px;
-    padding: 0.75rem 2.25rem;
-    color: #fefefe;
+    padding: 0.65rem 1.75rem;
+    color: #FFFFFF;
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
   }
 
   &.button--secondary {
-    border-color: #fefefe;
+    border-color: $secondary-accent;
     background: transparent;
+    color: $secondary-accent;
 
-    &:hover {
-      border-color: $primary-accent;
-      background: $primary-accent;
+    &:hover, &:focus {
+      background: darken($secondary-accent, 10);
+      border-color: darken($secondary-accent, 10);
+      color: #FFFFFF;
+    }
+
+    .section--dark & {
+      border-color: #FFFFFF;
+      background: transparent;
+      color: #FFFFFF;
+
+      &:hover, &:focus {
+        background: darken($secondary-accent, 10);
+        border-color: darken($secondary-accent, 10);
+        color: #FFFFFF;
+      }
     }
   }
   &.button--primary {
-    border-color: $primary-accent;
-    background: $primary-accent;
+    border-color: $secondary-accent;
+    background: $secondary-accent;
+
+    &:hover, &:focus {
+      background: darken($secondary-accent, 10);
+      border-color: darken($secondary-accent, 10);
+    }
   }
 }
 

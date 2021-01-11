@@ -4,14 +4,17 @@
 ********************************************************************************************************/
 
 /******************** Color and font variables ********************/
-$primary-accent: #0D9A5F;
+$primary-accent: #00356A;
+$secondary-accent: #E8AB35;
+$tertiary-accent: #027DC5;
 $dark-heading-copy-color: #FFFFFF;
 
 $body-copy-font: 'Open Sans', sans-serif;
-$body-text-color: #16191A;
+$body-text-color: #31353D;
 $body-copy-color: $body-text-color;
 $subheading-copy-font: "Open Sans", sans-serif;
-$heading-copy-font: "Encode Sans Condensed", sans-serif;
+$heading-copy-font: "Montserrat", sans-serif;
+$accent-copy-font: "Over the Rainbow", cursive;
 $heading-text-color: #16191A;
 $heading-copy-color: $heading-text-color;
 $dark-heading-copy-color: #FFFFFF;
@@ -26,18 +29,18 @@ $global-font-size: 20px;
 // Usage: get($container-widths, "containerSize.breakpoint") 
 $container-widths: (
   standard: (
-      small: rem-calc(1150px),
-      medium: rem-calc(1150px),
-      large: rem-calc(1150px),
-      xlarge: rem-calc(1150px),
-      xxlarge: rem-calc(1150px)
+      small: rem-calc(1300px),
+      medium: rem-calc(1300px),
+      large: rem-calc(1300px),
+      xlarge: rem-calc(1300px),
+      xxlarge: rem-calc(1300px)
   ),
   large: (
-      small: rem-calc(1700px),
-      medium: rem-calc(1700px),
-      large: rem-calc(1700px),
-      xlarge: rem-calc(1700px),
-      xxlarge: rem-calc(1700px)
+      small: rem-calc(1500px),
+      medium: rem-calc(1500px),
+      large: rem-calc(1500px),
+      xlarge: rem-calc(1500px),
+      xxlarge: rem-calc(1500px)
   ),
 );
 
