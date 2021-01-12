@@ -276,12 +276,33 @@ header.site-header {
         margin-top: 1rem;
       }
 
-      .button {
-        
+      .buttons .button {
+        border-radius: 5px;
+        font-size: rem-calc(15px);
+        padding: 0.5rem 1rem;
+
+        &:not(:last-of-type) {
+          margin-right: 0.5rem;
+        }
       }
 
       @include breakpoint(small down) {
         text-align: center;
+
+        .buttons {
+          align-items: center;
+          margin-top: 0.35rem;
+
+          .button {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .button:not(:last-of-type) {
+            margin-bottom: 0.35rem;
+            margin-right: 0;
+          }
+        }
       }
     }
   }

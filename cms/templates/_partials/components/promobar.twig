@@ -11,16 +11,18 @@
 			{% include "_partials/components/social-links" %}
 
 			<div class="promo-nav--menu">
-            {% for item in topBarNavigationLinks %}
-				{% include "_partials/snippets/button" with {
-                    title: item.navigationLink.getText(),
-                    url: item.navigationLink.getUrl(),
-                    target: item.navigationLink.getTarget(),
-                    type: item.buttonType,
-					icon: item.icon,
-                    isLightbox: false
-                } %}
-            {% endfor %}
+			<div class="buttons">
+				{% for item in topBarNavigationLinks %}
+					{% include "_partials/snippets/button" with {
+						title: item.navigationLink.getText(),
+						url: item.navigationLink.getUrl(),
+						target: item.navigationLink.getTarget(),
+						type: item.buttonType,
+						icon: item.icon,
+						isLightbox: false
+					} %}
+				{% endfor %}
+				</div>
 			</div>
 		</nav>
 	</div>
