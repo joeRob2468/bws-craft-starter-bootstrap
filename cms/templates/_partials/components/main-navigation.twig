@@ -2,11 +2,23 @@
     section: 'mainNavigation',
     with: ['children', 'children.children']
 }).all() %}
+{% set type = type is defined ? type : 'all' %}
+{% set linksTotal = mainMenuLinks|length %}
+{% set linksOffset = 0 %}
+{% set linksLimit = linksTotal %}
+
+{% if type == 'first-half' %}
+  {% set linksOffset = 0 %}
+  {% set linksLimit = (linksTotal / 2) | round(0, 'ceil') %}
+{% elseif type == 'second-half' %}
+  {% set linksOffset = (linksTotal / 2) | round(0, 'ceil') %}
+  {% set linksLimit = linksTotal %}
+{% endif %}
 
 <div class="main-navigation--menu">
     <ul class="menu">
         {# Primary items #}
-        {% for topLevelLink in mainMenuLinks if topLevelLink.level == 1 %}
+        {% for topLevelLink in (mainMenuLinks|slice(linksOffset, linksLimit)) if topLevelLink.level == 1 %}
         <li class="menu-item{% if topLevelLink.navigationLinkHighlight %} highlighted{% endif %}{% if topLevelLink.children|length %} is-parent{% endif %}">
             <a href="{{ topLevelLink.navigationLink.getUrl() }}"{% if topLevelLink.navigationLink.getTarget()|length %} target="{{ topLevelLink.navigationLink.getTarget() }}"{% endif %}>
                 {{ topLevelLink.navigationLink.getText() }}
