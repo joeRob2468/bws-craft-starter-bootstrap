@@ -689,92 +689,48 @@ header.site-header {
 
 // Footer
 footer.site-footer {
-  padding: 3rem 0;
-  border-top: 1px solid #EEEEEE;
-
   .footer-links {
-    text-align: center;
-    font-size: rem-calc(17px);
-    color: #5A5A5A;
+    font-size: rem-calc(16px);
+    color: #595959;
 
     a {
-      color: #5A5A5A;
+      color: #595959;
+      font-weight: 600;
 
       &:hover {
         color: $primary-accent;
       }
     }
 
-    ul.menu {
-      list-style: none;
-      margin: 0;
+    .footer-logo {
+      text-align: center;
+      padding: 3rem 0;
 
-      li {
+      a.logo {
         display: inline-block;
+
+        img {
+          height: 5.5rem;
+        }
       }
     }
 
     .footer-navigation-container {
-      padding: 1rem 0;
+      padding: 2.5rem 0;
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(#000000, 0.1);
 
-      .separator {
-        display: inline-flex;
-        padding: 0 0.45rem;
-        font-size: rem-calc(14px);
-        line-height: 1em;
-        vertical-align: middle;
-        transform: translateY(-(rem-calc(1px)));
-      }
+      .copyright {
+        max-width: 25rem;
 
-      @include breakpoint(small down) {
-        flex-direction: column;
-
-        .footer-navigation {
-          order: 1;
-          padding-bottom: 1rem;
-        }
-
-        .copyright {
-          order: 2;
-
-          .separator {
-            display: none;
-          }
-        }
-
-        .referral {
-          order: 3;
-
-          .separator {
-            display: none;
-          }
-        }
-      }
-    }
-
-    .social-links-container {
-      padding: 1rem 0;
-
-      .social-links .link a {
-        display: inline-flex;
-        align-self: center;
-        padding: 0.25rem 0.5rem;
-        font-size: rem-calc(20px);
-
-        svg.icon {
-          width: 1em;
-          height: 1em;
-          position: relative;
-          top: .125em;
+        p:last-of-type {
+          margin-bottom: 0;
         }
       }
 
-      @include breakpoint(small down) {
-        padding: 0;
+      .referral {
+
       }
     }
   }

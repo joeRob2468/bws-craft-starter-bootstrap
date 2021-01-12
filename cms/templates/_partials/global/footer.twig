@@ -1,32 +1,15 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {% cache globally unless cacheExempt %}
-
-{% set footerNavigation = craft.entries({
-    section: 'footerNavigation',
-    with: ['navigationLink', 'children', 'children.navigationLink']
-}).all() %}
-
 <footer class="site-footer animatable">
     {# {% include '_partials/snippets/newsletter-signup' %} #}
-
     <div class="footer-links">
         <div class="container">
+            <div class="footer-logo">
+                {% include "_partials/snippets/logo" with {'size': 'compact' } %}
+            </div>
             <div class="footer-navigation-container">
-                <div class="copyright">&copy; {{ now|date('Y') }} {{ siteName }}{% if footerNavigation|length %}<span class="separator">|</span>{% endif %}</div>
-                
-                {% if footerNavigation|length %}
-                <ul class="menu footer-navigation">
-                    {% for item in footerNavigation %}
-                        <li class="link">
-                            <a href="{{ item.navigationLink.getUrl() }}" {% if item.navigationLink.getTarget()|length %}target="{{ item.navigationLink.getTarget() }}"{% endif %}>{{ item.navigationLink.getText() }}</a>
-                            {% if not loop.last %}<span class="separator">|</span>{% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                <div class="referral">
-                    <span class="separator">|</span>Site by <a href="https://www.boyerwebstudios.com" target="_blank" rel="noopener">Boyer Web Studios</a>
-                </div>
+                <div class="copyright rte">{{ siteSettings.footerCopyright  }}</div>
+                <div class="referral">Site by <a href="https://www.boyerwebstudios.com" target="_blank" rel="noopener">Boyer Web Studios</a></div>
             </div>
         </div>
     </div>
