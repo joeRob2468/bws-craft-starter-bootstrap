@@ -1,0 +1,18 @@
+contentColumnType: string(600)
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: subheading
+instructions: 'The secondary heading for this section (usually displayed in cursive font).'
+name: Subheading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 150
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
