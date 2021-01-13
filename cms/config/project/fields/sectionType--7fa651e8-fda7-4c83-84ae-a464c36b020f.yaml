@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: sectionType
+instructions: 'Adjusts the background color of this section. Use Standard for the standard background (white for light sections, dark blue for dark sections), and Alternate for the alternate background (off-white for light sections, light blue for dark sections). Use to help introduce more contrast between sections of each page when necessary. '
+name: 'Section Type'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Standard
+        -
+          - value
+          - standard
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Alternate
+        -
+          - value
+          - alternate
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

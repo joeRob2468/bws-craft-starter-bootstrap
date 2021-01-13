@@ -2,7 +2,7 @@ childBlocks:
   - button
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  c9a8b21b-4f29-474a-96ed-5ab3aabdf536:
+  d916a483-225c-458f-8fa9-b8e95f35f00a:
     tabs:
       -
         elements:
@@ -34,20 +34,20 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            fieldUid: 291580b7-d5d0-4340-8f73-76b8fcf000d1
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: text
+handle: text_cta
 maxBlocks: 0
-maxChildBlocks: 1
+maxChildBlocks: 2
 maxSiblingBlocks: 0
-name: Text
-sortOrder: 2
+name: 'Text CTA'
+sortOrder: 4
 topLevel: true

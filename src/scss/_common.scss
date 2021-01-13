@@ -239,7 +239,7 @@ video.cover {
     }
   }
 
-  &.section--whitespace:not(.section--primary):not(.section--secondary) +  &.section--whitespace:not(.section--primary):not(.section--secondary), &.section--whitespace.section--primary + .section--whitespace.section--primary, &.section--whitespace.section--secondary + .section--whitespace.section--secondary {
+  &.section--whitespace:not(.section--standard):not(.section--alternate) +  &.section--whitespace:not(.section--standard):not(.section--alternate), &.section--whitespace.section--standard + .section--whitespace.section--standard, &.section--whitespace.section--alternate + .section--whitespace.section--alternate {
     padding-top: 0;
   }
 

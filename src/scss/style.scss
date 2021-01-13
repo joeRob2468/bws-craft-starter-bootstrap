@@ -241,6 +241,23 @@ form {
   padding-bottom: 5px;
 }
 
+// Section type background colors
+.section--standard {
+  background-color: #FFFFFF;
+
+  &.section--dark {
+    background-color: $primary-accent;
+  }
+}
+
+.section--alternate {
+  background-color: #FAFAFA;
+
+  &.section--dark {
+    background-color: $tertiary-accent;
+  }
+}
+
 /******************** Global Component Styles ********************/
 // Promo Bar
 header.site-header {
@@ -804,6 +821,20 @@ footer.site-footer {
   .image-container img {
     @include breakpoint(medium up) {
       max-height: rem-calc(800px);
+    }
+  }
+}
+
+.section-text_cta--block {
+  .content-container {
+    text-align: center;
+    max-width: rem-calc(850px);
+    margin-left: auto;
+    margin-right: auto;
+
+    .buttons {
+      justify-content: center;
+      align-items: center;
     }
   }
 }
