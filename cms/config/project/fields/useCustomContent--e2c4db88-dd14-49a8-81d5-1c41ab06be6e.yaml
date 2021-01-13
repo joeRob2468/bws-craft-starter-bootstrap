@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: useCustomContent
+instructions: 'If enabled, will use custom content instead of pulling data from other areas of the site. '
+name: 'Use custom content?'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

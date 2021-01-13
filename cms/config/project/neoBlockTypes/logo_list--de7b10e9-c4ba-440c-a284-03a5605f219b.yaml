@@ -1,0 +1,53 @@
+childBlocks:
+  - logoListItem
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+fieldLayouts:
+  72ffd0e4-f3c3-4fad-99c5-9e3956840fe1:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
+            instructions: 'If enabled, will only display logos added below. If disabled, partners will be automatically displayed (from the Entries>Partners site content section). Logos added below are optional. '
+            label: 'Only show custom logos?'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 1
+handle: logo_list
+maxBlocks: 0
+maxChildBlocks: 30
+maxSiblingBlocks: 0
+name: 'Logo List'
+sortOrder: 7
+topLevel: true

@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: linkUrl
+instructions: 'The web URL to use for this section.'
+name: URL
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: 'https://www.google.com/'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

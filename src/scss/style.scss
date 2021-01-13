@@ -772,6 +772,7 @@ footer.site-footer {
 
 /******************** Block Styles ********************/
 
+// Hero content block
 .section-hero--block {
   position: relative;
   display: flex;
@@ -817,6 +818,7 @@ footer.site-footer {
   }
 }
 
+// Image content block
 .section-image--block {
   .image-container img {
     @include breakpoint(medium up) {
@@ -825,6 +827,7 @@ footer.site-footer {
   }
 }
 
+// Text CTA content block
 .section-text_cta--block {
   .content-container {
     text-align: center;
@@ -835,6 +838,34 @@ footer.site-footer {
     .buttons {
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+// Logo List content block
+.section-logo_list--block {
+  text-align: center;
+
+  .logo-items {
+    margin-top: 2rem;
+
+    .logo-item {
+      display: flex;
+
+      .content-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+
+        @include breakpoint(medium up) {
+          padding: 1rem;
+        }
+
+        img {
+          mix-blend-mode: multiply;
+        }
+      }
     }
   }
 }

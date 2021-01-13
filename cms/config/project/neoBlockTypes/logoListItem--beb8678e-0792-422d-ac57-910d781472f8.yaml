@@ -1,43 +1,43 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  c8e26a5a-28cc-4494-9300-44715700c3d9:
+  521c827f-733c-4071-915d-898ca2dfc106:
     tabs:
       -
         elements:
           -
-            fieldUid: 2886f198-65b5-4662-8f31-5bc761325b03
-            instructions: 'The link to use for this button'
-            label: ''
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: 'The name of the company represented by this logo.'
+            label: 'Company Name'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: adac64af-2715-4c2c-aad7-d563dea9e9c0
-            instructions: ''
-            label: ''
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            instructions: 'The logo to display'
+            label: Logo
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: e98e2c64-af99-46b8-b4c7-2748aff3f3e5
-            instructions: null
-            label: null
-            required: false
+            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
+            instructions: 'The website URL to use for this logo'
+            label: 'Website URL'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: 'Button Settings'
+        name: Settings
         sortOrder: 1
-handle: button
+handle: logoListItem
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: Button
-sortOrder: 9
+name: 'Logo List Item'
+sortOrder: 10
 topLevel: false
