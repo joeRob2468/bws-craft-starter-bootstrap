@@ -3,17 +3,39 @@
 
 {# Block variable defaults #}
 {% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set subheading = block['subheading'] is defined ? block.subheading : '' %}
 {% set rtfContent = block['rtfContent'] is defined ? block.rtfContent : '' %}
+{% set buttons = block.children is defined ? block.children|filter(item => item.type.handle == 'button') : null %}
 
 <section class="section section--medium section--whitespace section-{{ block_type }}--block animatable">
     <div class="container">
-        {% if heading|length %}
-            <h2 class="primary--heading">{{ heading }}</h2>
-        {% endif %}
-        {% if rtfContent|length %}
-            <div class="content rte">
-                {{ rtfContent }}
+        <div class="grid-x grid-margin-x align-center">
+            <div class="cell medium-10">
+                {% if subheading|length %}
+                    <p class="subtitle--heading">{{ subheading }}</p>
+                {% endif %}
+                {% if heading|length %}
+                    <h2 class="primary--heading">{{ heading }}</h2>
+                {% endif %}
+                {% if rtfContent|length %}
+                    <div class="content rte">
+                        {{ rtfContent }}
+                    </div>
+                {% endif %}
+                {% if buttons and buttons|length %}
+                    <div class="buttons">
+                        {% for button in buttons %}
+                        {% include "_partials/snippets/button" with {
+                            title: button.linkField.getText(),
+                            url: button.linkField.getUrl(),
+                            target: button.linkField.getTarget(),
+                            type: button.buttonType,
+                            isLightbox: button.isLightbox
+                        } only %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
-        {% endif %}
+        </div>
     </div>
 </section>
