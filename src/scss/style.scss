@@ -60,7 +60,7 @@
   font-family: $heading-copy-font;
   font-style: normal;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: $heading-copy-color;
   line-height: $header-lineheight;
@@ -76,7 +76,7 @@
   font-family: $heading-copy-font;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: $heading-copy-color;
   line-height: $header-lineheight;
@@ -870,6 +870,53 @@ footer.site-footer {
   }
 }
 
+// Image/Text Banner content block
+.section-image_text_banner--block {
+  .text-container {
+    @extend .section.section--medium;
+  }
+
+  &.section--dark .text-container .subtitle--heading {
+    color: #B9DFF5;
+  }
+
+  &.section--dark.section--alternate .text-container .subtitle--heading {
+    color: #FFFFFF;
+  }
+
+  @include breakpoint(medium up) {
+    display: flex;
+    flex-direction: row;
+
+    &.section-alignment--reversed {
+      flex-direction: row-reverse;
+    }
+
+    .image-container {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text-container {
+      flex: 1;
+
+      .text-content {
+        max-width: 26rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
 /******************** Snippet Styles ********************/
 a.logo {
   position: relative;
@@ -964,7 +1011,7 @@ ul.social-links {
     border: none;
   }
 
-  transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+  transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease, opacity 200ms ease;
 
   & > .icon {
     margin-right: 0.5rem;
@@ -977,7 +1024,7 @@ ul.social-links {
     padding: 0 5px;
     border-width: 0;
     text-transform: uppercase;
-    transition: color 200ms ease;
+    transition: color 200ms ease, opacity 200ms ease;
     z-index: 1;
     align-items: center;
 
@@ -1002,6 +1049,12 @@ ul.social-links {
     }
 
     .section--dark & {
+      color: #78B9F5;
+
+      &:hover, &:focus {
+        color: #fefefe;
+      }
+
       .icon-container {
         border-color: #FFFFFF;
 
@@ -1011,8 +1064,13 @@ ul.social-links {
       }
     }
 
-    .section--dark &:hover, .section--dark &:focus {
-      color: #fefefe;
+    .section--dark.section--alternate & {
+      color: #FFFFFF;
+
+      &:hover, &:focus {
+        color: #FFFFFF;
+        opacity: 0.8;
+      }
     }
   }
 

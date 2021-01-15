@@ -27,7 +27,7 @@ fieldLayouts:
             fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
             instructions: 'The website URL to use for this logo'
             label: 'Website URL'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -39,5 +39,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Logo List Item'
-sortOrder: 10
+sortOrder: 12
 topLevel: false

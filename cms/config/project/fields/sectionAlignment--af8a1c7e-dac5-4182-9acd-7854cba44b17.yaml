@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: sectionAlignment
+instructions: 'The alignment of this section. Use Standard to show normally, and Reversed to reverse the direction. '
+name: 'Section Alignment'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Standard
+        -
+          - value
+          - standard
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Reversed
+        -
+          - value
+          - reversed
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown
