@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"vendors~contact-form":"vendors~contact-form","contact-form":"contact-form","vendors~icons-library":"vendors~icons-library","icons-library":"icons-library"}[chunkId]||chunkId) + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + ({"vendors~contact-form":"vendors~contact-form","contact-form":"contact-form","vendors~icons-library":"vendors~icons-library","icons-library":"icons-library","vendors~image-text-slider":"vendors~image-text-slider","image-text-slider":"image-text-slider"}[chunkId]||chunkId) + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -353,7 +353,8 @@ var enterScrollWatcher=scrollMonitor.create($(this).get(0),-100);var exitScrollW
 $(this).addClass('will-animate');$(this).removeClass('is-active');if(exitScrollWatcher.isInViewport){setTimeout(function(){$(exitScrollWatcher.watchItem).addClass('is-active');},50);}});// import icons library and dependencies, initialize when done
 Promise.all(/*! import() | icons-library */[__webpack_require__.e("vendors~icons-library"), __webpack_require__.e("icons-library")]).then(__webpack_require__.bind(null, /*! ./IconLibrary */ "./src/js/IconLibrary.js")).then(function(module){var IconLibrary=module.default;_this.iconLibrary=new IconLibrary();_this.iconLibrary.init();});this.initContentBlockModules();}catch(e){console.log(e);}}// Called in init() method - initializes all content block modules
 },{key:"initContentBlockModules",value:function initContentBlockModules(){var _this2=this;// init contact form
-if($('.section-contact_form--block').length){Promise.all(/*! import() | contact-form */[__webpack_require__.e("vendors~contact-form"), __webpack_require__.e("contact-form")]).then(__webpack_require__.bind(null, /*! ./block-modules/ContactForm */ "./src/js/block-modules/ContactForm.js")).then(function(module){var ContactForm=module.default;if($(ContactForm.selector).length){var contactForm=new ContactForm();contactForm.init();_this2.content_block_modules.push(contactForm);}});}}// Runs every time a new page replaces the current one
+if($('.section-contact_form--block').length){Promise.all(/*! import() | contact-form */[__webpack_require__.e("vendors~contact-form"), __webpack_require__.e("contact-form")]).then(__webpack_require__.bind(null, /*! ./block-modules/ContactForm */ "./src/js/block-modules/ContactForm.js")).then(function(module){var ContactForm=module.default;if($(ContactForm.selector).length){var contactForm=new ContactForm();contactForm.init();_this2.content_block_modules.push(contactForm);}});}// init image/text slider
+if($('.section-image_text_slider--block').length){Promise.all(/*! import() | image-text-slider */[__webpack_require__.e("vendors~image-text-slider"), __webpack_require__.e("image-text-slider")]).then(__webpack_require__.bind(null, /*! ./block-modules/ImageTextSlider */ "./src/js/block-modules/ImageTextSlider.js")).then(function(module){var ImageTextSlider=module.default;if($(ImageTextSlider.selector).length){var imageTextSlider=new ImageTextSlider();imageTextSlider.init();_this2.content_block_modules.push(imageTextSlider);}});}}// Runs every time a new page replaces the current one
 // Destroys all scripts on the page, so they can be reinitialized on the new one
 },{key:"destroy",value:function destroy(){try{// destroy content blocks
 for(var i=0;i<this.content_block_modules.length;i++){this.content_block_modules[i].destroy();}this.content_block_modules=[];// destroy navigation controller

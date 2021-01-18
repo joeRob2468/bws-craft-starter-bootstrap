@@ -91,6 +91,19 @@ class MainController {
                 }
             });
         }
+
+        // init image/text slider
+        if ($('.section-image_text_slider--block').length) {
+            import(/* webpackChunkName: "image-text-slider" */"./block-modules/ImageTextSlider").then(module => {
+                const ImageTextSlider = module.default;
+
+                if ($(ImageTextSlider.selector).length) {
+                    let imageTextSlider = new ImageTextSlider();
+                    imageTextSlider.init();
+                    this.content_block_modules.push(imageTextSlider);
+                }
+            });
+        }
     }
 
     // Runs every time a new page replaces the current one

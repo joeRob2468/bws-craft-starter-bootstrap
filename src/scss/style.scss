@@ -52,6 +52,9 @@
 // Only import if you need something other than the default ease
 // @import "~awesome-sass-easing/_sass-easing.scss";
 
+// Swiper 
+@import '~swiper/swiper';
+
 // Common Styles (overrides and utilities)
 @import "common";
 
@@ -107,15 +110,15 @@
   font-family: $heading-copy-font;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: $heading-copy-color;
   line-height: $header-lineheight;
-  margin-bottom: 1.6rem;
-  font-size: rem-calc(25);
+  margin-bottom: 1rem;
+  font-size: rem-calc(22);
 
   @include breakpoint(medium up) {
-    font-size: rem-calc(35);
+    font-size: rem-calc(32);
   }
 }
 
@@ -884,7 +887,7 @@ footer.site-footer {
     color: #FFFFFF;
   }
 
-  @include breakpoint(medium up) {
+  @include breakpoint(large up) {
     display: flex;
     flex-direction: row;
 
@@ -912,6 +915,166 @@ footer.site-footer {
         max-width: 26rem;
         margin-left: auto;
         margin-right: auto;
+      }
+    }
+  }
+}
+
+// Image/Text Slider content block
+.section-image_text_slider--block {
+  display: flex;
+  flex-direction: row;
+
+  &.section--dark .text-container .subtitle--heading {
+    color: #B9DFF5;
+  }
+
+  &.section--dark.section--alternate .text-container .subtitle--heading {
+    color: #FFFFFF;
+  }
+
+  .content-container {
+    @extend .section.section--medium;
+    flex: 1;
+
+    .text-container .text-content {
+      max-width: 26rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .navigation-container {
+      margin-top: 4rem;
+
+      .slider-navigation .slider-navigation-item {
+        @extend .container;
+
+        color: #FFFFFF;
+        position: relative;
+        background: rgba($tertiary-accent, 0);
+        transition: background-color 200ms ease;
+        cursor: pointer;
+
+        &.active, &:hover, &:focus {
+          background: rgba($tertiary-accent, 1);
+        }
+
+        .nav-text-container {
+          @extend .inline--heading;
+
+          font-size: rem-calc(26px);
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          margin-bottom: 0;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          width: 100%;
+          max-width: 26rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .icon-container {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          right: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .slides-container {
+    flex: 1.4;
+    overflow: hidden;
+    
+    .swiper-container {
+      height: 100%;
+    }
+
+    .slide-wrapper {
+      display: flex;
+
+      .slide {    
+        position: relative;
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 1;
+        padding: 3rem;
+        
+        .image-container {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+        .caption-container {
+          background: rgba(#FFFFFF, 0.9);
+          padding: 2rem 3rem;
+
+          .inline--heading {
+            color: $heading-copy-color;
+          }
+
+          .content p {
+            color: $body-copy-color;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+
+          .buttons {
+            margin-top: 1rem;
+
+            .button {
+              @extend .button;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile Styles
+  @include breakpoint(medium down) {
+    flex-direction: column;
+
+    .content-container {
+      .navigation-container {
+        .slider-navigation-item {
+          .nav-text-container {
+            font-size: $base-font-size;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .slides-container {
+      .swiper-slide {
+        height: initial;
+      }
+
+      .slide-wrapper .slide {
+        padding: 0;
+
+        .caption-container {
+          margin-top: 20rem;
+        }
       }
     }
   }

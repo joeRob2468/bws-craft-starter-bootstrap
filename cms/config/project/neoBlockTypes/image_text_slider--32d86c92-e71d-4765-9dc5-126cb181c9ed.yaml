@@ -1,8 +1,8 @@
 childBlocks:
-  - logoListItem
+  - imageTextSliderItem
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  72ffd0e4-f3c3-4fad-99c5-9e3956840fe1:
+  c064909e-54e9-44b1-91c9-d16fec4aa42f:
     tabs:
       -
         elements:
@@ -26,6 +26,15 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
             instructions: null
             label: null
             required: false
@@ -33,21 +42,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
-            instructions: 'If enabled, will only display logos added below. If disabled, partners will be automatically displayed (from the Entries>Partners site content section). Logos added below are optional. '
-            label: 'Only show custom logos?'
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Settings
         sortOrder: 1
-handle: logo_list
+handle: image_text_slider
 maxBlocks: 0
-maxChildBlocks: 30
+maxChildBlocks: 3
 maxSiblingBlocks: 0
-name: 'Logo List'
-sortOrder: 10
+name: 'Image/Text Slider'
+sortOrder: 7
 topLevel: true
