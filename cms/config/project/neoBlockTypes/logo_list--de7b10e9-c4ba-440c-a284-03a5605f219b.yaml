@@ -49,5 +49,5 @@ maxBlocks: 0
 maxChildBlocks: 30
 maxSiblingBlocks: 0
 name: 'Logo List'
-sortOrder: 10
+sortOrder: 12
 topLevel: true

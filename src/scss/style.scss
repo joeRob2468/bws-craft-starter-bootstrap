@@ -821,6 +821,13 @@ footer.site-footer {
   }
 }
 
+// Subpage Hero block
+.section-hero_subpage--block {
+  .subtitle--heading, .page--heading {
+    text-align: center;
+  }
+}
+
 // Image content block
 .section-image--block {
   .image-container img {

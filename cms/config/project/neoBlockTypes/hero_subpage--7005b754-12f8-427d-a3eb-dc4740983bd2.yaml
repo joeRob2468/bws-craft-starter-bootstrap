@@ -2,15 +2,15 @@ childBlocks:
   - button
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  09089ab4-ba7c-4f64-b2e9-6e7ccc9c248b:
+  86b540e2-85a4-473b-a700-fb8a9443e271:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
-            instructions: 'The background image for this section'
-            label: 'Background Image'
-            required: '1'
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
             instructions: null
             label: null
             required: false
@@ -35,10 +35,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: hero
+handle: hero_subpage
 maxBlocks: 0
-maxChildBlocks: 2
+maxChildBlocks: 1
 maxSiblingBlocks: 0
-name: Hero
-sortOrder: 2
+name: 'Subpage Hero'
+sortOrder: 3
 topLevel: true

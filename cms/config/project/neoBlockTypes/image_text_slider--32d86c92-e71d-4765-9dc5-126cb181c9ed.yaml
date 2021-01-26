@@ -49,5 +49,5 @@ maxBlocks: 0
 maxChildBlocks: 3
 maxSiblingBlocks: 0
 name: 'Image/Text Slider'
-sortOrder: 7
+sortOrder: 10
 topLevel: true
