@@ -48,7 +48,7 @@ class ImageTextSlider {
         if (this.sliders.length) {
             // destroy slider instances
             for (let i = 0; i < this.sliders.length; i++) {
-                let slider = this.slider[i];
+                let slider = this.sliders[i];
                 slider.destroy();
             }
             

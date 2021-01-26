@@ -1053,15 +1053,8 @@ footer.site-footer {
   @include breakpoint(medium down) {
     flex-direction: column;
 
-    .content-container {
-      .navigation-container {
-        .slider-navigation-item {
-          .nav-text-container {
-            font-size: $base-font-size;
-            position: relative;
-          }
-        }
-      }
+    .content-container .navigation-container .slider-navigation .slider-navigation-item .nav-text-container {
+      font-size: rem-calc($base-font-size);
     }
 
     .slides-container {
