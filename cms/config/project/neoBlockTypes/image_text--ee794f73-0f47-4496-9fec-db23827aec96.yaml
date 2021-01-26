@@ -2,7 +2,7 @@ childBlocks:
   - button
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  ee9dd4ed-0883-44ca-b69b-ee2fcfa30a14:
+  748de282-1101-4bcc-8a40-e248ec0a159a:
     tabs:
       -
         elements:
@@ -10,15 +10,6 @@ fieldLayouts:
             fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
             instructions: ''
             label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: af8a1c7e-dac5-4182-9acd-7854cba44b17
-            instructions: 'Standard will show the image on the left and the text on the right, and Reversed will show the image on the right and text on the left.  '
-            label: 'Image Position'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,19 +44,19 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: image_text_banner
+handle: image_text
 maxBlocks: 0
-maxChildBlocks: 2
+maxChildBlocks: 1
 maxSiblingBlocks: 0
-name: 'Image/Text Banner'
-sortOrder: 10
+name: Image/Text
+sortOrder: 9
 topLevel: true
