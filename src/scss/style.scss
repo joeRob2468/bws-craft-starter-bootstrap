@@ -963,6 +963,109 @@ footer.site-footer {
   }
 }
 
+// Image/Stats Banner content block
+.section-image_stats_banner--block {
+  &.section--dark .text-container .subtitle--heading {
+    color: #B9DFF5;
+  }
+
+  &.section--dark.section--alternate .text-container .subtitle--heading {
+    color: #FFFFFF;
+  }
+
+  .text-container {
+    @extend .section.section--medium;
+    flex: 1;
+
+    .text-content {
+      max-width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+    }
+  }
+
+  .statistics--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .statistic-item {
+      text-align: center;
+      max-width: 15rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+
+      .statistic {
+        position: relative;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+
+        color: #6CC9FF;
+        font-family: $heading-copy-font;
+        font-size: rem-calc(40px);
+        line-height: 1;
+
+        &.highlighted {
+          color: #FFFFFF;
+          background-color: $tertiary-accent;
+          border-radius: 15px;
+        }
+      }
+
+      .description {
+        font-size: rem-calc(18px);
+        font-weight: 600;
+        text-transform: uppercase;
+        
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.section--alternate .statistics--container .statistic {
+    color: #FFFFFF;
+
+    &.highlighted {
+      background-color: #FFFFFF;
+      color: $tertiary-accent;
+    }
+  }
+
+  @include breakpoint(large up) {
+    display: flex;
+    flex-direction: row;
+
+    &.section-alignment--reversed {
+      flex-direction: row-reverse;
+    }
+
+    .image-container {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .statistics--container.show-as-grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
 // Image/Text Slider content block
 .section-image_text_slider--block {
   display: flex;
