@@ -881,6 +881,17 @@ footer.site-footer {
           padding: 1rem;
         }
 
+        a {
+          img {
+            opacity: 1;
+            transition: opacity 200ms ease;
+          }
+
+          &:hover img, &:active img {
+            opacity: 0.6;
+          }
+        }
+
         img {
           mix-blend-mode: multiply;
         }
