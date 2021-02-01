@@ -1325,6 +1325,7 @@ footer.site-footer {
   }
 }
 
+// Team Grid content block
 .section-team_grid--block {
   .primary--heading, .accent--heading {
     text-align: center;
@@ -1400,6 +1401,7 @@ footer.site-footer {
   }
 }
 
+// Team Text Grid content block
 .section-team_text_grid--block {
   text-align: center;
   color: $primary-accent;
@@ -1428,6 +1430,74 @@ footer.site-footer {
         .item-description {
           margin-bottom: 0;
         }
+      }
+    }
+  }
+}
+
+// Icon Grid content block
+.section-icon_grid--block {
+  .primary--heading, .accent--heading {
+    text-align: center;
+  }
+
+  .icon-items {
+    margin-top: 5rem;
+
+    .icon-item {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 4rem;
+
+      @include breakpoint(large up) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .icon-container {
+        margin-right: 1.5rem;
+
+        .icon {
+          font-size: rem-calc(55px);
+          color: $tertiary-accent;
+        }
+
+        @include breakpoint(small down) {
+          margin-right: 1rem;
+          
+          .icon {
+            font-size: rem-calc(45px);
+          }
+        }
+      }
+
+      .content-container {
+        margin-top: 0.3rem;
+
+        .item-title {
+          margin-bottom: 0.65rem;
+          font-family: $body-copy-font;
+          font-size: rem-calc(21px);
+          letter-spacing: 0;
+          text-transform: uppercase;
+        }
+
+        .item-description {
+          p:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+
+    @include breakpoint(small down) {
+      .button {
+        width: 100%;
+        justify-content: center;
       }
     }
   }

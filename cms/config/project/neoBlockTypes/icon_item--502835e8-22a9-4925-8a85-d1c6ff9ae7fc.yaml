@@ -1,14 +1,14 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  312688e4-068a-4c56-ab55-3efde700f677:
+  4d41ed7d-4536-4f90-94e6-5c551b65ac2e:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
-            instructions: 'The portrait image to show for this team member.'
-            label: 'Portrait Image'
+            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -16,37 +16,37 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
-            instructions: 'The name to show for this team member.'
-            label: Name
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
-            instructions: 'The job title to display for this team member.'
-            label: 'Job Title'
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 1d73271a-6ca9-4f5c-8bfb-739767606bc0
-            instructions: 'The email address to display for this team member.'
-            label: ''
+            instructions: null
+            label: null
             required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 291580b7-d5d0-4340-8f73-76b8fcf000d1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2886f198-65b5-4662-8f31-5bc761325b03
+            instructions: ''
+            label: 'Link (optional)'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: team_grid_item
+handle: icon_item
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Team Member'
-sortOrder: 24
+name: 'Icon Item'
+sortOrder: 26
 topLevel: false
