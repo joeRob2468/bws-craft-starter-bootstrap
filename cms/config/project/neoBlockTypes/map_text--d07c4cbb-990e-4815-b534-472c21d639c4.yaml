@@ -1,8 +1,8 @@
 childBlocks:
-  - team_grid_item
+  - map_text_item
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  9bcac3dc-539b-49a9-a0ab-43c7f89ed6c2:
+  3a25d697-09f9-4246-abaf-592fea31690b:
     tabs:
       -
         elements:
@@ -16,9 +16,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: b95a16bc-39e5-4914-a385-86b644433d63
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
-            instructions: 'Enable to show larger portraits (rows of 2 instead of rows of 3) - helpful for featuring this specific set of team members before a smaller list of others. '
-            label: 'Show as large portraits? '
+            instructions: 'If enabled, will display social icons (in the same format as the Map/Text Item nested blocks).'
+            label: 'Show social media icons?'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -26,8 +35,8 @@ fieldLayouts:
             width: 100
           -
             fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
-            instructions: null
-            label: null
+            instructions: ''
+            label: Subheading
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -36,18 +45,27 @@ fieldLayouts:
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
             instructions: ''
-            label: ''
-            required: '1'
+            label: Heading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            instructions: ''
+            label: 'Formatted Content'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: team_grid
+handle: map_text
 maxBlocks: 0
-maxChildBlocks: 12
+maxChildBlocks: 3
 maxSiblingBlocks: 0
-name: 'Team Grid'
-sortOrder: 16
+name: Map/Text
+sortOrder: 18
 topLevel: true
