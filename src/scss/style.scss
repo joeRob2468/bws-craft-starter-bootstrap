@@ -1604,6 +1604,41 @@ footer.site-footer {
   }
 }
 
+// Icon List content block
+.section-icon_list--block {
+  .subtitle--heading, .primary--heading {
+    text-align: center; 
+  }
+
+  .icon-items {
+    &:not(:first-child) {
+      margin-top: 4rem;
+    }
+
+    .icon-item {
+      text-align: center;
+
+      .icon-container {
+        font-size: rem-calc(65px);
+        line-height: 1;
+        color: $tertiary-accent;
+      }
+
+      .content-container {
+        margin-top: 1rem;
+
+        .icon-title {
+          color: $primary-accent;
+
+          p:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 /******************** Snippet Styles ********************/
 a.logo {
   position: relative;
