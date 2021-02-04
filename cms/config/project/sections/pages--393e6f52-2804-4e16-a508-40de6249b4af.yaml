@@ -1,7 +1,6 @@
 enableVersioning: true
 handle: pages
 name: Pages
-previewTargets: null
 propagationMethod: all
 siteSettings:
   0cc785f8-a672-4448-9841-1c39b72f75bd:
@@ -10,6 +9,6 @@ siteSettings:
     template: _pages/pages-structure-main
     uriFormat: '{parent.uri}/{slug}'
 structure:
-  maxLevels: 1
+  maxLevels: 2
   uid: 7e857a81-fa51-4fc8-b327-6f515304bc3f
 type: structure
