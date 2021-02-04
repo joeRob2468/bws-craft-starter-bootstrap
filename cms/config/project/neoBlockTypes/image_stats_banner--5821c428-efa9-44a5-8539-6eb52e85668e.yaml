@@ -58,5 +58,5 @@ maxBlocks: 0
 maxChildBlocks: 6
 maxSiblingBlocks: 0
 name: 'Image/Statistic Banner'
-sortOrder: 11
+sortOrder: 12
 topLevel: true

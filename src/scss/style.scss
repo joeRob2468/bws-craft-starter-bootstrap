@@ -91,6 +91,22 @@
   }
 }
 
+.standard--heading {
+  font-family: $heading-copy-font;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $heading-copy-color;
+  line-height: $header-lineheight;
+  margin-bottom: 1.6rem;
+  font-size: rem-calc(35);
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(45);
+  }
+}
+
 .subtitle--heading {
   font-family: $accent-copy-font;
   font-style: normal;
@@ -834,6 +850,29 @@ footer.site-footer {
 .section-hero_subpage--block {
   .subtitle--heading, .page--heading {
     text-align: center;
+  }
+}
+
+// Text with Side Heading content block
+.section-text_side_heading--block {
+  .rte strong {
+    color: $primary-accent;
+  }
+
+  @include breakpoint(large up) {
+    .container {
+      display: flex;
+      flex-direction: row;
+
+      .heading-container {
+        flex: 1;
+      }
+
+      .content-container {
+        flex: 2.2;
+        padding-left: 4rem;
+      }
+    }
   }
 }
 

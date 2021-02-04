@@ -1,14 +1,15 @@
-childBlocks: ''
+childBlocks:
+  - button
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  2bf4b8f1-2d71-4cac-af49-60c36142f5ea:
+  0fa81f3b-a3f5-480f-96fc-5d9befb34240:
     tabs:
       -
         elements:
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
-            instructions: 'The primary statistic to show ($500, 2700+, etc)'
-            label: Statistic
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -16,17 +17,26 @@ fieldLayouts:
             width: 100
           -
             fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
-            instructions: 'More information about the above statistic (ie, "parents reunited with their children", "families adopted for christmas"). '
-            label: Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
-            instructions: 'If enabled, statistic will be shown with a colored background, for emphasis. '
-            label: 'Highlight statistic?'
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -34,10 +44,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: image_stats_banner_statistic
+handle: text_side_heading
 maxBlocks: 0
-maxChildBlocks: 0
+maxChildBlocks: 1
 maxSiblingBlocks: 0
-name: Statistic
-sortOrder: 26
-topLevel: false
+name: 'Text with Side Heading'
+sortOrder: 6
+topLevel: true
