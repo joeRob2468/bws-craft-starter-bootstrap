@@ -339,14 +339,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var scrollmonitor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! scrollmonitor */ "./node_modules/scrollmonitor/scrollMonitor.js");
 /* harmony import */ var scrollmonitor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(scrollmonitor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _NavigationController__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavigationController */ "./src/js/NavigationController.js");
+/* harmony import */ var lity__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lity */ "./node_modules/lity/dist/lity.js");
+/* harmony import */ var lity__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lity__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NavigationController__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavigationController */ "./src/js/NavigationController.js");
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}var MainController=/*#__PURE__*/function(){// main class initialization - runs once on site load
 function MainController(){_classCallCheck(this,MainController);// Create class variables
 this.scrollMonitor=scrollmonitor__WEBPACK_IMPORTED_MODULE_3___default.a;this.scrollWatchers=[];this.navigationController=null;this.iconLibrary=null;this.content_block_modules=[];// hide preloader 
 $('.revealer').removeClass('show').addClass('animate-out');setTimeout(function(){$('.revealer').removeClass('animate-out');},600);}// initialization - runs each time a new page is loaded
 _createClass(MainController,[{key:"init",value:function init(){var _this=this;try{//$(document).foundation();
 $('body').addClass('animations-enabled');var _instance=this;if(typeof ga==='function'){ga('send','pageview',location.pathname);}// initialize navigation controller
-this.navigationController=new _NavigationController__WEBPACK_IMPORTED_MODULE_4__["default"]();this.navigationController.init();// run element animations when in viewport (adds .is-active to visible elements as you scroll)
+this.navigationController=new _NavigationController__WEBPACK_IMPORTED_MODULE_5__["default"]();this.navigationController.init();// initiate lity lightboxes
+$(document).on('click.bws','[data-lightbox]',lity__WEBPACK_IMPORTED_MODULE_4___default.a);// run element animations when in viewport (adds .is-active to visible elements as you scroll)
 $('.animatable').each(function(index){// create two watchers - one with an offset for enter events, and one without an offset for exit events
 // lets us add visibility classes with an offset, and remove them when the element is completely outside the visible viewport
 var enterScrollWatcher=scrollMonitor.create($(this).get(0),-100);var exitScrollWatcher=scrollMonitor.create($(this).get(0),100);_instance.scrollWatchers.push(enterScrollWatcher);_instance.scrollWatchers.push(exitScrollWatcher);enterScrollWatcher.enterViewport(function(){$(this.watchItem).addClass('is-active');});exitScrollWatcher.exitViewport(function(){$(this.watchItem).removeClass('is-active');});// If any of the elements are visible, add the active class (after an initial delay, to facilitate page transition animation)
@@ -356,7 +359,8 @@ Promise.all(/*! import() | icons-library */[__webpack_require__.e("vendors~icons
 if($('.section-contact_form--block').length){Promise.all(/*! import() | contact-form */[__webpack_require__.e("vendors~contact-form"), __webpack_require__.e("contact-form")]).then(__webpack_require__.bind(null, /*! ./block-modules/ContactForm */ "./src/js/block-modules/ContactForm.js")).then(function(module){var ContactForm=module.default;if($(ContactForm.selector).length){var contactForm=new ContactForm();contactForm.init();_this2.content_block_modules.push(contactForm);}});}// init image/text slider
 if($('.section-image_text_slider--block').length){Promise.all(/*! import() | image-text-slider */[__webpack_require__.e("vendors~image-text-slider"), __webpack_require__.e("image-text-slider")]).then(__webpack_require__.bind(null, /*! ./block-modules/ImageTextSlider */ "./src/js/block-modules/ImageTextSlider.js")).then(function(module){var ImageTextSlider=module.default;if($(ImageTextSlider.selector).length){var imageTextSlider=new ImageTextSlider();imageTextSlider.init();_this2.content_block_modules.push(imageTextSlider);}});}}// Runs every time a new page replaces the current one
 // Destroys all scripts on the page, so they can be reinitialized on the new one
-},{key:"destroy",value:function destroy(){try{// destroy content blocks
+},{key:"destroy",value:function destroy(){try{// destroy lity lightboxes
+$(document).off('click.bws','[data-lightbox]');// destroy content blocks
 for(var i=0;i<this.content_block_modules.length;i++){this.content_block_modules[i].destroy();}this.content_block_modules=[];// destroy navigation controller
 this.navigationController.destroy();this.navigationController=null;// destroy fonts
 if(typeof this.iconLibrary!=='undefined'){this.iconLibrary.destroy();this.iconLibrary=null;}// destroy element animation scroll watchers 

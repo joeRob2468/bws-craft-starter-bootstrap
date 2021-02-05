@@ -1,4 +1,5 @@
 import ScrollMonitor from 'scrollmonitor';
+import lity from 'lity';
 
 import NavigationController from './NavigationController';
 
@@ -33,6 +34,9 @@ class MainController {
             // initialize navigation controller
             this.navigationController = new NavigationController();
             this.navigationController.init();
+
+            // initiate lity lightboxes
+            $(document).on('click.bws', '[data-lightbox]', lity);
 
             // run element animations when in viewport (adds .is-active to visible elements as you scroll)
             $('.animatable').each(function (index) {
@@ -110,6 +114,9 @@ class MainController {
     // Destroys all scripts on the page, so they can be reinitialized on the new one
     destroy() {
         try {
+            // destroy lity lightboxes
+            $(document).off('click.bws', '[data-lightbox]');
+
             // destroy content blocks
             for (let i=0; i < this.content_block_modules.length; i++) {
                 this.content_block_modules[i].destroy();
