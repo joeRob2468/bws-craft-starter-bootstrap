@@ -1648,16 +1648,18 @@ footer.site-footer {
 
 // Icon List content block
 .section-icon_list--block {
-  .subtitle--heading, .primary--heading {
+  .subtitle--heading, .standard--heading {
     text-align: center; 
   }
 
   .icon-items {
     &:not(:first-child) {
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
 
     .icon-item {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
       text-align: center;
 
       .icon-container {
@@ -1671,6 +1673,89 @@ footer.site-footer {
 
         .icon-title {
           color: $primary-accent;
+
+          p:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Text Icon Grid content block
+.section-text_icon_grid--block {
+  .subtitle--heading, .primary--heading {
+    text-align: center; 
+  }
+
+  .icon-items {
+    &:not(:first-child) {
+      margin-top: 4rem;
+    }
+
+    .icon-item {
+      text-align: center;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      .icon-container {
+        .icon-background {
+          position: relative;
+          align-content: center;
+          background-color: #FFFFFF;
+          border-radius: 50%;
+          border: 1px solid $primary-accent;
+          width: 100%;
+          max-width: 8.5rem;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex: 1;
+          padding: 6px;
+          
+          &:before {
+            content: '';
+            display: block;
+            flex: 1;
+            margin: 0;
+            padding: 0;
+           
+            background-color: #e2ebf6;
+            border-radius: 50%;
+            border: 1px solid $primary-accent;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+          }
+
+          .icon-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 80%;
+
+            font-size: rem-calc(23px);
+            font-weight: 600;
+            color: $primary-accent;
+            line-height: 1.2;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .content-container {
+        margin-top: 1rem;
+
+        .icon-title, .item-description {
+          padding: 0 1rem;
+          color: $primary-accent;
+          text-align: center;
 
           p:last-of-type {
             margin-bottom: 0;

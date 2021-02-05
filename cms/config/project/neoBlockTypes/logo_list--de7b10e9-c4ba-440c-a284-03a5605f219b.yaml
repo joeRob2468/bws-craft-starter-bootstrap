@@ -48,6 +48,6 @@ handle: logo_list
 maxBlocks: 0
 maxChildBlocks: 30
 maxSiblingBlocks: 0
-name: 'Logo List'
+name: 'Logo/Partners Grid'
 sortOrder: 15
 topLevel: true

@@ -49,5 +49,5 @@ maxBlocks: 0
 maxChildBlocks: 2
 maxSiblingBlocks: 0
 name: 'Text CTA'
-sortOrder: 8
+sortOrder: 7
 topLevel: true
