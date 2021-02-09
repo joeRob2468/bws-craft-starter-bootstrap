@@ -1,14 +1,15 @@
-childBlocks: ''
+childBlocks:
+  - points_table_item
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  312688e4-068a-4c56-ab55-3efde700f677:
+  c43a7b0a-a89a-4def-8d38-d4b02945f57b:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
-            instructions: 'The portrait image to show for this team member.'
-            label: 'Portrait Image'
+            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -16,8 +17,8 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
-            instructions: 'The name to show for this team member.'
-            label: Name
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -25,28 +26,28 @@ fieldLayouts:
             width: 100
           -
             fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
-            instructions: 'The job title to display for this team member.'
-            label: 'Job Title'
+            instructions: 'The heading to display over the description column (for example, Budget Activity)'
+            label: 'Column Description Heading'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 1d73271a-6ca9-4f5c-8bfb-739767606bc0
-            instructions: 'The email address to display for this team member.'
-            label: ''
-            required: false
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            instructions: 'A short description of terms or notes.'
+            label: Terms/Notes
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: team_grid_item
-maxBlocks: 0
-maxChildBlocks: 0
+handle: points_table
+maxBlocks: 10
+maxChildBlocks: 10
 maxSiblingBlocks: 0
-name: 'Team Member'
-sortOrder: 30
+name: 'Points Table'
+sortOrder: 36
 topLevel: false

@@ -1,23 +1,23 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  f02e82c2-f8e0-4a46-86c2-f1c29179c6ae:
+  01ad5d5c-3674-4b63-9458-5407167ee272:
     tabs:
       -
         elements:
           -
-            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
             instructions: ''
-            label: ''
+            label: 'Row Description'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 291580b7-d5d0-4340-8f73-76b8fcf000d1
-            instructions: ''
-            label: Text
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: 'The points value for this row. '
+            label: 'Row Points'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -25,10 +25,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: icon_list_item
+handle: points_table_item
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Icon List Item'
-sortOrder: 33
+name: 'Points Table Row'
+sortOrder: 37
 topLevel: false
