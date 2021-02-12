@@ -1,0 +1,28 @@
+{# Form Block #}
+{% set block_type = "formie_form" %}
+
+{# Block variable defaults #}
+{% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set subheading = block['subheading'] is defined ? block.subheading : '' %}
+{% set sectionType = block['sectionType'] is defined ? block.sectionType : 'standard' %}
+{% set formieForm = block['formieForm'] is defined ? block.formieForm.one() : '' %}
+
+<section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
+    <div class="container">
+        {% if subheading|length %}
+            <p class="subtitle--heading">{{ subheading }}</p>
+        {% endif %}
+        {% if heading|length %}
+            <h2 class="primary--heading">{{ heading }}</h2>
+        {% endif %}
+
+        {% if formieForm|length %}
+        {{ craft.formie.registerAssets(formieForm) }}
+        {{ craft.formie.renderFormCss(formieForm) }}
+        <div class="form-container">
+            {{ craft.formie.renderForm(formieForm) }}
+        </div>
+        {# {{ craft.formie.renderFormJs(formieForm) }} #}
+        {% endif %}
+    </div>
+</section>

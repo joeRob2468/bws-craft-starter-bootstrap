@@ -48,5 +48,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Team Member'
-sortOrder: 30
+sortOrder: 32
 topLevel: false

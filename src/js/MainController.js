@@ -108,6 +108,19 @@ class MainController {
                 }
             });
         }
+
+        // init formie form
+        if ($('.section-formie_form--block').length) {
+            import(/* webpackChunkName: "formie-form" */"./block-modules/FormieForm").then(module => {
+                const FormieForm = module.default;
+
+                if ($(FormieForm.selector).length) {
+                    let formieForm = new FormieForm();
+                    formieForm.init();
+                    this.content_block_modules.push(formieForm);
+                }
+            });
+        }
     }
 
     // Runs every time a new page replaces the current one

@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: formieForm
+instructions: 'The Formie form to use for this section.'
+name: 'Formie Form'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: verbb\formie\fields\Forms

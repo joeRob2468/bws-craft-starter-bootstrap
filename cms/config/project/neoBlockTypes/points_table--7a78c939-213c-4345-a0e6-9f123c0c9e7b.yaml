@@ -37,7 +37,7 @@ fieldLayouts:
             fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
             instructions: 'A short description of terms or notes.'
             label: Terms/Notes
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -49,5 +49,5 @@ maxBlocks: 10
 maxChildBlocks: 10
 maxSiblingBlocks: 0
 name: 'Points Table'
-sortOrder: 36
+sortOrder: 38
 topLevel: false

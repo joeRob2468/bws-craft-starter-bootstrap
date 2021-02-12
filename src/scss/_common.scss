@@ -18,6 +18,16 @@ body, html {
   .section--dark p {
     color: #FFFFFF;
   }
+
+  .section--dark a:not(.button) {
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: color 200ms ease;
+
+    &:hover {
+      color: rgba(#FFFFFF, 0.8);
+    }
+  }
 }
 
 p.is-multi-column {
