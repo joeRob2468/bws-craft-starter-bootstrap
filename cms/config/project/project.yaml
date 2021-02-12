@@ -1,4 +1,4 @@
-dateModified: 1613159731
+dateModified: 1613164593
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -46,15 +46,25 @@ plugins:
     settings:
       alertEmails: null
       defaultDateDisplayType: ''
-      defaultDateTime: null
+      defaultDateTime:
+        __assoc__:
+          -
+            - date
+            - ''
+          -
+            - timezone
+            - America/Los_Angeles
+          -
+            - time
+            - ''
       defaultDateValueOption: ''
       defaultEmailTemplate: ''
-      defaultFileUploadVolume: ''
-      defaultFormTemplate: ''
+      defaultFileUploadVolume: 'folder:3628224c-b498-4d54-b48c-e1b13ac90c05'
+      defaultFormTemplate: defaultForm
       defaultInstructionsPosition: verbb\formie\positions\BelowInput
       defaultLabelPosition: verbb\formie\positions\AboveInput
       defaultPage: submissions
-      enableUnloadWarning: true
+      enableUnloadWarning: '1'
       maxIncompleteSubmissionAge: 30
       maxSentNotificationsAge: 30
       pluginName: Formie

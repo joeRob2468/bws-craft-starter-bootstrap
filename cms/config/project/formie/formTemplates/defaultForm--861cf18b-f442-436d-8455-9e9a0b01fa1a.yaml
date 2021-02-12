@@ -1,0 +1,11 @@
+handle: defaultForm
+name: 'Default Form'
+outputCssLayout: '1'
+outputCssLocation: inside-form
+outputCssTheme: '1'
+outputJsBase: '1'
+outputJsLocation: manual
+outputJsTheme: '1'
+sortOrder: 99
+template: ''
+useCustomTemplates: ''

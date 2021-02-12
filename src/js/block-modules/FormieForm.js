@@ -17,7 +17,7 @@ class FormieForm {
                 if ($('form.fui-form', element).length) {
                     let formElement = $('form.fui-form', element)[0];
                     let formInstance = new Formie();
-                    formInstance.initForm(formInstance);
+                    formInstance.initForm(formElement);
 
                     this.forms.push({
                         element: formElement,

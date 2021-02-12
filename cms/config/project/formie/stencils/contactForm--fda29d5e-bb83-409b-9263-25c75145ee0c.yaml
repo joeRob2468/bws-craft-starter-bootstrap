@@ -4,7 +4,7 @@ data:
   availabilitySubmissions: null
   availabilityTo: null
   dataRetention: forever
-  dataRetentionValue: null
+  dataRetentionValue: ''
   fileUploadsAction: retain
   notifications:
     -
@@ -126,7 +126,7 @@ data:
     availabilityMessageDate: null
     availabilityMessageSubmissions: null
     collectIp: ''
-    collectUser: null
+    collectUser: ''
     dataRetention: null
     dataRetentionValue: null
     defaultEmailTemplateId: ''
@@ -136,13 +136,7 @@ data:
     displayFormTitle: ''
     displayPageProgress: ''
     displayPageTabs: ''
-    errorMessage:
-      -
-        content:
-          -
-            text: 'Couldn’t save submission due to errors.'
-            type: text
-        type: paragraph
+    errorMessage: '[{"type":"paragraph","content":[{"type":"text","text":"Couldn’t save submission due to errors."}]}]'
     errorMessagePosition: top-form
     fileUploadsAction: null
     loadingIndicator: spinner
@@ -153,13 +147,7 @@ data:
     submissionTitleFormat: '{timestamp}'
     submitAction: message
     submitActionFormHide: ''
-    submitActionMessage:
-      -
-        content:
-          -
-            text: 'Thank you for contacting us! Our team will get in touch shortly to follow up on your message.'
-            type: text
-        type: paragraph
+    submitActionMessage: '[{"type":"paragraph","content":[{"type":"text","text":"Thank you for contacting us! Our team will get in touch shortly to follow up on your message."}]}]'
     submitActionMessagePosition: top-form
     submitActionMessageTimeout: ''
     submitActionTab: null
@@ -169,7 +157,7 @@ data:
     validationOnFocus: '1'
     validationOnSubmit: '1'
   userDeletedAction: retain
-defaultStatusId: null
+defaultStatusId: 1
 handle: contactForm
 name: 'Contact Form'
-templateId: null
+templateId: 1
