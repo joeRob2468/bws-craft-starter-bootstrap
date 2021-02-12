@@ -33,7 +33,8 @@ const INSTALL_PLUGINS = [
     //'scout', // https://github.com/riasvdv/craft-scout
     'seo', // https://github.com/ethercreative/seo
     //'sprout-fields', // https://plugins.craftcms.com/sprout-fields
-    'typogrify'
+    'typogrify',
+    'formie' // https://github.com/verbb/formie
 ];
 
 // Set path constants

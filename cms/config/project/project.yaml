@@ -1,4 +1,4 @@
-dateModified: 1612897198
+dateModified: 1613158246
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -38,6 +38,35 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: $PLUGIN_FORMIE_LICENSE
+    schemaVersion: 1.1.6
+    settings:
+      alertEmails: null
+      defaultDateDisplayType: ''
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: ''
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\BelowInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: submissions
+      enableUnloadWarning: true
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pluginName: Formie
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
   imager:
     edition: standard
     enabled: true
@@ -57,6 +86,7 @@ plugins:
   neo:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_NEO_LICENSE
     schemaVersion: 2.8.15
   redactor:
     edition: standard
