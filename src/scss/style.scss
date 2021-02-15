@@ -260,6 +260,18 @@ form {
   }
 }
 
+.fui-form-container {
+  .fui-heading {
+    @extend .standard--heading;
+    font-size: rem-calc(25px);
+    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+  }
+  .fui-btn-container .fui-btn {
+    @extend .button.button--primary;
+  }
+}
+
 /******************** General Styles ********************/
 .rtf li {
   margin-bottom: 1em;
@@ -343,6 +355,7 @@ header.site-header {
         border-radius: 5px;
         font-size: rem-calc(15px);
         padding: 0.5rem 1rem;
+        min-width: 0;
 
         &:not(:last-of-type) {
           margin-right: 0.5rem;
@@ -2036,6 +2049,8 @@ ul.social-links {
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
+    min-width: 10rem;
+    justify-content: center;
   }
 
   &.button--secondary {
