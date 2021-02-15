@@ -864,6 +864,25 @@ footer.site-footer {
 
 // Subpage Hero block
 .section-hero_subpage--block {
+  position: relative;
+  z-index: 0;
+
+  .background-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #FFFFFF;
+
+    img {
+      opacity: 0.25;
+      width: 100%;
+      height: 100%;
+    }
+  }
   .subtitle--heading, .page--heading {
     text-align: center;
   }

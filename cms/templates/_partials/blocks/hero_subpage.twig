@@ -1,14 +1,38 @@
 {# Subpage Hero Block #}
 {% set block_type = "hero_subpage" %}
 
+{# Macro Imports #}
+{% import '_macros/lazyImager' as LazyImager %}
+
 {# Block variable defaults #}
 {% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set image = block['image'] is defined and (block.image|length) ? block.image[0] : null %}
 {% set subheading = block['subheading'] is defined ? block.subheading : '' %}
 {% set rtfContent = block['rtfContent'] is defined ? block.rtfContent : '' %}
 {% set sectionType = 'alternate' %}
 {% set buttons = block.children is defined ? block.children|filter(item => item.type.handle == 'button') : null %}
 
+{% if image|length %}
+    {% set imageOptions = {
+    sizes: [
+        { width: 2200 },
+        { width: 1920 },
+        { width: 1366 },
+        { width: 768 },
+        { width: 360 },
+    ],
+    alt: image.title,
+    cover: true,
+    wrapImage: false,
+    } %}
+{% endif %}
+
 <section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
+    {% if image|length %}
+    <div class="background-container">
+        {{ LazyImager.LazyImager(image, imageOptions) }}
+    </div>
+    {% endif %}
     <div class="container">
         <div class="grid-x grid-margin-x align-center">
             <div class="cell medium-10">

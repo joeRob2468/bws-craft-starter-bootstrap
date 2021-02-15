@@ -7,6 +7,15 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            instructions: 'The background image to show for this section. Will have a white overlay, so using bright images is best. '
+            label: 'Background Image (optional)'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
             instructions: null
             label: null
