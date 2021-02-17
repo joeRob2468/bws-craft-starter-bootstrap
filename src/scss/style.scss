@@ -1678,6 +1678,61 @@ footer.site-footer {
   }
 }
 
+// Map Grid content block
+.section-map_grid--block {
+  .subtitle--heading, .primary--heading {
+    text-align: center;
+  }
+
+  .primary--heading {
+    margin-bottom: 2rem;
+  }
+
+  .map-items {
+    margin-bottom: 2rem;
+
+    .map-item {
+      margin-top: 1.6rem;
+      margin-bottom: 1.6rem;
+
+      .content-container {
+        margin-bottom: 1rem;
+
+        .item-title {
+          margin-bottom: 0;
+          color: $primary-accent;
+          font-weight: 700;
+          text-align: center;
+          font-size: rem-calc(22px);
+        }
+      }
+
+      .map-container {
+        position: relative; 
+
+        &::after {
+          content: '';
+          display: block;
+          padding-bottom: 90%;
+        }
+
+        iframe.map {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 // Icon List content block
 .section-icon_list--block {
   .subtitle--heading, .standard--heading {

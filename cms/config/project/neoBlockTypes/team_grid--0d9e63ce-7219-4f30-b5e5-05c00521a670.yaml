@@ -49,5 +49,5 @@ maxBlocks: 0
 maxChildBlocks: 12
 maxSiblingBlocks: 0
 name: 'Team Grid'
-sortOrder: 22
+sortOrder: 20
 topLevel: true

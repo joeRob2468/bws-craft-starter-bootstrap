@@ -1,21 +1,14 @@
-childBlocks: ''
+childBlocks:
+  - button
+  - map_grid_item
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  c8e26a5a-28cc-4494-9300-44715700c3d9:
+  4492bfc2-0243-46b6-82ec-d88762e0b3c3:
     tabs:
       -
         elements:
           -
-            fieldUid: 2886f198-65b5-4662-8f31-5bc761325b03
-            instructions: 'The link to use for this button'
-            label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: adac64af-2715-4c2c-aad7-d563dea9e9c0
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
             instructions: ''
             label: ''
             required: '1'
@@ -24,7 +17,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e98e2c64-af99-46b8-b4c7-2748aff3f3e5
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
             instructions: null
             label: null
             required: false
@@ -32,12 +25,21 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: 'Button Settings'
+          -
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
         sortOrder: 1
-handle: button
+handle: map_grid
 maxBlocks: 0
-maxChildBlocks: 0
-maxSiblingBlocks: 2
-name: Button
-sortOrder: 30
-topLevel: false
+maxChildBlocks: 8
+maxSiblingBlocks: 0
+name: 'Map Grid'
+sortOrder: 24
+topLevel: true
