@@ -1,16 +1,15 @@
-childBlocks:
-  - button
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  86b540e2-85a4-473b-a700-fb8a9443e271:
+  c8e35b73-4eff-4984-8249-39404fbdac14:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
-            instructions: 'The background image to show for this section. Will have a white overlay, so using bright images is best. '
-            label: 'Background Image (optional)'
-            required: false
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -26,15 +25,6 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
-            instructions: ''
-            label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
             instructions: null
             label: null
             required: false
@@ -42,12 +32,21 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 56aa0bec-30e7-42ff-b25e-ad77bfa5d907
+            instructions: 'The QGive widget embed code - found under Settings > Widgets in the QGive admin (you can add new ones for existing forms by clicking Add New Widget at the top). Make sure the page URL in the widget settings exactly matches the page URL that you''ll be adding this form to. '
+            label: 'QGive Embed Code'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Settings
         sortOrder: 1
-handle: hero_subpage
+handle: qgive_form
 maxBlocks: 0
-maxChildBlocks: 1
+maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Subpage Hero'
-sortOrder: 3
+name: 'QGive Form'
+sortOrder: 27
 topLevel: true

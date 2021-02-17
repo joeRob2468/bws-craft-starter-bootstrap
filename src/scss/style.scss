@@ -1901,6 +1901,19 @@ footer.site-footer {
   }
 }
 
+// QGive Form content block
+.section-qgive_form--block {
+  padding-bottom: 0;
+
+  .subtitle--heading, .primary--heading {
+    text-align: center;
+  }
+
+  .primary--heading {
+    margin-bottom: 3rem;
+  }
+}
+
 /******************** Snippet Styles ********************/
 a.logo {
   position: relative;

@@ -121,6 +121,19 @@ class MainController {
                 }
             });
         }
+
+        // init qgive form
+        if ($('.section-qgive_form--block').length) {
+            import(/* webpackChunkName: "qgive-form" */"./block-modules/QGiveForm").then(module => {
+                const QGiveForm = module.default;
+
+                if ($(QGiveForm.selector).length) {
+                    let qgiveForm = new QGiveForm();
+                    qgiveForm.init();
+                    this.content_block_modules.push(qgiveForm);
+                }
+            });
+        }
     }
 
     // Runs every time a new page replaces the current one
