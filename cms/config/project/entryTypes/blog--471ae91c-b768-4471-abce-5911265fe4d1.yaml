@@ -1,0 +1,80 @@
+fieldLayouts:
+  ccda4eb6-7b33-4f5b-8720-ba2f20dcf032:
+    tabs:
+      -
+        elements:
+          -
+            heading: 'Entry Info'
+            type: craft\fieldlayoutelements\Heading
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6656498b-7dc6-4ef7-928d-ce871eb1c74a
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2073fc21-8a0c-48b1-9d73-c27054189da5
+            instructions: 'The category to use for this blog entry. You can manage categories under Categories in the sidebar (although we suggest sticking with just a few categories)'
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: 'Entry Content'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            instructions: ''
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: blog
+hasTitleField: true
+name: 'Blog Entry'
+section: 57571548-c1da-4ade-af9b-d4a630a3d48d
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

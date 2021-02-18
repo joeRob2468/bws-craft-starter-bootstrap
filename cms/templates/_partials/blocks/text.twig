@@ -11,7 +11,7 @@
 <section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
     <div class="container">
         <div class="grid-x grid-margin-x align-center">
-            <div class="cell medium-10">
+            <div class="cell {% if sectionHandle and sectionHandle == 'blog' %}medium-12{% else %}medium-10{% endif %}">
                 {% if subheading|length %}
                     <p class="subtitle--heading">{{ subheading }}</p>
                 {% endif %}

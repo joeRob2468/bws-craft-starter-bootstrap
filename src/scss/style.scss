@@ -814,6 +814,72 @@ footer.site-footer {
 
 /******************** Component Styles ********************/
 
+// Article Hero
+.section-article_hero {
+  position: relative;
+  background: #FFFFFF;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .background-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    background: #0D1C38;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+    }
+  }
+
+  .article-meta {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: rem-calc(1600px);
+    margin-left: auto;
+    margin-right: auto; 
+
+    margin-top: 15rem;
+    padding-top: get($section-spacings, "medium.small") * 0.85;
+
+    @include breakpoint(medium up) {
+      margin-top: 20rem;
+      padding-top: get($section-spacings, "medium.medium") * 0.85;
+    }
+
+    @include breakpoint(large up) {
+      margin-top: calc(20rem + 20vh);
+      padding-top: get($section-spacings, "medium.large") * 0.85;
+    }
+
+    .meta-content {
+      .post-date {
+        font-weight: 700;
+        color: #535353;
+        margin-bottom: 0.45rem;
+        text-transform: uppercase;
+      }
+
+      .primary--heading {
+        text-transform: none; 
+
+        @include breakpoint(medium up) {
+          font-size: rem-calc(50px);
+        }
+      }
+    }
+  }
+}
+
 /******************** Block Styles ********************/
 
 // Hero content block
@@ -911,11 +977,21 @@ footer.site-footer {
   }
 }
 
-// Image content block
+// Image block
 .section-image--block {
   .image-container img {
     @include breakpoint(medium up) {
       max-height: rem-calc(800px);
+    }
+  }
+
+  .caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+
+    p:last-of-type {
+      margin-bottom: 0;
     }
   }
 }
@@ -1966,6 +2042,31 @@ footer.site-footer {
 
   .primary--heading {
     margin-bottom: 3rem;
+  }
+}
+
+/**************** Article Block Overrides ***************/
+.article--content {
+  .rte {
+    h2:not(.primary--heading), h3:not(.primary--heading), h4:not(.primary--heading) {
+      @extend .inline--heading;
+      margin-top: 3rem;
+    }
+  }
+
+  .section.section--medium.section--whitespace {
+    padding-top: get($section-spacings, "small.small");
+    padding-bottom: get($section-spacings, "small.small");
+
+    @include breakpoint(medium up) {
+      padding-top: get($section-spacings, "small.medium");
+      padding-bottom: get($section-spacings, "small.medium");
+    }
+
+    @include breakpoint(large up) {
+      padding-top: get($section-spacings, "small.large");
+      padding-bottom: get($section-spacings, "small.large");
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% extends "_layouts/layout.twig" %}
+
+{% block _inline_css %}
+{% endblock %}
+
+{% block content %}
+<div class="article--content">
+{% include '_partials/components/article-hero' %}
+{% include '_partials/components/content_builder' %}
+</div>
+
+{% endblock %}
+
+{% block _inline_js %}
+{% endblock %}

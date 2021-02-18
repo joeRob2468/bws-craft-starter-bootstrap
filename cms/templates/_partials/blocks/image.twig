@@ -5,7 +5,9 @@
 {% import '_macros/lazyImager' as LazyImager %}
 
 {# Block variable defaults #}
+{% set sectionType = block['sectionType'] is defined ? block.sectionType : 'primary' %}
 {% set image = block['image'] is defined ? block.image[0] : null %}
+{% set caption = block['rtfShortContent'] is defined ? block.rtfShortContent : '' %}
 
 {% if image %}
 	{% set imageOptions = {
@@ -17,16 +19,16 @@
             { width: 360 },
         ],
         alt: image.title,
-        ratio: '16:10',
         cover: true,
         wrapImage: true,
     } %}
 {% endif %}
 
 {% if image %}
-<section class="section section--medium section--whitespace section-{{ block_type}}--block animatable">
-    <div class="container container--large">
+<section class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section--standard section-{{ block_type}}--block animatable">
+    <div class="container">
         {{ LazyImager.LazyImager(image, imageOptions) }}
+        {% if caption|length %}<div class="caption content rte">{{ caption }}</div>{% endif %}
     </div>
 </section>
 {% endif %}

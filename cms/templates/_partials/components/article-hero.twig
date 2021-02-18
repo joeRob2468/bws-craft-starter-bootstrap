@@ -1,0 +1,52 @@
+{# Article Hero #}
+{% set section_type = "article_hero" %}
+
+{# Macro Imports #}
+{% import '_macros/lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set image = entry['featuredImage'] is defined ? entry.featuredImage[0] : null %}
+{% set heading = entry['title'] is defined ? entry.title : '' %}
+{% set postDate = entry.postDate %}
+
+{% set categories = entry['blogCategory'] is defined ? entry.blogCategory.all() : null %}
+
+{% if image %}
+	{% set imageOptions = {
+      sizes: [
+        { width: 2200 },
+        { width: 1920 },
+        { width: 1366 },
+        { width: 768 },
+        { width: 360 },
+      ],
+      alt: image.title,
+      ratio: '16:10',
+      cover: true,
+      wrapImage: false
+  } %}
+{% endif %}
+
+<section class="section section--standard section--whitespace section--primary section-{{ section_type }} animatable">
+    <div class="background-container hero-image">
+      {{ LazyImager.LazyImager(image, imageOptions) }}
+    </div>
+    <div class="article-meta">
+        <div class="container meta-content">
+            {% if postDate %}
+                <p class="post-date">
+                    {{ postDate|date('F j, Y') }}
+                    {% if categories|length %}
+                        / 
+                        {% for category in categories %}
+                            {{ category.title }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </p>
+            {% endif %}
+            {% if heading|length %}
+                <h1 class="primary--heading">{{ heading }}</h1>
+            {% endif %}
+        </div>
+    </div>
+</section>
