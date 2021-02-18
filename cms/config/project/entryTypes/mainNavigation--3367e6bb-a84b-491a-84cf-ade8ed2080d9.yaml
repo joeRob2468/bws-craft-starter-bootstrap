@@ -4,17 +4,46 @@ fieldLayouts:
       -
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
             label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           -
             fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            instructions: null
+            label: null
             required: true
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             fieldUid: 12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f
+            instructions: null
+            label: null
             required: false
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Settings
         sortOrder: 1
 handle: mainNavigation
@@ -23,3 +52,5 @@ name: 'Main Navigation'
 section: f9dbfbdc-d362-47f8-8861-5a62706fc184
 sortOrder: 1
 titleFormat: '{navigationLink.getText()}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

@@ -5,14 +5,18 @@ instructions: 'The image for this section. '
 name: Image
 searchable: true
 settings:
+  allowSelfRelations: false
+  allowUploads: true
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
   defaultUploadLocationSubpath: general
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Select an image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
@@ -22,7 +26,7 @@ settings:
     - 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
   targetSiteId: null
   useSingleFolder: false
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

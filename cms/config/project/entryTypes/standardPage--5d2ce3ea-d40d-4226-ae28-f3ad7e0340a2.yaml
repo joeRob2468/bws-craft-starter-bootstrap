@@ -4,25 +4,59 @@ fieldLayouts:
       -
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
             label: 'Page Title'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           -
             fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            instructions: null
+            label: null
             required: true
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            instructions: null
+            label: null
             required: false
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
       -
         elements:
           -
             fieldUid: 09545e8c-22b7-4f76-a84f-c58f8e9e281a
+            instructions: null
+            label: null
             required: false
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: SEO
         sortOrder: 2
 handle: standardPage
@@ -30,4 +64,6 @@ hasTitleField: true
 name: 'Standard Page'
 section: 393e6f52-2804-4e16-a508-40de6249b4af
 sortOrder: 1
-titleFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

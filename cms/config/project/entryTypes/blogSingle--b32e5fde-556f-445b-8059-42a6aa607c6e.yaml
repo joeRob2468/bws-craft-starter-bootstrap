@@ -1,5 +1,5 @@
 fieldLayouts:
-  35ae30e5-0e9d-42ff-8b17-d0b1e31baaae:
+  c8be4315-55e9-4182-8d20-0130922aa397:
     tabs:
       -
         elements:
@@ -10,8 +10,8 @@ fieldLayouts:
             class: null
             disabled: false
             id: null
-            instructions: null
-            label: Title
+            instructions: ''
+            label: 'Page Title'
             max: null
             min: null
             name: null
@@ -27,30 +27,43 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
-            instructions: null
-            label: null
-            required: true
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Settings
+        name: Content
         sortOrder: 1
-handle: socialLinks
-hasTitleField: false
-name: 'Social Links'
-section: ecc44cee-dded-4260-be41-18578d1a9286
+      -
+        elements:
+          -
+            fieldUid: 0c1e3849-8962-4287-8d23-5b4e202a8e01
+            instructions: ''
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 2
+handle: blogSingle
+hasTitleField: true
+name: 'Blog '
+section: e274cca8-411b-431f-b273-03a4351a4f4f
 sortOrder: 1
-titleFormat: '{navigationLink.getText()}'
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
-titleTranslationMethod: ''
+titleTranslationMethod: site

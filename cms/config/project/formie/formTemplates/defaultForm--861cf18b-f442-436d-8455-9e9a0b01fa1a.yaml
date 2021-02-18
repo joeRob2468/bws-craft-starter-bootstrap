@@ -8,4 +8,4 @@ outputJsLocation: manual
 outputJsTheme: '1'
 sortOrder: 99
 template: ''
-useCustomTemplates: ''
+useCustomTemplates: null

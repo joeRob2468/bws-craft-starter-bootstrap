@@ -5,14 +5,18 @@ instructions: 'The logo for this website, used across the site. '
 name: Logo
 searchable: true
 settings:
+  allowSelfRelations: false
+  allowUploads: true
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Select a logo'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: true
   singleUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
@@ -21,7 +25,7 @@ settings:
   sources: '*'
   targetSiteId: null
   useSingleFolder: true
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

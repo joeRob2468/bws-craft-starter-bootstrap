@@ -70,6 +70,19 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 967142f2-e489-41cb-9894-e9518218f704
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 2
 handle: blog
 hasTitleField: true
 name: 'Blog Entry'

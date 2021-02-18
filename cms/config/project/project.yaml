@@ -1,4 +1,4 @@
-dateModified: 1613679849
+dateModified: 1613680751
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -9,10 +9,6 @@ email:
     domain: $MAILGUN_DOMAIN
     endpoint: $MAILGUN_ENDPOINT
   transportType: craft\mailgun\MailgunAdapter
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 plugins:
   async-queue:
     edition: standard

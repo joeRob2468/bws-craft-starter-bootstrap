@@ -7,7 +7,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: false
     template: null
-    uriFormat: ''
+    uriFormat: null
 structure:
   maxLevels: 1
   uid: 28e7c3b5-bfb9-473f-81a6-028c265e906f
