@@ -1,6 +1,37 @@
-<div class="section newsletter-signup--section">
+{# Newsletter Signup component #}
+{% set block_type = "newsletter_signup" %}
+
+{% set heading = 'Stay Connected' %}
+{% set subheading = 'Get inspired by our stories of hope.' %}
+{% set rtfContent = 'Sign up for our newsletter to hear more about lives changed at Hillcrest Hope.' %}
+{% set sectionType = 'alternate' %}
+
+<div class="section section--medium section-{{ block_type }} section--{{ sectionType }} animatable">
     <div class="container">
-        <h2 class="inline--heading text-center">Get The Latest</h2>
+        <div class="content-container">
+            {% if subheading|length %}
+                <p class="subtitle--heading">{{ subheading }}</p>
+            {% endif %}
+            {% if heading|length %}
+                <h2 class="primary--heading">{{ heading }}</h2>
+            {% endif %}
+            {% if rtfContent|length %}
+                <div class="content rte">
+                    <p>{{ rtfContent }}</p>
+                </div>
+            {% endif %}
+            <div class="buttons">
+                {% include "_partials/snippets/button" with {
+                    title: 'Sign up for our newsletter',
+                    url: '#newsletter-signup',
+                    target: '',
+                    type: 'text',
+                    isLightbox: false
+                } only %}
+            </div>
+        </div>
+
+        {#
         <div class="newsletter-form--container">
             <form class="newsletter-form">
                 <div class="field-group">
@@ -13,5 +44,6 @@
                 </div>
             </form>
         </div>
+        #}
     </div>
 </div>

@@ -965,6 +965,21 @@ footer.site-footer {
   }
 }
 
+// Newsletter Signup component
+.section-newsletter_signup {
+  .content-container {
+    text-align: center;
+    max-width: rem-calc(850px);
+    margin-left: auto;
+    margin-right: auto;
+
+    .buttons {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
 /******************** Block Styles ********************/
 
 // Hero content block
