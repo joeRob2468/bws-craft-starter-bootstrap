@@ -1,0 +1,62 @@
+childBlocks:
+  - button
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+fieldLayouts:
+  3a54f7ae-5953-46b6-b107-6e45a021d08e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b51d9d40-997b-4034-8904-21d41788b30f
+            instructions: 'The total number of articles to display. If you''re not sure, use 3!'
+            label: 'Total articles to display'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2073fc21-8a0c-48b1-9d73-c27054189da5
+            instructions: 'If you''d like to only show articles from specific categories, pick them here. Leave this blank to show articles from any category.'
+            label: 'Limit articles to specific category'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 1
+handle: recent_articles
+maxBlocks: 0
+maxChildBlocks: 2
+maxSiblingBlocks: 0
+name: 'Recent Articles'
+sortOrder: 31
+topLevel: true
