@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 406133ee-e72a-4334-9dc0-e55f911f2424
 handle: blogCategory
 instructions: 'The category to use for this blog entry.'
 name: 'Blog Category'
@@ -12,7 +12,7 @@ settings:
   limit: null
   localizeRelations: false
   selectionLabel: ''
-  showSiteMenu: false
+  showSiteMenu: true
   source: 'group:c24df632-e5b4-4c65-a8a7-e892270a0600'
   sources: '*'
   targetSiteId: null

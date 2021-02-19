@@ -814,6 +814,91 @@ footer.site-footer {
 
 /******************** Component Styles ********************/
 
+// Pagination component
+.pagination {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  font-size: rem-calc(18px);
+  color: #A9B2B9;
+  margin-top: 2rem;
+
+  .previous {
+    font-weight: 700;
+    
+    .icon {
+      margin-right: 0.25rem;
+    }
+
+    &.active a {
+      color: #484B4D;
+
+      .icon {
+        color: $primary-accent;
+      }
+
+      &:hover {
+        color: $primary-accent;
+      }
+    }
+  }
+
+  .links {
+    @include breakpoint(small down) {
+      display: none;
+    }
+
+    ul.links-menu {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+        font-size: rem-calc(17px);
+        cursor: pointer;
+
+        a {
+          color: #A9B2B9;
+          font-weight: 600;
+          padding: 0.2rem;
+          display: inline-block;
+
+          &:hover {
+            color: $primary-accent;
+          }
+        }
+
+        &.active a {
+          color: #484A4C;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .next {
+    font-weight: 700;
+    
+    .icon {
+      margin-left: 0.25rem;
+    }
+
+    &.active a {
+      color: #484B4D;
+
+      .icon {
+        color: $primary-accent;
+      }
+
+      &:hover {
+        color: $primary-accent;
+      }
+    }
+  }
+}
+
 // Article Hero
 .section-article_hero {
   position: relative;
@@ -2042,6 +2127,55 @@ footer.site-footer {
 
   .primary--heading {
     margin-bottom: 3rem;
+  }
+}
+
+// Articles List block
+.section-articles_list--block {
+  .article-items .article-item {
+    margin-bottom: 3rem;
+
+    @include breakpoint(medium up) {
+      margin-bottom: 4rem;
+    }
+
+    .content-container {
+      margin-top: 1rem;
+
+      .post-date {
+        font-size: rem-calc(15px);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #535353;
+
+        .text-separator {
+          padding-left: 0.15rem;
+          padding-right: 0.15rem;
+        }
+      }
+
+      .inline--heading {
+        margin-bottom: 0.8rem;
+        font-size: rem-calc(24px);
+        text-transform: none;
+
+        a {
+          font-weight: inherit;
+          color: inherit;
+          font-size: inherit; 
+          transition: color 200ms ease; 
+
+          &:hover, &:active {
+            color: $primary-accent; 
+          }
+        }
+      }
+
+      .article-excerpt {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

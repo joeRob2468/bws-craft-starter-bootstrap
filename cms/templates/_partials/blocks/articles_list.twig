@@ -1,0 +1,77 @@
+{# Articles List Block #}
+{% set block_type = "articles_list" %}
+
+{# Macro Imports #}
+{% import '_macros/lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set sectionType = block['sectionType'] is defined ? block.sectionType : '' %}
+{% set totalPerPage = block['totalPerPage'] is defined and block.totalPerPage > 0 ? block.totalPerPage : 5 %}
+
+{% set query = craft.entries({
+    section: 'blog',
+    orderBy: 'postDate desc, elements.id desc',
+    with: ['featuredImage', 'blogCategory'],
+    limit: totalPerPage
+}) %}
+{% paginate query as pageInfo, articles %}
+
+<section class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
+    <div class="container">
+        {% if heading|length %}<h2 class="primary--heading">{{ heading }}</h2>{% endif %}
+        <div class="grid-container article-items">
+            <div class="grid-x grid-margin-x">
+            {% for article in articles %}
+
+                {% set articleTitle = article['title'] is defined ? article.title : '' %}
+                {% set articleUrl = article.url %}
+                {% set articleDate = article['postDate'] is defined ? article.postDate : null %}
+                {% set articleImage = article['featuredImage'] is defined ? article.featuredImage[0] : null %}
+                {% set articleExcerpt = article['seoDescription'] is defined ? article.seoDescription : '' %}
+                {% set categories = article['blogCategory'] is defined ? article.blogCategory : null %}
+
+                {% if articleImage %}
+                    {% set articleImageOptions = {
+                    sizes: [
+                        { width: 1200},
+                        { width: 600},
+                        { width: 300 },
+                        { width: 150 },
+                    ],
+                    alt: articleImage.title,
+                    ratio: '16:10',
+                    cover: true,
+                    wrapImage: false
+                } %}
+                {% endif %}
+                
+                <div class="cell large-4 medium-6 small-12 article-item">
+                    <div class="image-container">
+                        {% if articleImage %}
+                            <a href="{{ article.url }}">{{ LazyImager.LazyImager(articleImage, articleImageOptions) }}</a>
+                        {% endif %}
+                    </div>
+                    <div class="content-container">
+                        <p class="post-date">
+                        {{ articleDate|date('M j, Y') }}
+                        {% if categories|length %}
+                            <span class="text-separator">/</span> 
+                            {% for category in categories %}
+                                {{ category.title }}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
+                        {% if articleTitle|length %}
+                            <h3 class="inline--heading"><a href="{{ article.url }}">{{ articleTitle }}</a></h3>
+                        {% endif %}
+                        {% if articleExcerpt|length %}<p class="article-excerpt">{{ articleExcerpt|truncate(120) }}</p>{% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        
+        {% include '_partials/components/pagination' %}
+    </div>
+</section>

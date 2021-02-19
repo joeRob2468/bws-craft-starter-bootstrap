@@ -176,6 +176,7 @@ video.cover {
 
 // Nested container > grid-container classes, prevents extra side spacing
 .container .grid-container {
+  max-width: 100%;
   margin-left: get($container-gutters, "standard.small") * -1;
   margin-right: get($container-gutters, "standard.small") * -1;
 

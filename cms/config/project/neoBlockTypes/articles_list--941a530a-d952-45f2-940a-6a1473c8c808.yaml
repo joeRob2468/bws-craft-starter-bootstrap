@@ -1,12 +1,12 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  0e910be5-e42d-484a-81c5-bb6fdcdbb4e9:
+  f69c70d2-02be-44dd-bd84-6cb45ffec60e:
     tabs:
       -
         elements:
           -
-            fieldUid: b95a16bc-39e5-4914-a385-86b644433d63
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
             instructions: ''
             label: ''
             required: '1'
@@ -16,19 +16,28 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
-            instructions: 'The name of the location to display above this map item.'
-            label: 'Location Name'
+            instructions: null
+            label: null
             required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b51d9d40-997b-4034-8904-21d41788b30f
+            instructions: 'The total number of articles to show on each page. Use 9 if you''re not sure!'
+            label: 'Articles Per Page'
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: map_grid_item
+handle: articles_list
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Map Grid Item'
-sortOrder: 41
-topLevel: false
+name: 'All Articles List'
+sortOrder: 30
+topLevel: true

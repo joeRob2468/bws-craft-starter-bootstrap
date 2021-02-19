@@ -1,0 +1,19 @@
+contentColumnType: smallint(2)
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: totalPerPage
+instructions: 'The total number of items to show on each page.'
+name: 'Total Per Page'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: '9'
+  max: '21'
+  min: '3'
+  prefix: ''
+  previewCurrency: ''
+  previewFormat: decimal
+  size: null
+  suffix: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number
