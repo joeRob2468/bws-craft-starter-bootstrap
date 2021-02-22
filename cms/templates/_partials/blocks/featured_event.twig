@@ -1,0 +1,77 @@
+{# Featured Event #}
+{% set section_type = "featured_event" %}
+
+{# Macro Imports #}
+{% import '_macros/lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set sectionType = block['sectionType'] is defined ? block.sectionType : 'standard' %}
+{% set event = block['event'] is defined ? block.event.with(['featuredImage']).one() : null %}
+{% set hideAfterExpiration = block['useCustomContent'] is defined ? block.useCustomContent : false %}
+
+{% if event %}
+    {% set image = event['featuredImage'] is defined ? event.featuredImage[0] : null %}
+    {% set subheading = event['subheading'] is defined ? event.subheading : '' %}
+    {% set heading = event['title'] is defined ? event.title : '' %}
+    {% set description = event['seoDescription'] is defined ? event.seoDescription : '' %}
+    {% set buttonText = event['eventButtonText'] is defined ? event.eventButtonText : 'See event details' %}
+    {% set calendarEvent = event['calendarEvent'] is defined ? event.calendarEvent : null %}
+
+    {% set imageOptions = {
+        sizes: [
+            { width: 2200 },
+            { width: 1920 },
+            { width: 1366 },
+            { width: 768 },
+            { width: 360 },
+        ],
+        alt: image.title,
+        ratio: '16:10',
+        cover: true,
+        wrapImage: false
+    } %}
+{% endif %}
+
+{% if event %}
+<section class="section section--medium section--whitespace section--standard section-{{ section_type }}--block animatable">
+    <div class="container container--large">
+        <div class="background-container">
+        {{ LazyImager.LazyImager(image, imageOptions) }}
+        </div>
+        <div class="content-container section--dark">
+            <div class="container meta-content">
+                {% if calendarEvent %}
+                    <p class="event-date">
+                        {% if not calendarEvent.allDay %}{{calendarEvent.next.start|time('short') }} on {% endif %}
+                        {{ calendarEvent.next.start|date('F d, Y') }}
+                        {% if calendarEvent.next.start != calendarEvent.next.end %}
+                            - {% if not calendarEvent.allDay %}{{calendarEvent.next.end|time('short') }} on {% endif %}
+                            {{ calendarEvent.next.end|date('F d, Y') }}
+                        {% endif %}
+                    </p>
+                {% endif %}
+
+                {# {% if subheading|length %}
+                    <p class="subtitle--heading">{{ subheading }}</p>
+                {% endif %} #}
+                {% if heading|length %}
+                    <h1 class="standard--heading">{{ heading }}</h1>
+                {% endif %}
+
+                {% if description|length %}
+                    <p class="event-description">{{ description }}</p>
+                {% endif %}
+
+                <div class="buttons">
+                    {% include "_partials/snippets/button" with {
+                        title: buttonText,
+                        url: event.url,
+                        type: 'primary',
+                        isLightbox: false
+                    } only %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

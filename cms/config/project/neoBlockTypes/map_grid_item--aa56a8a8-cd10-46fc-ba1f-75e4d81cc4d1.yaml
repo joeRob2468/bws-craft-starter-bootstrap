@@ -30,5 +30,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Map Grid Item'
-sortOrder: 42
+sortOrder: 44
 topLevel: false

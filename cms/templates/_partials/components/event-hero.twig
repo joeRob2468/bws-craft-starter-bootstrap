@@ -1,0 +1,54 @@
+{# Article Hero #}
+{% set section_type = "event_hero" %}
+
+{# Macro Imports #}
+{% import '_macros/lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set image = entry['featuredImage'] is defined ? entry.featuredImage[0] : null %}
+{% set subheading = entry['subheading'] is defined ? entry.subheading : '' %}
+{% set heading = entry['title'] is defined ? entry.title : '' %}
+
+{% set calendarEvent = entry['calendarEvent'] is defined ? entry.calendarEvent : null %}
+
+{% if image %}
+	{% set imageOptions = {
+      sizes: [
+        { width: 2200 },
+        { width: 1920 },
+        { width: 1366 },
+        { width: 768 },
+        { width: 360 },
+      ],
+      alt: image.title,
+      ratio: '16:10',
+      cover: true,
+      wrapImage: false
+  } %}
+{% endif %}
+
+<section class="section section--standard section--dark section--primary section-{{ section_type }} animatable">
+    <div class="background-container hero-image">
+      {{ LazyImager.LazyImager(image, imageOptions) }}
+    </div>
+    <div class="event-meta">
+        <div class="container meta-content">
+            {% if subheading|length %}
+                <p class="subtitle--heading">{{ subheading }}</p>
+            {% endif %}
+            {% if heading|length %}
+                <h1 class="primary--heading">{{ heading }}</h1>
+            {% endif %}
+            {% if calendarEvent %}
+                <p class="event-date">
+                    {% if not calendarEvent.allDay %}{{calendarEvent.next.start|time('short') }} on {% endif %}
+                    {{ calendarEvent.next.start|date('F d, Y') }}
+                    {% if calendarEvent.next.start != calendarEvent.next.end %}
+                        - {% if not calendarEvent.allDay %}{{calendarEvent.next.end|time('short') }} on {% endif %}
+                        {{ calendarEvent.next.end|date('F d, Y') }}
+                    {% endif %}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: 67533219-35e1-4601-8283-07b61e5e849b
+handle: featuredEvent
+instructions: 'If this is a featured event (and should be shown as a large element on the Events page), enable this checkbox. '
+name: 'Featured Event?'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

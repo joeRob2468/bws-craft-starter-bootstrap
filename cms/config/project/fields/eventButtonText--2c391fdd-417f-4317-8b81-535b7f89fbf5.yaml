@@ -1,0 +1,18 @@
+contentColumnType: string(300)
+fieldGroup: 67533219-35e1-4601-8283-07b61e5e849b
+handle: eventButtonText
+instructions: 'The text to display for this event''s CTA element (for example, the button for a featured event on the Events page). If left blank, "See event details" will be used. '
+name: 'Event Button Text'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 75
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

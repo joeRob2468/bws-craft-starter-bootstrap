@@ -1,32 +1,32 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  521c827f-733c-4071-915d-898ca2dfc106:
+  e6053033-ef0b-4d39-b9fd-21341c735ac7:
     tabs:
       -
         elements:
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
-            instructions: 'The name of the company represented by this logo.'
-            label: 'Company Name'
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
-            instructions: 'The logo to display'
-            label: Logo
+            fieldUid: 68443fb6-c3e8-4e35-b120-cb8e0f687d08
+            instructions: ''
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
-            instructions: 'The website URL to use for this logo'
-            label: 'Website URL'
+            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
+            instructions: 'If enabled, event will be hidden after the end date of the event has passed. '
+            label: 'Hide event if event date has passed?'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -34,10 +34,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: logoListItem
+handle: featured_event
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Logo List Item'
-sortOrder: 36
-topLevel: false
+name: 'Featured Event'
+sortOrder: 30
+topLevel: true

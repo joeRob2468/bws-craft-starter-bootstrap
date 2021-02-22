@@ -46,7 +46,7 @@ fieldLayouts:
             fieldUid: 2073fc21-8a0c-48b1-9d73-c27054189da5
             instructions: 'If you''d like to only show articles from specific categories, pick them here. Leave this blank to show articles from any category.'
             label: 'Limit articles to specific category'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -58,5 +58,5 @@ maxBlocks: 0
 maxChildBlocks: 2
 maxSiblingBlocks: 0
 name: 'Recent Articles'
-sortOrder: 31
+sortOrder: 33
 topLevel: true

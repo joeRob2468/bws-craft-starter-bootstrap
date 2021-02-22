@@ -1,0 +1,107 @@
+fieldLayouts:
+  6b19a968-9ab1-4a35-b79c-9c6a26f48e0b:
+    tabs:
+      -
+        elements:
+          -
+            heading: 'Event Settings'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 6656498b-7dc6-4ef7-928d-ce871eb1c74a
+            instructions: 'The featured image for this event, shown wherever this event is displayed on the site. '
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 20fdd39d-df7e-451e-8aed-0581d1a06c84
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            instructions: 'The secondary heading for this event, shown above the title on the event page. '
+            label: 'Event Subheading'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: ''
+            label: 'Event Name'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            instructions: 'The short description of this event, used for SEO and for sections where this event is displayed. Often contains the first few sentences of the page content, or a quick summary of this event. '
+            label: 'Short Event Description'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c530ba0d-fa74-49a3-ab10-7c3faed8c9a6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2c391fdd-417f-4317-8b81-535b7f89fbf5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: 'Event Page Content'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            instructions: 'Use the blocks below to create, remove, or reorder flexible content blocks, which will be displayed on this page. The event hero (image, title, and date) will be added automatically. '
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: events
+hasTitleField: true
+name: Events
+section: 2ecb8f3e-0484-49a6-b7b5-95c5a819edc9
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
