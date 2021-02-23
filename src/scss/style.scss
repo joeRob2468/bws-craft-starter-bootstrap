@@ -2527,6 +2527,80 @@ footer.site-footer {
   }
 }
 
+// Inline Hero with Text Columns block styles
+// Featured Event block
+.section-inline_hero_columns--block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 25rem;
+  @include breakpoint(large up) {
+    min-height: 65vh;
+  }
+
+  .background-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-accent;
+    z-index: -1;
+
+    img {
+      opacity: 0.15;
+    }
+  }
+
+  .content-container {
+    .standard--heading, .subtitle--heading {
+      text-align: center;
+    }
+
+    .heading-container .content {
+      max-width: 50rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-container ~ .items-container {
+      margin-top: 3rem;
+    }
+
+    .items-container .item {
+      text-align: center;
+
+      .item-heading {
+        font-size: rem-calc(24px);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #6CC9FF;
+        margin-bottom: 1rem;
+      }
+
+      .item-content {
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .buttons {
+        margin-top: 1.6rem;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
 /**************** Article Block Overrides ***************/
 .article--content {
   .rte {

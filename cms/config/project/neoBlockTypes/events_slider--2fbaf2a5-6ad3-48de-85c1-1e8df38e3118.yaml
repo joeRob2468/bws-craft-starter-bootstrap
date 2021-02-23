@@ -36,7 +36,7 @@ fieldLayouts:
             fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
             instructions: 'If enabled, will hide all featured events, and only show standard ones. Helpful when combined with a list of featured events above this section. '
             label: 'Hide featured events? '
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -57,5 +57,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Upcoming Events Slider'
-sortOrder: 32
+sortOrder: 34
 topLevel: true

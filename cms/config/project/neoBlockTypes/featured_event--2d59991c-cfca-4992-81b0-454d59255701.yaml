@@ -39,5 +39,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Featured Event'
-sortOrder: 31
+sortOrder: 33
 topLevel: true
