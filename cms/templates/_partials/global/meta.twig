@@ -16,6 +16,11 @@
     {% set seo = getSeoField('articleSeo') %}
 {% endif %}
 
+{# Event Structure SEO #}
+{% if seo is not defined or seo is null and (entry is defined and entry['eventSeo'] is defined) %}
+    {% set seo = getSeoField('eventSeo') %}
+{% endif %}
+
 {# General Single SEO #}
 {% if seo is not defined or seo is null and (entry is defined and entry['singleSeo'] is defined) %}
     {% set seo = getSeoField('singleSeo') %}
