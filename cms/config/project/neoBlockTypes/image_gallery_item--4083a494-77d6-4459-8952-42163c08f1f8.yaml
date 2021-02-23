@@ -1,0 +1,25 @@
+childBlocks: ''
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+fieldLayouts:
+  64c692db-2266-4100-b023-6336ca18ed09:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            instructions: 'The image to use for this slide'
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 1
+handle: image_gallery_item
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: 'Image Gallery Item'
+sortOrder: 49
+topLevel: false

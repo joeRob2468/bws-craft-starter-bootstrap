@@ -1,0 +1,51 @@
+{# Image Gallery Slider Block #}
+{% set block_type = "image_gallery" %}
+
+{# Macro Imports #}
+{% import '_macros/lazyImager' as LazyImager %}
+
+{# Block variable defaults #}
+{% set sectionType = block['sectionType'] is defined ? block.sectionType : 'standard' %}
+{% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set subheading = block['subheading'] is defined ? block.subheading : '' %}
+{% set slides = block.children is defined ? block.children|filter(item => item.type.handle == 'image_gallery_item') : null %}
+
+{% if slides|length and slides|length > 1 %}
+<section class="section section--medium section--whitespace section--{{ sectionType }} section-{{ block_type }}--block animatable">
+    {% if subheading|length or heading|length %}
+    <div class="container">
+        {% if subheading|length %}
+            <p class="subtitle--heading">{{ subheading }}</p>
+        {% endif %}
+        {% if heading|length %}
+            <h2 class="primary--heading">{{ heading }}</h2>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="image-slider swiper-container">
+        <div class="swiper-wrapper">
+        {% for slide in slides %}
+            {% set image = slide.image.one() %}
+            {% set imageOptions = {
+            sizes: [
+                { width: 2200 },
+                { width: 1920 },
+                { width: 1366 },
+                { width: 768 },
+                { width: 360 },
+            ],
+            alt: image.title,
+            ratio: '16:10',
+            cover: true,
+            wrapImage: false
+            } %}
+
+            <div class="slide swiper-slide">
+            {{ LazyImager.LazyImager(image, imageOptions) }}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

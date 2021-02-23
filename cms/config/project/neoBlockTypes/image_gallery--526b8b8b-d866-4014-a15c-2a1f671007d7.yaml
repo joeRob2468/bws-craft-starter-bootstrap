@@ -1,8 +1,8 @@
 childBlocks:
-  - points_table
+  - image_gallery_item
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  b8a39046-b394-4498-aa12-42d4ee106c23:
+  f02cfb9b-1b3e-472a-a0a3-6615d1b60460:
     tabs:
       -
         elements:
@@ -35,10 +35,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: points_table_list
+handle: image_gallery
 maxBlocks: 0
-maxChildBlocks: 10
+maxChildBlocks: 21
 maxSiblingBlocks: 0
-name: 'Points Table List'
-sortOrder: 23
+name: 'Image Gallery'
+sortOrder: 14
 topLevel: true

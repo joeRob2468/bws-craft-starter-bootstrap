@@ -54,6 +54,7 @@
 
 // Swiper 
 @import '~swiper/swiper';
+@import '~swiper/components/navigation/navigation';
 
 // Lity
 @import 'lity/dist/lity.min.css';
@@ -1623,6 +1624,22 @@ footer.site-footer {
         }
       }
     }
+  }
+}
+
+// Image Gallery content block
+.section-image_gallery--block {
+  .primary--heading, .subtitle--heading {
+    text-align: center;
+  }
+
+  .container ~ .image-slider {
+    margin-top: 3rem;
+  }
+
+  .image-slider .slide img {
+    min-height: 20rem;
+    max-height: 40rem;
   }
 }
 

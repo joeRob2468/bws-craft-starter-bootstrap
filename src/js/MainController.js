@@ -109,6 +109,19 @@ class MainController {
             });
         }
 
+        // init image gallery
+        if ($('.section-image_gallery--block').length) {
+            import(/* webpackChunkName: "image-gallery" */"./block-modules/ImageGallery").then(module => {
+                const ImageGallery = module.default;
+
+                if ($(ImageGallery.selector).length) {
+                    let imageGallery = new ImageGallery();
+                    imageGallery.init();
+                    this.content_block_modules.push(imageGallery);
+                }
+            });
+        }
+
         // init formie form
         if ($('.section-formie_form--block').length) {
             import(/* webpackChunkName: "formie-form" */"./block-modules/FormieForm").then(module => {
