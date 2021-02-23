@@ -2416,6 +2416,117 @@ footer.site-footer {
   }
 }
 
+// Events Slider block
+.section-events_slider--block {
+  .primary--heading, .subtitle--heading {
+    text-align: center;
+  }
+
+  .primary--heading ~ .events-container {
+    margin-top: 3rem;
+  }
+
+  .swiper-component {
+    position: relative;
+
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+
+      .slide {
+        display: flex;
+        height: initial;
+      }
+
+      .slide-wrapper, .slide-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    }
+
+    .events-slider .slide .slide-wrapper {
+      margin: 10px;
+
+      .slide-content {
+        background: #FFFFFF;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05), 0px 6px 20px rgba(0, 0, 0, 0.05);
+
+        a.event-link-wrapper {
+          display: block;
+          color: inherit;
+        }
+      }
+
+      .event-content {
+        padding: 1.5rem 1rem;
+
+        @include breakpoint(large up) {
+          padding: 2.5rem 2rem;
+        }
+
+        .event-date {
+          margin-bottom: 0.5rem;
+          font-size: rem-calc(16px);
+          font-weight: 700;
+          color: $tertiary-accent;
+        }
+
+        .event-title {
+          font-size: rem-calc($base-font-size);
+          font-weight: 700;
+          color: $body-copy-color;
+          margin-bottom: 1.2rem;
+
+          @include breakpoint(small down) {
+            margin-bottom: 0;
+          }
+        }
+
+        .event-description {
+          margin-bottom: 0;
+
+          @include breakpoint(small down) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .swiper-navigation {
+      .swiper-button-prev, .swiper-button-next {
+        color: $primary-accent;
+
+        &::after {
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+      }
+
+      .swiper-button-prev {
+        left: -1rem;
+
+        @include breakpoint(xxlarge up) {
+          left: -2rem;
+        }
+      }
+
+      .swiper-button-next {
+        right: -1rem;
+
+        @include breakpoint(xxlarge up) {
+          right: -2rem;
+        }
+      }
+
+      @include breakpoint(xlarge down) {
+        display: none;
+      }
+    }
+  }
+}
+
 /**************** Article Block Overrides ***************/
 .article--content {
   .rte {

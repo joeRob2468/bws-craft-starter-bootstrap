@@ -122,6 +122,19 @@ class MainController {
             });
         }
 
+        // init events slider
+        if ($('.section-events_slider--block').length) {
+            import(/* webpackChunkName: "events-slider" */"./block-modules/EventsSlider").then(module => {
+                const EventsSlider = module.default;
+
+                if ($(EventsSlider.selector).length) {
+                    let eventsSlider = new EventsSlider();
+                    eventsSlider.init();
+                    this.content_block_modules.push(eventsSlider);
+                }
+            });
+        }
+
         // init formie form
         if ($('.section-formie_form--block').length) {
             import(/* webpackChunkName: "formie-form" */"./block-modules/FormieForm").then(module => {

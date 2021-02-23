@@ -41,11 +41,11 @@
             {% endif %}
             {% if calendarEvent %}
                 <p class="event-date">
-                    {% if not calendarEvent.allDay %}{{calendarEvent.next.start|time('short') }} on {% endif %}
-                    {{ calendarEvent.next.start|date('F d, Y') }}
-                    {% if calendarEvent.next.start != calendarEvent.next.end %}
-                        - {% if not calendarEvent.allDay %}{{calendarEvent.next.end|time('short') }} on {% endif %}
-                        {{ calendarEvent.next.end|date('F d, Y') }}
+                    {% set difference = date(calendarEvent.next.start).diff(date(calendarEvent.next.end)) %} 
+                    {% if difference.days > 0 %}
+                        {{ calendarEvent.next.start|date('F d') }} - {{ calendarEvent.next.end|date('F d, Y') }}
+                    {% else %}
+                        {% if not calendarEvent.allDay %}{{calendarEvent.next.start|time('short') }} - {{calendarEvent.next.end|time('short') }} on {% endif %} {{ calendarEvent.next.start|date('F d, Y') }}
                     {% endif %}
                 </p>
             {% endif %}

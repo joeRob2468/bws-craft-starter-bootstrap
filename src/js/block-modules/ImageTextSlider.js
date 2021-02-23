@@ -1,9 +1,10 @@
-import { Swiper } from 'swiper';
+import Swiper, { Navigation } from 'swiper/core';
 
 class ImageTextSlider {
     static selector = '.section-image_text_slider--block';
 
     constructor() {
+        Swiper.use([Navigation]);
         this.sliders = [];
     }
 

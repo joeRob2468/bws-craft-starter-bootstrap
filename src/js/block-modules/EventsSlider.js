@@ -1,7 +1,7 @@
 import Swiper, { Navigation } from 'swiper/core';
 
-class ImageGallery {
-    static selector = '.section-image_gallery--block';
+class EventsSlider {
+    static selector = '.section-events_slider--block';
 
     constructor() {
         Swiper.use([Navigation]);
@@ -9,19 +9,25 @@ class ImageGallery {
     }
 
     init() {
-        let elements = $(ImageGallery.selector);
+        let elements = $(EventsSlider.selector);
         if (elements.length) {
             elements.each((index, element) => {
                 let slider = new Swiper($('.swiper-container', element)[0], {
                     centeredSlides: true,
-                    loop: true,
+                    loop: false,
                     initialSlide: 0,
-                    spaceBetween: 15,
+                    spaceBetween: 5,
                     slidesPerView: 1.2,
+                    navigation: {
+                        nextEl: $('.swiper-navigation', element).find('.swiper-button-next')[0],
+                        prevEl: $('.swiper-navigation', element).find('.swiper-button-prev')[0],
+                    },
                     breakpoints: {
                         1024: {
-                            spaceBetween: 35,
-                            slidesPerView: 1.4
+                            spaceBetween: 15,
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                            loop: false
                         }
                     }
                 });
@@ -43,4 +49,4 @@ class ImageGallery {
     }
 }
 
-export default ImageGallery;
+export default EventsSlider;
