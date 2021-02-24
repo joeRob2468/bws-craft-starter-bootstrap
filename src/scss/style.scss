@@ -319,9 +319,13 @@ header.site-header {
       padding: 0.5rem 0;
 
       @include breakpoint(small down) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+
+        .promo-nav--menu {
+          display: none;
+        }
       }
     }
 
@@ -425,7 +429,7 @@ header.site-header {
           display: none;
         }
 
-        @include breakpoint(medium down) {
+        @include breakpoint(large down) {
           justify-content: space-between;
 
           .mobile-navigation-trigger-container {
@@ -461,7 +465,7 @@ header.site-header {
     a {
       display: block;
       color: #1C2436;
-      padding: 1rem 0.75rem;
+      padding: 1.75rem 0.75rem;
       transition: color 300ms ease;
       text-transform: uppercase;
       font-size: rem-calc(17px);
@@ -515,7 +519,8 @@ header.site-header {
   .menu-item > .dropdown-menu {
     display: block;
     position: absolute;
-    left: -30%;
+    left: 50%;
+    transform: translateX(-50%);
     top: calc(100% - 2px);
     border: 1px solid #F0F0F0;
     border-top: 2px solid $primary-accent;
@@ -631,7 +636,7 @@ header.site-header {
   transition: visibility 300ms ease, opacity 300ms ease;
 
   &.open {
-    @include breakpoint(medium down) {
+    @include breakpoint(large down) {
       visibility: visible;
       opacity: 1;
     }
