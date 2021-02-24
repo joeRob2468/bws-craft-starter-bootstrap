@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+handle: sectionWidth
+instructions: 'The width of this section - use Standard to fit it inside the page content, and Full to use the full page width from edge to edge.'
+name: 'Section Width'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Standard
+        -
+          - value
+          - standard
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Full
+        -
+          - value
+          - full
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

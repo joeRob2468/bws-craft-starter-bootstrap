@@ -41,5 +41,5 @@ maxBlocks: 0
 maxChildBlocks: 10
 maxSiblingBlocks: 0
 name: 'Icon Grid'
-sortOrder: 19
+sortOrder: 20
 topLevel: true
