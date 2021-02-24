@@ -41,5 +41,5 @@ maxBlocks: 0
 maxChildBlocks: 8
 maxSiblingBlocks: 0
 name: 'Map Grid'
-sortOrder: 29
+sortOrder: 30
 topLevel: true

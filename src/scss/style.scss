@@ -2786,6 +2786,121 @@ footer.site-footer {
   }
 }
 
+// Video block
+.section-video--block {
+  &.section-width--full {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.section-width--standard {
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-container {
+      min-height: 25rem;
+
+      @include breakpoint(large up) {
+        min-height: 35rem;
+      }
+    }
+  }
+
+  .background-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #16191A;
+    z-index: -1;
+
+    img {
+      opacity: 0.8;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      background: rgba($primary-accent, 0.75);
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+
+    .hero-content {
+      max-width: 56rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      .hero-subheading {
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .hero-subheading ~ .buttons, .standard--heading ~ .buttons {
+        padding-top: 0.5rem;
+      }
+
+      .buttons {
+        align-items: center;
+        justify-content: center;
+
+        .play-button-container .play-button-link {
+          display: block;
+
+          .play-button {
+            display: flex;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            justify-content: center;
+            background: #FFFFFF;
+            color: $primary-accent;
+            font-size: 1.6rem;
+
+            transition: background-color 200ms ease, color 200ms ease;
+
+            .icon {
+              transform: translateX(2px);
+            }
+          }
+
+          &:hover .play-button, &:active .play-button {
+            color: #FFFFFF;
+            background-color: $secondary-accent;
+          }
+
+          .button-label {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-top: 0.75rem;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
 /**************** Article Block Overrides ***************/
 .article--content {
   .rte {

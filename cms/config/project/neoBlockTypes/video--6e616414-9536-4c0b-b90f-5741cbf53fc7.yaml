@@ -1,7 +1,7 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  c8e35b73-4eff-4984-8249-39404fbdac14:
+  b0e50832-0033-42d5-b04e-a89b3a2bdeb8:
     tabs:
       -
         elements:
@@ -9,6 +9,24 @@ fieldLayouts:
             fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
             instructions: ''
             label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 744cb779-6599-47be-b369-d180c2f4b780
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            instructions: 'The preview image to use for this section (shown as a background image, usually a still from the video you''d like to display). '
+            label: 'Preview Image'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -33,9 +51,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 56aa0bec-30e7-42ff-b25e-ad77bfa5d907
-            instructions: 'The QGive widget embed code - found under Settings > Widgets in the QGive admin (you can add new ones for existing forms by clicking Add New Widget at the top). Make sure the page URL in the widget settings exactly matches the page URL that you''ll be adding this form to. '
-            label: 'QGive Embed Code'
+            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
+            instructions: 'The URL of the video you''d like to display (YouTube and Vimeo work best). '
+            label: 'Video URL'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -43,10 +61,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: qgive_form
+handle: video
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'QGive Form'
-sortOrder: 34
+name: 'Video Hero'
+sortOrder: 16
 topLevel: true
