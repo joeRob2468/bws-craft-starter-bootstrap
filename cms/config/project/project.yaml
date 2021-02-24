@@ -1,4 +1,4 @@
-dateModified: 1614195639
+dateModified: 1614195889
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -37,7 +37,7 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: $PLUGIN_FORMIE_LICENSE
+    licenseKey: KW1QRTPVXX1651W48O0MA0OT
     schemaVersion: 1.1.6
     settings:
       alertEmails: null
@@ -92,8 +92,8 @@ plugins:
   neo:
     edition: standard
     enabled: true
-    licenseKey: $PLUGIN_NEO_LICENSE
-    schemaVersion: 2.8.15
+    licenseKey: C010YWETFKNJ6DZNDDKJXR8J
+    schemaVersion: 2.8.16
   redactor:
     edition: standard
     enabled: true
@@ -160,7 +160,7 @@ system:
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
