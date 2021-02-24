@@ -160,6 +160,19 @@ class MainController {
                 }
             });
         }
+
+        // init modal popups
+        if ($('.section-modal_popup[data-modal-popup]').length) {
+            import(/* webpackChunkName: "modal-popup" */"./block-modules/ModalPopup").then(module => {
+                const ModalPopup = module.default;
+
+                if ($(ModalPopup.selector).length) {
+                    let modalPopup = new ModalPopup();
+                    modalPopup.init();
+                    this.content_block_modules.push(modalPopup);
+                }
+            });
+        }
     }
 
     // Runs every time a new page replaces the current one

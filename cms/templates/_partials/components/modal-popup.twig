@@ -1,0 +1,31 @@
+{# Modal Popup component #}
+
+{# Variable defaults #}
+{% set popup_handle = popup_handle|length ? popup_handle : 'modal-popup' %}
+{% set popup_title = popup_title|length ? popup_title : 'Modal Popup' %}
+{% set popup_content = popup_content|length ? popup_content : '' %}
+
+{% if popup_content|length %}
+<div class="section-modal_popup modal-popup popup--{{ popup_handle }}" data-modal-popup="{{ popup_handle }}">
+  <div class="popup-container">
+  	<div class="popup-header">
+      <div class="popup-title-container">
+      	<p class="popup-title">{{ popup_title }}</p>
+      </div>
+      <div class="popup-controls-container">
+        <button class="popup-close-button" aria-label="close" data-close-popup>
+          <svg class="icon-close" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+            <title>Close icon</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M4.11611 5.00001L0.327286 8.78884L1.21117 9.67272L5 5.88389L8.78883 9.67272L9.67271 8.78884L5.88388 5.00001L9.67271 1.21118L8.78882 0.327301L5 4.11613L1.21117 0.327301L0.327286 1.21118L4.11611 5.00001Z"
+              fill="currentColor"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="popup-content rte">
+      {{ popup_content | raw }}
+    </div>
+  </div>
+</div>
+{% endif %}

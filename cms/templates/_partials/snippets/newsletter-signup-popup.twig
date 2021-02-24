@@ -1,0 +1,11 @@
+{# Newsletter Signup Popup component #}
+
+{% set popup_handle = 'newsletter-signup' %}
+{% set popup_title = siteSettings is defined and siteSettings['newsletterPopupTitle'] is defined ? siteSettings.newsletterPopupTitle : 'Newsletter Signup' %}
+{% set popup_content = siteSettings is defined and siteSettings['newsletterPopupForm'] is defined ? siteSettings.newsletterPopupForm : '' %}
+
+{% include '_partials/components/modal-popup' with {
+    popup_handle: popup_handle, 
+    popup_title: popup_title, 
+    popup_content: popup_content
+} only %}

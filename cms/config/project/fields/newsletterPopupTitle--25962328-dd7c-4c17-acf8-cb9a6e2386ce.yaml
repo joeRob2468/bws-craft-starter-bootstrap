@@ -1,0 +1,18 @@
+contentColumnType: string(400)
+fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565
+handle: newsletterPopupTitle
+instructions: 'The title of the newsletter signup popup'
+name: 'Newsletter Signup - Popup Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 100
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

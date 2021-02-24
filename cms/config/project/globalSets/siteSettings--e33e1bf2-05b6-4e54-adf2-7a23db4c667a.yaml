@@ -4,6 +4,28 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 25962328-dd7c-4c17-acf8-cb9a6e2386ce
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8d852626-21ab-4f69-88a2-d57479b72c06
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Newsletter Signup Popup'
+        sortOrder: 1
+      -
+        elements:
+          -
             fieldUid: 0499506a-3693-406c-9bff-a04abe18daa2
             instructions: null
             label: null
@@ -12,10 +34,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Branding
-        sortOrder: 1
-      -
-        elements:
           -
             fieldUid: 4dbc61da-b1a5-4dfb-a41d-bcb588f594d6
             instructions: null
@@ -25,7 +43,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: 'Important Settings'
+        name: 'Site Settings'
         sortOrder: 2
 handle: siteSettings
 name: 'Site Settings'
