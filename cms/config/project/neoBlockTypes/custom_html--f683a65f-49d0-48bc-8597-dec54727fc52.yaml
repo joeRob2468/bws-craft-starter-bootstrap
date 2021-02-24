@@ -1,7 +1,7 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e
 fieldLayouts:
-  c8e35b73-4eff-4984-8249-39404fbdac14:
+  30d3320c-7edb-4f57-9c2e-30b26efd9107:
     tabs:
       -
         elements:
@@ -34,8 +34,8 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 56aa0bec-30e7-42ff-b25e-ad77bfa5d907
-            instructions: 'The QGive widget embed code - found under Settings > Widgets in the QGive admin (you can add new ones for existing forms by clicking Add New Widget at the top). Make sure the page URL in the widget settings exactly matches the page URL that you''ll be adding this form to. '
-            label: 'QGive Embed Code'
+            instructions: 'The HTML code to use for this section. Be careful to use safe code - this will be embedded directly into the web page. '
+            label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -43,10 +43,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: qgive_form
+handle: custom_html
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'QGive Form'
-sortOrder: 32
+name: 'Custom HTML'
+sortOrder: 23
 topLevel: true

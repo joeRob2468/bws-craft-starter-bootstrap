@@ -40,5 +40,5 @@ maxBlocks: 0
 maxChildBlocks: 10
 maxSiblingBlocks: 0
 name: 'Points Table List'
-sortOrder: 25
+sortOrder: 26
 topLevel: true

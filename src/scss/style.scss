@@ -1130,7 +1130,7 @@ footer.site-footer {
         overflow: hidden;
       }
 
-      #mce-responses {
+      #mc_embed_signup div#mce-responses {
         margin-left: 0;
         margin-right: 0;
       }
@@ -2704,6 +2704,17 @@ footer.site-footer {
         justify-content: center;
       }
     }
+  }
+}
+
+// Custom HTML content block
+.section-custom_html--block {
+  .primary--heading, .accent--heading {
+    text-align: center;
+  }
+
+  .primary--heading ~ .content {
+    margin-top: 3rem;
   }
 }
 

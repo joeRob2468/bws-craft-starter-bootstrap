@@ -1,0 +1,25 @@
+{# Custom HTML Block #}
+{% set block_type = "custom_html" %}
+
+{# Block variable defaults #}
+{% set sectionType = block['sectionType'] is defined ? block.sectionType : 'standard' %}
+{% set heading = block['heading'] is defined ? block.heading : '' %}
+{% set subheading = block['subheading'] is defined ? block.subheading : '' %}
+{% set htmlCode = block['htmlCode'] is defined ? block.htmlCode : '' %}
+
+<section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
+    <div class="container">
+        {% if subheading|length %}
+            <p class="subtitle--heading">{{ subheading }}</p>
+        {% endif %}
+        {% if heading|length %}
+            <h2 class="primary--heading">{{ heading }}</h2>
+        {% endif %}
+        {% if htmlCode|length %}
+            <div class="content rte">
+                {{ htmlCode | raw }}
+            </div>
+        {% endif %}
+        </div>
+    </div>
+</section>
