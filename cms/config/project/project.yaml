@@ -37,7 +37,7 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: ANQQK175F4M4JY05S07PNCJS
+    licenseKey: $PLUGIN_FORMIE_LICENSE
     schemaVersion: 1.1.6
     settings:
       alertEmails: null
@@ -92,7 +92,7 @@ plugins:
   neo:
     edition: standard
     enabled: true
-    licenseKey: G9V5W4332Y5X5584QE7JHQ5K
+    licenseKey: $PLUGIN_NEO_LICENSE
     schemaVersion: 2.8.16
   redactor:
     edition: standard
