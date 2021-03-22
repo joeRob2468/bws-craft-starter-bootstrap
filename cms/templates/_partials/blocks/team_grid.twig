@@ -42,20 +42,22 @@
 
             {% if image %}
             <div class="team-item cell {% if showLargePortraits %}large-6{% else %}large-3{% endif %} medium-6 small-12">
-                <div class="image-container">
-                  {{ LazyImager.LazyImager(image, imageOptions) }}
-                </div>
-                <div class="content-container">
-                    <div class="caption">
-                        {% if name|length %}<h4 class="item-title">{{ name }}</h4>{% endif %}
-                        {% if title|length %}<p class="item-description">{{ title }}</p>{% endif %}
-                        {% if email|length %}
-                            <div class="item-link">
-                            <a href="mailto:{{ email | escape }}" target="_blank">{{ email | escape }}</a>
-                            </div>
-                        {% endif %}
+                {% if email|length %}<a href="mailto:{{ email | escape }}" target="_blank" style="display: block">{% endif %}
+                    <div class="image-container">
+                    {{ LazyImager.LazyImager(image, imageOptions) }}
                     </div>
-                </div>
+                    <div class="content-container">
+                        <div class="caption">
+                            {% if name|length %}<h4 class="item-title">{{ name }}</h4>{% endif %}
+                            {% if title|length %}<p class="item-description">{{ title }}</p>{% endif %}
+                            {# {% if email|length %}
+                                <div class="item-link">
+                                <a href="mailto:{{ email | escape }}" target="_blank">{{ email | escape }}</a>
+                                </div>
+                            {% endif %} #}
+                        </div>
+                    </div>
+                {% if email|length %}</a>{% endif %}
             </div>
             {% endif %}
         {% endfor %}
