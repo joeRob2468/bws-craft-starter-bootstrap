@@ -1,10 +1,10 @@
-import Swiper, { Navigation } from 'swiper/core';
+import Swiper, { Navigation, Autoplay } from 'swiper/core';
 
 class ImageGallery {
     static selector = '.section-image_gallery--block';
 
     constructor() {
-        Swiper.use([Navigation]);
+        Swiper.use([Navigation, Autoplay]);
         this.sliders = [];
     }
 
@@ -18,6 +18,9 @@ class ImageGallery {
                     initialSlide: 0,
                     spaceBetween: 15,
                     slidesPerView: 1.2,
+                    autoplay: {
+                        delay: 4000
+                    },
                     breakpoints: {
                         1024: {
                             spaceBetween: 35,
