@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   b1484620-6625-4d8e-a308-5f87e5687eb1:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: null
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: null
             label: null
             required: false
@@ -33,7 +33,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6a38e80c-6122-4de1-8e7d-0e586ace9d71
+            fieldUid: 6a38e80c-6122-4de1-8e7d-0e586ace9d71 # Formie Form
             instructions: ''
             label: ''
             required: '1'

@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   312688e4-068a-4c56-ab55-3efde700f677:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: 'The portrait image to show for this team member.'
             label: 'Portrait Image'
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: 'The name to show for this team member.'
             label: Name
             required: '1'
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: 'The job title to display for this team member.'
             label: 'Job Title'
             required: '1'
@@ -33,7 +33,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1d73271a-6ca9-4f5c-8bfb-739767606bc0
+            fieldUid: 1d73271a-6ca9-4f5c-8bfb-739767606bc0 # Email
             instructions: 'The email address to display for this team member.'
             label: ''
             required: false

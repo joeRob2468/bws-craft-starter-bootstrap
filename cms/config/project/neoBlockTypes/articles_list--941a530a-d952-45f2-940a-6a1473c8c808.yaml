@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   f69c70d2-02be-44dd-bd84-6cb45ffec60e:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: null
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b51d9d40-997b-4034-8904-21d41788b30f
+            fieldUid: b51d9d40-997b-4034-8904-21d41788b30f # Total Per Page
             instructions: 'The total number of articles to show on each page. Use 9 if you''re not sure!'
             label: 'Articles Per Page'
             required: '1'

@@ -1,9 +1,9 @@
-dateModified: 1619019658
+dateModified: 1619019988
 email:
-  fromEmail: hello@boyerwebstudios.com
+  fromEmail: $SYSTEM_EMAIL
   fromName: $SITE_NAME
   replyToEmail: null
-  template: null
+  template: ''
   transportSettings:
     apiKey: $MAILGUN_API_KEY
     domain: $MAILGUN_DOMAIN
@@ -55,7 +55,7 @@ plugins:
             - ''
       defaultDateValueOption: ''
       defaultEmailTemplate: ''
-      defaultFileUploadVolume: 'folder:3628224c-b498-4d54-b48c-e1b13ac90c05'
+      defaultFileUploadVolume: 'folder:3628224c-b498-4d54-b48c-e1b13ac90c05' # Form Uploads
       defaultFormTemplate: defaultForm
       defaultInstructionsPosition: verbb\formie\positions\BelowInput
       defaultLabelPosition: verbb\formie\positions\AboveInput

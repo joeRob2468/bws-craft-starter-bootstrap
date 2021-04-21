@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 25962328-dd7c-4c17-acf8-cb9a6e2386ce
+            fieldUid: 25962328-dd7c-4c17-acf8-cb9a6e2386ce # Newsletter Signup - Popup Title
             instructions: null
             label: null
             required: false
@@ -13,7 +13,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 8d852626-21ab-4f69-88a2-d57479b72c06
+            fieldUid: 8d852626-21ab-4f69-88a2-d57479b72c06 # Newsletter Signup - Popup Form
             instructions: null
             label: null
             required: false
@@ -26,7 +26,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 0499506a-3693-406c-9bff-a04abe18daa2
+            fieldUid: 0499506a-3693-406c-9bff-a04abe18daa2 # Logo
             instructions: null
             label: null
             required: true
@@ -35,7 +35,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4dbc61da-b1a5-4dfb-a41d-bcb588f594d6
+            fieldUid: 4dbc61da-b1a5-4dfb-a41d-bcb588f594d6 # Footer Copyright
             instructions: null
             label: null
             required: false

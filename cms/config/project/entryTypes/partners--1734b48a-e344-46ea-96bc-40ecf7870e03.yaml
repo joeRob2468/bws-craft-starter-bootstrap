@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: 'The primary logo to use for this partner. '
             label: 'Partner Logo'
             required: '1'
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
+            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179 # URL
             instructions: 'The URL of this partner''s website'
             label: 'Partner Website'
             required: ''
@@ -49,7 +49,7 @@ fieldLayouts:
 handle: partners
 hasTitleField: true
 name: Partners
-section: db958bcb-a6d8-4133-963d-dc2b3577160d
+section: db958bcb-a6d8-4133-963d-dc2b3577160d # Partners
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

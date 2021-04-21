@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9 # SEO Description
             instructions: ''
             label: ''
             required: '1'
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 0c1e3849-8962-4287-8d23-5b4e202a8e01
+            fieldUid: 0c1e3849-8962-4287-8d23-5b4e202a8e01 # Single SEO
             instructions: ''
             label: ''
             required: ''
@@ -62,7 +62,7 @@ fieldLayouts:
 handle: blogSingle
 hasTitleField: true
 name: 'Blog '
-section: e274cca8-411b-431f-b273-03a4351a4f4f
+section: e274cca8-411b-431f-b273-03a4351a4f4f # Blog 
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

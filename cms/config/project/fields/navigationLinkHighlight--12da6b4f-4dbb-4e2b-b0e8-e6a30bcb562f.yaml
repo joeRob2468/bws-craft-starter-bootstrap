@@ -1,5 +1,5 @@
 contentColumnType: boolean
-fieldGroup: 8fba94f5-6d8c-4344-9c60-61b9b1b52e17
+fieldGroup: 8fba94f5-6d8c-4344-9c60-61b9b1b52e17 # Navigation
 handle: navigationLinkHighlight
 instructions: 'If enabled, this link will be highlighted in the navigation menu, most often by displaying as a button. '
 name: 'Link Highlight'

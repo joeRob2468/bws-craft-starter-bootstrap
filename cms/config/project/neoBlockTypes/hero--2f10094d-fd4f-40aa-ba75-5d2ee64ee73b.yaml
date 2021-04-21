@@ -1,13 +1,13 @@
 childBlocks:
   - button
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   09089ab4-ba7c-4f64-b2e9-6e7ccc9c248b:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: 'The background image for this section'
             label: 'Background Image'
             required: '1'
@@ -16,7 +16,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: ''
             label: ''
             required: '1'
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: null
             label: null
             required: false

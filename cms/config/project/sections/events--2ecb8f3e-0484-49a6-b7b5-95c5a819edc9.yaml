@@ -3,7 +3,7 @@ handle: events
 name: Events
 propagationMethod: all
 siteSettings:
-  0cc785f8-a672-4448-9841-1c39b72f75bd:
+  0cc785f8-a672-4448-9841-1c39b72f75bd: # Hillcrest Hope
     enabledByDefault: true
     hasUrls: true
     template: _pages/events/single

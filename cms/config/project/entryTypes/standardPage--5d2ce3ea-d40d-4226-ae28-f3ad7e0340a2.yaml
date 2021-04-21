@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9 # SEO Description
             instructions: null
             label: null
             required: true
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 09545e8c-22b7-4f76-a84f-c58f8e9e281a
+            fieldUid: 09545e8c-22b7-4f76-a84f-c58f8e9e281a # Pages SEO
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
 handle: standardPage
 hasTitleField: true
 name: 'Standard Page'
-section: 393e6f52-2804-4e16-a508-40de6249b4af
+section: 393e6f52-2804-4e16-a508-40de6249b4af # Pages
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

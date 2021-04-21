@@ -30,7 +30,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6656498b-7dc6-4ef7-928d-ce871eb1c74a
+            fieldUid: 6656498b-7dc6-4ef7-928d-ce871eb1c74a # Featured Image
             instructions: ''
             label: ''
             required: '1'
@@ -39,7 +39,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9 # SEO Description
             instructions: ''
             label: ''
             required: '1'
@@ -48,7 +48,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2073fc21-8a0c-48b1-9d73-c27054189da5
+            fieldUid: 2073fc21-8a0c-48b1-9d73-c27054189da5 # Blog Category
             instructions: 'The category to use for this blog entry. You can manage categories under Categories in the sidebar (although we suggest sticking with just a few categories)'
             label: ''
             required: '1'
@@ -60,7 +60,7 @@ fieldLayouts:
             heading: 'Entry Content'
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
             instructions: ''
             label: ''
             required: ''
@@ -73,7 +73,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 967142f2-e489-41cb-9894-e9518218f704
+            fieldUid: 967142f2-e489-41cb-9894-e9518218f704 # Article SEO
             instructions: ''
             label: ''
             required: '1'
@@ -86,7 +86,7 @@ fieldLayouts:
 handle: blog
 hasTitleField: true
 name: 'Blog Entry'
-section: 57571548-c1da-4ade-af9b-d4a630a3d48d
+section: 57571548-c1da-4ade-af9b-d4a630a3d48d # Blog Entries
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

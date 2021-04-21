@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   9adcd620-a19f-45e4-a50b-3e754189a1d0:
     tabs:
       -
         elements:
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be # Formatted Content
             instructions: 'The content to display next to this item. Keep character count down, space is limited. '
             label: 'Short Content'
             required: '1'

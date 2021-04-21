@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   521c827f-733c-4071-915d-898ca2dfc106:
     tabs:
       -
         elements:
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: 'The name of the company represented by this logo.'
             label: 'Company Name'
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: 'The logo to display'
             label: Logo
             required: '1'
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
+            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179 # URL
             instructions: 'The website URL to use for this logo'
             label: 'Website URL'
             required: false

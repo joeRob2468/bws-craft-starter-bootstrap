@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   c8e35b73-4eff-4984-8249-39404fbdac14:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: null
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: null
             label: null
             required: false
@@ -33,7 +33,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 56aa0bec-30e7-42ff-b25e-ad77bfa5d907
+            fieldUid: 56aa0bec-30e7-42ff-b25e-ad77bfa5d907 # HTML
             instructions: 'The QGive widget embed code - found under Settings > Widgets in the QGive admin (you can add new ones for existing forms by clicking Add New Widget at the top). Make sure the page URL in the widget settings exactly matches the page URL that you''ll be adding this form to. '
             label: 'QGive Embed Code'
             required: '1'

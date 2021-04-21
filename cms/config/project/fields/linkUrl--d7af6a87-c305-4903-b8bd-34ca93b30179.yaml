@@ -1,5 +1,5 @@
 contentColumnType: string(255)
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: linkUrl
 instructions: 'The web URL to use for this section.'
 name: URL

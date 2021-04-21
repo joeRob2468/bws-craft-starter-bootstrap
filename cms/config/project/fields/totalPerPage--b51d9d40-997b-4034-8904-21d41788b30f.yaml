@@ -1,5 +1,5 @@
 contentColumnType: smallint(2)
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: totalPerPage
 instructions: 'The total number of items to show on each page.'
 name: 'Total Per Page'

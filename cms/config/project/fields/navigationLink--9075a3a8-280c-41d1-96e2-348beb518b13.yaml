@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 8fba94f5-6d8c-4344-9c60-61b9b1b52e17
+fieldGroup: 8fba94f5-6d8c-4344-9c60-61b9b1b52e17 # Navigation
 handle: navigationLink
 instructions: 'The link to a page or URL that you''d like to include in this navigation section. '
 name: 'Navigation Link'
@@ -65,7 +65,7 @@ settings:
               - sources
               -
                 - singles
-                - 'section:393e6f52-2804-4e16-a508-40de6249b4af'
+                - 'section:393e6f52-2804-4e16-a508-40de6249b4af' # Pages
       -
         - site
         -

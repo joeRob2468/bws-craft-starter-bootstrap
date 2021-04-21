@@ -1,5 +1,5 @@
 contentColumnType: text
-fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565
+fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565 # Globals
 handle: newsletterPopupForm
 instructions: 'The form code (or HTML content) to display in the newsletter popup (be careful to use safe HTML code). Form embed codes are easy to create in MailChimp (under Audience > Signup Forms > Embedded Forms). '
 name: 'Newsletter Signup - Popup Form'

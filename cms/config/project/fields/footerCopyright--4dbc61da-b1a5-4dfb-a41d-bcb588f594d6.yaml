@@ -1,5 +1,5 @@
 contentColumnType: text
-fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565
+fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565 # Globals
 handle: footerCopyright
 instructions: 'The copyright text to place in the site footer. Use ${year} to show the current year. '
 name: 'Footer Copyright'

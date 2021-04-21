@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   64c692db-2266-4100-b023-6336ca18ed09:
     tabs:
       -
         elements:
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: 'The image to use for this slide'
             label: ''
             required: '1'

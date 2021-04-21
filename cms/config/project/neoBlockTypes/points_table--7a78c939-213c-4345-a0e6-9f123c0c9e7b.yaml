@@ -1,13 +1,13 @@
 childBlocks:
   - points_table_item
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   c43a7b0a-a89a-4def-8d38-d4b02945f57b:
     tabs:
       -
         elements:
           -
-            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
+            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93 # Icon
             instructions: ''
             label: ''
             required: '1'
@@ -16,7 +16,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: ''
             label: ''
             required: '1'
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: 'The heading to display over the description column (for example, Budget Activity)'
             label: 'Column Description Heading'
             required: '1'
@@ -34,7 +34,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be # Formatted Content
             instructions: 'A short description of terms or notes.'
             label: Terms/Notes
             required: false

@@ -1,5 +1,5 @@
 contentColumnType: string(300)
-fieldGroup: 67533219-35e1-4601-8283-07b61e5e849b
+fieldGroup: 67533219-35e1-4601-8283-07b61e5e849b # Events
 handle: eventButtonText
 instructions: 'The text to display for this event''s CTA element (for example, the button for a featured event on the Events page). If left blank, "See event details" will be used. '
 name: 'Event Button Text'

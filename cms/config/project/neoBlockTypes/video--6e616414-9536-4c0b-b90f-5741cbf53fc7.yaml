@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   b0e50832-0033-42d5-b04e-a89b3a2bdeb8:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 744cb779-6599-47be-b369-d180c2f4b780
+            fieldUid: 744cb779-6599-47be-b369-d180c2f4b780 # Section Width
             instructions: ''
             label: ''
             required: '1'
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: 'The preview image to use for this section (shown as a background image, usually a still from the video you''d like to display). '
             label: 'Preview Image'
             required: '1'
@@ -33,7 +33,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: null
             label: null
             required: false
@@ -42,7 +42,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: null
             label: null
             required: false
@@ -51,7 +51,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179
+            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179 # URL
             instructions: 'The URL of the video you''d like to display (YouTube and Vimeo work best). '
             label: 'Video URL'
             required: '1'

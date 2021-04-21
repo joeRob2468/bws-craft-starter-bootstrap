@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13 # Navigation Link
             instructions: null
             label: null
             required: true
@@ -40,7 +40,7 @@ fieldLayouts:
 handle: footerNavigation
 hasTitleField: false
 name: 'Footer Navigation'
-section: 70e8051d-b22c-4014-b436-a4430f341640
+section: 70e8051d-b22c-4014-b436-a4430f341640 # Footer Navigation
 sortOrder: 1
 titleFormat: '{navigationLink.getText()}'
 titleTranslationKeyFormat: null

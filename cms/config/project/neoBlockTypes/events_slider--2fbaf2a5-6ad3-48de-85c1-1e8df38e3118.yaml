@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   b1c79966-29b8-4bba-84b6-bc4cc6be904b:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: null
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: null
             label: null
             required: false
@@ -33,7 +33,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
+            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e # Use custom content?
             instructions: 'If enabled, will hide all featured events, and only show standard ones. Helpful when combined with a list of featured events above this section. '
             label: 'Hide featured events? '
             required: false
@@ -42,7 +42,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b51d9d40-997b-4034-8904-21d41788b30f
+            fieldUid: b51d9d40-997b-4034-8904-21d41788b30f # Total Per Page
             instructions: 'The total number of events to show in this slider.'
             label: 'Number of events to show'
             required: '1'

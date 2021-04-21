@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: eca12a22-55f0-4613-ad10-2bed6bfdb4a2
+fieldGroup: eca12a22-55f0-4613-ad10-2bed6bfdb4a2 # Content Builder
 handle: contentBuilder
 instructions: 'Use the blocks below to create, remove, or reorder flexible content blocks, which will be displayed on this page. '
 name: 'Content Builder'

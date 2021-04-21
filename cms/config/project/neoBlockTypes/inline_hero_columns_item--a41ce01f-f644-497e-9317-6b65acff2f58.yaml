@@ -1,13 +1,13 @@
 childBlocks:
   - button
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   cae44aa8-c582-4ab4-bec9-c4f7204190c6:
     tabs:
       -
         elements:
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: null
             label: null
             required: false
@@ -16,7 +16,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 291580b7-d5d0-4340-8f73-76b8fcf000d1
+            fieldUid: 291580b7-d5d0-4340-8f73-76b8fcf000d1 # Short Formatted Content
             instructions: null
             label: null
             required: false

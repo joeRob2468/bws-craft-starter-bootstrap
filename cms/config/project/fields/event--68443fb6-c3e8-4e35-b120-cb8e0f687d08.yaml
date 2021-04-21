@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 67533219-35e1-4601-8283-07b61e5e849b
+fieldGroup: 67533219-35e1-4601-8283-07b61e5e849b # Events
 handle: event
 instructions: 'The event to display for this section'
 name: Event
@@ -12,7 +12,7 @@ settings:
   showSiteMenu: false
   source: null
   sources:
-    - 'section:2ecb8f3e-0484-49a6-b7b5-95c5a819edc9'
+    - 'section:2ecb8f3e-0484-49a6-b7b5-95c5a819edc9' # Events
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93
+            fieldUid: 5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93 # Icon
             instructions: null
             label: null
             required: true
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13 # Navigation Link
             instructions: null
             label: null
             required: true
@@ -49,7 +49,7 @@ fieldLayouts:
 handle: socialLinks
 hasTitleField: false
 name: 'Social Links'
-section: ecc44cee-dded-4260-be41-18578d1a9286
+section: ecc44cee-dded-4260-be41-18578d1a9286 # Social Links
 sortOrder: 1
 titleFormat: '{navigationLink.getText()}'
 titleTranslationKeyFormat: null

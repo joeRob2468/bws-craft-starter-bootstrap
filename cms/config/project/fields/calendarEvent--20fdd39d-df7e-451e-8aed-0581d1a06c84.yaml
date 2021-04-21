@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: calendarEvent
 instructions: 'The calendar configuration for this section - allows you to set up start and end dates, recurring events, and other calendar-related settings. '
 name: 'Calendar Event'

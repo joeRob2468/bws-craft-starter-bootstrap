@@ -1,13 +1,13 @@
 childBlocks:
   - button
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   ee9dd4ed-0883-44ca-b69b-ee2fcfa30a14:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -16,7 +16,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: af8a1c7e-dac5-4182-9acd-7854cba44b17
+            fieldUid: af8a1c7e-dac5-4182-9acd-7854cba44b17 # Section Alignment
             instructions: 'Standard will show the image on the left and the text on the right, and Reversed will show the image on the right and text on the left.  '
             label: 'Image Position'
             required: '1'
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d
+            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
             instructions: ''
             label: ''
             required: '1'
@@ -34,7 +34,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574
+            fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
             instructions: ''
             label: ''
             required: '1'
@@ -52,7 +52,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be # Formatted Content
             instructions: null
             label: null
             required: false

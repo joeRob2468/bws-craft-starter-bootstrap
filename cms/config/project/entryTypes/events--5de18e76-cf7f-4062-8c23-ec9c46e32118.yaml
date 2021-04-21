@@ -7,7 +7,7 @@ fieldLayouts:
             heading: 'Event Settings'
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: 6656498b-7dc6-4ef7-928d-ce871eb1c74a
+            fieldUid: 6656498b-7dc6-4ef7-928d-ce871eb1c74a # Featured Image
             instructions: 'The featured image for this event, shown wherever this event is displayed on the site. '
             label: ''
             required: '1'
@@ -16,7 +16,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 20fdd39d-df7e-451e-8aed-0581d1a06c84
+            fieldUid: 20fdd39d-df7e-451e-8aed-0581d1a06c84 # Calendar Event
             instructions: ''
             label: ''
             required: '1'
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
             instructions: 'The secondary heading for this event, shown above the title on the event page. '
             label: 'Event Subheading'
             required: ''
@@ -57,7 +57,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9
+            fieldUid: d36c88c9-b8c6-4b76-afe5-cc0210389ee9 # SEO Description
             instructions: 'The short description of this event, used for SEO and for sections where this event is displayed. Often contains the first few sentences of the page content, or a quick summary of this event. '
             label: 'Short Event Description'
             required: '1'
@@ -66,7 +66,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c530ba0d-fa74-49a3-ab10-7c3faed8c9a6
+            fieldUid: c530ba0d-fa74-49a3-ab10-7c3faed8c9a6 # Featured Event?
             instructions: null
             label: null
             required: false
@@ -75,7 +75,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2c391fdd-417f-4317-8b81-535b7f89fbf5
+            fieldUid: 2c391fdd-417f-4317-8b81-535b7f89fbf5 # Event Button Text
             instructions: null
             label: null
             required: false
@@ -87,7 +87,7 @@ fieldLayouts:
             heading: 'Event Page Content'
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e
+            fieldUid: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
             instructions: 'Use the blocks below to create, remove, or reorder flexible content blocks, which will be displayed on this page. The event hero (image, title, and date) will be added automatically. '
             label: ''
             required: ''
@@ -100,7 +100,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ce2fc830-3148-44c3-8c64-db50e750cbe2
+            fieldUid: ce2fc830-3148-44c3-8c64-db50e750cbe2 # Event SEO
             instructions: null
             label: null
             required: false
@@ -113,7 +113,7 @@ fieldLayouts:
 handle: events
 hasTitleField: true
 name: Events
-section: 2ecb8f3e-0484-49a6-b7b5-95c5a819edc9
+section: 2ecb8f3e-0484-49a6-b7b5-95c5a819edc9 # Events
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

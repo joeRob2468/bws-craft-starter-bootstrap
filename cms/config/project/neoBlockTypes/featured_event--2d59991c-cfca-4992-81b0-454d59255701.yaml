@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   e6053033-ef0b-4d39-b9fd-21341c735ac7:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f
+            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 68443fb6-c3e8-4e35-b120-cb8e0f687d08
+            fieldUid: 68443fb6-c3e8-4e35-b120-cb8e0f687d08 # Event
             instructions: ''
             label: ''
             required: '1'
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e
+            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e # Use custom content?
             instructions: 'If enabled, event will be hidden after the end date of the event has passed. '
             label: 'Hide event if event date has passed?'
             required: false

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13
+            fieldUid: 9075a3a8-280c-41d1-96e2-348beb518b13 # Navigation Link
             instructions: null
             label: null
             required: true
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f
+            fieldUid: 12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f # Link Highlight
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
 handle: mainNavigation
 hasTitleField: false
 name: 'Main Navigation'
-section: f9dbfbdc-d362-47f8-8861-5a62706fc184
+section: f9dbfbdc-d362-47f8-8861-5a62706fc184 # Main Navigation
 sortOrder: 1
 titleFormat: '{navigationLink.getText()}'
 titleTranslationKeyFormat: null

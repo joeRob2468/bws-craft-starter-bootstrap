@@ -1,5 +1,5 @@
 contentColumnType: string(600)
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: subheading
 instructions: 'The secondary heading for this section (usually displayed in cursive font).'
 name: Subheading

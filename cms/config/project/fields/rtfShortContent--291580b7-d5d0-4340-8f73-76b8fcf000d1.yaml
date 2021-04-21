@@ -1,5 +1,5 @@
 contentColumnType: text
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: rtfShortContent
 instructions: 'A brief snippet of formatted text content for this section. '
 name: 'Short Formatted Content'

@@ -1,12 +1,12 @@
 childBlocks: ''
-field: 720308b0-c8fd-4f13-bd94-758097e76b5e
+field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   c8e26a5a-28cc-4494-9300-44715700c3d9:
     tabs:
       -
         elements:
           -
-            fieldUid: 2886f198-65b5-4662-8f31-5bc761325b03
+            fieldUid: 2886f198-65b5-4662-8f31-5bc761325b03 # Link
             instructions: 'The link to use for this button'
             label: ''
             required: '1'
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: adac64af-2715-4c2c-aad7-d563dea9e9c0
+            fieldUid: adac64af-2715-4c2c-aad7-d563dea9e9c0 # Button Type
             instructions: ''
             label: ''
             required: '1'
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e98e2c64-af99-46b8-b4c7-2748aff3f3e5
+            fieldUid: e98e2c64-af99-46b8-b4c7-2748aff3f3e5 # Open Link in Popup
             instructions: null
             label: null
             required: false

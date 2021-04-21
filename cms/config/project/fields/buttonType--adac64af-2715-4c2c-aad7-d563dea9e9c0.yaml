@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: buttonType
 instructions: 'The type of button to display. Primary will show a solid button, Secondary will show an outlined button, and Text will show a text link with an arrow. '
 name: 'Button Type'

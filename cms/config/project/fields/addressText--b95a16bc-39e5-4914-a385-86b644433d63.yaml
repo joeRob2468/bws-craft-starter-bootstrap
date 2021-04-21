@@ -1,5 +1,5 @@
 contentColumnType: string(800)
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: addressText
 instructions: 'Enter the full address of the location to display for this section - we recommend searching for the location on Google Maps, then copying the full address (including the business name).'
 name: Address

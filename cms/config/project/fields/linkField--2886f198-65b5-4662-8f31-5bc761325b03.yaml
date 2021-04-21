@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe
+fieldGroup: 63c84b53-059e-46e3-b41e-3cd1cb9030fe # Content Builder Fields
 handle: linkField
 instructions: 'The link to use for this section'
 name: Link

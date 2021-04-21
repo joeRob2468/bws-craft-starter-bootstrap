@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565
+fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565 # Globals
 handle: logo
 instructions: 'The logo for this website, used across the site. '
 name: Logo
@@ -9,7 +9,7 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-  defaultUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
+  defaultUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137' # Site Assets
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
@@ -19,7 +19,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: true
-  singleUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137'
+  singleUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137' # Site Assets
   singleUploadLocationSubpath: branding
   source: null
   sources: '*'
