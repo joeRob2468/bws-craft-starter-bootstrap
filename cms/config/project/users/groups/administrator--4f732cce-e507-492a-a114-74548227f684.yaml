@@ -13,6 +13,8 @@ permissions:
   - registerusers
   - moderateusers
   - assignuserpermissions
+  - 'assignusergroup:4f732cce-e507-492a-a114-74548227f684' # Administrator
+  - 'assignusergroup:7d282711-01a5-4842-bfb0-35018266a002' # Content Editor
   - assignusergroups
   - administrateusers
   - impersonateusers
