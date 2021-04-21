@@ -1,4 +1,4 @@
-dateModified: 1619015962
+dateModified: 1619019658
 email:
   fromEmail: hello@boyerwebstudios.com
   fromName: $SITE_NAME
@@ -38,7 +38,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_FORMIE_LICENSE
-    schemaVersion: 1.1.6
+    schemaVersion: 1.1.8
     settings:
       alertEmails: null
       defaultDateDisplayType: ''
@@ -160,7 +160,7 @@ system:
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
