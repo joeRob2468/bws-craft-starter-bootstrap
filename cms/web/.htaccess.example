@@ -4,14 +4,14 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
-	# Remove www from URL's
-	RewriteCond %{HTTP_HOST} ^www\.(.+)
+	# Add www to URL's
+	RewriteCond %{HTTP_HOST} !^www\.
 	# RewriteCond %{HTTPS}s/%1 ^(on(s)|offs)/(.+)
-	RewriteRule ^ http%2://%3%{REQUEST_URI} [L,R=301]
+	RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
 
 	# Make all traffic go over https
-	# RewriteCond %{HTTP:X-Forwarded-Proto} !https
-	# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+	RewriteCond %{HTTP:X-Forwarded-Proto} !https
+	RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 	# Remove trailing slashes
 	RewriteCond %{REQUEST_FILENAME} !-d
