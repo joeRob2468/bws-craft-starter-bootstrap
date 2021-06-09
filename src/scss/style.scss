@@ -1239,7 +1239,7 @@ footer.site-footer {
 .section-image--block {
   .image-container img {
     @include breakpoint(medium up) {
-      max-height: rem-calc(800px);
+      //max-height: rem-calc(800px);
     }
   }
 
