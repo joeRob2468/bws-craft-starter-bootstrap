@@ -81,6 +81,7 @@
 	{% endfor %}
 
 	{% for block in entry.contentBuilder if block.level == 1 %}
+        <div id="permalink-{{ block.type.handle }}"></div>
 		{% include '_partials/blocks/' ~ block.type.handle ignore missing with {block: block, entry: entry, sectionHandle: entry.getSection().handle} only %}
 	{% endfor %}
 {% endif %}
