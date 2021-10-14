@@ -11,7 +11,7 @@
 {% set showLargePortraits = block['useCustomContent'] is defined ? block.useCustomContent : false %}
 {% set items = block.children is defined ? block.children|filter(item => item.type.handle == 'team_grid_item') : null %}
 
-<section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
     <div class="container">
         {% if subheading|length %}
             <p class="subtitle--heading">{{ subheading }}</p>

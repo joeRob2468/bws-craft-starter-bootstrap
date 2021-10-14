@@ -29,7 +29,7 @@
 {% endif %}
 
 {% if events|length %}
-<section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
     <div class="container content-container">
 
         {% if subheading|length %}

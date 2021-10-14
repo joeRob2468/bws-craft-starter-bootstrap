@@ -25,7 +25,7 @@
 {% endif %}
 
 {% if image %}
-<section class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section--standard section-{{ block_type}}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section--standard section-{{ block_type}}--block animatable">
     <div class="container">
         {{ LazyImager.LazyImager(image, imageOptions) }}
         {% if caption|length %}<div class="caption content rte">{{ caption }}</div>{% endif %}

@@ -33,7 +33,7 @@
 {% endif %}
 
 {% if event %}
-<section class="section section--medium section--whitespace section--standard section-{{ section_type }}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace section--standard section-{{ section_type }}--block animatable">
     <div class="container container--large">
         <div class="background-container">
         {{ LazyImager.LazyImager(image, imageOptions) }}

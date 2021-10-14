@@ -36,7 +36,7 @@
     }).all() %}
 {% endif %}
 
-<section class="section section--medium section--dark {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--dark {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
     <div class="container container--large">
         {% if subheading|length %}<p class="subtitle--heading">{{ subheading }}</p>{% endif %}
         {% if heading|length %}<h2 class="primary--heading">{{ heading }}</h2>{% endif %}

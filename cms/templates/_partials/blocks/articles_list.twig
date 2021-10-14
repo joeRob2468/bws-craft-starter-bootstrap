@@ -17,7 +17,7 @@
 }) %}
 {% paginate query as pageInfo, articles %}
 
-<section class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
     <div class="container">
         {% if heading|length %}<h2 class="primary--heading">{{ heading }}</h2>{% endif %}
         <div class="grid-container article-items">

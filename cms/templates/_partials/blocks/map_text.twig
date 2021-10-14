@@ -13,7 +13,7 @@
 
 {% set items = block.children is defined ? block.children|filter(item => item.type.handle == 'map_text_item') : null %}
 
-<section class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type }}--block animatable">
     <div class="container">
         <div class="grid-x grid-margin-x align-center">
             <div class="cell large-6 content-container">

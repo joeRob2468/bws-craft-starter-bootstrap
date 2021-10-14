@@ -11,7 +11,7 @@
 {% set slides = block.children is defined ? block.children|filter(item => item.type.handle == 'image_gallery_item') : null %}
 
 {% if slides|length and slides|length > 1 %}
-<section class="section section--medium section--whitespace section--{{ sectionType }} section-{{ block_type }}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace section--{{ sectionType }} section-{{ block_type }}--block animatable">
     {% if subheading|length or heading|length %}
     <div class="container">
         {% if subheading|length %}

@@ -7,7 +7,7 @@
 {% set subheading = block['subheading'] is defined ? block.subheading : '' %}
 {% set htmlCode = block['htmlCode'] is defined ? block.htmlCode : '' %}
 
-<section class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace section-{{ block_type }}--block section--{{ sectionType }} animatable">
     <div class="container">
         {% if subheading|length %}
             <p class="subtitle--heading">{{ subheading }}</p>

@@ -29,7 +29,7 @@
 } %}
 {% endif %}
 
-<section class="section section--medium {% if sectionWidth != 'full' %}section--whitespace{% endif %} section--{{ sectionType }} section-width--{{ sectionWidth }} section-{{ block_type }}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium {% if sectionWidth != 'full' %}section--whitespace{% endif %} section--{{ sectionType }} section-width--{{ sectionWidth }} section-{{ block_type }}--block animatable">
     <div class="container container--large">
         <div class="background-container">
         {{ LazyImager.LazyImager(image, imageOptions) }}

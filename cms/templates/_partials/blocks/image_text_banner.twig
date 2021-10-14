@@ -28,7 +28,7 @@
     } %}
 {% endif %}
 
-<section class="section section--dark section-{{ block_type }}--block section--{{ sectionType }} section-alignment--{{ sectionAlignment }} animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--dark section-{{ block_type }}--block section--{{ sectionType }} section-alignment--{{ sectionAlignment }} animatable">
     <div class="image-container">
         {% if image|length %}{{ LazyImager.LazyImager(image, imageOptions) }}{% endif %}
     </div>

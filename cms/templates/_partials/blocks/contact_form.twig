@@ -6,7 +6,7 @@
 {% set sectionType = block['sectionType'] is defined ? block.sectionType : '' %}
 {% set emailAddress = block['emailAddress'] is defined and block.emailAddress|length ? block.emailAddress : siteSettings.emailAddress %}
 
-<section class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type}}--block animatable">
+<section id="permalink-{{ index }}--{{ block.type.handle }}" class="section section--medium section--whitespace {% if sectionType|length %}section--{{ sectionType }}{% endif %} section-{{ block_type}}--block animatable">
     <div class="container" v-if="initialized">
         {% if heading|length %}<div class="form-header"><h2 class="primary--heading">{{ heading }}</h2></div>{% endif %}
         <div class="contact-form-container">
