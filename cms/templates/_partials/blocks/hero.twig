@@ -38,7 +38,7 @@
       <h1 class="page--heading">{{ heading }}</h1>
     {% endif %}
     {% if subheading|length %}
-      <p class="subtitle--heading">{{ subheading }}</p>
+      <p class="subtitle--heading">{{ subheading|replace('|', '<br>') }}</p>
     {% endif %}
     {% if buttons and buttons|length %}
       <div class="buttons">
