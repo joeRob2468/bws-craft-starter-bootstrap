@@ -15,5 +15,17 @@ $(() => {
             common: DefaultTransition,
             default: DefaultTransition
         }
-    })
+    });
+
+    // Handle anchor links
+    H.on('NAVIGATE_END', ({ location }) => {
+        if (location.anchor) {
+            // get element
+            const el = document.querySelector(location.anchor);
+
+            if (el) {
+                window.scrollTo(el.offsetLeft, el.offsetTop);
+            }
+        }
+    });
 });
