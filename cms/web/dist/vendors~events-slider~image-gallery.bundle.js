@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~events-slider~image-gallery~image-text-slider"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~events-slider~image-gallery"],{
 
 /***/ "./node_modules/dom7/dom7.esm.js":
 /*!***************************************!*\
@@ -11762,4 +11762,4 @@ _esm_components_core_core_class__WEBPACK_IMPORTED_MODULE_0__["default"].use(comp
 /***/ })
 
 }]);
-//# sourceMappingURL=vendors~events-slider~image-gallery~image-text-slider.bundle.js.map
+//# sourceMappingURL=vendors~events-slider~image-gallery.bundle.js.map

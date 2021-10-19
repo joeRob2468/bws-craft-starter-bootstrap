@@ -96,19 +96,6 @@ class MainController {
             });
         }
 
-        // init image/text slider
-        if ($('.section-image_text_slider--block').length) {
-            import(/* webpackChunkName: "image-text-slider" */"./block-modules/ImageTextSlider").then(module => {
-                const ImageTextSlider = module.default;
-
-                if ($(ImageTextSlider.selector).length) {
-                    let imageTextSlider = new ImageTextSlider();
-                    imageTextSlider.init();
-                    this.content_block_modules.push(imageTextSlider);
-                }
-            });
-        }
-
         // init image gallery
         if ($('.section-image_gallery--block').length) {
             import(/* webpackChunkName: "image-gallery" */"./block-modules/ImageGallery").then(module => {

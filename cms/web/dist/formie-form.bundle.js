@@ -37,12 +37,8 @@ class FormieFormBase {
 
     this.addEventListener(this.$form, 'submit', e => {
       e.preventDefault();
-      const beforeSubmitEvent = new CustomEvent('onBeforeFormieSubmit', {
-        bubbles: true,
-        cancelable: true,
-        detail: {
-          submitHandler: this
-        }
+      const beforeSubmitEvent = this.eventObject('onBeforeFormieSubmit', {
+        submitHandler: this
       });
 
       if (!this.$form.dispatchEvent(beforeSubmitEvent)) {
@@ -51,21 +47,40 @@ class FormieFormBase {
 
 
       setTimeout(() => {
-        const validateEvent = new CustomEvent('onFormieValidate', {
-          bubbles: true,
-          cancelable: true,
-          detail: {
-            submitHandler: this
-          }
+        // Create an event for before validation. This is mostly for captchas
+        const captchaValidateEvent = this.eventObject('onFormieCaptchaValidate', {
+          submitHandler: this
         });
 
-        if (!this.$form.dispatchEvent(validateEvent)) {
+        if (!this.$form.dispatchEvent(captchaValidateEvent)) {
           return;
-        }
+        } // Call the validation hooks
+
+
+        if (!this.validate() || !this.afterValidate()) {
+          return;
+        } // Proceed with submitting the form, which raises other validation events
+
 
         this.submitForm();
       }, 300);
     }, false);
+  }
+
+  validate() {
+    // Create an event for front-end validation (our own JS)
+    const validateEvent = this.eventObject('onFormieValidate', {
+      submitHandler: this
+    });
+    return this.$form.dispatchEvent(validateEvent);
+  }
+
+  afterValidate() {
+    // Create an event for after validation. This is mostly for third-parties.
+    const afterValidateEvent = this.eventObject('onAfterFormieValidate', {
+      submitHandler: this
+    });
+    return this.$form.dispatchEvent(afterValidateEvent);
   }
 
   submitForm() {
@@ -78,12 +93,8 @@ class FormieFormBase {
       this.$form.appendChild($backButtonInput);
     }
 
-    const submitEvent = new CustomEvent('onFormieSubmit', {
-      bubbles: true,
-      cancelable: true,
-      detail: {
-        submitHandler: this
-      }
+    const submitEvent = this.eventObject('onFormieSubmit', {
+      submitHandler: this
     });
 
     if (!this.$form.dispatchEvent(submitEvent)) {
@@ -168,6 +179,14 @@ class FormieFormBase {
     }
   }
 
+  eventObject(name, detail) {
+    return new CustomEvent(name, {
+      bubbles: true,
+      cancelable: true,
+      detail
+    });
+  }
+
 }
 
 /***/ }),
@@ -207,10 +226,15 @@ class FormieFormTheme {
 
     this.addSubmitEventListener(); // Save the form's current state so we can tell if its changed later on
 
-    this.savedFormHash = this.hashForm(); // Listen to form changes if the user tries to reload
+    this.updateFormHash(); // Listen to form changes if the user tries to reload
 
     if (this.settings.enableUnloadWarning) {
       this.addFormUnloadEventListener();
+    } // Listen to tabs being clicked for ajax-enabled forms
+
+
+    if (this.settings.submitMethod === 'ajax') {
+      this.formTabEventListener();
     }
   }
 
@@ -357,7 +381,7 @@ class FormieFormTheme {
     } else {
       // Before a server-side submit, refresh the saved hash immediately. Otherwise, the native submit
       // handler - which technically unloads the page - will trigger the changed alert.
-      this.savedFormHash = this.hashForm();
+      this.updateFormHash();
       this.$form.submit();
     }
   }
@@ -371,6 +395,29 @@ class FormieFormTheme {
       if (this.savedFormHash !== this.hashForm()) {
         e.returnValue = t('Are you sure you want to leave?');
       }
+    });
+  }
+
+  formTabEventListener() {
+    var $tabs = this.$form.querySelectorAll('[data-fui-page-tab-anchor]');
+    $tabs.forEach($tab => {
+      this.form.addEventListener($tab, 'click', e => {
+        e.preventDefault();
+        var pageIndex = e.target.getAttribute('data-fui-page-index');
+        var pageId = e.target.getAttribute('data-fui-page-id');
+        this.togglePage({
+          nextPageIndex: pageIndex,
+          nextPageId: pageId,
+          totalPages: this.settings.pages.length
+        }); // Ensure we still update the current page server-side
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', e.target.getAttribute('href'), true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.setRequestHeader('Cache-Control', 'no-cache');
+        xhr.send();
+      });
     });
   }
 
@@ -389,6 +436,10 @@ class FormieFormTheme {
     }
 
     return JSON.stringify(hash);
+  }
+
+  updateFormHash() {
+    this.savedFormHash = this.hashForm();
   }
 
   validate(focus = true) {
@@ -488,7 +539,7 @@ class FormieFormTheme {
 
         if (this.settings.errorMessagePosition == 'bottom-form') {
           this.$submitBtn.parentNode.parentNode.insertBefore($alert, this.$submitBtn.parentNode);
-        } else {
+        } else if (this.settings.errorMessagePosition == 'top-form') {
           this.$form.parentNode.insertBefore($alert, this.$form);
         }
       } else {
@@ -499,9 +550,14 @@ class FormieFormTheme {
           if (this.settings.submitActionFormHide) {
             this.$form.parentNode.insertBefore($alert, this.$form);
           } else {
-            this.$submitBtn.parentNode.parentNode.insertBefore($alert, this.$submitBtn.parentNode);
+            // Check if there's a submit button still. Might've been removed for multi-page, ajax.
+            if (this.$submitBtn.parentNode) {
+              this.$submitBtn.parentNode.parentNode.insertBefore($alert, this.$submitBtn.parentNode);
+            } else {
+              this.$form.parentNode.insertBefore($alert, this.$form.nextSibling);
+            }
           }
-        } else {
+        } else if (this.settings.submitActionMessagePosition == 'top-form') {
           this.$form.parentNode.insertBefore($alert, this.$form);
         }
       }
@@ -625,7 +681,7 @@ class FormieFormTheme {
     this.submitHandler.formAfterSubmit(data);
     this.afterAjaxSubmit(data); // Reset the form hash, as all has been saved
 
-    this.savedFormHash = this.hashForm(); // Check if we need to proceed to the next page
+    this.updateFormHash(); // Check if we need to proceed to the next page
 
     if (data.nextPageId) {
       this.removeLoading();
@@ -644,19 +700,30 @@ class FormieFormTheme {
     } // Delay this a little, in case we're redirecting away - better UX to just keep it loading
 
 
-    this.removeLoading(); // Remove the back button - not great UX to go back to a finished form
-    // Remember, its the button and the hidden input
-
-    var $backButtonInputs = this.$form.querySelectorAll('[name="goingBack"]');
-    $backButtonInputs.forEach($backButtonInput => {
-      $backButtonInput.remove();
-    }); // Also remove the submit button for a multi-page form. Its bad UX to show you can
-    // submit a multi-page form again, at the end. In fact, we'll probably get errors -
-    // but this is totally fine for a single-page ajax form.
+    this.removeLoading(); // For multi-page ajax forms, deal with them a little differently.
 
     if (data.totalPages > 1) {
-      if (this.$submitBtn) {
-        this.$submitBtn.remove();
+      // If we have a success message at the top, go to the first page
+      if (this.settings.submitActionMessagePosition == 'top-form') {
+        this.togglePage({
+          nextPageIndex: 0,
+          nextPageId: this.settings.pages[0].id,
+          totalPages: this.settings.pages.length
+        });
+      } else {
+        // Otherwise, we want to hide the buttons because we have to stay on the last page
+        // to show the success message at the bottom of the form. Otherwise, showing it on the
+        // first page of an empty form is just plain weird UX.
+        if (this.$submitBtn) {
+          this.$submitBtn.remove();
+        } // Remove the back button - not great UX to go back to a finished form
+        // Remember, its the button and the hidden input
+
+
+        var $backButtonInputs = this.$form.querySelectorAll('[name="goingBack"]');
+        $backButtonInputs.forEach($backButtonInput => {
+          $backButtonInput.remove();
+        });
       }
     }
 
@@ -671,9 +738,11 @@ class FormieFormTheme {
     } // Reset values regardless, for the moment
 
 
-    this.$form.reset(); // Reset the form hash, as all has been saved
+    this.$form.reset(); // Reset the submission ID in case we want to go again
 
-    this.savedFormHash = this.hashForm();
+    this.updateOrCreateHiddenInput('submissionId', ''); // Reset the form hash, as all has been saved
+
+    this.updateFormHash();
   }
 
   updateSubmissionInput(data) {
@@ -713,7 +782,7 @@ class FormieFormTheme {
     var $progress = this.$form.querySelector('.fui-progress-bar');
 
     if ($progress) {
-      var pageIndex = data.nextPageIndex + 1;
+      var pageIndex = parseInt(data.nextPageIndex, 10) + 1;
       var progress = Math.round(pageIndex / data.totalPages * 100);
       $progress.style.width = progress + '%';
       $progress.setAttribute('aria-valuenow', progress);
@@ -1127,16 +1196,22 @@ const Bouncer = function (selector, options) {
     if (!field.hasAttribute('required')) return false; // Handle checkboxes
 
     if (field.type === 'checkbox') {
+      // Watch out for grouped checkboxes. Only validate the group as a whole
       var checkboxInputs = field.form.querySelectorAll('[name="' + escapeCharacters(field.name) + '"]:not([type="hidden"])');
-      var checkedInputs = Array.prototype.filter.call(checkboxInputs, btn => {
-        return btn.checked;
-      }).length;
 
-      if (checkedInputs === 0) {
-        return field === checkboxInputs[0];
+      if (checkboxInputs.length) {
+        var checkedInputs = Array.prototype.filter.call(checkboxInputs, btn => {
+          return btn.checked;
+        }).length;
+        return !checkedInputs;
       }
 
       return !field.checked;
+    } // Don't validate any hidden fields
+
+
+    if (field.type === 'hidden') {
+      return false;
     } // Get the field value length
 
 
@@ -1350,11 +1425,10 @@ const Bouncer = function (selector, options) {
     if (!id && create) {
       id = settings.fieldPrefix + Math.floor(Math.random() * 999);
       field.id = id;
-    }
+    } // if (field.type === 'checkbox') {
+    //     id += '_' + (field.value || field.id);
+    // }
 
-    if (field.type === 'checkbox') {
-      id += '_' + (field.value || field.id);
-    }
 
     return id;
   };
@@ -1410,7 +1484,11 @@ const Bouncer = function (selector, options) {
 
 
     if (settings.messageAfterField) {
-      // If there's no next sibling, create one
+      if (!target) {
+        target = field;
+      } // If there's no next sibling, create one
+
+
       if (!target.nextSibling) {
         target.parentNode.appendChild(document.createTextNode(''));
       }
@@ -1706,7 +1784,9 @@ const Bouncer = function (selector, options) {
     // Only run if the field is in a form to be validated
     if (!event.target.form || !event.target.form.matches(selector)) return; // Special-case for file field, blurs as soon as the selector kicks in
 
-    if (event.target.type === 'file') return; // Validate the field
+    if (event.target.type === 'file') return; // Don't trigger click event handling for checkbox/radio. We should use the change.
+
+    if (event.target.type === 'checkbox' || event.target.type === 'radio') return; // Validate the field
 
     publicAPIs.validate(event.target);
   }; // Leave this as opt-in for the moment, for better file-support
@@ -1714,9 +1794,9 @@ const Bouncer = function (selector, options) {
 
   var changeHandler = function (event) {
     // Only run if the field is in a form to be validated
-    if (!event.target.form || !event.target.form.matches(selector)) return; // Just deal with file input fields
+    if (!event.target.form || !event.target.form.matches(selector)) return; // Only handle change events for some fields
 
-    if (event.target.type !== 'file') return; // Validate the field
+    if (event.target.type !== 'file' && event.target.type !== 'checkbox' && event.target.type !== 'radio') return; // Validate the field
 
     publicAPIs.validate(event.target);
   };
@@ -1729,7 +1809,24 @@ const Bouncer = function (selector, options) {
     // Only run if the field is in a form to be validated
     if (!event.target.form || !event.target.form.matches(selector)) return; // Only run on fields with errors
 
-    if (!event.target.classList.contains(settings.fieldClass)) return; // Validate the field
+    if (!event.target.classList.contains(settings.fieldClass)) return; // Don't trigger click event handling for checkbox/radio. We should use the change.
+
+    if (event.target.type === 'checkbox' || event.target.type === 'radio') return; // Validate the field
+
+    publicAPIs.validate(event.target);
+  };
+  /**
+   * Run a validation on a fields with errors when the value changes
+   */
+
+
+  var clickHandler = function (event) {
+    // Only run if the field is in a form to be validated
+    if (!event.target.form || !event.target.form.matches(selector)) return; // Only run on fields with errors
+
+    if (!event.target.classList.contains(settings.fieldClass)) return; // Don't trigger click event handling for checkbox/radio. We should use the change.
+
+    if (event.target.type === 'checkbox' || event.target.type === 'radio') return; // Validate the field
 
     publicAPIs.validate(event.target);
   };
@@ -1775,7 +1872,7 @@ const Bouncer = function (selector, options) {
       document.removeEventListener('blur', blurHandler, true);
       document.removeEventListener('input', inputHandler, false);
       document.removeEventListener('change', changeHandler, false);
-      document.removeEventListener('click', inputHandler, false);
+      document.removeEventListener('click', clickHandler, false);
     }
 
     if (settings.validateOnSubmit) {
@@ -1811,7 +1908,7 @@ const Bouncer = function (selector, options) {
       document.addEventListener('blur', blurHandler, true);
       document.addEventListener('input', inputHandler, false);
       document.addEventListener('change', changeHandler, false);
-      document.addEventListener('click', inputHandler, false);
+      document.addEventListener('click', clickHandler, false);
     }
 
     if (settings.validateOnSubmit) {
