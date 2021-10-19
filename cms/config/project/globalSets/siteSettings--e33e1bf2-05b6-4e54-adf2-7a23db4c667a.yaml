@@ -47,3 +47,4 @@ fieldLayouts:
         sortOrder: 2
 handle: siteSettings
 name: 'Site Settings'
+sortOrder: 1

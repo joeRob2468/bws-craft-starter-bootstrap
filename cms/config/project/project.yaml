@@ -1,4 +1,4 @@
-dateModified: 1634663662
+dateModified: 1634664953
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SITE_NAME
@@ -9,6 +9,145 @@ email:
     domain: $MAILGUN_DOMAIN
     endpoint: $MAILGUN_ENDPOINT
   transportType: craft\mailgun\MailgunAdapter
+meta:
+  __names__:
+    0b8d16c5-881e-4e6e-9ca1-a2d0e2095ee9: 'Image/Text Banner' # Image/Text Banner
+    0c1e3849-8962-4287-8d23-5b4e202a8e01: 'Single SEO' # Single SEO
+    0cc785f8-a672-4448-9841-1c39b72f75bd: 'Dover Development' # Dover Development
+    0cd54e63-d904-445b-9bcc-96ebbd48ee7a: 'Events Page' # Events Page
+    0d9e63ce-7219-4f30-b5e5-05c00521a670: 'Team Grid' # Team Grid
+    1af8dbdb-36bd-4827-9897-7134e3894251: 'Icon Grid' # Icon Grid
+    1d73271a-6ca9-4f5c-8bfb-739767606bc0: Email # Email
+    01db9b9c-35f7-4d04-8709-179ddf0a86ce: 'Map Grid' # Map Grid
+    2c391fdd-417f-4317-8b81-535b7f89fbf5: 'Event Button Text' # Event Button Text
+    2d59991c-cfca-4992-81b0-454d59255701: 'Featured Event' # Featured Event
+    2ecb8f3e-0484-49a6-b7b5-95c5a819edc9: Events # Events
+    2f10094d-fd4f-40aa-ba75-5d2ee64ee73b: Hero # Hero
+    2fbaf2a5-6ad3-48de-85c1-1e8df38e3118: 'Upcoming Events Slider' # Upcoming Events Slider
+    4dbc61da-b1a5-4dfb-a41d-bcb588f594d6: 'Footer Copyright' # Footer Copyright
+    4f1d170a-c466-4444-a347-88455a40a9c9: Text # Text
+    4f732cce-e507-492a-a114-74548227f684: Administrator # Administrator
+    5ac27dca-bb4c-4e88-a8a3-5fb6621bfe93: Icon # Icon
+    5ced9d30-29a3-4b23-8b74-4951c818fb67: SEO # SEO
+    5d2ce3ea-d40d-4226-ae28-f3ad7e0340a2: 'Standard Page' # Standard Page
+    5de18e76-cf7f-4062-8c23-ec9c46e32118: Events # Events
+    5e6f584e-933a-4f16-bb73-fd358cec63de: Color # Color
+    6a38e80c-6122-4de1-8e7d-0e586ace9d71: 'Formie Form' # Formie Form
+    6e616414-9536-4c0b-b90f-5741cbf53fc7: 'Video Hero' # Video Hero
+    7a78c939-213c-4345-a0e6-9f123c0c9e7b: 'Points Table' # Points Table
+    7d282711-01a5-4842-bfb0-35018266a002: 'Content Editor' # Content Editor
+    7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565: Globals # Globals
+    7fa651e8-fda7-4c83-84ae-a464c36b020f: 'Section Type' # Section Type
+    8d852626-21ab-4f69-88a2-d57479b72c06: 'Newsletter Signup - Popup Form' # Newsletter Signup - Popup Form
+    8fba94f5-6d8c-4344-9c60-61b9b1b52e17: Navigation # Navigation
+    9c9cedf8-9d96-4d16-8615-c7b9ba00c0fc: 'BWS Craft Bootstrap' # BWS Craft Bootstrap
+    9e486a46-126b-43b7-88e7-5d5eefe6a952: 'Text Icon Item' # Text Icon Item
+    12da6b4f-4dbb-4e2b-b0e8-e6a30bcb562f: 'Link Highlight' # Link Highlight
+    20ea42bc-cd65-42a1-b822-af230d254f0a: Button # Button
+    20fdd39d-df7e-451e-8aed-0581d1a06c84: 'Calendar Event' # Calendar Event
+    21a60029-942f-47a4-928f-74eaeff2e68c: 'Team Member' # Team Member
+    30ed75f2-f005-476c-a28e-b321dd7c60e8: 'Footer Navigation' # Footer Navigation
+    32d86c92-e71d-4765-9dc5-126cb181c9ed: 'Image/Text Slider' # Image/Text Slider
+    040f755c-ead7-4a88-bf98-e0a117b05574: Heading # Heading
+    47d806d7-f955-46cc-9e24-88e5a9334137: 'Site Assets' # Site Assets
+    56aa0bec-30e7-42ff-b25e-ad77bfa5d907: HTML # HTML
+    61d4a273-d0a7-4a81-830e-3de3c9527ff2: 'Points Table List' # Points Table List
+    63c84b53-059e-46e3-b41e-3cd1cb9030fe: 'Content Builder Fields' # Content Builder Fields
+    70e8051d-b22c-4014-b436-a4430f341640: 'Footer Navigation' # Footer Navigation
+    82b2b688-414a-4baf-b918-8637e6319035: Statistic # Statistic
+    82de9b35-174d-44e9-869a-e7fa3286c0de: 'Social Links' # Social Links
+    104a2117-39ef-4ed6-b367-0c0db83b87be: 'Formatted Content' # Formatted Content
+    187dffe5-065e-4b32-9082-08b395f51448: 'Top Bar Navigation' # Top Bar Navigation
+    386a46d4-c2c1-4cf1-b9a8-8ff49a799e74: 'Banners/CTA Sections' # Banners/CTA Sections
+    393e6f52-2804-4e16-a508-40de6249b4af: Pages # Pages
+    471ae91c-b768-4471-abce-5911265fe4d1: 'Blog Entry' # Blog Entry
+    526b8b8b-d866-4014-a15c-2a1f671007d7: 'Image Gallery' # Image Gallery
+    638c3c73-cfd2-4352-8c1f-d7c5c6230f97: 'Top Bar Navigation' # Top Bar Navigation
+    744cb779-6599-47be-b369-d180c2f4b780: 'Section Width' # Section Width
+    804b247e-c5e3-43f1-8c75-a5ae06adbb4e: Events # Events
+    828c58a9-21a3-4b8e-84db-0b976a595011: 'Image Content' # Image Content
+    861cf18b-f442-436d-8455-9e9a0b01fa1a: 'Default Form' # Default Form
+    874ad047-1197-4ed0-aee4-18eb7fe601cc: Description # Description
+    900d6297-d9ad-4117-816a-4a5e9531737b: 'Icon List' # Icon List
+    941a530a-d952-45f2-940a-6a1473c8c808: 'All Articles List' # All Articles List
+    1652c81c-4efa-4069-be3b-0732b862c332: 'Inline Hero' # Inline Hero
+    1734b48a-e344-46ea-96bc-40ecf7870e03: Partners # Partners
+    1909f9ec-b0fc-43e4-b2aa-0ec9cd52c07b: 'Icons and Logos' # Icons and Logos
+    2073fc21-8a0c-48b1-9d73-c27054189da5: 'Blog Category' # Blog Category
+    2886f198-65b5-4662-8f31-5bc761325b03: Link # Link
+    3367e6bb-a84b-491a-84cf-ade8ed2080d9: 'Main Navigation' # Main Navigation
+    4083a494-77d6-4459-8952-42163c08f1f8: 'Image Gallery Item' # Image Gallery Item
+    5237d0e9-4f8a-42f8-9726-d112eca41f07: 'Text with Side Heading' # Text with Side Heading
+    5821c428-efa9-44a5-8539-6eb52e85668e: 'Image/Statistic Banner' # Image/Statistic Banner
+    6817f28a-bbd0-4678-9985-08d73f6c85ee: 'Recent Articles' # Recent Articles
+    7005b754-12f8-427d-a3eb-dc4740983bd2: 'Subpage Hero' # Subpage Hero
+    9075a3a8-280c-41d1-96e2-348beb518b13: 'Navigation Link' # Navigation Link
+    9306d213-7a2c-4005-8ce5-5546cb124653: 'Text Icon Grid' # Text Icon Grid
+    09545e8c-22b7-4f76-a84f-c58f8e9e281a: 'Pages SEO' # Pages SEO
+    59501bed-68f5-44d6-9220-ea2ce033fe12: 'Public Schema' # Public Schema
+    68443fb6-c3e8-4e35-b120-cb8e0f687d08: Event # Event
+    84542be9-d8a5-424e-905c-298f1ce19395: 'Image/Text Slider Slide' # Image/Text Slider Slide
+    102547fc-ae53-4f57-ae61-853693fee4a6: 'Icon List Item' # Icon List Item
+    184817f4-fb61-4cc1-923b-648b76b85d8a: 'Team Text Grid' # Team Text Grid
+    291580b7-d5d0-4340-8f73-76b8fcf000d1: 'Short Formatted Content' # Short Formatted Content
+    390392bd-dcbe-412f-b359-08c529e01b8c: 'Text CTA' # Text CTA
+    406133ee-e72a-4334-9dc0-e55f911f2424: Blog # Blog
+    0499506a-3693-406c-9bff-a04abe18daa2: Logo # Logo
+    502835e8-22a9-4925-8a85-d1c6ff9ae7fc: 'Icon Item' # Icon Item
+    720308b0-c8fd-4f13-bd94-758097e76b5e: 'Content Builder' # Content Builder
+    967142f2-e489-41cb-9894-e9518218f704: 'Article SEO' # Article SEO
+    1620034d-a5bc-4230-a755-b4b8bce643e9: 'Short Title' # Short Title
+    3628224c-b498-4d54-b48c-e1b13ac90c05: 'Form Uploads' # Form Uploads
+    6656498b-7dc6-4ef7-928d-ce871eb1c74a: 'Featured Image' # Featured Image
+    8879810d-e13f-4b58-9a05-2d9e276d33e0: Forms # Forms
+    21683775-3868-4b44-89de-66d6a4930399: 'Team Member' # Team Member
+    25962328-dd7c-4c17-acf8-cb9a6e2386ce: 'Newsletter Signup - Popup Title' # Newsletter Signup - Popup Title
+    57571548-c1da-4ade-af9b-d4a630a3d48d: 'Blog Entries' # Blog Entries
+    67533219-35e1-4601-8283-07b61e5e849b: Events # Events
+    a41ce01f-f644-497e-9317-6b65acff2f58: 'Inline Hero/Columns Item' # Inline Hero/Columns Item
+    a556fbd2-0ac4-46fa-9279-92e36b7807dc: 'Page Headings' # Page Headings
+    a8507c3f-710b-4695-af7d-8d48e0fd4f83: Home # Home
+    aa56a8a8-cd10-46fc-ba1f-75e4d81cc4d1: 'Map Grid Item' # Map Grid Item
+    aac7af06-c518-4fa6-975e-a16831e6947a: 'Specialized Blocks' # Specialized Blocks
+    ad5473c8-47c4-4ebb-83e7-785037895299: New # New
+    adac64af-2715-4c2c-aad7-d563dea9e9c0: 'Button Type' # Button Type
+    af8a1c7e-dac5-4182-9acd-7854cba44b17: 'Section Alignment' # Section Alignment
+    b32e5fde-556f-445b-8059-42a6aa607c6e: 'Blog ' # Blog 
+    b51d9d40-997b-4034-8904-21d41788b30f: 'Total Per Page' # Total Per Page
+    b95a16bc-39e5-4914-a385-86b644433d63: Address # Address
+    bccce2a0-4313-42c4-a95a-fa1a29c4d3e3: Home # Home
+    beb8678e-0792-422d-ac57-910d781472f8: 'Logo List Item' # Logo List Item
+    c1c6b867-bc9c-4456-a763-35066be9b9c3: 'Map/Text Item' # Map/Text Item
+    c4dba8de-aaf5-4ac8-ab70-4a8baf125c01: Blog # Blog
+    c24df632-e5b4-4c65-a8a7-e892270a0600: 'Blog Categories' # Blog Categories
+    c530ba0d-fa74-49a3-ab10-7c3faed8c9a6: 'Featured Event?' # Featured Event?
+    ce2fc830-3148-44c3-8c64-db50e750cbe2: 'Event SEO' # Event SEO
+    d0e9cd2f-08c7-4d52-a6ad-6dfe4663dd23: Image # Image
+    d07c4cbb-990e-4815-b534-472c21d639c4: Map/Text # Map/Text
+    d1ec822e-0f7a-45ff-85d6-fbd9de02d1af: 'Events Page' # Events Page
+    d7a2b626-82d3-4bfb-87e9-16681ba69611: 'Formie Form' # Formie Form
+    d7af6a87-c305-4903-b8bd-34ca93b30179: URL # URL
+    d36c88c9-b8c6-4b76-afe5-cc0210389ee9: 'SEO Description' # SEO Description
+    db958bcb-a6d8-4133-963d-dc2b3577160d: Partners # Partners
+    dd73d61d-23a2-4ef3-a43a-94871a4e1640: 'QGive Form' # QGive Form
+    de7b10e9-c4ba-440c-a284-03a5605f219b: 'Logo/Partners Grid' # Logo/Partners Grid
+    df89f5f2-2e45-4c96-8505-3910d0d940df: 'Text Content' # Text Content
+    e2c4db88-dd14-49a8-81d5-1c41ab06be6e: 'Use custom content?' # Use custom content?
+    e7bd0adf-741f-40d7-89d2-7969bfbcd47b: 'Inline Hero with Text Columns' # Inline Hero with Text Columns
+    e33e1bf2-05b6-4e54-adf2-7a23db4c667a: 'Site Settings' # Site Settings
+    e98e2c64-af99-46b8-b4c7-2748aff3f3e5: 'Open Link in Popup' # Open Link in Popup
+    e274cca8-411b-431f-b273-03a4351a4f4f: 'Blog ' # Blog 
+    e962a7fb-a0fd-49ab-b1e6-c70678fb6cce: 'Points Table Row' # Points Table Row
+    eca12a22-55f0-4613-ad10-2bed6bfdb4a2: 'Content Builder' # Content Builder
+    ecc44cee-dded-4260-be41-18578d1a9286: 'Social Links' # Social Links
+    ee794f73-0f47-4496-9fec-db23827aec96: Image/Text # Image/Text
+    efe048c7-28f5-409a-9d31-7487d8859946: Components # Components
+    f7a6d15c-0dbc-4167-ac30-a19f8f45491d: Image # Image
+    f9dbfbdc-d362-47f8-8861-5a62706fc184: 'Main Navigation' # Main Navigation
+    f597aa65-1ff5-4163-8023-ab3a0f5eb1be: 'Image/Stats/Text Banner' # Image/Stats/Text Banner
+    f683a65f-49d0-48bc-8597-dec54727fc52: 'Custom HTML' # Custom HTML
+    fda29d5e-bb83-409b-9263-25c75145ee0c: 'Contact Form' # Contact Form
+    fdce38f5-80cc-4912-a2f7-d3594f32cb89: Subheading # Subheading
 plugins:
   async-queue:
     edition: standard
@@ -38,7 +177,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: OOO7H8GXYFYPO8MLWXW0UPWK
-    schemaVersion: 1.1.8
+    schemaVersion: 1.1.11
     settings:
       alertEmails: null
       defaultDateDisplayType: ''
@@ -93,7 +232,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ZG88CFP7QSR4UMOYKJSAM4QK
-    schemaVersion: 2.8.16
+    schemaVersion: 2.11.6
   redactor:
     edition: standard
     enabled: true
@@ -105,7 +244,7 @@ plugins:
   seo:
     edition: standard
     enabled: true
-    schemaVersion: 3.1.1
+    schemaVersion: 3.2.0
     settings:
       description: ''
       facebookAppId: ''
@@ -160,5 +299,5 @@ system:
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.8
   timeZone: America/Los_Angeles
