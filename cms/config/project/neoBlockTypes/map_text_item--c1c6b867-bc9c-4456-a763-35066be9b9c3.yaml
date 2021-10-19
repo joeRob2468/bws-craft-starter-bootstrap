@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   9adcd620-a19f-45e4-a50b-3e754189a1d0:
@@ -30,5 +30,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Map/Text Item'
-sortOrder: 50
+sortOrder: 44
 topLevel: false

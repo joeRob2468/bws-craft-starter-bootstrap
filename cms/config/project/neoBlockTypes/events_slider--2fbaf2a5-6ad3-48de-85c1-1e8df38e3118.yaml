@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   b1c79966-29b8-4bba-84b6-bc4cc6be904b:
@@ -57,5 +57,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Upcoming Events Slider'
-sortOrder: 37
+sortOrder: 33
 topLevel: true

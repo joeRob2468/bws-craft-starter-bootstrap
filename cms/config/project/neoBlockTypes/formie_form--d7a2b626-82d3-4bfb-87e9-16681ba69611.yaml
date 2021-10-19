@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   b1484620-6625-4d8e-a308-5f87e5687eb1:
@@ -48,5 +48,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Formie Form'
-sortOrder: 33
+sortOrder: 29
 topLevel: true

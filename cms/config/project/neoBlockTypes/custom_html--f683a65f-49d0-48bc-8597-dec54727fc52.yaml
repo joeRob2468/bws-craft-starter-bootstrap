@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   30d3320c-7edb-4f57-9c2e-30b26efd9107:
@@ -48,5 +48,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Custom HTML'
-sortOrder: 25
+sortOrder: 22
 topLevel: true

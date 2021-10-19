@@ -1,5 +1,4 @@
-childBlocks:
-  - points_table_item
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   c43a7b0a-a89a-4def-8d38-d4b02945f57b:
@@ -49,5 +48,5 @@ maxBlocks: 10
 maxChildBlocks: 10
 maxSiblingBlocks: 0
 name: 'Points Table'
-sortOrder: 53
+sortOrder: 47
 topLevel: false

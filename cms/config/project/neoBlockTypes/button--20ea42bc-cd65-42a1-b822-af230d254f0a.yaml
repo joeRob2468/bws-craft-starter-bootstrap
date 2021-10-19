@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   c8e26a5a-28cc-4494-9300-44715700c3d9:
@@ -39,5 +39,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 2
 name: Button
-sortOrder: 42
+sortOrder: 38
 topLevel: false

@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   0e910be5-e42d-484a-81c5-bb6fdcdbb4e9:
@@ -30,5 +30,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Map Grid Item'
-sortOrder: 51
+sortOrder: 45
 topLevel: false

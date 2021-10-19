@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   4d41ed7d-4536-4f90-94e6-5c551b65ac2e:
@@ -48,5 +48,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Icon Item'
-sortOrder: 48
+sortOrder: 42
 topLevel: false

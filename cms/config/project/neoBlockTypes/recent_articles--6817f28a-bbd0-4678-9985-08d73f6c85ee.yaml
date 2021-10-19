@@ -58,5 +58,5 @@ maxBlocks: 0
 maxChildBlocks: 2
 maxSiblingBlocks: 0
 name: 'Recent Articles'
-sortOrder: 40
+sortOrder: 36
 topLevel: true

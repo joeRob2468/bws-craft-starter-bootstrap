@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: eca12a22-55f0-4613-ad10-2bed6bfdb4a2 # Content Builder
 handle: contentBuilder
@@ -6,10 +7,11 @@ name: 'Content Builder'
 searchable: true
 settings:
   maxBlocks: ''
+  maxLevels: ''
   maxTopBlocks: '15'
   minBlocks: ''
   propagationMethod: all
-  wasModified: false
+  wasModified: true
 translationKeyFormat: null
 translationMethod: site
 type: benf\neo\Field

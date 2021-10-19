@@ -58,5 +58,5 @@ maxBlocks: 0
 maxChildBlocks: 3
 maxSiblingBlocks: 0
 name: 'Inline Hero with Text Columns'
-sortOrder: 18
+sortOrder: 15
 topLevel: true
