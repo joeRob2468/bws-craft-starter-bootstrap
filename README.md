@@ -1,5 +1,5 @@
-## Hillcrest Hope
-This project contains the full starter theme for [Hillcrest Hope](https://www.hillcresthope.org), built on Craft 3 and Webpack 4. 
+## Dover Development
+This project contains the full theme for [Dover Development](https://www.dover-development.com), built on Craft 3 and Webpack 4. 
 
 ## About 
 In addition to setting up a new Craft 3 CMS project, this project sets up:
