@@ -1,2 +1,1979 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{131:function(t,e,r){"use strict";r.r(e),function(t){var i=r(312);function n(t,e){for(var r=0;r<e.length;r++){var i=e[r];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i)}}var o,s,a,u=function(){function e(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),this.instances=[],this.forms=[]}var r,o,s;return r=e,(o=[{key:"init",value:function(){var r=this,n=t(e.selector);n.length&&n.each((function(e,n){if(r.instances.push(n),t("form.fui-form",n).length){var o=t("form.fui-form",n)[0],s=new i.a;s.initForm(o),r.forms.push({element:o,instance:s})}}))}},{key:"destroy",value:function(){if(this.forms.length){for(var t=0;t<this.forms.length;t++){var e=this.forms[t];e.instance.destroyForm(e.element)}this.forms=[]}this.instances.length&&(this.instances=[])}}])&&n(r.prototype,o),s&&n(r,s),e}();a=".section-formie_form--block",(s="selector")in(o=u)?Object.defineProperty(o,s,{value:a,enumerable:!0,configurable:!0,writable:!0}):o[s]=a,e.default=u}.call(this,r(16))},187:function(t,e,r){"use strict";r.r(e),function(t){r(307);t.t=function(t,e={}){return window.FormieTranslations&&(t=window.FormieTranslations[t]||t),t.replace(/{([a-zA-Z0-9]+)}/g,(t,r)=>e[r]?e[r]:t)},function(){if("function"==typeof window.CustomEvent)return!1;window.CustomEvent=function(t,e){e=e||{bubbles:!1,cancelable:!1,detail:null};var r=document.createEvent("CustomEvent");return r.initCustomEvent(t,e.bubbles,e.cancelable,e.detail),r}}(),Element.prototype.matches||(Element.prototype.matches=Element.prototype.msMatchesSelector||Element.prototype.webkitMatchesSelector),Element.prototype.closest||(Element.prototype.closest=function(t){var e=this;do{if(e.matches(t))return e;e=e.parentElement||e.parentNode}while(null!==e&&1===e.nodeType);return null})}.call(this,r(86))},307:function(t,e,r){(function(t){!function(){var e;function r(t){var e=0;return function(){return e<t.length?{done:!1,value:t[e++]}:{done:!0}}}var i="function"==typeof Object.defineProperties?Object.defineProperty:function(t,e,r){return t==Array.prototype||t==Object.prototype||(t[e]=r.value),t};var n,o=function(e){e=["object"==typeof globalThis&&globalThis,e,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof t&&t];for(var r=0;r<e.length;++r){var i=e[r];if(i&&i.Math==Math)return i}throw Error("Cannot find global object")}(this);function s(t,e){if(e){for(var r=o,n=t.split("."),s=0;s<n.length-1;s++){var a=n[s];a in r||(r[a]={}),r=r[a]}(a=e(s=r[n=n[n.length-1]]))!=s&&null!=a&&i(r,n,{configurable:!0,writable:!0,value:a})}}function a(t){return(t={next:t})[Symbol.iterator]=function(){return this},t}function u(t){var e="undefined"!=typeof Symbol&&Symbol.iterator&&t[Symbol.iterator];return e?e.call(t):{next:r(t)}}if(s("Symbol",(function(t){function e(t,e){this.o=t,i(this,"description",{configurable:!0,writable:!0,value:e})}if(t)return t;e.prototype.toString=function(){return this.o};var r=0;return function t(i){if(this instanceof t)throw new TypeError("Symbol is not a constructor");return new e("jscomp_symbol_"+(i||"")+"_"+r++,i)}})),s("Symbol.iterator",(function(t){if(t)return t;t=Symbol("Symbol.iterator");for(var e="Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "),n=0;n<e.length;n++){var s=o[e[n]];"function"==typeof s&&"function"!=typeof s.prototype[t]&&i(s.prototype,t,{configurable:!0,writable:!0,value:function(){return a(r(this))}})}return t})),"function"==typeof Object.setPrototypeOf)n=Object.setPrototypeOf;else{var l;t:{var f={};try{f.__proto__={u:!0},l=f.u;break t}catch(t){}l=!1}n=l?function(t,e){if(t.__proto__=e,t.__proto__!==e)throw new TypeError(t+" is not extensible");return t}:null}var c=n;function d(){this.h=!1,this.f=null,this.m=void 0,this.b=1,this.l=this.v=0,this.g=null}function m(t){if(t.h)throw new TypeError("Generator is already running");t.h=!0}function h(t,e){return t.b=3,{value:e}}function v(t){this.a=new d,this.B=t}function b(t,e,r,i){try{var n=e.call(t.a.f,r);if(!(n instanceof Object))throw new TypeError("Iterator result "+n+" is not an object");if(!n.done)return t.a.h=!1,n;var o=n.value}catch(e){return t.a.f=null,t.a.j(e),p(t)}return t.a.f=null,i.call(t.a,o),p(t)}function p(t){for(;t.a.b;)try{var e=t.B(t.a);if(e)return t.a.h=!1,{value:e.value,done:!1}}catch(e){t.a.m=void 0,t.a.j(e)}if(t.a.h=!1,t.a.g){if(e=t.a.g,t.a.g=null,e.A)throw e.w;return{value:e.return,done:!0}}return{value:void 0,done:!0}}function g(t){this.next=function(e){return t.i(e)},this.throw=function(e){return t.j(e)},this.return=function(e){return function(t,e){m(t.a);var r=t.a.f;return r?b(t,"return"in r?r.return:function(t){return{value:t,done:!0}},e,t.a.return):(t.a.return(e),p(t))}(t,e)},this[Symbol.iterator]=function(){return this}}function y(t,e){var r=new g(new v(e));return c&&c(r,t.prototype),r}if(d.prototype.i=function(t){this.m=t},d.prototype.j=function(t){this.g={w:t,A:!0},this.b=this.v||this.l},d.prototype.return=function(t){this.g={return:t},this.b=this.l},v.prototype.i=function(t){return m(this.a),this.a.f?b(this,this.a.f.next,t,this.a.i):(this.a.i(t),p(this))},v.prototype.j=function(t){return m(this.a),this.a.f?b(this,this.a.f.throw,t,this.a.i):(this.a.j(t),p(this))},"undefined"!=typeof Blob&&("undefined"==typeof FormData||!FormData.prototype.keys)){var x=function(t,e){for(var r=0;r<t.length;r++)e(t[r])},E=function(t,e,r){return e instanceof Blob?[String(t),e,void 0!==r?r+"":"string"==typeof e.name?e.name:"blob"]:[String(t),String(e)]},A=function(t,e){if(t.length<e)throw new TypeError(e+" argument required, but only "+t.length+" present.")},S=function(t){var e=u(t);t=e.next().value;var r=e.next().value;return e=e.next().value,r instanceof Blob&&(r=new File([r],e,{type:r.type,lastModified:r.lastModified})),[t,r]},w="object"==typeof globalThis?globalThis:"object"==typeof window?window:"object"==typeof self?self:this,$=w.FormData,F=w.XMLHttpRequest&&w.XMLHttpRequest.prototype.send,C=w.Request&&w.fetch,L=w.navigator&&w.navigator.sendBeacon,P=w.Element&&w.Element.prototype,B=w.Symbol&&Symbol.toStringTag;B&&(Blob.prototype[B]||(Blob.prototype[B]="Blob"),"File"in w&&!File.prototype[B]&&(File.prototype[B]="File"));try{new File([],"")}catch(t){w.File=function(t,e,r){return t=new Blob(t,r),r=r&&void 0!==r.lastModified?new Date(r.lastModified):new Date,Object.defineProperties(t,{name:{value:e},lastModifiedDate:{value:r},lastModified:{value:+r},toString:{value:function(){return"[object File]"}}}),B&&Object.defineProperty(t,B,{value:"File"}),t}}var q=function(t){this.c=[];var e=this;t&&x(t.elements,(function(t){if(t.name&&!t.disabled&&"submit"!==t.type&&"button"!==t.type&&!t.matches("form fieldset[disabled] *"))if("file"===t.type){var r=t.files&&t.files.length?t.files:[new File([],"",{type:"application/octet-stream"})];x(r,(function(r){e.append(t.name,r)}))}else"select-multiple"===t.type||"select-one"===t.type?x(t.options,(function(r){!r.disabled&&r.selected&&e.append(t.name,r.value)})):"checkbox"===t.type||"radio"===t.type?t.checked&&e.append(t.name,t.value):(r="textarea"===t.type?t.value.replace(/\r\n/g,"\n").replace(/\n/g,"\r\n"):t.value,e.append(t.name,r))}))};if((e=q.prototype).append=function(t,e,r){A(arguments,2),this.c.push(E(t,e,r))},e.delete=function(t){A(arguments,1);var e=[];t=String(t),x(this.c,(function(r){r[0]!==t&&e.push(r)})),this.c=e},e.entries=function t(){var e,r=this;return y(t,(function(t){if(1==t.b&&(e=0),3!=t.b)return e<r.c.length?t=h(t,S(r.c[e])):(t.b=0,t=void 0),t;e++,t.b=2}))},e.forEach=function(t,e){A(arguments,1);for(var r=u(this),i=r.next();!i.done;i=r.next()){var n=u(i.value);i=n.next().value,n=n.next().value,t.call(e,n,i,this)}},e.get=function(t){A(arguments,1);var e=this.c;t=String(t);for(var r=0;r<e.length;r++)if(e[r][0]===t)return S(e[r])[1];return null},e.getAll=function(t){A(arguments,1);var e=[];return t=String(t),x(this.c,(function(r){r[0]===t&&e.push(S(r)[1])})),e},e.has=function(t){A(arguments,1),t=String(t);for(var e=0;e<this.c.length;e++)if(this.c[e][0]===t)return!0;return!1},e.keys=function t(){var e,r,i,n,o=this;return y(t,(function(t){if(1==t.b&&(e=u(o),r=e.next()),3!=t.b)return r.done?void(t.b=0):(i=r.value,n=u(i),h(t,n.next().value));r=e.next(),t.b=2}))},e.set=function(t,e,r){A(arguments,2),t=String(t);var i=[],n=E(t,e,r),o=!0;x(this.c,(function(e){e[0]===t?o&&(o=!i.push(n)):i.push(e)})),o&&i.push(n),this.c=i},e.values=function t(){var e,r,i,n,o=this;return y(t,(function(t){if(1==t.b&&(e=u(o),r=e.next()),3!=t.b)return r.done?void(t.b=0):(i=r.value,(n=u(i)).next(),h(t,n.next().value));r=e.next(),t.b=2}))},q.prototype._asNative=function(){for(var t=new $,e=u(this),r=e.next();!r.done;r=e.next()){var i=u(r.value);r=i.next().value,i=i.next().value,t.append(r,i)}return t},q.prototype._blob=function(){for(var t="----formdata-polyfill-"+Math.random(),e=[],r=u(this),i=r.next();!i.done;i=r.next()){var n=u(i.value);i=n.next().value,n=n.next().value,e.push("--"+t+"\r\n"),n instanceof Blob?e.push('Content-Disposition: form-data; name="'+i+'"; filename="'+n.name+'"\r\nContent-Type: '+(n.type||"application/octet-stream")+"\r\n\r\n",n,"\r\n"):e.push('Content-Disposition: form-data; name="'+i+'"\r\n\r\n'+n+"\r\n")}return e.push("--"+t+"--"),new Blob(e,{type:"multipart/form-data; boundary="+t})},q.prototype[Symbol.iterator]=function(){return this.entries()},q.prototype.toString=function(){return"[object FormData]"},P&&!P.matches&&(P.matches=P.matchesSelector||P.mozMatchesSelector||P.msMatchesSelector||P.oMatchesSelector||P.webkitMatchesSelector||function(t){for(var e=(t=(this.document||this.ownerDocument).querySelectorAll(t)).length;0<=--e&&t.item(e)!==this;);return-1<e}),B&&(q.prototype[B]="FormData"),F){var M=w.XMLHttpRequest.prototype.setRequestHeader;w.XMLHttpRequest.prototype.setRequestHeader=function(t,e){M.call(this,t,e),"content-type"===t.toLowerCase()&&(this.s=!0)},w.XMLHttpRequest.prototype.send=function(t){t instanceof q?(t=t._blob(),this.s||this.setRequestHeader("Content-Type",t.type),F.call(this,t)):F.call(this,t)}}C&&(w.fetch=function(t,e){return e&&e.body&&e.body instanceof q&&(e.body=e.body._blob()),C.call(this,t,e)}),L&&(w.navigator.sendBeacon=function(t,e){return e instanceof q&&(e=e._asNative()),L.call(this,t,e)}),w.FormData=q}}()}).call(this,r(86))},312:function(e,r,i){"use strict";i.d(r,"a",(function(){return u}));const n=function(t){return t&&0===Object.keys(t).length&&t.constructor===Object},o=function(t,e){var r,i={fieldClass:"error",errorClass:"error-message",fieldPrefix:"bouncer-field_",errorPrefix:"bouncer-error_",patterns:{email:/^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$/,url:/^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/,number:/^(?:[-+]?[0-9]*[.,]?[0-9]+)$/,color:/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/,date:/(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))/,time:/^(?:(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))$/,month:/^(?:(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])))$/},customValidations:{},messageAfterField:!0,messageCustom:"data-bouncer-message",messageTarget:"data-bouncer-target",disableSubmit:!1,validateOnBlur:!0,validateOnSubmit:!0,emitEvents:!0},n=function(t,e){Array.prototype.forEach.call(t,e)},o=function(){var t={};return n(arguments,e=>{for(var r in e){if(!e.hasOwnProperty(r))return;"[object Object]"===Object.prototype.toString.call(e[r])?t[r]=o(t[r],e[r]):t[r]=e[r]}}),t},s=function(t,e,r){if("function"==typeof window.CustomEvent){var i=new CustomEvent(e,{bubbles:!0,detail:r||{}});t.dispatchEvent(i)}},a=function(t){if(!t.hasAttribute("required"))return!1;if("checkbox"===t.type){var e=t.form.querySelectorAll('[name="'+m(t.name)+'"]:not([type="hidden"])');return 0===Array.prototype.filter.call(e,t=>t.checked).length?t===e[0]:!t.checked}var{length:r}=t.value;return"radio"===t.type&&(r=Array.prototype.filter.call(t.form.querySelectorAll('[name="'+m(t.name)+'"]'),t=>t.checked).length),r<1},u=function(t,e){var r=t.getAttribute("pattern");return!(!(r=r?new RegExp("^(?:"+r+")$"):e.patterns[t.type])||!t.value||t.value.length<1)&&!t.value.match(r)},l=function(t){if(!t.value||t.value.length<1)return!1;var e=t.getAttribute("max"),r=t.getAttribute("min"),i=parseFloat(t.value);return e&&i>e?"over":!!(r&&i<r)&&"under"},f=function(t){if(!t.value||t.value.length<1)return!1;var e=t.getAttribute("maxlength"),r=t.getAttribute("minlength"),{length:i}=t.value;return e&&i>e?"over":!!(r&&i<r)&&"under"},c=function(t){for(var e in t)if(t[e])return!0;return!1},d=function(t,e){var r=function(t,e){return{missingValue:a(t),patternMismatch:u(t,e),outOfRange:l(t),wrongLength:f(t)}}(t,e);return r=function(t,e,r,i){for(var n in r)r.hasOwnProperty(n)&&(e[n]=r[n](t,i));return e}(t,r,e.customValidations,e),{valid:!c(r),errors:r}},m=function(t){for(var e,r=String(t),{length:i}=r,n=-1,o="",s=r.charCodeAt(0);++n<i;){if(0===(e=r.charCodeAt(n)))throw new InvalidCharacterError("Invalid character: the input contains U+0000.");e>=1&&e<=31||127==e||0===n&&e>=48&&e<=57||1===n&&e>=48&&e<=57&&45===s?o+="\\"+e.toString(16)+" ":o+=e>=128||45===e||95===e||e>=48&&e<=57||e>=65&&e<=90||e>=97&&e<=122?r.charAt(n):"\\"+r.charAt(n)}return o},h=function(t,e,r){var i=t.name?t.name:t.id;return!i&&r&&(i=e.fieldPrefix+Math.floor(999*Math.random()),t.id=i),"checkbox"===t.type&&(i+="_"+(t.value||t.id)),i},v=function(t,e){var r=document.createElement("div");r.className=e.errorClass,r.id=e.errorPrefix+h(t,e,!0);var i=function(t){if("radio"===t.type&&t.name){var e=t.form.querySelectorAll('[name="'+m(t.name)+'"]');t=e[e.length-1]}return"checkbox"!==t.type&&"radio"!==t.type||(t=t.closest(".fui-field-container")),t}(t),n=function(t,e,r){var i=t.getAttribute(r.messageTarget);if(i){var n=t.form.querySelector(i);if(n)return n.firstChild||n.appendChild(document.createTextNode(""))}return r.messageAfterField?(e.nextSibling||e.parentNode.appendChild(document.createTextNode("")),e.nextSibling):e}(t,i,e);return n.parentNode.insertBefore(r,n),r},b=function(t,e,r){t.classList.add(r.fieldClass),t.setAttribute("aria-describedby",e.id),t.setAttribute("aria-invalid",!0);var i=t.closest(".fui-field");i&&i.classList.add(r.fieldClass)},p=function(t,e,r){var i=t.form.querySelector("#"+m(r.errorPrefix+h(t,r)))||v(t,r),n=function(t,e,r){var{messages:i}=r;if(e.missingValue)return i.missingValue[t.type]||i.missingValue.default;if(e.outOfRange)return i.outOfRange[e.outOfRange].replace("{max}",t.getAttribute("max")).replace("{min}",t.getAttribute("min")).replace("{length}",t.value.length);if(e.wrongLength)return i.wrongLength[e.wrongLength].replace("{maxLength}",t.getAttribute("maxlength")).replace("{minLength}",t.getAttribute("minlength")).replace("{length}",t.value.length);if(e.patternMismatch){var n=t.getAttribute(r.messageCustom);return n||(i.patternMismatch[t.type]||i.patternMismatch.default)}for(var o in r.customValidations)if(r.customValidations.hasOwnProperty(o)&&e[o]&&i[o])return i[o];return e.customMessage?e.customMessage:i.fallback}(t,e,r);i.textContent="function"==typeof n?n(t,r):n,function(t,e,r){"radio"===t.type&&t.name&&Array.prototype.forEach.call(document.querySelectorAll('[name="'+t.name+'"]'),t=>{b(t,e,r)}),b(t,e,r)}(t,i,r),r.emitEvents&&s(t,"bouncerShowError",{errors:e})},g=function(t,e){t.classList.remove(e.fieldClass),t.removeAttribute("aria-describedby"),t.removeAttribute("aria-invalid");var r=t.closest(".fui-field");r&&r.classList.remove(e.fieldClass)},y=function(t,e){var r=t.form.querySelector("#"+m(e.errorPrefix+h(t,e)));r&&(r.parentNode.removeChild(r),function(t,e){"radio"===t.type&&t.name?Array.prototype.forEach.call(document.querySelectorAll('[name="'+t.name+'"]'),t=>{g(t,e)}):g(t,e)}(t,e),e.emitEvents&&s(t,"bouncerRemoveError"))},x={};x.showError=function(t,e,i){var n=o(r,i||{});return p(t,e,n)},x.removeError=function(t,e){var i=o(r,e||{});return y(t,i)},x.validate=function(t,e){if(!t.disabled&&!t.readOnly&&"reset"!==t.type&&"submit"!==t.type&&"button"!==t.type){var i=o(r,e||{}),n=d(t,i);if(!n.valid)return p(t,n.errors,i),n;y(t,i)}},x.validateAll=function(t){return Array.prototype.filter.call(t.querySelectorAll("input, select, textarea"),t=>{var e=x.validate(t);return e&&!e.valid})};var E=function(e){e.target.form&&e.target.form.matches(t)&&"file"!==e.target.type&&x.validate(e.target)},A=function(e){e.target.form&&e.target.form.matches(t)&&"file"===e.target.type&&x.validate(e.target)},S=function(e){e.target.form&&e.target.form.matches(t)&&e.target.classList.contains(r.fieldClass)&&x.validate(e.target)},w=function(e){if(e.target.matches(t)){e.preventDefault();var i=x.validateAll(e.target);if(i.length>0)return i[0].focus(),void s(e.target,"bouncerFormInvalid",{errors:i});r.disableSubmit||e.target.submit(),r.emitEvents&&s(e.target,"bouncerFormValid")}};x.destroy=function(){r.validateOnBlur&&(document.removeEventListener("blur",E,!0),document.removeEventListener("input",S,!1),document.removeEventListener("change",A,!1),document.removeEventListener("click",S,!1)),r.validateOnSubmit&&document.removeEventListener("submit",w,!1),function(t,e){n(document.querySelectorAll(t),t=>{n(t.querySelectorAll("input, select, textarea"),t=>{y(t,e)})})}(t,r),function(t){n(document.querySelectorAll(t),t=>{t.removeAttribute("novalidate")})}(t),r.emitEvents&&s(document,"bouncerDestroyed",{settings:r}),r=null};return r=o(i,e||{}),function(t){n(document.querySelectorAll(t),t=>{t.setAttribute("novalidate",!0)})}(t),r.validateOnBlur&&(document.addEventListener("blur",E,!0),document.addEventListener("input",S,!1),document.addEventListener("change",A,!1),document.addEventListener("click",S,!1)),r.validateOnSubmit&&document.addEventListener("submit",w,!1),r.emitEvents&&s(document,"bouncerInitialized",{settings:r}),x};class s{constructor(t={}){this.formId="#"+t.formHashId,this.$form=document.querySelector(this.formId),this.config=t,this.settings=t.settings,this.validationOnSubmit=!!this.settings.validationOnSubmit,this.validationOnFocus=!!this.settings.validationOnFocus,this.setCurrentPage(this.settings.currentPageId),this.$form&&(this.$form.formTheme=this,this.form=this.$form.form,this.initValidator(),this.hideSuccess(),this.addSubmitEventListener(),this.savedFormHash=this.hashForm(),this.settings.enableUnloadWarning&&this.addFormUnloadEventListener())}initValidator(){var e={fieldClass:"fui-error",errorClass:"fui-error-message",fieldPrefix:"fui-field-",errorPrefix:"fui-error-",messageAfterField:!0,messageCustom:"data-fui-message",messageTarget:"data-fui-target",validateOnBlur:this.validationOnFocus,validateOnSubmit:!1,disableSubmit:!1,customValidations:{},messages:{missingValue:{checkbox:t("This field is required."),radio:t("Please select a value."),select:t("Please select a value."),"select-multiple":t("Please select at least one value."),default:t("Please fill out this field.")},patternMismatch:{email:t("Please enter a valid email address."),url:t("Please enter a URL."),number:t("Please enter a number"),color:t("Please match the following format: #rrggbb"),date:t("Please use the YYYY-MM-DD format"),time:t("Please use the 24-hour time format. Ex. 23:00"),month:t("Please use the YYYY-MM format"),default:t("Please match the requested format.")},outOfRange:{over:t("Please select a value that is no more than {max}."),under:t("Please select a value that is no less than {min}.")},wrongLength:{over:t("Please shorten this text to no more than {maxLength} characters. You are currently using {length} characters."),under:t("Please lengthen this text to {minLength} characters or more. You are currently using {length} characters.")},fallback:t("There was an error with this field.")}};const r=new CustomEvent("registerFormieValidation",{bubbles:!0,detail:{validatorSettings:e}});setTimeout(()=>{this.$form.dispatchEvent(r),this.validator=new o(this.formId,r.detail.validatorSettings)},500),this.form.addEventListener(this.$form,"bouncerRemoveError",t=>{this.validate(!1)}),this.form.addEventListener(this.$form,"bouncerShowError",t=>{var e=t.target,r=e.closest(".fui-field"),i=e.getAttribute("data-fui-message");t.detail&&t.detail.errors&&t.detail.errors.serverMessage&&(i=t.detail.errors.serverMessage);var n=e.parentNode.querySelector(".fui-error-message");if(n&&n.parentNode.parentNode&&n.parentNode.parentNode.appendChild(n),r){var o=r.querySelector(".fui-error-message");o&&i&&(o.textContent=i)}},!1)}addSubmitEventListener(){this.$form.querySelectorAll('[type="submit"]').forEach(t=>{this.form.addEventListener(t,"click",t=>{this.$submitBtn=t.target,this.originalButtonText=t.target.textContent.trim()})}),this.form.addEventListener(this.$form,"onBeforeFormieSubmit",this.onBeforeSubmit.bind(this)),this.form.addEventListener(this.$form,"onFormieValidate",this.onValidate.bind(this)),this.form.addEventListener(this.$form,"onFormieSubmit",this.onSubmit.bind(this)),this.form.addEventListener(this.$form,"onFormieSubmitError",this.onSubmitError.bind(this))}onBeforeSubmit(t){this.beforeSubmit(),this.submitHandler=t.detail.submitHandler}onValidate(t){this.$form.goBack||this.validate()||(this.onFormError(),t.detail.invalid=!0,t.preventDefault())}onSubmit(t){if(t.preventDefault(),this.$submitBtn&&this.$submitBtn.getAttribute("name")){const t=this.$submitBtn.getAttribute("name"),e=this.$submitBtn.getAttribute("value");this.updateOrCreateHiddenInput(t,e)}"ajax"===this.settings.submitMethod?this.ajaxSubmit():(this.savedFormHash=this.hashForm(),this.$form.submit())}onSubmitError(t){this.onFormError()}addFormUnloadEventListener(){this.form.addEventListener(window,"beforeunload",e=>{this.savedFormHash!==this.hashForm()&&(e.returnValue=t("Are you sure you want to leave?"))})}hashForm(){var t={},e=new FormData(this.$form),r=["g-recaptcha-response","CRAFT_CSRF_TOKEN","__JSCHK"];for(var i of e.entries()){r.filter(t=>i[0].startsWith(t)).length||(t[i[0]]=i[1])}return JSON.stringify(t)}validate(t=!0){if(!this.validationOnSubmit)return!0;var e=this.$form;this.$currentPage&&(e=this.$currentPage);var r=this.validator.validateAll(e);return r.length>0&&t&&r[0].focus(),0===r.length&&this.removeFormAlert(),!r.length}hideSuccess(){var t=this.$form.parentNode.querySelector(".fui-alert-success");if(t&&this.settings.submitActionMessageTimeout){var e=1e3*parseInt(this.settings.submitActionMessageTimeout,10);setTimeout(()=>{t.remove()},e)}}addLoading(){this.$submitBtn&&(this.$submitBtn.setAttribute("disabled",!0),"spinner"===this.settings.loadingIndicator&&this.$submitBtn.classList.add("fui-loading"),"text"===this.settings.loadingIndicator&&(this.$submitBtn.textContent=this.settings.loadingIndicatorText))}removeLoading(){this.$submitBtn&&(this.$submitBtn.removeAttribute("disabled"),"spinner"===this.settings.loadingIndicator&&this.$submitBtn.classList.remove("fui-loading"),"text"===this.settings.loadingIndicator&&(this.$submitBtn.textContent=this.originalButtonText))}onFormError(t){t?this.showFormAlert(t,"error"):this.showFormAlert(this.settings.errorMessage,"error"),this.removeLoading()}showFormAlert(t,e){var r=this.$form.parentNode.querySelector(".fui-alert");t=t.replace(/<p[^>]*>/g,"").replace(/<\/p>/g,""),r?r.innerHTML!==this.decodeHtml(t)&&(r.innerHTML=r.innerHTML+"<br>"+t):((r=document.createElement("div")).className="fui-alert fui-alert-"+e,r.setAttribute("role","alert"),r.innerHTML=t,"error"==e?(r.className+=" fui-alert-"+this.settings.errorMessagePosition,"bottom-form"==this.settings.errorMessagePosition?this.$submitBtn.parentNode.parentNode.insertBefore(r,this.$submitBtn.parentNode):this.$form.parentNode.insertBefore(r,this.$form)):(r.className+=" fui-alert-"+this.settings.submitActionMessagePosition,"bottom-form"==this.settings.submitActionMessagePosition?this.settings.submitActionFormHide?this.$form.parentNode.insertBefore(r,this.$form):this.$submitBtn.parentNode.parentNode.insertBefore(r,this.$submitBtn.parentNode):this.$form.parentNode.insertBefore(r,this.$form)))}decodeHtml(t){var e=document.createElement("textarea");return e.innerHTML=t,e.value}removeFormAlert(){var t=this.$form.parentNode.querySelector(".fui-alert");t&&t.remove()}removeBackInput(){var t=this.$form.querySelector('[name="goingBack"][type="hidden"]');t&&t.remove(),this.$form.goBack=null}beforeSubmit(){Array.prototype.filter.call(this.$form.querySelectorAll("input, select, textarea"),t=>{this.validator.removeError(t)}),this.removeFormAlert(),this.addLoading()}ajaxSubmit(){const e=new FormData(this.$form),r=this.$form.getAttribute("method"),i=this.$form.getAttribute("action"),n=new XMLHttpRequest;n.open(r||"POST",i||window.location.href,!0),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Accept","application/json"),n.setRequestHeader("Cache-Control","no-cache"),n.timeout=1e3*(this.settings.ajaxTimeout||10),this.beforeSubmit(),n.ontimeout=()=>{this.onAjaxError(t("The request timed out."))},n.onerror=e=>{this.onAjaxError(t("The request encountered a network error. Please try again."))},n.onload=()=>{if(n.status>=200&&n.status<300)try{const t=JSON.parse(n.responseText);t.errors?this.onAjaxError(t.errors,t.errorMessage):this.onAjaxSuccess(t)}catch(e){this.onAjaxError(t("Unable to parse response `{e}`.",{e:e}))}else this.onAjaxError(n.status+": "+n.statusText)},n.send(e)}afterAjaxSubmit(t){this.removeBackInput(),this.updateSubmissionInput(t)}onAjaxError(t,e=""){this.onFormError(e),this.submitHandler.formSubmitError(),this.afterAjaxSubmit(t),"string"==typeof t&&this.showFormAlert(t,"error"),"object"==typeof t&&Object.keys(t).forEach((e,r)=>{const[i]=t[e],n=document.querySelector(`[name="fields[${e}]"]`);n&&(this.validator.showError(n,{serverMessage:i}),0===r&&n.focus())})}onAjaxSuccess(t){return this.submitHandler.formAfterSubmit(t),this.afterAjaxSubmit(t),this.savedFormHash=this.hashForm(),t.nextPageId?(this.removeLoading(),void this.togglePage(t)):t.redirectUrl?("new-tab"===this.settings.submitActionTab&&window.open(t.redirectUrl,"_blank"),void(window.location.href=t.redirectUrl)):(this.removeLoading(),this.$form.querySelectorAll('[name="goingBack"]').forEach(t=>{t.remove()}),t.totalPages>1&&this.$submitBtn&&this.$submitBtn.remove(),"message"===this.settings.submitAction&&(this.showFormAlert(t.submitActionMessage,"success"),this.hideSuccess(),this.settings.submitActionFormHide&&(this.$form.style.display="none")),this.$form.reset(),void(this.savedFormHash=this.hashForm()))}updateSubmissionInput(t){t.submissionId&&t.nextPageId&&this.updateOrCreateHiddenInput("submissionId",t.submissionId)}updateOrCreateHiddenInput(t,e){var r=this.$form.querySelector('[name="'+t+'"][type="hidden"]');r||((r=document.createElement("input")).setAttribute("type","hidden"),r.setAttribute("name",t),this.$form.appendChild(r)),r.setAttribute("value",e)}togglePage(t){this.$form.querySelectorAll(".fui-page").forEach(e=>{e.id===""+this.getPageId(t.nextPageId)?e.classList.remove("fui-hidden"):e.classList.add("fui-hidden")});var e=this.$form.querySelector(".fui-progress-bar");if(e){var r=t.nextPageIndex+1,i=Math.round(r/t.totalPages*100);e.style.width=i+"%",e.setAttribute("aria-valuenow",i),e.textContent=i+"%"}this.$form.querySelectorAll(".fui-tab").forEach(e=>{e.id==="fui-tab-"+t.nextPageId?e.classList.add("fui-tab-active"):e.classList.remove("fui-tab-active")}),this.setCurrentPage(t.nextPageId),window.scrollTo({top:this.$form.getBoundingClientRect().top+window.pageYOffset-50,behavior:"smooth"})}setCurrentPage(t){this.currentPageId="#"+this.getPageId(t),this.$currentPage=document.querySelector(this.currentPageId)}getPageId(t){return`${this.config.formHashId}-p-${t}`}}i(187);class a{constructor(t={}){this.formId="#"+t.formHashId,this.$form=document.querySelector(this.formId),this.config=t,this.settings=t.settings,this.listeners={},this.$form&&(this.$form.form=this,this.settings.outputJsTheme&&(this.formTheme=new s(this.config)),this.registerFieldEvents(this.$form),this.addEventListener(this.$form,"submit",t=>{t.preventDefault();const e=new CustomEvent("onBeforeFormieSubmit",{bubbles:!0,cancelable:!0,detail:{submitHandler:this}});this.$form.dispatchEvent(e)&&setTimeout(()=>{const t=new CustomEvent("onFormieValidate",{bubbles:!0,cancelable:!0,detail:{submitHandler:this}});this.$form.dispatchEvent(t)&&this.submitForm()},300)},!1))}submitForm(){if(this.$form.goBack){const t=document.createElement("input");t.setAttribute("type","hidden"),t.setAttribute("name","goingBack"),t.setAttribute("value","true"),this.$form.appendChild(t)}const t=new CustomEvent("onFormieSubmit",{bubbles:!0,cancelable:!0,detail:{submitHandler:this}});this.$form.dispatchEvent(t)&&("ajax"===this.settings.submitMethod?this.formAfterSubmit():this.$form.submit())}formAfterSubmit(t={}){this.$form.dispatchEvent(new CustomEvent("onAfterFormieSubmit",{bubbles:!0,detail:t}))}formSubmitError(t={}){this.$form.dispatchEvent(new CustomEvent("onFormieSubmitError",{bubbles:!0,detail:t}))}registerFieldEvents(t){t.querySelectorAll(".fui-field").forEach(t=>{const e=t.querySelector(".fui-input, .fui-select");e&&(this.addEventListener(e,"input",e=>{t.dispatchEvent(new CustomEvent("input",{bubbles:!1,detail:{input:e.target}}))}),this.addEventListener(e,"focus",e=>{t.dispatchEvent(new CustomEvent("focus",{bubbles:!1,detail:{input:e.target}}))}),this.addEventListener(e,"blur",e=>{t.dispatchEvent(new CustomEvent("blur",{bubbles:!1,detail:{input:e.target}}))}),t.dispatchEvent(new CustomEvent("init",{bubbles:!1,detail:{input:e}})))})}addEventListener(t,e,r){this.listeners[e]={element:t,func:r},t.addEventListener(e.split(".")[0],this.listeners[e].func)}removeEventListener(t){let e=this.listeners[t]||{};e&&e.element&&e.func&&(e.element.removeEventListener(t.split(".")[0],e.func),delete this.listeners[t])}}i(187);class u{constructor(){this.forms=[]}initForms(){this.$forms=document.querySelectorAll('form[id^="formie-form-"]')||[],this.$forms.length||(this.$forms=document.querySelectorAll('div[id^="formie-form-"]')||[]),this.$forms.forEach(t=>{this.initForm(t)}),document.dispatchEvent(new CustomEvent("onFormieInit",{bubbles:!0,detail:{formie:this}}))}initForm(t,e={}){if(n(e)&&(e=JSON.parse(t.getAttribute("data-config"))),n(e))console.error("Unable to parse `data-config` form attribute for config. Ensure this attribute exists on your form and contains valid JSON.");else{var r=e.registeredJs||[];e.Formie=this;var i=new a(e);this.forms.push(i),i.fieldConfigs=this.parseFieldConfig(t,t),r.length&&(i.$registeredJs=document.createElement("div"),i.$registeredJs.setAttribute("data-fui-scripts",e.formId),document.body.appendChild(i.$registeredJs),r.forEach(e=>{var r=document.createElement("script");e.src&&(r.src=e.src,r.defer=!0,r.onload=()=>{if(e.module){var r=i.fieldConfigs[e.module];r&&Array.isArray(r)&&r.length&&r.forEach(t=>{this.initJsClass(e.module,t)}),e.settings&&this.initJsClass(e.module,e.settings),"FormieConditions"===e.module&&this.initJsClass(e.module,{$form:t})}}),i.$registeredJs.appendChild(r)}))}}initJsClass(t,e){var r=window[t];r&&new r(e)}parseFieldConfig(t,e){var r={};return t.querySelectorAll("[data-field-config]").forEach(t=>{var i=JSON.parse(t.getAttribute("data-field-config"));Array.isArray(i)||(i=[i]),i.forEach(i=>{r[i.module]||(r[i.module]=[]),r[i.module].push({$form:e,$field:t,...i})})}),r}getForm(t){return this.forms.find(e=>e.$form==t)}getFormById(t){return this.forms.find(e=>{if(e.config)return e.config.formId==t})}getFormByHandle(t){return this.forms.find(e=>{if(e.config)return e.config.formHandle==t})}destroyForm(t){var e=this.getForm(t);if(e){var r=this.forms.indexOf(e);-1!==r&&(e.$registeredJs&&e.$registeredJs.parentNode&&e.$registeredJs.parentNode.removeChild(e.$registeredJs),n(e.listeners)||Object.keys(e.listeners).forEach(t=>{e.removeEventListener(t)}),e.formTheme&&e.formTheme.validator&&e.formTheme.validator.destroy(),delete this.forms[r])}}}window.Formie=u}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["formie-form"],{
+
+/***/ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-form-base.js":
+/*!************************************************************************************!*\
+  !*** ./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-form-base.js ***!
+  \************************************************************************************/
+/*! exports provided: FormieFormBase */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormieFormBase", function() { return FormieFormBase; });
+/* harmony import */ var _formie_form_theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formie-form-theme */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-form-theme.js");
+const globals = __webpack_require__(/*! ./utils/globals */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/globals.js");
+
+
+class FormieFormBase {
+  constructor(config = {}) {
+    this.formId = `#${config.formHashId}`;
+    this.$form = document.querySelector(this.formId);
+    this.config = config;
+    this.settings = config.settings;
+    this.listeners = {};
+
+    if (!this.$form) {
+      return;
+    }
+
+    this.$form.form = this;
+
+    if (this.settings.outputJsTheme) {
+      this.formTheme = new _formie_form_theme__WEBPACK_IMPORTED_MODULE_0__["FormieFormTheme"](this.config);
+    } // Add helper classes to fields when their inputs are focused, have values etc.
+
+
+    this.registerFieldEvents(this.$form); // Hijack the form's submit handler, in case we need to do something
+
+    this.addEventListener(this.$form, 'submit', e => {
+      e.preventDefault();
+      const beforeSubmitEvent = new CustomEvent('onBeforeFormieSubmit', {
+        bubbles: true,
+        cancelable: true,
+        detail: {
+          submitHandler: this
+        }
+      });
+
+      if (!this.$form.dispatchEvent(beforeSubmitEvent)) {
+        return;
+      } // Add a little delay for UX
+
+
+      setTimeout(() => {
+        const validateEvent = new CustomEvent('onFormieValidate', {
+          bubbles: true,
+          cancelable: true,
+          detail: {
+            submitHandler: this
+          }
+        });
+
+        if (!this.$form.dispatchEvent(validateEvent)) {
+          return;
+        }
+
+        this.submitForm();
+      }, 300);
+    }, false);
+  }
+
+  submitForm() {
+    // Check if we're going back, and attach an input to tell formie not to validate
+    if (this.$form.goBack) {
+      const $backButtonInput = document.createElement('input');
+      $backButtonInput.setAttribute('type', 'hidden');
+      $backButtonInput.setAttribute('name', 'goingBack');
+      $backButtonInput.setAttribute('value', 'true');
+      this.$form.appendChild($backButtonInput);
+    }
+
+    const submitEvent = new CustomEvent('onFormieSubmit', {
+      bubbles: true,
+      cancelable: true,
+      detail: {
+        submitHandler: this
+      }
+    });
+
+    if (!this.$form.dispatchEvent(submitEvent)) {
+      return;
+    }
+
+    if (this.settings.submitMethod === 'ajax') {
+      this.formAfterSubmit();
+    } else {
+      this.$form.submit();
+    }
+  }
+
+  formAfterSubmit(data = {}) {
+    this.$form.dispatchEvent(new CustomEvent('onAfterFormieSubmit', {
+      bubbles: true,
+      detail: data
+    }));
+  }
+
+  formSubmitError(data = {}) {
+    this.$form.dispatchEvent(new CustomEvent('onFormieSubmitError', {
+      bubbles: true,
+      detail: data
+    }));
+  }
+
+  registerFieldEvents($element) {
+    const $wrappers = $element.querySelectorAll('.fui-field');
+    $wrappers.forEach($wrapper => {
+      const $input = $wrapper.querySelector('.fui-input, .fui-select');
+
+      if ($input) {
+        this.addEventListener($input, 'input', event => {
+          $wrapper.dispatchEvent(new CustomEvent('input', {
+            bubbles: false,
+            detail: {
+              input: event.target
+            }
+          }));
+        });
+        this.addEventListener($input, 'focus', event => {
+          $wrapper.dispatchEvent(new CustomEvent('focus', {
+            bubbles: false,
+            detail: {
+              input: event.target
+            }
+          }));
+        });
+        this.addEventListener($input, 'blur', event => {
+          $wrapper.dispatchEvent(new CustomEvent('blur', {
+            bubbles: false,
+            detail: {
+              input: event.target
+            }
+          }));
+        });
+        $wrapper.dispatchEvent(new CustomEvent('init', {
+          bubbles: false,
+          detail: {
+            input: $input
+          }
+        }));
+      }
+    });
+  }
+
+  addEventListener(element, event, func) {
+    this.listeners[event] = {
+      element,
+      func
+    };
+    element.addEventListener(event.split('.')[0], this.listeners[event].func);
+  }
+
+  removeEventListener(event) {
+    let eventInfo = this.listeners[event] || {};
+
+    if (eventInfo && eventInfo.element && eventInfo.func) {
+      eventInfo.element.removeEventListener(event.split('.')[0], eventInfo.func);
+      delete this.listeners[event];
+    }
+  }
+
+}
+
+/***/ }),
+
+/***/ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-form-theme.js":
+/*!*************************************************************************************!*\
+  !*** ./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-form-theme.js ***!
+  \*************************************************************************************/
+/*! exports provided: FormieFormTheme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormieFormTheme", function() { return FormieFormTheme; });
+/* harmony import */ var _utils_bouncer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/bouncer */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/bouncer.js");
+
+class FormieFormTheme {
+  constructor(config = {}) {
+    this.formId = `#${config.formHashId}`;
+    this.$form = document.querySelector(this.formId);
+    this.config = config;
+    this.settings = config.settings;
+    this.validationOnSubmit = !!this.settings.validationOnSubmit;
+    this.validationOnFocus = !!this.settings.validationOnFocus;
+    this.setCurrentPage(this.settings.currentPageId);
+
+    if (!this.$form) {
+      return;
+    }
+
+    this.$form.formTheme = this;
+    this.form = this.$form.form;
+    this.initValidator(); // Check if this is a success page and if we need to hide the notice
+    // This is for non-ajax forms, where the page has reloaded
+
+    this.hideSuccess(); // Hijack the form's submit handler, in case we need to do something
+
+    this.addSubmitEventListener(); // Save the form's current state so we can tell if its changed later on
+
+    this.savedFormHash = this.hashForm(); // Listen to form changes if the user tries to reload
+
+    if (this.settings.enableUnloadWarning) {
+      this.addFormUnloadEventListener();
+    }
+  }
+
+  initValidator() {
+    // Kick off validation - use this even if disabling client-side validation
+    // so we can use a nice API handle server-side errprs
+    var validatorSettings = {
+      fieldClass: 'fui-error',
+      errorClass: 'fui-error-message',
+      fieldPrefix: 'fui-field-',
+      errorPrefix: 'fui-error-',
+      messageAfterField: true,
+      messageCustom: 'data-fui-message',
+      messageTarget: 'data-fui-target',
+      validateOnBlur: this.validationOnFocus,
+      // Call validation on-demand
+      validateOnSubmit: false,
+      disableSubmit: false,
+      customValidations: {},
+      messages: {
+        missingValue: {
+          checkbox: t('This field is required.'),
+          radio: t('Please select a value.'),
+          select: t('Please select a value.'),
+          'select-multiple': t('Please select at least one value.'),
+          default: t('Please fill out this field.')
+        },
+        patternMismatch: {
+          email: t('Please enter a valid email address.'),
+          url: t('Please enter a URL.'),
+          number: t('Please enter a number'),
+          color: t('Please match the following format: #rrggbb'),
+          date: t('Please use the YYYY-MM-DD format'),
+          time: t('Please use the 24-hour time format. Ex. 23:00'),
+          month: t('Please use the YYYY-MM format'),
+          default: t('Please match the requested format.')
+        },
+        outOfRange: {
+          over: t('Please select a value that is no more than {max}.'),
+          under: t('Please select a value that is no less than {min}.')
+        },
+        wrongLength: {
+          over: t('Please shorten this text to no more than {maxLength} characters. You are currently using {length} characters.'),
+          under: t('Please lengthen this text to {minLength} characters or more. You are currently using {length} characters.')
+        },
+        fallback: t('There was an error with this field.')
+      }
+    }; // Allow other modules to modify our validator settings (for custom rules and messages)
+
+    const registerFormieValidation = new CustomEvent('registerFormieValidation', {
+      bubbles: true,
+      detail: {
+        validatorSettings
+      }
+    }); // Give a small amount of time for other JS scripts to register validations. These are lazy-loaded.
+    // Maybe re-think this so we don't have to deal with event listener registration before/after dispatch?
+
+    setTimeout(() => {
+      this.$form.dispatchEvent(registerFormieValidation);
+      this.validator = new _utils_bouncer__WEBPACK_IMPORTED_MODULE_0__["Bouncer"](this.formId, registerFormieValidation.detail.validatorSettings);
+    }, 500); // After we clear any error, validate the fielset again. Mostly so we can remove global errors
+
+    this.form.addEventListener(this.$form, 'bouncerRemoveError', e => {
+      this.validate(false);
+    }); // Override error messages defined in DOM - Bouncer only uses these as a last resort
+    // In future updates, we can probably remove this
+
+    this.form.addEventListener(this.$form, 'bouncerShowError', e => {
+      var $field = e.target;
+      var $fieldContainer = $field.closest('.fui-field');
+      var message = $field.getAttribute('data-fui-message'); // If there's a server error, it takes priority.
+
+      if (e.detail && e.detail.errors && e.detail.errors.serverMessage) {
+        message = e.detail.errors.serverMessage;
+      } // Check if we need to move the error out of the .fui-input-container node.
+      // Only the input itself should be in here.
+
+
+      var $errorToMove = $field.parentNode.querySelector('.fui-error-message');
+
+      if ($errorToMove && $errorToMove.parentNode.parentNode) {
+        $errorToMove.parentNode.parentNode.appendChild($errorToMove);
+      } // The error has been moved, find it again
+
+
+      if ($fieldContainer) {
+        var $error = $fieldContainer.querySelector('.fui-error-message');
+
+        if ($error && message) {
+          $error.textContent = message;
+        }
+      }
+    }, false);
+  }
+
+  addSubmitEventListener() {
+    var $submitBtns = this.$form.querySelectorAll('[type="submit"]'); // Forms can have multiple submit buttons, and its easier to assign the currently clicked one
+    // than tracking it through the submit handler.
+
+    $submitBtns.forEach($submitBtn => {
+      this.form.addEventListener($submitBtn, 'click', e => {
+        this.$submitBtn = e.target; // Store for later if we're using text spinner
+
+        this.originalButtonText = e.target.textContent.trim();
+      });
+    });
+    this.form.addEventListener(this.$form, 'onBeforeFormieSubmit', this.onBeforeSubmit.bind(this));
+    this.form.addEventListener(this.$form, 'onFormieValidate', this.onValidate.bind(this));
+    this.form.addEventListener(this.$form, 'onFormieSubmit', this.onSubmit.bind(this));
+    this.form.addEventListener(this.$form, 'onFormieSubmitError', this.onSubmitError.bind(this));
+  }
+
+  onBeforeSubmit(e) {
+    this.beforeSubmit(); // Save for later to trigger real submit
+
+    this.submitHandler = e.detail.submitHandler;
+  }
+
+  onValidate(e) {
+    // Bypass validation and custom event handling if going back
+    if (!this.$form.goBack && !this.validate()) {
+      this.onFormError(); // Set a flag on the event, so other listeners can potentially do something
+
+      e.detail.invalid = true;
+      e.preventDefault();
+    }
+  }
+
+  onSubmit(e) {
+    // Stop base behaviour of just submitting the form
+    e.preventDefault(); // Check if the submit button has a `name` attribute. If so, we need to append a hidden input
+    // to the form, as JS-submitted forms won't pass on the submit button value as its programatically submitted.
+
+    if (this.$submitBtn && this.$submitBtn.getAttribute('name')) {
+      const name = this.$submitBtn.getAttribute('name');
+      const value = this.$submitBtn.getAttribute('value'); // Add a hidden input, if it doesn't exist
+
+      this.updateOrCreateHiddenInput(name, value);
+    } // Either staight submit, or use Ajax
+
+
+    if (this.settings.submitMethod === 'ajax') {
+      this.ajaxSubmit();
+    } else {
+      // Before a server-side submit, refresh the saved hash immediately. Otherwise, the native submit
+      // handler - which technically unloads the page - will trigger the changed alert.
+      this.savedFormHash = this.hashForm();
+      this.$form.submit();
+    }
+  }
+
+  onSubmitError(e) {
+    this.onFormError();
+  }
+
+  addFormUnloadEventListener() {
+    this.form.addEventListener(window, 'beforeunload', e => {
+      if (this.savedFormHash !== this.hashForm()) {
+        e.returnValue = t('Are you sure you want to leave?');
+      }
+    });
+  }
+
+  hashForm() {
+    var hash = {};
+    var formData = new FormData(this.$form);
+    var excludedItems = ['g-recaptcha-response', 'CRAFT_CSRF_TOKEN', '__JSCHK'];
+
+    for (var pair of formData.entries()) {
+      var isExcluded = excludedItems.filter(item => pair[0].startsWith(item));
+
+      if (!isExcluded.length) {
+        // eslint-disable-next-line
+        hash[pair[0]] = pair[1];
+      }
+    }
+
+    return JSON.stringify(hash);
+  }
+
+  validate(focus = true) {
+    if (!this.validationOnSubmit) {
+      return true;
+    }
+
+    var $fieldset = this.$form;
+
+    if (this.$currentPage) {
+      $fieldset = this.$currentPage;
+    }
+
+    var invalidFields = this.validator.validateAll($fieldset); // If there are errors, focus on the first one
+
+    if (invalidFields.length > 0 && focus) {
+      invalidFields[0].focus();
+    } // Remove any global errors if none - just in case
+
+
+    if (invalidFields.length === 0) {
+      this.removeFormAlert();
+    }
+
+    return !invalidFields.length;
+  }
+
+  hideSuccess() {
+    var $successMessage = this.$form.parentNode.querySelector('.fui-alert-success');
+
+    if ($successMessage && this.settings.submitActionMessageTimeout) {
+      var timeout = parseInt(this.settings.submitActionMessageTimeout, 10) * 1000;
+      setTimeout(() => {
+        $successMessage.remove();
+      }, timeout);
+    }
+  }
+
+  addLoading() {
+    if (this.$submitBtn) {
+      // Always disable the button
+      this.$submitBtn.setAttribute('disabled', true);
+
+      if (this.settings.loadingIndicator === 'spinner') {
+        this.$submitBtn.classList.add('fui-loading');
+      }
+
+      if (this.settings.loadingIndicator === 'text') {
+        this.$submitBtn.textContent = this.settings.loadingIndicatorText;
+      }
+    }
+  }
+
+  removeLoading() {
+    if (this.$submitBtn) {
+      // Always enable the button
+      this.$submitBtn.removeAttribute('disabled');
+
+      if (this.settings.loadingIndicator === 'spinner') {
+        this.$submitBtn.classList.remove('fui-loading');
+      }
+
+      if (this.settings.loadingIndicator === 'text') {
+        this.$submitBtn.textContent = this.originalButtonText;
+      }
+    }
+  }
+
+  onFormError(errorMessage) {
+    if (errorMessage) {
+      this.showFormAlert(errorMessage, 'error');
+    } else {
+      this.showFormAlert(this.settings.errorMessage, 'error');
+    }
+
+    this.removeLoading();
+  }
+
+  showFormAlert(text, type) {
+    var $alert = this.$form.parentNode.querySelector('.fui-alert'); // Strip <p> tags
+
+    text = text.replace(/<p[^>]*>/g, '').replace(/<\/p>/g, '');
+
+    if ($alert) {
+      // We have to cater for HTML entities - quick-n-dirty
+      if ($alert.innerHTML !== this.decodeHtml(text)) {
+        $alert.innerHTML = $alert.innerHTML + '<br>' + text;
+      }
+    } else {
+      $alert = document.createElement('div');
+      $alert.className = 'fui-alert fui-alert-' + type;
+      $alert.setAttribute('role', 'alert');
+      $alert.innerHTML = text; // For error notices, we have potential special handling on position
+
+      if (type == 'error') {
+        $alert.className += ' fui-alert-' + this.settings.errorMessagePosition;
+
+        if (this.settings.errorMessagePosition == 'bottom-form') {
+          this.$submitBtn.parentNode.parentNode.insertBefore($alert, this.$submitBtn.parentNode);
+        } else {
+          this.$form.parentNode.insertBefore($alert, this.$form);
+        }
+      } else {
+        $alert.className += ' fui-alert-' + this.settings.submitActionMessagePosition;
+
+        if (this.settings.submitActionMessagePosition == 'bottom-form') {
+          // An even further special case when hiding the form!
+          if (this.settings.submitActionFormHide) {
+            this.$form.parentNode.insertBefore($alert, this.$form);
+          } else {
+            this.$submitBtn.parentNode.parentNode.insertBefore($alert, this.$submitBtn.parentNode);
+          }
+        } else {
+          this.$form.parentNode.insertBefore($alert, this.$form);
+        }
+      }
+    }
+  }
+
+  decodeHtml(html) {
+    var txt = document.createElement('textarea');
+    txt.innerHTML = html;
+    return txt.value;
+  }
+
+  removeFormAlert() {
+    var $alert = this.$form.parentNode.querySelector('.fui-alert');
+
+    if ($alert) {
+      $alert.remove();
+    }
+  }
+
+  removeBackInput() {
+    // Remove the hidden back input sent in any previous step
+    var $backButtonInput = this.$form.querySelector('[name="goingBack"][type="hidden"]');
+
+    if ($backButtonInput) {
+      $backButtonInput.remove();
+    } // Reset the chosen page
+
+
+    this.$form.goBack = null;
+  }
+
+  beforeSubmit() {
+    // Remove all validation errors
+    Array.prototype.filter.call(this.$form.querySelectorAll('input, select, textarea'), $field => {
+      this.validator.removeError($field);
+    });
+    this.removeFormAlert();
+    this.addLoading();
+  }
+
+  ajaxSubmit() {
+    const formData = new FormData(this.$form);
+    const method = this.$form.getAttribute('method');
+    const action = this.$form.getAttribute('action');
+    const xhr = new XMLHttpRequest();
+    xhr.open(method ? method : 'POST', action ? action : window.location.href, true);
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader('Cache-Control', 'no-cache');
+    xhr.timeout = (this.settings.ajaxTimeout || 10) * 1000;
+    this.beforeSubmit();
+
+    xhr.ontimeout = () => {
+      this.onAjaxError(t('The request timed out.'));
+    };
+
+    xhr.onerror = e => {
+      this.onAjaxError(t('The request encountered a network error. Please try again.'));
+    };
+
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        try {
+          const response = JSON.parse(xhr.responseText);
+
+          if (response.errors) {
+            this.onAjaxError(response.errors, response.errorMessage);
+          } else {
+            this.onAjaxSuccess(response);
+          }
+        } catch (e) {
+          this.onAjaxError(t('Unable to parse response `{e}`.', {
+            e
+          }));
+        }
+      } else {
+        this.onAjaxError(xhr.status + ': ' + xhr.statusText);
+      }
+    };
+
+    xhr.send(formData);
+  }
+
+  afterAjaxSubmit(response) {
+    // This will be called regardless of success or error
+    this.removeBackInput();
+    this.updateSubmissionInput(response);
+  }
+
+  onAjaxError(response, errorMessage = '') {
+    this.onFormError(errorMessage); // Fire a fail event
+
+    this.submitHandler.formSubmitError();
+    this.afterAjaxSubmit(response);
+
+    if (typeof response === 'string') {
+      this.showFormAlert(response, 'error');
+    }
+
+    if (typeof response === 'object') {
+      Object.keys(response).forEach((handle, index) => {
+        const [error] = response[handle];
+        const $field = document.querySelector(`[name="fields[${handle}]"]`);
+
+        if ($field) {
+          this.validator.showError($field, {
+            serverMessage: error
+          }); // Focus on the first error
+
+          if (index === 0) {
+            $field.focus();
+          }
+        }
+      });
+    }
+  }
+
+  onAjaxSuccess(data) {
+    // Fire the event, because we've overridden the handler
+    this.submitHandler.formAfterSubmit(data);
+    this.afterAjaxSubmit(data); // Reset the form hash, as all has been saved
+
+    this.savedFormHash = this.hashForm(); // Check if we need to proceed to the next page
+
+    if (data.nextPageId) {
+      this.removeLoading();
+      this.togglePage(data);
+      return;
+    } // If we're redirecting away, do it immediately for nicer UX
+
+
+    if (data.redirectUrl) {
+      if (this.settings.submitActionTab === 'new-tab') {
+        window.open(data.redirectUrl, '_blank');
+      }
+
+      window.location.href = data.redirectUrl;
+      return;
+    } // Delay this a little, in case we're redirecting away - better UX to just keep it loading
+
+
+    this.removeLoading(); // Remove the back button - not great UX to go back to a finished form
+    // Remember, its the button and the hidden input
+
+    var $backButtonInputs = this.$form.querySelectorAll('[name="goingBack"]');
+    $backButtonInputs.forEach($backButtonInput => {
+      $backButtonInput.remove();
+    }); // Also remove the submit button for a multi-page form. Its bad UX to show you can
+    // submit a multi-page form again, at the end. In fact, we'll probably get errors -
+    // but this is totally fine for a single-page ajax form.
+
+    if (data.totalPages > 1) {
+      if (this.$submitBtn) {
+        this.$submitBtn.remove();
+      }
+    }
+
+    if (this.settings.submitAction === 'message') {
+      this.showFormAlert(data.submitActionMessage, 'success'); // Check if we need to remove the success message
+
+      this.hideSuccess();
+
+      if (this.settings.submitActionFormHide) {
+        this.$form.style.display = 'none';
+      }
+    } // Reset values regardless, for the moment
+
+
+    this.$form.reset(); // Reset the form hash, as all has been saved
+
+    this.savedFormHash = this.hashForm();
+  }
+
+  updateSubmissionInput(data) {
+    if (!data.submissionId || !data.nextPageId) {
+      return;
+    } // Add the hidden submission input, if it doesn't exist
+
+
+    this.updateOrCreateHiddenInput('submissionId', data.submissionId);
+  }
+
+  updateOrCreateHiddenInput(name, value) {
+    var $input = this.$form.querySelector('[name="' + name + '"][type="hidden"]');
+
+    if (!$input) {
+      $input = document.createElement('input');
+      $input.setAttribute('type', 'hidden');
+      $input.setAttribute('name', name);
+      this.$form.appendChild($input);
+    }
+
+    $input.setAttribute('value', value);
+  }
+
+  togglePage(data) {
+    // Hide all pages
+    var $allPages = this.$form.querySelectorAll('.fui-page');
+    $allPages.forEach($page => {
+      // Show the current page
+      if ($page.id === `${this.getPageId(data.nextPageId)}`) {
+        $page.classList.remove('fui-hidden');
+      } else {
+        $page.classList.add('fui-hidden');
+      }
+    }); // Update tabs and progress bar if we're using them
+
+    var $progress = this.$form.querySelector('.fui-progress-bar');
+
+    if ($progress) {
+      var pageIndex = data.nextPageIndex + 1;
+      var progress = Math.round(pageIndex / data.totalPages * 100);
+      $progress.style.width = progress + '%';
+      $progress.setAttribute('aria-valuenow', progress);
+      $progress.textContent = progress + '%';
+    }
+
+    var $tabs = this.$form.querySelectorAll('.fui-tab');
+    $tabs.forEach($tab => {
+      // Show the current page
+      if ($tab.id === 'fui-tab-' + data.nextPageId) {
+        $tab.classList.add('fui-tab-active');
+      } else {
+        $tab.classList.remove('fui-tab-active');
+      }
+    }); // Update the current page
+
+    this.setCurrentPage(data.nextPageId); // Smooth-scroll to the top of the form.
+
+    window.scrollTo({
+      top: this.$form.getBoundingClientRect().top + window.pageYOffset - 50,
+      behavior: 'smooth'
+    });
+  }
+
+  setCurrentPage(pageId) {
+    this.currentPageId = `#${this.getPageId(pageId)}`;
+    this.$currentPage = document.querySelector(this.currentPageId);
+  }
+
+  getPageId(pageId) {
+    return `${this.config.formHashId}-p-${pageId}`;
+  }
+
+}
+
+/***/ }),
+
+/***/ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-lib.js":
+/*!******************************************************************************!*\
+  !*** ./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-lib.js ***!
+  \******************************************************************************/
+/*! exports provided: Formie */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Formie", function() { return Formie; });
+/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/utils */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/utils.js");
+/* harmony import */ var _formie_form_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./formie-form-base */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-form-base.js");
+const globals = __webpack_require__(/*! ./utils/globals */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/globals.js");
+
+
+
+class Formie {
+  constructor() {
+    this.forms = [];
+  }
+
+  initForms() {
+    // TODO: Change this to not be an ID for greater flexibility at the next breakpoint
+    this.$forms = document.querySelectorAll('form[id^="formie-form-"]') || []; // We use this in the CP, where it's a bit tricky to add a form ID. So check just in case.
+    // Might also be handy for front-end too!
+
+    if (!this.$forms.length) {
+      this.$forms = document.querySelectorAll('div[id^="formie-form-"]') || [];
+    }
+
+    this.$forms.forEach($form => {
+      this.initForm($form);
+    }); // Emit a custom event to let scripts know the Formie class is ready
+
+    document.dispatchEvent(new CustomEvent('onFormieInit', {
+      bubbles: true,
+      detail: {
+        formie: this
+      }
+    }));
+  }
+
+  initForm($form, formConfig = {}) {
+    if (Object(_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isEmpty"])(formConfig)) {
+      // Initialize the form class with the `data-config` param on the form
+      formConfig = JSON.parse($form.getAttribute('data-config'));
+    }
+
+    if (Object(_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isEmpty"])(formConfig)) {
+      console.error('Unable to parse `data-config` form attribute for config. Ensure this attribute exists on your form and contains valid JSON.');
+      return;
+    } // See if we need to init additional, conditional JS (field, captchas, etc)
+
+
+    var registeredJs = formConfig.registeredJs || []; // Add an instance to this factory to the form config
+
+    formConfig.Formie = this; // Create the form class, save it to our collection
+
+    var form = new _formie_form_base__WEBPACK_IMPORTED_MODULE_1__["FormieFormBase"](formConfig);
+    this.forms.push(form); // Find all `data-field-config` attributes for the current page and form
+    // and build an object of them to initialize when loaded.
+
+    form.fieldConfigs = this.parseFieldConfig($form, $form); // Is there any additional JS config registered for this form?
+
+    if (registeredJs.length) {
+      // Create a container to add these items to, so we can destroy them later
+      form.$registeredJs = document.createElement('div');
+      form.$registeredJs.setAttribute('data-fui-scripts', formConfig.formId);
+      document.body.appendChild(form.$registeredJs); // Create a `<script>` for each registered JS
+
+      registeredJs.forEach(config => {
+        var $script = document.createElement('script'); // Check if we've provided an external script to load. Ensure they're deferred so they don't block
+        // and use the onload call to trigger any actual scripts once its been loaded.
+
+        if (config.src) {
+          $script.src = config.src;
+          $script.defer = true; // Initialize all matching fields - their config is already rendered in templates
+
+          $script.onload = () => {
+            if (config.module) {
+              var fieldConfigs = form.fieldConfigs[config.module]; // Handle multiple fields on a page, creating a new JS class instance for each
+
+              if (fieldConfigs && Array.isArray(fieldConfigs) && fieldConfigs.length) {
+                fieldConfigs.forEach(fieldConfig => {
+                  this.initJsClass(config.module, fieldConfig);
+                });
+              } // Handle captchas that have global settings, instead of per-field
+
+
+              if (config.settings) {
+                this.initJsClass(config.module, config.settings);
+              } // Special handling for some JS modules
+
+
+              if (config.module === 'FormieConditions') {
+                this.initJsClass(config.module, {
+                  $form
+                });
+              }
+            }
+          };
+        }
+
+        form.$registeredJs.appendChild($script);
+      });
+    }
+  }
+
+  initJsClass(className, params) {
+    var moduleClass = window[className];
+
+    if (moduleClass) {
+      new moduleClass(params);
+    }
+  } // Note the use of $form and $element to habdle Repeater
+
+
+  parseFieldConfig($element, $form) {
+    var config = {};
+    $element.querySelectorAll('[data-field-config]').forEach($field => {
+      var fieldConfig = JSON.parse($field.getAttribute('data-field-config')); // Some fields supply multiple modules, so normalise for ease-of-processing
+
+      if (!Array.isArray(fieldConfig)) {
+        fieldConfig = [fieldConfig];
+      }
+
+      fieldConfig.forEach(nestedFieldConfig => {
+        if (!config[nestedFieldConfig.module]) {
+          config[nestedFieldConfig.module] = [];
+        } // Provide field classes with the data they need
+
+
+        config[nestedFieldConfig.module].push({
+          $form,
+          $field,
+          ...nestedFieldConfig
+        });
+      });
+    });
+    return config;
+  }
+
+  getForm($form) {
+    return this.forms.find(form => {
+      return form.$form == $form;
+    });
+  }
+
+  getFormById(id) {
+    return this.forms.find(form => {
+      if (form.config) {
+        return form.config.formId == id;
+      }
+    });
+  }
+
+  getFormByHandle(handle) {
+    return this.forms.find(form => {
+      if (form.config) {
+        return form.config.formHandle == handle;
+      }
+    });
+  }
+
+  destroyForm($form) {
+    var form = this.getForm($form);
+
+    if (!form) {
+      return;
+    }
+
+    var index = this.forms.indexOf(form);
+
+    if (index === -1) {
+      return;
+    } // Delete any additional scripts for the form - if any
+
+
+    if (form.$registeredJs && form.$registeredJs.parentNode) {
+      form.$registeredJs.parentNode.removeChild(form.$registeredJs);
+    } // Remove all event listeners attached to this form
+
+
+    if (!Object(_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isEmpty"])(form.listeners)) {
+      Object.keys(form.listeners).forEach(eventKey => {
+        form.removeEventListener(eventKey);
+      });
+    } // Destroy Bouncer events
+
+
+    if (form.formTheme && form.formTheme.validator) {
+      form.formTheme.validator.destroy();
+    } // Delete it from the factory
+
+
+    delete this.forms[index];
+  }
+
+}
+window.Formie = Formie;
+
+/***/ }),
+
+/***/ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/bouncer.js":
+/*!*********************************************************************************!*\
+  !*** ./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/bouncer.js ***!
+  \*********************************************************************************/
+/*! exports provided: Bouncer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Bouncer", function() { return Bouncer; });
+/* eslint-disable */
+
+/*!
+ * formbouncerjs v1.4.6
+ * A lightweight form validation script that augments native HTML5 form validation elements and attributes.
+ * (c) 2020 Chris Ferdinandi
+ * MIT License
+ * http://github.com/cferdinandi/bouncer
+ */
+
+/**
+ * The plugin constructor
+ * @param {String} selector The selector to use for forms to be validated
+ * @param {Object} options  User settings [optional]
+ */
+const Bouncer = function (selector, options) {
+  //
+  // Variables
+  //
+  var defaults = {
+    // Classes & IDs
+    fieldClass: 'error',
+    errorClass: 'error-message',
+    fieldPrefix: 'bouncer-field_',
+    errorPrefix: 'bouncer-error_',
+    // Patterns
+    patterns: {
+      email: /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$/,
+      url: /^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/,
+      number: /^(?:[-+]?[0-9]*[.,]?[0-9]+)$/,
+      color: /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/,
+      date: /(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))/,
+      time: /^(?:(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))$/,
+      month: /^(?:(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])))$/
+    },
+    // Custom Validations
+    customValidations: {},
+    // Messages
+    messageAfterField: true,
+    messageCustom: 'data-bouncer-message',
+    messageTarget: 'data-bouncer-target',
+    // messages: {
+    //     missingValue: {
+    //         checkbox: 'This field is required.',
+    //         radio: 'Please select a value.',
+    //         select: 'Please select a value.',
+    //         'select-multiple': 'Please select at least one value.',
+    //         default: 'Please fill out this field.',
+    //     },
+    //     patternMismatch: {
+    //         email: 'Please enter a valid email address.',
+    //         url: 'Please enter a URL.',
+    //         number: 'Please enter a number',
+    //         color: 'Please match the following format: #rrggbb',
+    //         date: 'Please use the YYYY-MM-DD format',
+    //         time: 'Please use the 24-hour time format. Ex. 23:00',
+    //         month: 'Please use the YYYY-MM format',
+    //         default: 'Please match the requested format.',
+    //     },
+    //     outOfRange: {
+    //         over: 'Please select a value that is no more than {max}.',
+    //         under: 'Please select a value that is no less than {min}.',
+    //     },
+    //     wrongLength: {
+    //         over: 'Please shorten this text to no more than {maxLength} characters. You are currently using {length} characters.',
+    //         under: 'Please lengthen this text to {minLength} characters or more. You are currently using {length} characters.',
+    //     },
+    //     fallback: 'There was an error with this field.',
+    // },
+    // Form Submission
+    disableSubmit: false,
+    // Allow blur/click/input events to be opt-out
+    validateOnBlur: true,
+    // Allow validation to be turned off altogether. Useful for server-side validation use.
+    validateOnSubmit: true,
+    // Custom Events
+    emitEvents: true
+  }; //
+  // Methods
+  //
+
+  /**
+   * A wrapper for Array.prototype.forEach() for non-arrays
+   * @param  {Array-like} arr      The array-like object
+   * @param  {Function}   callback The callback to run
+   */
+
+  var forEach = function (arr, callback) {
+    Array.prototype.forEach.call(arr, callback);
+  };
+  /**
+   * Merge two or more objects together.
+   * @param   {Object}   objects  The objects to merge together
+   * @returns {Object}            Merged values of defaults and options
+   */
+
+
+  var extend = function () {
+    var merged = {};
+    forEach(arguments, obj => {
+      for (var key in obj) {
+        if (!obj.hasOwnProperty(key)) return;
+
+        if (Object.prototype.toString.call(obj[key]) === '[object Object]') {
+          merged[key] = extend(merged[key], obj[key]);
+        } else {
+          merged[key] = obj[key];
+        } // merged[key] = obj[key];
+
+      }
+    });
+    return merged;
+  };
+  /**
+   * Emit a custom event
+   * @param  {String} type    The event type
+   * @param  {Object} options The settings object
+   * @param  {Node}   anchor  The anchor element
+   * @param  {Node}   toggle  The toggle element
+   */
+
+
+  var emitEvent = function (elem, type, details) {
+    if (typeof window.CustomEvent !== 'function') return;
+    var event = new CustomEvent(type, {
+      bubbles: true,
+      detail: details || {}
+    });
+    elem.dispatchEvent(event);
+  };
+  /**
+   * Add the `novalidate` attribute to all forms
+   * @param {Boolean} remove  If true, remove the `novalidate` attribute
+   */
+
+
+  var addNoValidate = function (selector) {
+    forEach(document.querySelectorAll(selector), form => {
+      form.setAttribute('novalidate', true);
+    });
+  };
+  /**
+   * Remove the `novalidate` attribute to all forms
+   */
+
+
+  var removeNoValidate = function (selector) {
+    forEach(document.querySelectorAll(selector), form => {
+      form.removeAttribute('novalidate');
+    });
+  };
+  /**
+   * Check if a required field is missing its value
+   * @param  {Node} field The field to check
+   * @return {Boolean}       It true, field is missing it's value
+   */
+
+
+  var missingValue = function (field) {
+    // If not required, bail
+    if (!field.hasAttribute('required')) return false; // Handle checkboxes
+
+    if (field.type === 'checkbox') {
+      var checkboxInputs = field.form.querySelectorAll('[name="' + escapeCharacters(field.name) + '"]:not([type="hidden"])');
+      var checkedInputs = Array.prototype.filter.call(checkboxInputs, btn => {
+        return btn.checked;
+      }).length;
+
+      if (checkedInputs === 0) {
+        return field === checkboxInputs[0];
+      }
+
+      return !field.checked;
+    } // Get the field value length
+
+
+    var {
+      length
+    } = field.value; // Handle radio buttons
+
+    if (field.type === 'radio') {
+      length = Array.prototype.filter.call(field.form.querySelectorAll('[name="' + escapeCharacters(field.name) + '"]'), btn => {
+        return btn.checked;
+      }).length;
+    } // Check for value
+
+
+    return length < 1;
+  };
+  /**
+   * Check if field value doesn't match a patter.
+   * @param  {Node}   field    The field to check
+   * @param  {Object} settings The plugin settings
+   * @see https://www.w3.org/TR/html51/sec-forms.html#the-pattern-attribute
+   * @return {Boolean}         If true, there's a pattern mismatch
+   */
+
+
+  var patternMismatch = function (field, settings) {
+    // Check if there's a pattern to match
+    var pattern = field.getAttribute('pattern');
+    pattern = pattern ? new RegExp('^(?:' + pattern + ')$') : settings.patterns[field.type];
+    if (!pattern || !field.value || field.value.length < 1) return false; // Validate the pattern
+
+    return field.value.match(pattern) ? false : true;
+  };
+  /**
+   * Check if field value is out-of-range
+   * @param  {Node}    field    The field to check
+   * @return {String}           Returns 'over', 'under', or false
+   */
+
+
+  var outOfRange = function (field) {
+    // Make sure field has value
+    if (!field.value || field.value.length < 1) return false; // Check for range
+
+    var max = field.getAttribute('max');
+    var min = field.getAttribute('min'); // Check validity
+
+    var num = parseFloat(field.value);
+    if (max && num > max) return 'over';
+    if (min && num < min) return 'under';
+    return false;
+  };
+  /**
+   * Check if the field value is too long or too short
+   * @param  {Node}   field    The field to check
+   * @return {String}           Returns 'over', 'under', or false
+   */
+
+
+  var wrongLength = function (field) {
+    // Make sure field has value
+    if (!field.value || field.value.length < 1) return false; // Check for min/max length
+
+    var max = field.getAttribute('maxlength');
+    var min = field.getAttribute('minlength'); // Check validity
+
+    var {
+      length
+    } = field.value;
+    if (max && length > max) return 'over';
+    if (min && length < min) return 'under';
+    return false;
+  };
+  /**
+   * Test for standard field validations
+   * @param  {Node}   field    The field to test
+   * @param  {Object} settings The plugin settings
+   * @return {Object}          The tests and their results
+   */
+
+
+  var runValidations = function (field, settings) {
+    return {
+      missingValue: missingValue(field),
+      patternMismatch: patternMismatch(field, settings),
+      outOfRange: outOfRange(field),
+      wrongLength: wrongLength(field)
+    };
+  };
+  /**
+   * Run any provided custom validations
+   * @param  {Node}   field       The field to test
+   * @param  {Object} errors      The existing errors
+   * @param  {Object} validations The custom validations to run
+   * @param  {Object} settings    The plugin settings
+   * @return {Object}             The tests and their results
+   */
+
+
+  var customValidations = function (field, errors, validations, settings) {
+    for (var test in validations) {
+      if (validations.hasOwnProperty(test)) {
+        errors[test] = validations[test](field, settings);
+      }
+    }
+
+    return errors;
+  };
+  /**
+   * Check if a field has any errors
+   * @param  {Object}  errors The validation test results
+   * @return {Boolean}        Returns true if there are errors
+   */
+
+
+  var hasErrors = function (errors) {
+    for (var type in errors) {
+      if (errors[type]) return true;
+    }
+
+    return false;
+  };
+  /**
+   * Check a field for errors
+   * @param  {Node} field      The field to test
+   * @param  {Object} settings The plugin settings
+   * @return {Object}          The field validity and errors
+   */
+
+
+  var getErrors = function (field, settings) {
+    // Get standard validation errors
+    var errors = runValidations(field, settings); // Check for custom validations
+
+    errors = customValidations(field, errors, settings.customValidations, settings);
+    return {
+      valid: !hasErrors(errors),
+      errors
+    };
+  };
+  /**
+   * Escape special characters for use with querySelector
+   * @author Mathias Bynens
+   * @link https://github.com/mathiasbynens/CSS.escape
+   * @param {String} id The anchor ID to escape
+   */
+
+
+  var escapeCharacters = function (id) {
+    var string = String(id);
+    var {
+      length
+    } = string;
+    var index = -1;
+    var codeUnit;
+    var result = '';
+    var firstCodeUnit = string.charCodeAt(0);
+
+    while (++index < length) {
+      codeUnit = string.charCodeAt(index); // Note: there’s no need to special-case astral symbols, surrogate
+      // pairs, or lone surrogates.
+      // If the character is NULL (U+0000), then throw an
+      // `InvalidCharacterError` exception and terminate these steps.
+
+      if (codeUnit === 0x0000) {
+        throw new InvalidCharacterError('Invalid character: the input contains U+0000.');
+      }
+
+      if ( // If the character is in the range [\1-\1F] (U+0001 to U+001F) or is
+      // U+007F, […]
+      codeUnit >= 0x0001 && codeUnit <= 0x001F || codeUnit == 0x007F || // If the character is the first character and is in the range [0-9]
+      // (U+0030 to U+0039), […]
+      index === 0 && codeUnit >= 0x0030 && codeUnit <= 0x0039 || // If the character is the second character and is in the range [0-9]
+      // (U+0030 to U+0039) and the first character is a `-` (U+002D), […]
+      index === 1 && codeUnit >= 0x0030 && codeUnit <= 0x0039 && firstCodeUnit === 0x002D) {
+        // http://dev.w3.org/csswg/cssom/#escape-a-character-as-code-point
+        result += '\\' + codeUnit.toString(16) + ' ';
+        continue;
+      } // If the character is not handled by one of the above rules and is
+      // greater than or equal to U+0080, is `-` (U+002D) or `_` (U+005F), or
+      // is in one of the ranges [0-9] (U+0030 to U+0039), [A-Z] (U+0041 to
+      // U+005A), or [a-z] (U+0061 to U+007A), […]
+
+
+      if (codeUnit >= 0x0080 || codeUnit === 0x002D || codeUnit === 0x005F || codeUnit >= 0x0030 && codeUnit <= 0x0039 || codeUnit >= 0x0041 && codeUnit <= 0x005A || codeUnit >= 0x0061 && codeUnit <= 0x007A) {
+        // the character itself
+        result += string.charAt(index);
+        continue;
+      } // Otherwise, the escaped character.
+      // http://dev.w3.org/csswg/cssom/#escape-a-character
+
+
+      result += '\\' + string.charAt(index);
+    } // Return sanitized hash
+
+
+    return result;
+  };
+  /**
+   * Get or create an ID for a field
+   * @param  {Node}    field    The field
+   * @param  {Object}  settings The plugin settings
+   * @param  {Boolean} create   If true, create an ID if there isn't one
+   * @return {String}           The field ID
+   */
+
+
+  var getFieldID = function (field, settings, create) {
+    var id = field.name ? field.name : field.id;
+
+    if (!id && create) {
+      id = settings.fieldPrefix + Math.floor(Math.random() * 999);
+      field.id = id;
+    }
+
+    if (field.type === 'checkbox') {
+      id += '_' + (field.value || field.id);
+    }
+
+    return id;
+  };
+  /**
+   * Special handling for radio buttons and checkboxes wrapped in labels.
+   * @param  {Node} field The field with the error
+   * @return {Node}       The field to show the error on
+   */
+
+
+  var getErrorField = function (field) {
+    // If the field is a radio button, get the last item in the radio group
+    // @todo if location is before, get first item
+    if (field.type === 'radio' && field.name) {
+      var group = field.form.querySelectorAll('[name="' + escapeCharacters(field.name) + '"]');
+      field = group[group.length - 1];
+    } // Get the associated label for radio button or checkbox
+    // if (field.type === 'radio') {
+    //     var label = field.closest('label') || field.form.querySelector('[for="' + field.id + '"]');
+    //     field = label || field;
+    // }
+
+
+    if (field.type === 'checkbox' || field.type === 'radio') {
+      // TODO: think of a way to make this less opinionated
+      field = field.closest('.fui-field-container');
+    }
+
+    return field;
+  };
+  /**
+   * Get the location for a field's error message
+   * @param  {Node}   field    The field
+   * @param  {Node}   target   The target for error message
+   * @param  {Object} settings The plugin settings
+   * @return {Node}            The error location
+   */
+
+
+  var getErrorLocation = function (field, target, settings) {
+    // Check for a custom error message
+    var selector = field.getAttribute(settings.messageTarget);
+
+    if (selector) {
+      var location = field.form.querySelector(selector);
+
+      if (location) {
+        // @bugfix by @HaroldPutman
+        // https://github.com/cferdinandi/bouncer/pull/28
+        return location.firstChild || location.appendChild(document.createTextNode(''));
+      }
+    } // If the message should come after the field
+
+
+    if (settings.messageAfterField) {
+      // If there's no next sibling, create one
+      if (!target.nextSibling) {
+        target.parentNode.appendChild(document.createTextNode(''));
+      }
+
+      return target.nextSibling;
+    } // If it should come before
+
+
+    return target;
+  };
+  /**
+   * Create a validation error message node
+   * @param  {Node} field      The field
+   * @param  {Object} settings The plugin settings
+   * @return {Node}            The error message node
+   */
+
+
+  var createError = function (field, settings) {
+    // Create the error message
+    var error = document.createElement('div');
+    error.className = settings.errorClass;
+    error.id = settings.errorPrefix + getFieldID(field, settings, true); // If the field is a radio button or checkbox, grab the last field label
+
+    var fieldTarget = getErrorField(field); // Inject the error message into the DOM
+
+    var location = getErrorLocation(field, fieldTarget, settings);
+    location.parentNode.insertBefore(error, location);
+    return error;
+  };
+  /**
+   * Get the error message test
+   * @param  {Node}            field    The field to get an error message for
+   * @param  {Object}          errors   The errors on the field
+   * @param  {Object}          settings The plugin settings
+   * @return {String|Function}          The error message
+   */
+
+
+  var getErrorMessage = function (field, errors, settings) {
+    // Variables
+    var {
+      messages
+    } = settings; // Missing value error
+
+    if (errors.missingValue) {
+      return messages.missingValue[field.type] || messages.missingValue.default;
+    } // Numbers that are out of range
+
+
+    if (errors.outOfRange) {
+      return messages.outOfRange[errors.outOfRange].replace('{max}', field.getAttribute('max')).replace('{min}', field.getAttribute('min')).replace('{length}', field.value.length);
+    } // Values that are too long or short
+
+
+    if (errors.wrongLength) {
+      return messages.wrongLength[errors.wrongLength].replace('{maxLength}', field.getAttribute('maxlength')).replace('{minLength}', field.getAttribute('minlength')).replace('{length}', field.value.length);
+    } // Pattern mismatch error
+
+
+    if (errors.patternMismatch) {
+      var custom = field.getAttribute(settings.messageCustom);
+      if (custom) return custom;
+      return messages.patternMismatch[field.type] || messages.patternMismatch.default;
+    } // Custom validations
+
+
+    for (var test in settings.customValidations) {
+      if (settings.customValidations.hasOwnProperty(test)) {
+        if (errors[test] && messages[test]) return messages[test];
+      }
+    } // Custom message, passed directly in
+
+
+    if (errors.customMessage) {
+      return errors.customMessage;
+    } // Fallback error message
+
+
+    return messages.fallback;
+  };
+  /**
+   * Add error attributes to a field
+   * @param  {Node}   field    The field with the error message
+   * @param  {Node}   error    The error message
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  var addErrorAttributes = function (field, error, settings) {
+    field.classList.add(settings.fieldClass);
+    field.setAttribute('aria-describedby', error.id);
+    field.setAttribute('aria-invalid', true); // TODO: think of a way to make this less opinionated
+
+    var $fieldNode = field.closest('.fui-field');
+
+    if ($fieldNode) {
+      $fieldNode.classList.add(settings.fieldClass);
+    }
+  };
+  /**
+   * Show error attributes on a field or radio/checkbox group
+   * @param  {Node}   field    The field with the error message
+   * @param  {Node}   error    The error message
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  var showErrorAttributes = function (field, error, settings) {
+    // If field is a radio button, add attributes to every button in the group
+    if (field.type === 'radio' && field.name) {
+      Array.prototype.forEach.call(document.querySelectorAll('[name="' + field.name + '"]'), button => {
+        addErrorAttributes(button, error, settings);
+      });
+    } // Otherwise, add an error class and aria attribute to the field
+
+
+    addErrorAttributes(field, error, settings);
+  };
+  /**
+   * Show an error message in the DOM
+   * @param  {Node} field      The field to show an error message for
+   * @param  {Object}          errors   The errors on the field
+   * @param  {Object}          settings The plugin settings
+   */
+
+
+  var showError = function (field, errors, settings) {
+    // Get/create an error message
+    var error = field.form.querySelector('#' + escapeCharacters(settings.errorPrefix + getFieldID(field, settings))) || createError(field, settings);
+    var msg = getErrorMessage(field, errors, settings);
+    error.textContent = typeof msg === 'function' ? msg(field, settings) : msg; // Add error attributes
+
+    showErrorAttributes(field, error, settings); // Emit custom event
+
+    if (settings.emitEvents) {
+      emitEvent(field, 'bouncerShowError', {
+        errors
+      });
+    }
+  };
+  /**
+   * Remove error attributes from a field
+   * @param  {Node}   field    The field with the error message
+   * @param  {Node}   error    The error message
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  var removeAttributes = function (field, settings) {
+    field.classList.remove(settings.fieldClass);
+    field.removeAttribute('aria-describedby');
+    field.removeAttribute('aria-invalid'); // TODO: think of a way to make this less opinionated
+
+    var $fieldNode = field.closest('.fui-field');
+
+    if ($fieldNode) {
+      $fieldNode.classList.remove(settings.fieldClass);
+    }
+  };
+  /**
+   * Remove error attributes from the field or radio group
+   * @param  {Node}   field    The field with the error message
+   * @param  {Node}   error    The error message
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  var removeErrorAttributes = function (field, settings) {
+    // If field is a radio button, remove attributes from every button in the group
+    if (field.type === 'radio' && field.name) {
+      Array.prototype.forEach.call(document.querySelectorAll('[name="' + field.name + '"]'), button => {
+        removeAttributes(button, settings);
+      });
+      return;
+    } // Otherwise, add an error class and aria attribute to the field
+
+
+    removeAttributes(field, settings);
+  };
+  /**
+   * Remove an error message from the DOM
+   * @param  {Node} field      The field with the error message
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  var removeError = function (field, settings) {
+    // Get the error message for this field
+    var error = field.form.querySelector('#' + escapeCharacters(settings.errorPrefix + getFieldID(field, settings)));
+    if (!error) return; // Remove the error
+
+    error.parentNode.removeChild(error); // Remove error and a11y from the field
+
+    removeErrorAttributes(field, settings); // Emit custom event
+
+    if (settings.emitEvents) {
+      emitEvent(field, 'bouncerRemoveError');
+    }
+  };
+  /**
+   * Remove errors from all fields
+   * @param  {String} selector The selector for the form
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  var removeAllErrors = function (selector, settings) {
+    forEach(document.querySelectorAll(selector), form => {
+      forEach(form.querySelectorAll('input, select, textarea'), field => {
+        removeError(field, settings);
+      });
+    });
+  }; //
+  // Variables
+  //
+
+
+  var publicAPIs = {};
+  var settings; //
+  // Methods
+  //
+
+  /**
+   * Show an error message in the DOM
+   * @param  {Node} field      The field to show an error message for
+   * @param  {Object}          errors   The errors on the field
+   * @param  {Object}          options Additional plugin settings
+   */
+
+  publicAPIs.showError = function (field, errors, options) {
+    var _settings = extend(settings, options || {});
+
+    return showError(field, errors, _settings);
+  };
+  /**
+   * Remove an error message from the DOM
+   * @param  {Node} field      The field with the error message
+   * @param  {Object} settings The plugin settings
+   */
+
+
+  publicAPIs.removeError = function (field, options) {
+    var _settings = extend(settings, options || {});
+
+    return removeError(field, _settings);
+  };
+  /**
+   * Validate a field
+   * @param  {Node} field     The field to validate
+   * @param  {Object} options Validation options
+   * @return {Object}         The validity state and errors
+   */
+
+
+  publicAPIs.validate = function (field, options) {
+    // Don't validate submits, buttons, file and reset inputs, and disabled and readonly fields
+    if (field.disabled || field.readOnly || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return; // Local settings
+
+    var _settings = extend(settings, options || {}); // Check for errors
+
+
+    var isValid = getErrors(field, _settings); // If valid, remove any error messages
+
+    if (isValid.valid) {
+      removeError(field, _settings);
+      return;
+    } // Otherwise, show an error message
+
+
+    showError(field, isValid.errors, _settings);
+    return isValid;
+  };
+  /**
+   * Validate all fields in a form or section
+   * @param  {Node} target The form or section to validate fields in
+   * @return {Array}       An array of fields with errors
+   */
+
+
+  publicAPIs.validateAll = function (target) {
+    return Array.prototype.filter.call(target.querySelectorAll('input, select, textarea'), field => {
+      var validate = publicAPIs.validate(field);
+      return validate && !validate.valid;
+    });
+  };
+  /**
+   * Run a validation on field blur
+   */
+
+
+  var blurHandler = function (event) {
+    // Only run if the field is in a form to be validated
+    if (!event.target.form || !event.target.form.matches(selector)) return; // Special-case for file field, blurs as soon as the selector kicks in
+
+    if (event.target.type === 'file') return; // Validate the field
+
+    publicAPIs.validate(event.target);
+  }; // Leave this as opt-in for the moment, for better file-support
+
+
+  var changeHandler = function (event) {
+    // Only run if the field is in a form to be validated
+    if (!event.target.form || !event.target.form.matches(selector)) return; // Just deal with file input fields
+
+    if (event.target.type !== 'file') return; // Validate the field
+
+    publicAPIs.validate(event.target);
+  };
+  /**
+   * Run a validation on a fields with errors when the value changes
+   */
+
+
+  var inputHandler = function (event) {
+    // Only run if the field is in a form to be validated
+    if (!event.target.form || !event.target.form.matches(selector)) return; // Only run on fields with errors
+
+    if (!event.target.classList.contains(settings.fieldClass)) return; // Validate the field
+
+    publicAPIs.validate(event.target);
+  };
+  /**
+   * Validate an entire form when it's submitted
+   */
+
+
+  var submitHandler = function (event) {
+    // Only run on matching elements
+    if (!event.target.matches(selector)) return; // Prevent form submission
+
+    event.preventDefault(); // Validate each field
+
+    var errors = publicAPIs.validateAll(event.target); // If there are errors, focus on the first one
+
+    if (errors.length > 0) {
+      errors[0].focus();
+      emitEvent(event.target, 'bouncerFormInvalid', {
+        errors
+      });
+      return;
+    } // Otherwise, submit if not disabled
+
+
+    if (!settings.disableSubmit) {
+      event.target.submit();
+    } // Emit custom event
+
+
+    if (settings.emitEvents) {
+      emitEvent(event.target, 'bouncerFormValid');
+    }
+  };
+  /**
+   * Destroy the current plugin instantiation
+   */
+
+
+  publicAPIs.destroy = function () {
+    // Remove event listeners
+    if (settings.validateOnBlur) {
+      document.removeEventListener('blur', blurHandler, true);
+      document.removeEventListener('input', inputHandler, false);
+      document.removeEventListener('change', changeHandler, false);
+      document.removeEventListener('click', inputHandler, false);
+    }
+
+    if (settings.validateOnSubmit) {
+      document.removeEventListener('submit', submitHandler, false);
+    } // Remove all errors
+
+
+    removeAllErrors(selector, settings); // Remove novalidate attribute
+
+    removeNoValidate(selector); // Emit custom event
+
+    if (settings.emitEvents) {
+      emitEvent(document, 'bouncerDestroyed', {
+        settings
+      });
+    } // Reset settings
+
+
+    settings = null;
+  };
+  /**
+   * Instantiate a new instance of the plugin
+   */
+
+
+  var init = function () {
+    // Create settings
+    settings = extend(defaults, options || {}); // Add novalidate attribute
+
+    addNoValidate(selector); // Event Listeners
+
+    if (settings.validateOnBlur) {
+      document.addEventListener('blur', blurHandler, true);
+      document.addEventListener('input', inputHandler, false);
+      document.addEventListener('change', changeHandler, false);
+      document.addEventListener('click', inputHandler, false);
+    }
+
+    if (settings.validateOnSubmit) {
+      document.addEventListener('submit', submitHandler, false);
+    } // Emit custom event
+
+
+    if (settings.emitEvents) {
+      emitEvent(document, 'bouncerInitialized', {
+        settings
+      });
+    }
+  }; //
+  // Inits & Event Listeners
+  //
+
+
+  init();
+  return publicAPIs;
+};
+
+/***/ }),
+
+/***/ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/globals.js":
+/*!*********************************************************************************!*\
+  !*** ./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/globals.js ***!
+  \*********************************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var formdata_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! formdata-polyfill */ "./node_modules/formdata-polyfill/formdata.min.js");
+/* harmony import */ var formdata_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(formdata_polyfill__WEBPACK_IMPORTED_MODULE_0__);
+global.t = function (string, replacements = {}) {
+  if (window.FormieTranslations) {
+    string = window.FormieTranslations[string] || string;
+  }
+
+  return string.replace(/{([a-zA-Z0-9]+)}/g, (match, p1) => {
+    if (replacements[p1]) {
+      return replacements[p1];
+    }
+
+    return match;
+  });
+}; //
+// Polyfills for IE11
+//
+// CustomEvent()
+
+
+(function () {
+  if (typeof window.CustomEvent === 'function') return false;
+
+  function CustomEvent(event, params) {
+    params = params || {
+      bubbles: false,
+      cancelable: false,
+      detail: null
+    };
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  }
+
+  window.CustomEvent = CustomEvent;
+})(); // FormData
+
+
+ // closest
+
+if (!Element.prototype.matches) {
+  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
+
+if (!Element.prototype.closest) {
+  Element.prototype.closest = function (s) {
+    var el = this;
+
+    do {
+      if (el.matches(s)) return el;
+      el = el.parentElement || el.parentNode;
+    } while (el !== null && el.nodeType === 1);
+
+    return null;
+  };
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/utils.js":
+/*!*******************************************************************************!*\
+  !*** ./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/utils/utils.js ***!
+  \*******************************************************************************/
+/*! exports provided: isEmpty, toBoolean, eventKey */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmpty", function() { return isEmpty; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toBoolean", function() { return toBoolean; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eventKey", function() { return eventKey; });
+const isEmpty = function (obj) {
+  return obj && Object.keys(obj).length === 0 && obj.constructor === Object;
+};
+const toBoolean = function (val) {
+  return !/^(?:f(?:alse)?|no?|0+)$/i.test(val) && !!val;
+};
+const eventKey = function (eventName) {
+  return eventName + '.' + Math.random();
+};
+
+/***/ }),
+
+/***/ "./node_modules/formdata-polyfill/formdata.min.js":
+/*!********************************************************!*\
+  !*** ./node_modules/formdata-polyfill/formdata.min.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {;(function(){var h;function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}var m="function"==typeof Object.defineProperties?Object.defineProperty:function(a,c,b){if(a==Array.prototype||a==Object.prototype)return a;a[c]=b.value;return a};
+function n(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var b=a[c];if(b&&b.Math==Math)return b}throw Error("Cannot find global object");}var p=n(this);function r(a,c){if(c){for(var b=p,d=a.split("."),e=0;e<d.length-1;e++){var f=d[e];f in b||(b[f]={});b=b[f]}d=d[d.length-1];e=b[d];f=c(e);f!=e&&null!=f&&m(b,d,{configurable:!0,writable:!0,value:f})}}
+r("Symbol",function(a){function c(e){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new b("jscomp_symbol_"+(e||"")+"_"+d++,e)}function b(e,f){this.o=e;m(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;b.prototype.toString=function(){return this.o};var d=0;return c});
+r("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");for(var c="Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "),b=0;b<c.length;b++){var d=p[c[b]];"function"===typeof d&&"function"!=typeof d.prototype[a]&&m(d.prototype,a,{configurable:!0,writable:!0,value:function(){return u(l(this))}})}return a});function u(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+function v(a){var c="undefined"!=typeof Symbol&&Symbol.iterator&&a[Symbol.iterator];return c?c.call(a):{next:l(a)}}var w;if("function"==typeof Object.setPrototypeOf)w=Object.setPrototypeOf;else{var y;a:{var z={u:!0},A={};try{A.__proto__=z;y=A.u;break a}catch(a){}y=!1}w=y?function(a,c){a.__proto__=c;if(a.__proto__!==c)throw new TypeError(a+" is not extensible");return a}:null}var B=w;function C(){this.h=!1;this.f=null;this.m=void 0;this.b=1;this.l=this.v=0;this.g=null}
+function D(a){if(a.h)throw new TypeError("Generator is already running");a.h=!0}C.prototype.i=function(a){this.m=a};C.prototype.j=function(a){this.g={w:a,A:!0};this.b=this.v||this.l};C.prototype["return"]=function(a){this.g={"return":a};this.b=this.l};function E(a,c){a.b=3;return{value:c}}function F(a){this.a=new C;this.B=a}F.prototype.i=function(a){D(this.a);if(this.a.f)return G(this,this.a.f.next,a,this.a.i);this.a.i(a);return H(this)};
+function I(a,c){D(a.a);var b=a.a.f;if(b)return G(a,"return"in b?b["return"]:function(d){return{value:d,done:!0}},c,a.a["return"]);a.a["return"](c);return H(a)}F.prototype.j=function(a){D(this.a);if(this.a.f)return G(this,this.a.f["throw"],a,this.a.i);this.a.j(a);return H(this)};
+function G(a,c,b,d){try{var e=c.call(a.a.f,b);if(!(e instanceof Object))throw new TypeError("Iterator result "+e+" is not an object");if(!e.done)return a.a.h=!1,e;var f=e.value}catch(g){return a.a.f=null,a.a.j(g),H(a)}a.a.f=null;d.call(a.a,f);return H(a)}function H(a){for(;a.a.b;)try{var c=a.B(a.a);if(c)return a.a.h=!1,{value:c.value,done:!1}}catch(b){a.a.m=void 0,a.a.j(b)}a.a.h=!1;if(a.a.g){c=a.a.g;a.a.g=null;if(c.A)throw c.w;return{value:c["return"],done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){return a.i(c)};this["throw"]=function(c){return a.j(c)};this["return"]=function(c){return I(a,c)};this[Symbol.iterator]=function(){return this}}function K(a,c){var b=new J(new F(c));B&&B(b,a.prototype);return b}
+if("undefined"!==typeof Blob&&("undefined"===typeof FormData||!FormData.prototype.keys)){var L=function(a,c){for(var b=0;b<a.length;b++)c(a[b])},M=function(a,c,b){return c instanceof Blob?[String(a),c,void 0!==b?b+"":"string"===typeof c.name?c.name:"blob"]:[String(a),String(c)]},N=function(a,c){if(a.length<c)throw new TypeError(c+" argument required, but only "+a.length+" present.");},O=function(a){var c=v(a);a=c.next().value;var b=c.next().value;c=c.next().value;b instanceof Blob&&(b=new File([b],
+c,{type:b.type,lastModified:b.lastModified}));return[a,b]},P="object"===typeof globalThis?globalThis:"object"===typeof window?window:"object"===typeof self?self:this,Q=P.FormData,R=P.XMLHttpRequest&&P.XMLHttpRequest.prototype.send,S=P.Request&&P.fetch,T=P.navigator&&P.navigator.sendBeacon,U=P.Element&&P.Element.prototype,V=P.Symbol&&Symbol.toStringTag;V&&(Blob.prototype[V]||(Blob.prototype[V]="Blob"),"File"in P&&!File.prototype[V]&&(File.prototype[V]="File"));try{new File([],"")}catch(a){P.File=function(c,
+b,d){c=new Blob(c,d);d=d&&void 0!==d.lastModified?new Date(d.lastModified):new Date;Object.defineProperties(c,{name:{value:b},lastModifiedDate:{value:d},lastModified:{value:+d},toString:{value:function(){return"[object File]"}}});V&&Object.defineProperty(c,V,{value:"File"});return c}}var W=function(a){this.c=[];var c=this;a&&L(a.elements,function(b){if(b.name&&!b.disabled&&"submit"!==b.type&&"button"!==b.type&&!b.matches("form fieldset[disabled] *"))if("file"===b.type){var d=b.files&&b.files.length?
+b.files:[new File([],"",{type:"application/octet-stream"})];L(d,function(e){c.append(b.name,e)})}else"select-multiple"===b.type||"select-one"===b.type?L(b.options,function(e){!e.disabled&&e.selected&&c.append(b.name,e.value)}):"checkbox"===b.type||"radio"===b.type?b.checked&&c.append(b.name,b.value):(d="textarea"===b.type?b.value.replace(/\r\n/g,"\n").replace(/\n/g,"\r\n"):b.value,c.append(b.name,d))})};h=W.prototype;h.append=function(a,c,b){N(arguments,2);this.c.push(M(a,c,b))};h["delete"]=function(a){N(arguments,
+1);var c=[];a=String(a);L(this.c,function(b){b[0]!==a&&c.push(b)});this.c=c};h.entries=function c(){var b,d=this;return K(c,function(e){1==e.b&&(b=0);if(3!=e.b)return b<d.c.length?e=E(e,O(d.c[b])):(e.b=0,e=void 0),e;b++;e.b=2})};h.forEach=function(c,b){N(arguments,1);for(var d=v(this),e=d.next();!e.done;e=d.next()){var f=v(e.value);e=f.next().value;f=f.next().value;c.call(b,f,e,this)}};h.get=function(c){N(arguments,1);var b=this.c;c=String(c);for(var d=0;d<b.length;d++)if(b[d][0]===c)return O(b[d])[1];
+return null};h.getAll=function(c){N(arguments,1);var b=[];c=String(c);L(this.c,function(d){d[0]===c&&b.push(O(d)[1])});return b};h.has=function(c){N(arguments,1);c=String(c);for(var b=0;b<this.c.length;b++)if(this.c[b][0]===c)return!0;return!1};h.keys=function b(){var d=this,e,f,g,k,q;return K(b,function(t){1==t.b&&(e=v(d),f=e.next());if(3!=t.b){if(f.done){t.b=0;return}g=f.value;k=v(g);q=k.next().value;return E(t,q)}f=e.next();t.b=2})};h.set=function(b,d,e){N(arguments,2);b=String(b);var f=[],g=M(b,
+d,e),k=!0;L(this.c,function(q){q[0]===b?k&&(k=!f.push(g)):f.push(q)});k&&f.push(g);this.c=f};h.values=function d(){var e=this,f,g,k,q,t;return K(d,function(x){1==x.b&&(f=v(e),g=f.next());if(3!=x.b){if(g.done){x.b=0;return}k=g.value;q=v(k);q.next();t=q.next().value;return E(x,t)}g=f.next();x.b=2})};W.prototype._asNative=function(){for(var d=new Q,e=v(this),f=e.next();!f.done;f=e.next()){var g=v(f.value);f=g.next().value;g=g.next().value;d.append(f,g)}return d};W.prototype._blob=function(){for(var d=
+"----formdata-polyfill-"+Math.random(),e=[],f=v(this),g=f.next();!g.done;g=f.next()){var k=v(g.value);g=k.next().value;k=k.next().value;e.push("--"+d+"\r\n");k instanceof Blob?e.push('Content-Disposition: form-data; name="'+g+'"; filename="'+k.name+'"\r\nContent-Type: '+((k.type||"application/octet-stream")+"\r\n\r\n"),k,"\r\n"):e.push('Content-Disposition: form-data; name="'+g+'"\r\n\r\n'+k+"\r\n")}e.push("--"+d+"--");return new Blob(e,{type:"multipart/form-data; boundary="+d})};W.prototype[Symbol.iterator]=
+function(){return this.entries()};W.prototype.toString=function(){return"[object FormData]"};U&&!U.matches&&(U.matches=U.matchesSelector||U.mozMatchesSelector||U.msMatchesSelector||U.oMatchesSelector||U.webkitMatchesSelector||function(d){d=(this.document||this.ownerDocument).querySelectorAll(d);for(var e=d.length;0<=--e&&d.item(e)!==this;);return-1<e});V&&(W.prototype[V]="FormData");if(R){var X=P.XMLHttpRequest.prototype.setRequestHeader;P.XMLHttpRequest.prototype.setRequestHeader=function(d,e){X.call(this,
+d,e);"content-type"===d.toLowerCase()&&(this.s=!0)};P.XMLHttpRequest.prototype.send=function(d){d instanceof W?(d=d._blob(),this.s||this.setRequestHeader("Content-Type",d.type),R.call(this,d)):R.call(this,d)}}S&&(P.fetch=function(d,e){e&&e.body&&e.body instanceof W&&(e.body=e.body._blob());return S.call(this,d,e)});T&&(P.navigator.sendBeacon=function(d,e){e instanceof W&&(e=e._asNative());return T.call(this,d,e)});P.FormData=W};
+})();
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./src/js/block-modules/FormieForm.js":
+/*!********************************************!*\
+  !*** ./src/js/block-modules/FormieForm.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _cms_vendor_verbb_formie_src_web_assets_frontend_src_js_formie_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-lib */ "./cms/vendor/verbb/formie/src/web/assets/frontend/src/js/formie-lib.js");
+function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}var FormieForm=/*#__PURE__*/function(){function FormieForm(){_classCallCheck(this,FormieForm);this.instances=[];this.forms=[];}_createClass(FormieForm,[{key:"init",value:function init(){var _this=this;var elements=$(FormieForm.selector);if(elements.length){elements.each(function(index,element){_this.instances.push(element);if($('form.fui-form',element).length){var formElement=$('form.fui-form',element)[0];var formInstance=new _cms_vendor_verbb_formie_src_web_assets_frontend_src_js_formie_lib__WEBPACK_IMPORTED_MODULE_0__["Formie"]();formInstance.initForm(formElement);_this.forms.push({element:formElement,instance:formInstance});}});}}},{key:"destroy",value:function destroy(){if(this.forms.length){for(var i=0;i<this.forms.length;i++){var form=this.forms[i];form.instance.destroyForm(form.element);}this.forms=[];}if(this.instances.length){this.instances=[];}}}]);return FormieForm;}();_defineProperty(FormieForm,"selector",'.section-formie_form--block');/* harmony default export */ __webpack_exports__["default"] = (FormieForm);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ })
+
+}]);
 //# sourceMappingURL=formie-form.bundle.js.map

@@ -8,7 +8,7 @@
                 {% include "_partials/snippets/logo" with {'size': 'compact' } %}
             </div>
             <div class="footer-navigation-container">
-                <div class="copyright rte">{{ siteSettings.footerCopyright  }}</div>
+                <div class="copyright rte">{{ siteSettings.footerCopyright | replace('${year}', "now"|date("Y")) | raw }}</div>
                 <div class="referral">Site by <a href="https://www.boyerwebstudios.com" target="_blank" rel="noopener">Boyer Web Studios</a></div>
             </div>
         </div>
