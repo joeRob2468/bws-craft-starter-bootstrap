@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Hillcrest Hope'
+name: 'Dover Development'
 primary: true
 siteGroup: 9c9cedf8-9d96-4d16-8615-c7b9ba00c0fc # BWS Craft Bootstrap
 sortOrder: 1

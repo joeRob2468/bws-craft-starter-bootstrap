@@ -1,4 +1,4 @@
-dateModified: 1619024948
+dateModified: 1634663662
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SITE_NAME
@@ -37,7 +37,7 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: $PLUGIN_FORMIE_LICENSE
+    licenseKey: OOO7H8GXYFYPO8MLWXW0UPWK
     schemaVersion: 1.1.8
     settings:
       alertEmails: null
@@ -92,7 +92,7 @@ plugins:
   neo:
     edition: standard
     enabled: true
-    licenseKey: $PLUGIN_NEO_LICENSE
+    licenseKey: ZG88CFP7QSR4UMOYKJSAM4QK
     schemaVersion: 2.8.16
   redactor:
     edition: standard

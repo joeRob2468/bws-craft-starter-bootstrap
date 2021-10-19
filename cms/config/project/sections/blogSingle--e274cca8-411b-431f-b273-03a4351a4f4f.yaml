@@ -15,7 +15,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  0cc785f8-a672-4448-9841-1c39b72f75bd: # Hillcrest Hope
+  0cc785f8-a672-4448-9841-1c39b72f75bd: # Dover Development
     enabledByDefault: true
     hasUrls: true
     template: _pages/blog/blog
