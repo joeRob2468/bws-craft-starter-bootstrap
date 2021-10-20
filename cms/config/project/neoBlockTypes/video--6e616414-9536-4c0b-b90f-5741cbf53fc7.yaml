@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   b0e50832-0033-42d5-b04e-a89b3a2bdeb8:
@@ -66,5 +66,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Video Hero'
-sortOrder: 13
+sortOrder: 16
 topLevel: true

@@ -1,43 +1,43 @@
 childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
-  521c827f-733c-4071-915d-898ca2dfc106:
+  2bf4b8f1-2d71-4cac-af49-60c36142f5ea:
     tabs:
       -
         elements:
           -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
-            instructions: 'The name of the company represented by this logo.'
-            label: 'Company Name'
+            instructions: 'The primary statistic to show ($500, 2700+, etc)'
+            label: Statistic
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: f7a6d15c-0dbc-4167-ac30-a19f8f45491d # Image
-            instructions: 'The logo to display'
-            label: Logo
+            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
+            instructions: 'More information about the above statistic (ie, "parents reunited with their children", "families adopted for christmas"). '
+            label: Description
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: d7af6a87-c305-4903-b8bd-34ca93b30179 # URL
-            instructions: 'The website URL to use for this logo'
-            label: 'Website URL'
-            required: false
+            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e # Use custom content?
+            instructions: 'If enabled, statistic will be shown with a colored background, for emphasis. '
+            label: 'Highlight statistic?'
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Settings
         sortOrder: 1
-handle: logoListItem
+handle: image_stats_banner_statistic
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Logo List Item'
-sortOrder: 43
+name: Statistic
+sortOrder: 45
 topLevel: false

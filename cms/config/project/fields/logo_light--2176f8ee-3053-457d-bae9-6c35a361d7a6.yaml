@@ -1,31 +1,31 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565 # Globals
-handle: logo
-instructions: 'The logo for this website, used across the site. '
-name: Logo
-searchable: true
+handle: logo_light
+instructions: 'The light version of the logo for this website, used across the site. If no light version of the logo is uploaded, the default logo will be used. '
+name: 'Logo (light)'
+searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137' # Site Assets
-  defaultUploadLocationSubpath: ''
+  defaultUploadLocationSubpath: branding
   limit: '1'
   localizeRelations: false
   previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Select a logo'
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
-  showUnpermittedVolumes: true
+  showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:47d806d7-f955-46cc-9e24-88e5a9334137' # Site Assets
-  singleUploadLocationSubpath: branding
+  singleUploadLocationSubpath: ''
   source: null
   sources: '*'
   targetSiteId: null
-  useSingleFolder: true
+  useSingleFolder: false
   validateRelatedElements: false
   viewMode: large
 translationKeyFormat: null

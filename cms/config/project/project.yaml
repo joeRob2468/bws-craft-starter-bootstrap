@@ -1,4 +1,4 @@
-dateModified: 1634666155
+dateModified: 1634752367
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SITE_NAME
@@ -11,6 +11,7 @@ email:
   transportType: craft\mailgun\MailgunAdapter
 meta:
   __names__:
+    0b8d16c5-881e-4e6e-9ca1-a2d0e2095ee9: 'Image/Text Banner' # Image/Text Banner
     0c1e3849-8962-4287-8d23-5b4e202a8e01: 'Single SEO' # Single SEO
     0cc785f8-a672-4448-9841-1c39b72f75bd: 'Dover Development' # Dover Development
     0cd54e63-d904-445b-9bcc-96ebbd48ee7a: 'Events Page' # Events Page
@@ -46,11 +47,14 @@ meta:
     20fdd39d-df7e-451e-8aed-0581d1a06c84: 'Calendar Event' # Calendar Event
     21a60029-942f-47a4-928f-74eaeff2e68c: 'Team Member' # Team Member
     30ed75f2-f005-476c-a28e-b321dd7c60e8: 'Footer Navigation' # Footer Navigation
+    32d86c92-e71d-4765-9dc5-126cb181c9ed: 'Image/Text Slider' # Image/Text Slider
     040f755c-ead7-4a88-bf98-e0a117b05574: Heading # Heading
     47d806d7-f955-46cc-9e24-88e5a9334137: 'Site Assets' # Site Assets
     56aa0bec-30e7-42ff-b25e-ad77bfa5d907: HTML # HTML
+    61d4a273-d0a7-4a81-830e-3de3c9527ff2: 'Points Table List' # Points Table List
     63c84b53-059e-46e3-b41e-3cd1cb9030fe: 'Content Builder Fields' # Content Builder Fields
     70e8051d-b22c-4014-b436-a4430f341640: 'Footer Navigation' # Footer Navigation
+    82b2b688-414a-4baf-b918-8637e6319035: Statistic # Statistic
     82de9b35-174d-44e9-869a-e7fa3286c0de: 'Social Links' # Social Links
     104a2117-39ef-4ed6-b367-0c0db83b87be: 'Formatted Content' # Formatted Content
     187dffe5-065e-4b32-9082-08b395f51448: 'Top Bar Navigation' # Top Bar Navigation
@@ -70,10 +74,12 @@ meta:
     1734b48a-e344-46ea-96bc-40ecf7870e03: Partners # Partners
     1909f9ec-b0fc-43e4-b2aa-0ec9cd52c07b: 'Icons and Logos' # Icons and Logos
     2073fc21-8a0c-48b1-9d73-c27054189da5: 'Blog Category' # Blog Category
+    2176f8ee-3053-457d-bae9-6c35a361d7a6: 'Logo (light)' # Logo (light)
     2886f198-65b5-4662-8f31-5bc761325b03: Link # Link
     3367e6bb-a84b-491a-84cf-ade8ed2080d9: 'Main Navigation' # Main Navigation
     4083a494-77d6-4459-8952-42163c08f1f8: 'Image Gallery Item' # Image Gallery Item
     5237d0e9-4f8a-42f8-9726-d112eca41f07: 'Text with Side Heading' # Text with Side Heading
+    5821c428-efa9-44a5-8539-6eb52e85668e: 'Image/Statistic Banner' # Image/Statistic Banner
     6817f28a-bbd0-4678-9985-08d73f6c85ee: 'Recent Articles' # Recent Articles
     7005b754-12f8-427d-a3eb-dc4740983bd2: 'Subpage Hero' # Subpage Hero
     9075a3a8-280c-41d1-96e2-348beb518b13: 'Navigation Link' # Navigation Link
@@ -81,6 +87,7 @@ meta:
     09545e8c-22b7-4f76-a84f-c58f8e9e281a: 'Pages SEO' # Pages SEO
     59501bed-68f5-44d6-9220-ea2ce033fe12: 'Public Schema' # Public Schema
     68443fb6-c3e8-4e35-b120-cb8e0f687d08: Event # Event
+    84542be9-d8a5-424e-905c-298f1ce19395: 'Image/Text Slider Slide' # Image/Text Slider Slide
     102547fc-ae53-4f57-ae61-853693fee4a6: 'Icon List Item' # Icon List Item
     184817f4-fb61-4cc1-923b-648b76b85d8a: 'Team Text Grid' # Team Text Grid
     291580b7-d5d0-4340-8f73-76b8fcf000d1: 'Short Formatted Content' # Short Formatted Content
@@ -131,6 +138,7 @@ meta:
     e33e1bf2-05b6-4e54-adf2-7a23db4c667a: 'Site Settings' # Site Settings
     e98e2c64-af99-46b8-b4c7-2748aff3f3e5: 'Open Link in Popup' # Open Link in Popup
     e274cca8-411b-431f-b273-03a4351a4f4f: 'Blog ' # Blog 
+    e962a7fb-a0fd-49ab-b1e6-c70678fb6cce: 'Points Table Row' # Points Table Row
     eca12a22-55f0-4613-ad10-2bed6bfdb4a2: 'Content Builder' # Content Builder
     ecc44cee-dded-4260-be41-18578d1a9286: 'Social Links' # Social Links
     ee794f73-0f47-4496-9fec-db23827aec96: Image/Text # Image/Text
@@ -225,7 +233,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ZG88CFP7QSR4UMOYKJSAM4QK
-    schemaVersion: 2.11.6
+    schemaVersion: 2.9.11
   redactor:
     edition: standard
     enabled: true

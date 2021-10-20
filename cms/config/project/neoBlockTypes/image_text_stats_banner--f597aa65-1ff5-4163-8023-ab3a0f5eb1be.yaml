@@ -1,5 +1,6 @@
 childBlocks:
   - button
+  - image_stats_banner_statistic
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   5bce36ab-7561-4a24-8a7c-dedd15429325:
@@ -67,5 +68,5 @@ maxBlocks: 0
 maxChildBlocks: 3
 maxSiblingBlocks: 0
 name: 'Image/Stats/Text Banner'
-sortOrder: 27
+sortOrder: 31
 topLevel: true

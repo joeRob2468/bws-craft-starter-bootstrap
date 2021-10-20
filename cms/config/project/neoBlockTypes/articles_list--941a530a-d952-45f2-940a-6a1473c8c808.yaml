@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   f69c70d2-02be-44dd-bd84-6cb45ffec60e:
@@ -39,5 +39,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'All Articles List'
-sortOrder: 35
+sortOrder: 39
 topLevel: true

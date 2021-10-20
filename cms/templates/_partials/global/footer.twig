@@ -5,7 +5,7 @@
     <div class="footer-links">
         <div class="container">
             <div class="footer-logo">
-                {% include "_partials/snippets/logo" with {'size': 'compact' } %}
+                {% include "_partials/snippets/logo" with {'type': 'light' } %}
             </div>
             <div class="footer-navigation-container">
                 <div class="copyright rte">{{ siteSettings.footerCopyright | replace('${year}', "now"|date("Y")) | raw }}</div>

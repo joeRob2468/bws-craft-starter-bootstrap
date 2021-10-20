@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   312688e4-068a-4c56-ab55-3efde700f677:
@@ -48,5 +48,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Team Member'
-sortOrder: 40
+sortOrder: 46
 topLevel: false

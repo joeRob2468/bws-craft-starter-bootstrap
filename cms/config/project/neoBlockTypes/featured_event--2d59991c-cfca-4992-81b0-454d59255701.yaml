@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   e6053033-ef0b-4d39-b9fd-21341c735ac7:
@@ -39,5 +39,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Featured Event'
-sortOrder: 32
+sortOrder: 36
 topLevel: true

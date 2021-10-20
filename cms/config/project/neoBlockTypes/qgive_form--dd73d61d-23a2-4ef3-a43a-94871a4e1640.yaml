@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   c8e35b73-4eff-4984-8249-39404fbdac14:
@@ -48,5 +48,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'QGive Form'
-sortOrder: 30
+sortOrder: 34
 topLevel: true

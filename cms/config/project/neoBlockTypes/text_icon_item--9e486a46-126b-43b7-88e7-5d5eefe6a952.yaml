@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   9962b7ce-e845-4586-b705-942192df5022:
@@ -30,5 +30,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Text Icon Item'
-sortOrder: 46
+sortOrder: 52
 topLevel: false

@@ -1,33 +1,23 @@
-childBlocks:
-  - team_text_grid_item
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
-  b5d640b4-9c9d-4a6e-8ac3-9b75f83ed5ec:
+  01ad5d5c-3674-4b63-9458-5407167ee272:
     tabs:
       -
         elements:
           -
-            fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be # Formatted Content
             instructions: ''
-            label: ''
+            label: 'Row Description'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: fdce38f5-80cc-4912-a2f7-d3594f32cb89 # Subheading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: 040f755c-ead7-4a88-bf98-e0a117b05574 # Heading
-            instructions: ''
-            label: ''
+            instructions: 'The points value for this row. '
+            label: 'Row Points'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -35,10 +25,10 @@ fieldLayouts:
             width: 100
         name: Settings
         sortOrder: 1
-handle: team_text_grid
+handle: points_table_item
 maxBlocks: 0
-maxChildBlocks: 24
+maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Team Text Grid'
-sortOrder: 27
-topLevel: true
+name: 'Points Table Row'
+sortOrder: 54
+topLevel: false

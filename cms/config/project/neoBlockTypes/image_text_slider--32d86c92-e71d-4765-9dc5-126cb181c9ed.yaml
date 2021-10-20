@@ -1,8 +1,8 @@
 childBlocks:
-  - team_grid_item
+  - imageTextSliderItem
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
-  9bcac3dc-539b-49a9-a0ab-43c7f89ed6c2:
+  c064909e-54e9-44b1-91c9-d16fec4aa42f:
     tabs:
       -
         elements:
@@ -10,15 +10,6 @@ fieldLayouts:
             fieldUid: 7fa651e8-fda7-4c83-84ae-a464c36b020f # Section Type
             instructions: ''
             label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: e2c4db88-dd14-49a8-81d5-1c41ab06be6e # Use custom content?
-            instructions: 'Enable to show larger portraits (rows of 2 instead of rows of 3) - helpful for featuring this specific set of team members before a smaller list of others. '
-            label: 'Show as large portraits? '
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -42,12 +33,21 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 104a2117-39ef-4ed6-b367-0c0db83b87be # Formatted Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Settings
         sortOrder: 1
-handle: team_grid
+handle: image_text_slider
 maxBlocks: 0
-maxChildBlocks: 12
+maxChildBlocks: 3
 maxSiblingBlocks: 0
-name: 'Team Grid'
-sortOrder: 26
+name: 'Image/Text Slider'
+sortOrder: 13
 topLevel: true

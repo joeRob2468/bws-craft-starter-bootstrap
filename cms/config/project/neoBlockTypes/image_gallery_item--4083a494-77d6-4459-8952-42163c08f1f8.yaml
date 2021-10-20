@@ -1,4 +1,4 @@
-childBlocks: null
+childBlocks: ''
 field: 720308b0-c8fd-4f13-bd94-758097e76b5e # Content Builder
 fieldLayouts:
   64c692db-2266-4100-b023-6336ca18ed09:
@@ -21,5 +21,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Image Gallery Item'
-sortOrder: 48
+sortOrder: 55
 topLevel: false

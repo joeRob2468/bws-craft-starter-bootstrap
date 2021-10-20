@@ -1,5 +1,13 @@
 {% import '_macros/lazyImager' as LazyImager %}
-{% set logo = siteSettings['logo'] is defined ? siteSettings.logo.one() : null %}
+{% set type = type is defined ? type : 'standard' %} {# pass {type: 'light'} into the snippet to load the light version of the logo if it exists #}
+
+{% if type == 'light' and siteSettings['logo_light'] is defined %}
+  {% set logo = siteSettings.logo_light.one() %}
+{% endif %}
+
+{% if logo is not defined or logo|length < 1 %}
+  {% set logo = siteSettings['logo'] is defined ? siteSettings.logo.one() : null %}
+{% endif %}
 
 {% if logo|length %}
 	{% set logoOptions = {
