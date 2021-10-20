@@ -1,0 +1,29 @@
+columnSuffix: isxakhbc
+contentColumnType: text
+fieldGroup: 7fa5e5f4-59ab-4c6f-9d42-8f827e5e4565 # Globals
+handle: contactInformation
+instructions: 'Your contact information, shown in the site footer and on the contact page. Business address and phone number are recommended.'
+name: 'Contact Information'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes:
+    - 47d806d7-f955-46cc-9e24-88e5a9334137 # Site Assets
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: StandardRTE.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

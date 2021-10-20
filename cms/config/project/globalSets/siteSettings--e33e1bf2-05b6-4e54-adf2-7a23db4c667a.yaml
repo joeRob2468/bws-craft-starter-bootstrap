@@ -4,6 +4,46 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 0499506a-3693-406c-9bff-a04abe18daa2 # Logo
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2176f8ee-3053-457d-bae9-6c35a361d7a6 # Logo (light)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4dbc61da-b1a5-4dfb-a41d-bcb588f594d6 # Footer Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3fcd11a2-634d-43cb-88cc-46340087137d # Contact Information
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Site Settings'
+        sortOrder: 1
+      -
+        elements:
+          -
             fieldUid: 25962328-dd7c-4c17-acf8-cb9a6e2386ce # Newsletter Signup - Popup Title
             instructions: null
             label: null
@@ -22,28 +62,6 @@ fieldLayouts:
             warning: null
             width: 100
         name: 'Newsletter Signup Popup'
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 0499506a-3693-406c-9bff-a04abe18daa2 # Logo
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 4dbc61da-b1a5-4dfb-a41d-bcb588f594d6 # Footer Copyright
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: 'Site Settings'
         sortOrder: 2
 handle: siteSettings
 name: 'Site Settings'

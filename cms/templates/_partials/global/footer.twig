@@ -8,9 +8,14 @@
                 {% include "_partials/snippets/logo" with {'type': 'light' } %}
             </div>
             <div class="footer-navigation-container">
-                <div class="copyright rte">{{ siteSettings.footerCopyright | replace('${year}', "now"|date("Y")) | raw }}</div>
-                <div class="referral">Site by <a href="https://www.boyerwebstudios.com" target="_blank" rel="noopener">Boyer Web Studios</a></div>
+              {% include '_partials/components/footer-navigation' %}
             </div>
+        </div>
+    </div>
+    <div class="footer-credits">
+        <div class="container">
+            <div class="copyright rte">{{ siteSettings.footerCopyright | replace('${year}', "now"|date("Y")) | raw }}</div>
+            <div class="referral">Site by <a href="https://www.boyerwebstudios.com" target="_blank" rel="noopener">Boyer Web Studios</a></div>
         </div>
     </div>
 </footer>

@@ -1,4 +1,4 @@
-dateModified: 1634752367
+dateModified: 1634755104
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SITE_NAME
@@ -24,6 +24,7 @@ meta:
     2ecb8f3e-0484-49a6-b7b5-95c5a819edc9: Events # Events
     2f10094d-fd4f-40aa-ba75-5d2ee64ee73b: Hero # Hero
     2fbaf2a5-6ad3-48de-85c1-1e8df38e3118: 'Upcoming Events Slider' # Upcoming Events Slider
+    3fcd11a2-634d-43cb-88cc-46340087137d: 'Contact Information' # Contact Information
     4dbc61da-b1a5-4dfb-a41d-bcb588f594d6: 'Footer Copyright' # Footer Copyright
     4f1d170a-c466-4444-a347-88455a40a9c9: Text # Text
     4f732cce-e507-492a-a114-74548227f684: Administrator # Administrator

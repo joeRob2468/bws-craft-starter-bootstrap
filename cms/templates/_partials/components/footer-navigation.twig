@@ -26,6 +26,22 @@
                 </div>
                 {% endif %}
                 {% endfor %}
+
+                <div class="nav-column-item contact-information-item">
+                    <div class="nav-column-heading">
+                        <p class="heading">
+                            Contact Us
+                        </p>
+                    </div>
+                    <div class="nav-column-content">
+                        {% if siteSettings['contactInformation'] is defined and siteSettings.contactInformation|length %}
+                        <div class="contact-info rte">
+                            {{ siteSettings.contactInformation }}
+                        </div>
+                        {% endif %}
+                        {% include '_partials/components/social-links' %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
