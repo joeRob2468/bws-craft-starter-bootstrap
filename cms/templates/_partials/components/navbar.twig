@@ -4,12 +4,12 @@
 	<div class="container">
 		<nav class="main-nav">
 			<div class="nav-links">
-				{% include '_partials/components/main-navigation' with {'type': 'first-half'} %}
 				<div class="nav-logo">
 					{% include "_partials/snippets/logo" with {'size': 'compact' } %}
 				</div>
-				{% include '_partials/components/main-navigation' with {'type': 'second-half'} %}
 				
+				{% include '_partials/components/main-navigation' with {'type': 'all'} %}
+
 				<div class="mobile-navigation-trigger-container">
 					<a class="mobile-navigation-trigger" href="#" aria-label="Open navigation menu">
 						<span data-feather="menu"></span>
