@@ -464,11 +464,11 @@ header.site-header {
 
     a {
       display: block;
-      color: #1C2436;
+      color: #333333;
       padding: 1.5rem 0.5rem;
       transition: color 300ms ease;
-      text-transform: uppercase;
-      font-size: rem-calc(18px);
+      //text-transform: uppercase;
+      font-size: rem-calc(17px);
       font-weight: 600;
     }
 
@@ -520,16 +520,33 @@ header.site-header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% - 2px);
-    border: 1px solid #F0F0F0;
-    border-top: 2px solid $primary-accent;
     width: auto;
     background: #FFFFFF;
     font-size: rem-calc(18px);
 
+    // top: calc(100% - 2px);
+    // border: 1px solid #F0F0F0;
+    // border-top: 2px solid $primary-accent;
+
+    border-top: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    top: calc(100% + 10px);
+
     visibility: hidden;
     opacity: 0;
     transition: opacity 150ms ease, visibility 150ms ease;
+
+    &::before {
+      content: '';
+      border-style: solid;
+      border-width: 5px 8px 5px 0;
+      border-color: transparent #fff transparent transparent;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateY(calc(-100% + 2px)) rotate(90deg);
+    }
 
     .dropdown-menu-item {
       > a {
