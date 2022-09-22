@@ -21,7 +21,7 @@
   "require": {
     "aelvan/imager": "v2.4.0",
     "barrelstrength/sprout-fields": "^3.6.1",
-    "craftcms/cms": "3.7.16",
+    "craftcms/cms": "3.7.55.2",
     "craftcms/contact-form": "2.2.7",
     "craftcms/feed-me": "^4.1",
     "craftcms/mailgun": "1.4.3",
